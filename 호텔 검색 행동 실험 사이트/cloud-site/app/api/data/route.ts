@@ -266,6 +266,24 @@ async function identity(req: NextRequest) {
       }),
     ]);
     created = true;
+  } else {
+    const current = await env.DB.prepare(
+      "SELECT ended_at FROM sessions WHERE id=? AND user_id=?",
+    ).bind(session, user).first<{ ended_at: string | null }>();
+    if (!current || current.ended_at) {
+      session = id("SES");
+      await env.DB.batch([
+        env.DB.prepare("INSERT INTO sessions VALUES(?,?,?,NULL)").bind(
+          session,
+          user,
+          now(),
+        ),
+        evt(user, session, "session_start", "landing", null, null, {
+          resumed_after_end: true,
+        }),
+      ]);
+      created = true;
+    }
   }
   return { user, session, created };
 }
@@ -576,17 +594,24 @@ const keywordTokens = (value: string) => {
   return normalized.split(/\s+/).filter(Boolean);
 };
 async function analysisDatasets() {
-  const [hotels, rooms, searches, users, events, reservations, deleted] =
+  const [hotels, rooms, searches, users, sessions, events, reservations, deleted] =
     await Promise.all([
       env.DB.prepare("SELECT * FROM hotels ORDER BY id").all(),
       env.DB.prepare("SELECT * FROM room_inventory ORDER BY hotel_id,id").all(),
       env.DB.prepare("SELECT * FROM searches ORDER BY created_at DESC").all(),
       env.DB.prepare("SELECT * FROM users ORDER BY created_at DESC").all(),
+      env.DB.prepare("SELECT * FROM sessions ORDER BY started_at DESC").all(),
       env.DB.prepare("SELECT * FROM events ORDER BY created_at DESC").all(),
       env.DB.prepare("SELECT * FROM reservations ORDER BY created_at DESC").all(),
       env.DB.prepare("SELECT * FROM admin_deleted_rows ORDER BY deleted_at DESC").all(),
     ]);
   const profileByUser = new Map<string, any>();
+  const sessionEndById = new Map<string, string>(
+    (sessions.results as any[]).map((session) => [
+      session.id,
+      session.ended_at || "",
+    ]),
+  );
   for (const event of events.results as any[]) {
     if (event.name === "participant_profile_submit" && !profileByUser.has(event.user_id))
       profileByUser.set(event.user_id, parseObject(event.properties));
@@ -675,6 +700,7 @@ async function analysisDatasets() {
         search_filter_id: e.search_id ? `F${e.search_id}` : "",
         search_id: e.search_id || "", user_id: e.user_id,
         rating: p.rating ?? p.score ?? "",
+        session_end_time: koreanDateTime(sessionEndById.get(e.session_id)),
         review_completed_at: p.review_text ? koreanDateTime(e.created_at) : "",
         review_text: p.review_text || "", device: p.device || "" };
     }),
@@ -1181,6 +1207,15 @@ export async function POST(req: NextRequest) {
     );
   }
   if (b.action === "event") {
+    if (b.name === "session_end") {
+      const endedAt = now();
+      await env.DB.batch([
+        evt(x.user, x.session, b.name, b.page || "app", null, null, b.properties),
+        env.DB.prepare("UPDATE sessions SET ended_at=? WHERE id=? AND ended_at IS NULL")
+          .bind(endedAt, x.session),
+      ]);
+      return response({ ok: true, session_end_time: koreanDateTime(endedAt) }, x);
+    }
     if (b.name === "participant_logout") {
       await env.DB.batch([
         evt(x.user, x.session, b.name, b.page || "app", null, null, b.properties),

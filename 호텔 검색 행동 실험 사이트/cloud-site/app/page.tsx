@@ -132,7 +132,8 @@ const DATASET_SCHEMAS: Record<string, Array<[string, string]>> = {
     ["event_at", "이벤트 발생 시각"], ["hotel_id", "호텔 아이디(FK)"],
     ["search_filter_id", "검색 필터 아이디(FK)"], ["search_id", "검색 아이디(FK)"],
     ["user_id", "사용자 아이디(FK)"], ["rating", "별점"],
-    ["review_completed_at", "리뷰 작성 완료 시각"], ["review_text", "리뷰 텍스트"], ["device", "디바이스"],
+    ["session_end_time", "세션 종료 시각"], ["review_completed_at", "리뷰 작성 완료 시각"],
+    ["review_text", "리뷰 텍스트"], ["device", "디바이스"],
   ],
   SEARCH_RESULT: [
     ["search_result_id", "검색 결과 아이디(PK)"], ["search_id", "검색 아이디(FK)"],
@@ -290,6 +291,22 @@ export default function Home() {
       sessionStorage.removeItem("staytrace_cart");
     }
     api();
+  }, []);
+  useEffect(() => {
+    const recordSessionEnd = (event: PageTransitionEvent) => {
+      const body = JSON.stringify({
+        action: "event",
+        name: "session_end",
+        page: "app",
+        properties: { reason: "pagehide", persisted: event.persisted },
+      });
+      navigator.sendBeacon(
+        "/api/data",
+        new Blob([body], { type: "application/json" }),
+      );
+    };
+    window.addEventListener("pagehide", recordSessionEnd);
+    return () => window.removeEventListener("pagehide", recordSessionEnd);
   }, []);
   const change = (k: string, v: any) => {
     setC((x: any) => ({
