@@ -591,19 +591,41 @@ export default function Home() {
     setAdmin(await api(undefined, "admin", adminCodeRef.current));
     setBusy(false);
   }
-  function downloadCsv(tableName: string, rows: any[]) {
-    if (!rows.length) return;
+  const csvText = (tableName: string, rows: any[]) => {
+    if (!rows.length) return "";
     const columns = DATASET_SCHEMAS[tableName]?.map(([key]) => key) || Object.keys(rows[0]);
     const escape = (value: any) =>
       `"${String(value ?? "").replaceAll('"', '""')}"`;
-    const csv = [columns.map(escape).join(","), ...rows.map((row) =>
+    return [columns.map(escape).join(","), ...rows.map((row) =>
       columns.map((column) => escape(row[column])).join(","))].join("\r\n");
-    const url = URL.createObjectURL(new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" }));
-    const link = document.createElement("a");
+  };
+  const downloadBlob = (blob: Blob, filename: string) => {
+    const url = URL.createObjectURL(blob), link = document.createElement("a");
     link.href = url;
-    link.download = `${tableName.toLowerCase()}_${new Date().toISOString().slice(0, 10)}.csv`;
+    link.download = filename;
     link.click();
     URL.revokeObjectURL(url);
+  };
+  function downloadCsv(tableName: string, rows: any[]) {
+    const csv = csvText(tableName, rows);
+    if (!csv) return;
+    downloadBlob(
+      new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" }),
+      `${tableName.toLowerCase()}_${new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10)}.csv`,
+    );
+  }
+  async function downloadAllCsv() {
+    const tables = ["HOTEL", "ROOM", "SEARCH", "SEARCH_FILTER", "USER", "EVENT", "SEARCH_RESULT", "BOOKING"],
+      date = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
+    for (const table of tables) {
+      const csv = csvText(table, admin?.datasets?.[table] || []);
+      if (!csv) continue;
+      downloadBlob(
+        new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" }),
+        `${table.toLowerCase()}_${date}.csv`,
+      );
+      await new Promise((resolve) => window.setTimeout(resolve, 180));
+    }
   }
   async function deleteAdminRow(table: string, row: any) {
     const idKey = `${table.toLowerCase()}_id`, rowId = row[idKey];
@@ -1875,6 +1897,13 @@ export default function Home() {
                   <p>테이블을 선택해 전체 칼럼을 확인하고 CSV로 내려받을 수 있습니다.</p>
                 </div>
                 <div className="consoleActions">
+                  <button
+                    className="solid"
+                    disabled={!admin?.datasets || busy}
+                    onClick={downloadAllCsv}
+                  >
+                    전체 CSV 한 번에 다운로드
+                  </button>
                   <a className="reportDownload" href="/staytrace-site-production-kit.zip" download>
                     전체 제작 자료
                   </a>
