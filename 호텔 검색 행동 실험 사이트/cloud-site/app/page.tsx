@@ -1994,7 +1994,7 @@ export default function Home() {
                       <ol className="journeyTimeline">
                         {session.events.map((event: any) => (
                           <li key={event.event_id}>
-                            <time>{new Date(event.event_at).toLocaleString("ko-KR")}</time>
+                            <time>{event.event_at}</time>
                             <div>
                               <b>{event.event_type}</b>
                               <small>{[

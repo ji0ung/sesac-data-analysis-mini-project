@@ -8,8 +8,33 @@ const shortToken = (length = 9) => {
   return Array.from(crypto.getRandomValues(new Uint8Array(length)),
     (byte) => alphabet[byte % alphabet.length]).join("");
 };
-const id = (prefix: string) => `${idPrefixes[prefix] || prefix[0]}${shortToken()}`,
-  now = () => new Date().toISOString();
+const id = (prefix: string) => `${idPrefixes[prefix] || prefix[0]}${shortToken()}`;
+const KST_OFFSET_MS = 9 * 60 * 60 * 1000;
+const now = () =>
+  new Date(Date.now() + KST_OFFSET_MS)
+    .toISOString()
+    .replace(/\.\d{3}Z$/, "+09:00");
+const koreanDateTime = (value: unknown) => {
+  if (!value) return "";
+  const date = new Date(String(value));
+  if (Number.isNaN(date.getTime())) return String(value);
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Asia/Seoul",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hourCycle: "h23",
+    })
+      .formatToParts(date)
+      .filter((part) => part.type !== "literal")
+      .map((part) => [part.type, part.value]),
+  );
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} KST`;
+};
 const tables = [
   `CREATE TABLE IF NOT EXISTS users(id TEXT PRIMARY KEY,name TEXT NOT NULL,created_at TEXT NOT NULL)`,
   `CREATE TABLE IF NOT EXISTS sessions(id TEXT PRIMARY KEY,user_id TEXT NOT NULL,started_at TEXT NOT NULL,ended_at TEXT)`,
@@ -492,7 +517,7 @@ const syntheticReviews = (rawHotel: any) => {
       country: review.country,
       rating: Number(rating.toFixed(1)),
       score: Number(rating.toFixed(1)),
-      review_created_at: `2026-${String(3 + index).padStart(2, "0")}-${String(8 + (n + index * 3) % 19).padStart(2, "0")}T12:00:00.000Z`,
+      review_created_at: `2026-${String(3 + index).padStart(2, "0")}-${String(8 + (n + index * 3) % 19).padStart(2, "0")} 21:00:00 KST`,
       review_text: review.body,
       body: review.body,
       review_photo_url: "",
@@ -623,7 +648,7 @@ async function analysisDatasets() {
     }),
     SEARCH: (searches.results as any[]).map((s) => {
       const c = searchConditions.get(s.id) || {};
-      return { search_id: s.id, session_id: s.session_id, search_time: s.created_at,
+      return { search_id: s.id, session_id: s.session_id, search_time: koreanDateTime(s.created_at),
         query_text: c.keyword || "", checkin_date: c.checkin || "",
         checkout_date: c.checkout || "", total_result_count: s.result_count,
         sort_option: c.sort || "", guest_count: c.guests || "",
@@ -641,16 +666,16 @@ async function analysisDatasets() {
     USER: (users.results as any[]).map((u) => {
       const p = profileByUser.get(u.id) || {};
       return { user_id: u.id, user_name: p.participant_name || u.name,
-        age_group: p.age_group || "", email: p.email || "", signup_at: u.created_at };
+        age_group: p.age_group || "", email: p.email || "", signup_at: koreanDateTime(u.created_at) };
     }),
     EVENT: (events.results as any[]).map((e) => {
       const p = parseObject(e.properties);
       return { event_id: e.id, session_id: e.session_id, event_type: e.name,
-        event_at: e.created_at, hotel_id: e.hotel_id || "",
+        event_at: koreanDateTime(e.created_at), hotel_id: e.hotel_id || "",
         search_filter_id: e.search_id ? `F${e.search_id}` : "",
         search_id: e.search_id || "", user_id: e.user_id,
         rating: p.rating ?? p.score ?? "",
-        review_completed_at: p.review_text ? e.created_at : "",
+        review_completed_at: p.review_text ? koreanDateTime(e.created_at) : "",
         review_text: p.review_text || "", device: p.device || "" };
     }),
     SEARCH_RESULT: (events.results as any[])
@@ -672,7 +697,7 @@ async function analysisDatasets() {
       return { booking_id: r.id, user_id: r.user_id, hotel_id: r.hotel_id,
         room_id: bookingEvent.room_id || "",
         booking_status: r.status, booking_amount: r.total_price,
-        booking_at: r.created_at, checkin_date: c.checkin || "",
+        booking_at: koreanDateTime(r.created_at), checkin_date: c.checkin || "",
         checkout_date: c.checkout || "", guest_count: c.guests || "",
         room_count: c.rooms || "",
         cancellation_deadline: cancelDate ? cancelDate.toISOString().slice(0, 10) : "" };
@@ -723,7 +748,15 @@ async function analysisDatasets() {
     user_id: u.id,
     user_name: profileByUser.get(u.id)?.participant_name || u.name,
   }));
-  return { datasets, deleted: deleted.results, ownership, userOptions };
+  return {
+    datasets,
+    deleted: (deleted.results as any[]).map((row) => ({
+      ...row,
+      deleted_at: koreanDateTime(row.deleted_at),
+    })),
+    ownership,
+    userOptions,
+  };
 }
 export async function GET(req: NextRequest) {
   await init();
@@ -808,7 +841,16 @@ export async function GET(req: NextRequest) {
       }),
     );
     const dataConsole = await analysisDatasets();
-    return response({ events: events.results, counts, experiment, ...dataConsole }, x);
+    return response({
+      events: (events.results as any[]).map((event) => ({
+        ...event,
+        created_at: koreanDateTime(event.created_at),
+      })),
+      counts,
+      experiment,
+      timezone: "Asia/Seoul",
+      ...dataConsole,
+    }, x);
   }
   const hotels = await env.DB.prepare("SELECT * FROM hotels").all();
   return response({ hotels: hotels.results }, x);
