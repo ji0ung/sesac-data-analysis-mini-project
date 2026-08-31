@@ -1,0 +1,72 @@
+TABLES
+<StringArray>
+['DateTableTemplate_b6cadb76-fdcb-4b78-b98f-70e6bf893e57',
+    'LocalDateTable_05be2040-97e0-49ae-92ee-39143af62ecd',
+    'LocalDateTable_55617da3-49a4-44dc-9b37-a73ada1dd283',
+    'LocalDateTable_611aa054-bc71-4f54-bd27-11cc0f192f9c',
+    'LocalDateTable_d4931ced-c778-4e3b-bdc4-e79cf4973acf',
+                                          'ab_assignment',
+                                                 'events',
+                                                 'orders',
+                                                  'users']
+Length: 9, dtype: str
+SCHEMA
+                                             TableName          ColumnName PandasDataType
+DateTableTemplate_b6cadb76-fdcb-4b78-b98f-70e6bf893e57                  연도          Int64
+DateTableTemplate_b6cadb76-fdcb-4b78-b98f-70e6bf893e57             MonthNo          Int64
+DateTableTemplate_b6cadb76-fdcb-4b78-b98f-70e6bf893e57                   월         string
+DateTableTemplate_b6cadb76-fdcb-4b78-b98f-70e6bf893e57           QuarterNo          Int64
+DateTableTemplate_b6cadb76-fdcb-4b78-b98f-70e6bf893e57                  분기         string
+DateTableTemplate_b6cadb76-fdcb-4b78-b98f-70e6bf893e57                   일          Int64
+   LocalDateTable_05be2040-97e0-49ae-92ee-39143af62ecd                  연도          Int64
+   LocalDateTable_05be2040-97e0-49ae-92ee-39143af62ecd             MonthNo          Int64
+   LocalDateTable_05be2040-97e0-49ae-92ee-39143af62ecd                   월         string
+   LocalDateTable_05be2040-97e0-49ae-92ee-39143af62ecd           QuarterNo          Int64
+   LocalDateTable_05be2040-97e0-49ae-92ee-39143af62ecd                  분기         string
+   LocalDateTable_05be2040-97e0-49ae-92ee-39143af62ecd                   일          Int64
+   LocalDateTable_55617da3-49a4-44dc-9b37-a73ada1dd283                  연도          Int64
+   LocalDateTable_55617da3-49a4-44dc-9b37-a73ada1dd283             MonthNo          Int64
+   LocalDateTable_55617da3-49a4-44dc-9b37-a73ada1dd283                   월         string
+   LocalDateTable_55617da3-49a4-44dc-9b37-a73ada1dd283           QuarterNo          Int64
+   LocalDateTable_55617da3-49a4-44dc-9b37-a73ada1dd283                  분기         string
+   LocalDateTable_55617da3-49a4-44dc-9b37-a73ada1dd283                   일          Int64
+   LocalDateTable_611aa054-bc71-4f54-bd27-11cc0f192f9c                  연도          Int64
+   LocalDateTable_611aa054-bc71-4f54-bd27-11cc0f192f9c             MonthNo          Int64
+   LocalDateTable_611aa054-bc71-4f54-bd27-11cc0f192f9c                   월         string
+   LocalDateTable_611aa054-bc71-4f54-bd27-11cc0f192f9c           QuarterNo          Int64
+   LocalDateTable_611aa054-bc71-4f54-bd27-11cc0f192f9c                  분기         string
+   LocalDateTable_611aa054-bc71-4f54-bd27-11cc0f192f9c                   일          Int64
+   LocalDateTable_d4931ced-c778-4e3b-bdc4-e79cf4973acf                  연도          Int64
+   LocalDateTable_d4931ced-c778-4e3b-bdc4-e79cf4973acf             MonthNo          Int64
+   LocalDateTable_d4931ced-c778-4e3b-bdc4-e79cf4973acf                   월         string
+   LocalDateTable_d4931ced-c778-4e3b-bdc4-e79cf4973acf           QuarterNo          Int64
+   LocalDateTable_d4931ced-c778-4e3b-bdc4-e79cf4973acf                  분기         string
+   LocalDateTable_d4931ced-c778-4e3b-bdc4-e79cf4973acf                   일          Int64
+                                         ab_assignment             user_id         string
+                                         ab_assignment       experiment_id         string
+                                         ab_assignment             variant         string
+                                         ab_assignment       assigned_date datetime64[ns]
+                                                events            event_id         string
+                                                events             user_id         string
+                                                events          event_date datetime64[ns]
+                                                events          event_name         string
+                                                events          session_id         string
+                                                events              device         string
+                                                orders            order_id         string
+                                                orders             user_id         string
+                                                orders          order_date datetime64[ns]
+                                                orders            category         string
+                                                orders              amount          Int64
+                                                orders            discount          Int64
+                                                orders        is_cancelled          Int64
+                                                 users             user_id         string
+                                                 users         signup_date datetime64[ns]
+                                                 users              gender         string
+                                                 users           age_group         string
+                                                 users              region         string
+                                                 users acquisition_channel         string
+RELATIONSHIPS
+FromTableName FromColumnName ToTableName ToColumnName  IsActive Cardinality CrossFilteringBehavior  FromKeyCount ToKeyCount  RelyOnReferentialIntegrity
+       events        user_id       users      user_id         1         M:1                 Single          9396       None                           0
+ab_assignment        user_id       users      user_id         1         M:1                 Single          6003       None                           0
+       orders        user_id       users      user_id         1         M:1                 Single          5342       None                           0

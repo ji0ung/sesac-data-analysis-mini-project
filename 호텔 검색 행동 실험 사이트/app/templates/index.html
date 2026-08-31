@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<section class="hero"><div><span class="eyebrow">TRAVEL BEHAVIOR LAB</span><h1>머무를 곳을 찾고,<br>선택의 흐름을 발견하세요.</h1><p>가상의 일본 호텔을 자유롭게 탐색하는 검색 실험 공간입니다.</p></div><form class="panel start" method="post" action="/start"><h2>탐색 시작하기</h2><label>별명<input name="name" required placeholder="예: 여행자01"></label><label>나이 (선택)<input name="age" type="number" min="10" max="100"></label><label>전화번호 (선택)<input name="phone" autocomplete="off"></label><button>호텔 검색 시작 →</button><small>실제 개인정보 대신 테스트 값을 사용해 주세요.</small></form></section>{% endblock %}
+

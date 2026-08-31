@@ -1,0 +1,20 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Node and build output
+node_modules/
+.next/
+dist/
+.wrangler/
+
+# Generated deployment archives
+cloud-site/site-build*.tar.gz
+_정리보관_*/
+
+# Logs and editor files
+*.log
+.DS_Store
+Thumbs.db

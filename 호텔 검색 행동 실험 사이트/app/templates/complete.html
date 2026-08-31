@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<section class="complete"><div class="check">✓</div><span class="eyebrow">RESERVATION COMPLETE</span><h1>예약이 완료되었습니다</h1><p>{{hotel.hotel_name}}에서 즐거운 여행 되세요.</p><div class="panel"><b>예약 번호</b><code>{{reservation.reservation_id}}</code><p>총 결제 예정 금액 {{'{:,}'.format(reservation.total_price)}}원</p></div><a class="button" href="/search">새로운 여행 찾기</a></section>{% endblock %}
+

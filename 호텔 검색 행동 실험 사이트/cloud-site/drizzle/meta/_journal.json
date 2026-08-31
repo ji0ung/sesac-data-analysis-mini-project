@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1787793449373,
+      "tag": "0000_outgoing_johnny_blaze",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1787795569605,
+      "tag": "0001_cultured_darwin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1787796613900,
+      "tag": "0002_soft_swarm",
+      "breakpoints": true
+    }
+  ]
+}
