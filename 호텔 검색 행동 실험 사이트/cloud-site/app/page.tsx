@@ -254,6 +254,7 @@ export default function Home() {
     [adminColumnFilters, setAdminColumnFilters] = useState<Record<string, string>>({}),
     [selectedAdmin, setSelectedAdmin] = useState(new Set<string>()),
     [busy, setBusy] = useState(false),
+    [recruitmentClosedOpen, setRecruitmentClosedOpen] = useState(true),
     [wishes, setWishes] = useState(new Set<string>()),
     [wishlistHotels, setWishlistHotels] = useState<H[]>([]),
     [cart, setCart] = useState<CartItem[]>([]),
@@ -864,6 +865,31 @@ export default function Home() {
     );
   return (
     <>
+      {recruitmentClosedOpen && (
+        <div className="recruitmentNoticeBackdrop" role="presentation">
+          <section
+            className="recruitmentNotice"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="recruitment-notice-title"
+            aria-describedby="recruitment-notice-description"
+          >
+            <span className="recruitmentNoticeEyebrow">STAYTRACE NOTICE</span>
+            <h2 id="recruitment-notice-title">가상 예약 참여 모집이 종료되었습니다</h2>
+            <p id="recruitment-notice-description">
+              더 이상 추가 참여자를 모집하지 않습니다.<br />
+              지금까지 참여해 주신 모든 분께 진심으로 감사드립니다.
+            </p>
+            <button
+              className="solid"
+              autoFocus
+              onClick={() => setRecruitmentClosedOpen(false)}
+            >
+              확인했습니다
+            </button>
+          </section>
+        </div>
+      )}
       <header>
         <button
           className="brand"
