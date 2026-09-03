@@ -1,0 +1,13 @@
+﻿metric,group,analysis_unit,numerator,denominator,rate,n,test,statistic,odds_ratio,ci_95_low,ci_95_high,p_value,interpretation,limitation
+next_search_positive_result_rate,동일조건 반복,zero-result search -> immediate next search transition,0,53,0.0,53,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_hotel_click_rate,동일조건 반복,zero-result search -> immediate next search transition,0,53,0.0,53,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_positive_result_rate,조건 완화,zero-result search -> immediate next search transition,11,41,0.2682926829268293,41,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_hotel_click_rate,조건 완화,zero-result search -> immediate next search transition,8,41,0.1951219512195122,41,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_positive_result_rate,검색어 수정,zero-result search -> immediate next search transition,3,10,0.3,10,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_hotel_click_rate,검색어 수정,zero-result search -> immediate next search transition,3,10,0.3,10,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_positive_result_rate,지역 변경,zero-result search -> immediate next search transition,10,24,0.4166666666666667,24,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_hotel_click_rate,지역 변경,zero-result search -> immediate next search transition,3,24,0.125,24,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_positive_result_rate,조건 강화,zero-result search -> immediate next search transition,0,10,0.0,10,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_hotel_click_rate,조건 강화,zero-result search -> immediate next search transition,0,10,0.0,10,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_positive_result_rate,혼합 변경,zero-result search -> immediate next search transition,0,2,0.0,2,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용
+next_search_hotel_click_rate,혼합 변경,zero-result search -> immediate next search transition,0,2,0.0,2,,,,,,,H3 탐색적 결과,유형별 n과 분류 규칙에 민감; 제품 개선의 인과효과로 단정 금지. hotel_click만 상세진입 KPI로 사용

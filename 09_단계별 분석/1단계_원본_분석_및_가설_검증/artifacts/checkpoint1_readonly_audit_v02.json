@@ -1,0 +1,1892 @@
+{
+  "guardrails": {
+    "uri_mode": "ro",
+    "pragma_query_only": 1,
+    "statistical_analysis": false,
+    "synthetic_generation": false
+  },
+  "file": {
+    "display_name": "travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+    "actual_path": "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+    "size_bytes": 6340608,
+    "sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "mtime_ns": 1788401785644897400
+  },
+  "integrity_check": "ok",
+  "tables": {
+    "_import_metadata": {
+      "row_count": 8,
+      "expected": null,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "table_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "source_file",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "row_count",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "file_size_bytes",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "source_sha256",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "imported_at_utc",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "table_name"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex__import_metadata_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "table_name"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "table_name": 0,
+        "source_file": 0,
+        "row_count": 0,
+        "file_size_bytes": 0,
+        "source_sha256": 0,
+        "imported_at_utc": 0
+      },
+      "blank_strings": {
+        "table_name": 0,
+        "source_file": 0,
+        "row_count": 0,
+        "file_size_bytes": 0,
+        "source_sha256": 0,
+        "imported_at_utc": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {},
+      "numeric_ranges": {
+        "row_count": {
+          "min": 36,
+          "max": 10432
+        },
+        "file_size_bytes": {
+          "min": 6595,
+          "max": 1841676
+        }
+      }
+    },
+    "booking": {
+      "row_count": 36,
+      "expected": 36,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "booking_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "user_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "hotel_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "room_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "booking_status",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "booking_amount",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "booking_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "checkin_date",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "checkout_date",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "guest_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "room_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "cancellation_deadline",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "booking_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_booking_booking_at",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "booking_at"
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "idx_booking_room_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "room_id"
+          ]
+        },
+        {
+          "seq": 2,
+          "name": "idx_booking_hotel_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "hotel_id"
+          ]
+        },
+        {
+          "seq": 3,
+          "name": "idx_booking_user_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "user_id"
+          ]
+        },
+        {
+          "seq": 4,
+          "name": "sqlite_autoindex_booking_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "booking_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "booking_id": 0,
+        "user_id": 0,
+        "hotel_id": 0,
+        "room_id": 0,
+        "booking_status": 0,
+        "booking_amount": 0,
+        "booking_at": 0,
+        "checkin_date": 0,
+        "checkout_date": 0,
+        "guest_count": 0,
+        "room_count": 0,
+        "cancellation_deadline": 0,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "booking_id": 0,
+        "user_id": 0,
+        "hotel_id": 0,
+        "room_id": 0,
+        "booking_status": 0,
+        "booking_amount": 0,
+        "booking_at": 0,
+        "checkin_date": 0,
+        "checkout_date": 0,
+        "guest_count": 0,
+        "room_count": 0,
+        "cancellation_deadline": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {
+        "booking_at": {
+          "nonblank": 36,
+          "failures": 0,
+          "examples": []
+        },
+        "checkin_date": {
+          "nonblank": 36,
+          "failures": 0,
+          "examples": []
+        },
+        "checkout_date": {
+          "nonblank": 36,
+          "failures": 0,
+          "examples": []
+        },
+        "cancellation_deadline": {
+          "nonblank": 36,
+          "failures": 0,
+          "examples": []
+        }
+      },
+      "numeric_ranges": {
+        "booking_amount": {
+          "min": 90000,
+          "max": 880000
+        },
+        "guest_count": {
+          "min": 2,
+          "max": 5
+        },
+        "room_count": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    },
+    "event": {
+      "row_count": 10432,
+      "expected": 10432,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "event_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "session_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "event_type",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "event_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "hotel_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "search_filter_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "search_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "user_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "rating",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "session_end_time",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "review_completed_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "review_text",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "device",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 13,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "event_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_event_user_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "user_id"
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "idx_event_search_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "search_id"
+          ]
+        },
+        {
+          "seq": 2,
+          "name": "idx_event_search_filter_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "search_filter_id"
+          ]
+        },
+        {
+          "seq": 3,
+          "name": "idx_event_hotel_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "hotel_id"
+          ]
+        },
+        {
+          "seq": 4,
+          "name": "idx_event_event_at",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "event_at"
+          ]
+        },
+        {
+          "seq": 5,
+          "name": "idx_event_event_type",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "event_type"
+          ]
+        },
+        {
+          "seq": 6,
+          "name": "idx_event_session_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "session_id"
+          ]
+        },
+        {
+          "seq": 7,
+          "name": "sqlite_autoindex_event_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "event_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "event_id": 0,
+        "session_id": 0,
+        "event_type": 0,
+        "event_at": 0,
+        "hotel_id": 647,
+        "search_filter_id": 158,
+        "search_id": 158,
+        "user_id": 0,
+        "rating": 10280,
+        "session_end_time": 1987,
+        "review_completed_at": 10432,
+        "review_text": 10432,
+        "device": 9688,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "event_id": 0,
+        "session_id": 0,
+        "event_type": 0,
+        "event_at": 0,
+        "hotel_id": 0,
+        "search_filter_id": 0,
+        "search_id": 0,
+        "user_id": 0,
+        "rating": 0,
+        "session_end_time": 0,
+        "review_completed_at": 0,
+        "review_text": 0,
+        "device": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {
+        "event_at": {
+          "nonblank": 10432,
+          "failures": 0,
+          "examples": []
+        },
+        "session_end_time": {
+          "nonblank": 8445,
+          "failures": 0,
+          "examples": []
+        },
+        "review_completed_at": {
+          "nonblank": 0,
+          "failures": 0,
+          "examples": []
+        }
+      },
+      "numeric_ranges": {
+        "rating": {
+          "min": 7.0,
+          "max": 9.0
+        }
+      }
+    },
+    "hotel": {
+      "row_count": 1000,
+      "expected": 1000,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "hotel_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "hotel_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "city_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "grade",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "hotel_address",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "user_rating",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "review_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "property_type",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "actual_address",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "actual_city",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "actual_prefecture",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "actual_postal_code",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "actual_latitude",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 13,
+          "name": "actual_longitude",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 14,
+          "name": "actual_phone",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 15,
+          "name": "actual_star_rating",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 16,
+          "name": "supplier_hotel_code",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 17,
+          "name": "rtx_code",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 18,
+          "name": "agoda_code",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 19,
+          "name": "expedia_code",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 20,
+          "name": "top_selling_rank",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 21,
+          "name": "source_last_mapped_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 22,
+          "name": "actual_data_sources",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 23,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "hotel_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_hotel_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "hotel_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "hotel_id": 0,
+        "hotel_name": 0,
+        "city_name": 0,
+        "grade": 0,
+        "hotel_address": 0,
+        "user_rating": 0,
+        "review_count": 0,
+        "property_type": 0,
+        "actual_address": 509,
+        "actual_city": 509,
+        "actual_prefecture": 678,
+        "actual_postal_code": 678,
+        "actual_latitude": 509,
+        "actual_longitude": 509,
+        "actual_phone": 520,
+        "actual_star_rating": 688,
+        "supplier_hotel_code": 552,
+        "rtx_code": 678,
+        "agoda_code": 695,
+        "expedia_code": 831,
+        "top_selling_rank": 881,
+        "source_last_mapped_at": 552,
+        "actual_data_sources": 509,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "hotel_id": 0,
+        "hotel_name": 0,
+        "city_name": 0,
+        "grade": 0,
+        "hotel_address": 0,
+        "user_rating": 0,
+        "review_count": 0,
+        "property_type": 0,
+        "actual_address": 0,
+        "actual_city": 0,
+        "actual_prefecture": 0,
+        "actual_postal_code": 0,
+        "actual_latitude": 0,
+        "actual_longitude": 0,
+        "actual_phone": 0,
+        "actual_star_rating": 0,
+        "supplier_hotel_code": 0,
+        "rtx_code": 0,
+        "agoda_code": 0,
+        "expedia_code": 0,
+        "top_selling_rank": 0,
+        "source_last_mapped_at": 0,
+        "actual_data_sources": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {
+        "source_last_mapped_at": {
+          "nonblank": 448,
+          "failures": 0,
+          "examples": []
+        }
+      },
+      "numeric_ranges": {
+        "grade": {
+          "min": 3,
+          "max": 5
+        },
+        "user_rating": {
+          "min": 7.1,
+          "max": 9.8
+        },
+        "review_count": {
+          "min": 80,
+          "max": 4977
+        },
+        "actual_latitude": {
+          "min": 33.52091799292013,
+          "max": 43.694031
+        },
+        "actual_longitude": {
+          "min": 130.3587248,
+          "max": 142.5153712
+        },
+        "actual_star_rating": {
+          "min": 1.0,
+          "max": 5.0
+        },
+        "top_selling_rank": {
+          "min": 1,
+          "max": 2924
+        }
+      }
+    },
+    "room": {
+      "row_count": 3000,
+      "expected": 3000,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "room_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "hotel_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "guest_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "room_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "room_options",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "pay_later_flag",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "free_cancel_flag",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "room_price",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "room_type",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "room_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_room_hotel_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "hotel_id"
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_room_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "room_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "room_id": 0,
+        "hotel_id": 0,
+        "guest_count": 0,
+        "room_count": 0,
+        "room_options": 0,
+        "pay_later_flag": 0,
+        "free_cancel_flag": 0,
+        "room_price": 0,
+        "room_type": 0,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "room_id": 0,
+        "hotel_id": 0,
+        "guest_count": 0,
+        "room_count": 0,
+        "room_options": 0,
+        "pay_later_flag": 0,
+        "free_cancel_flag": 0,
+        "room_price": 0,
+        "room_type": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {},
+      "numeric_ranges": {
+        "guest_count": {
+          "min": 2,
+          "max": 4
+        },
+        "room_count": {
+          "min": 1,
+          "max": 4
+        },
+        "pay_later_flag": {
+          "min": 0,
+          "max": 1
+        },
+        "free_cancel_flag": {
+          "min": 0,
+          "max": 1
+        },
+        "room_price": {
+          "min": 70000,
+          "max": 355000
+        }
+      }
+    },
+    "search": {
+      "row_count": 296,
+      "expected": 296,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "search_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "session_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "search_time",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "query_text",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "checkin_date",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "checkout_date",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "total_result_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "sort_option",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "guest_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "destination",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "search_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_search_search_time",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "search_time"
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "idx_search_session_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "session_id"
+          ]
+        },
+        {
+          "seq": 2,
+          "name": "sqlite_autoindex_search_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "search_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "search_id": 0,
+        "session_id": 0,
+        "search_time": 0,
+        "query_text": 108,
+        "checkin_date": 0,
+        "checkout_date": 0,
+        "total_result_count": 0,
+        "sort_option": 0,
+        "guest_count": 0,
+        "destination": 45,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "search_id": 0,
+        "session_id": 0,
+        "search_time": 0,
+        "query_text": 0,
+        "checkin_date": 0,
+        "checkout_date": 0,
+        "total_result_count": 0,
+        "sort_option": 0,
+        "guest_count": 0,
+        "destination": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {
+        "search_time": {
+          "nonblank": 296,
+          "failures": 0,
+          "examples": []
+        },
+        "checkin_date": {
+          "nonblank": 296,
+          "failures": 0,
+          "examples": []
+        },
+        "checkout_date": {
+          "nonblank": 296,
+          "failures": 0,
+          "examples": []
+        }
+      },
+      "numeric_ranges": {
+        "total_result_count": {
+          "min": 0,
+          "max": 1000
+        },
+        "guest_count": {
+          "min": 1,
+          "max": 5
+        }
+      }
+    },
+    "search_filter": {
+      "row_count": 296,
+      "expected": 296,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "search_filter_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "search_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "property_type",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "property_grade",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "user_rating_min",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "price",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "amenity_count",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "region",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "search_filter_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_search_filter_search_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "search_id"
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_search_filter_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "search_filter_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "search_filter_id": 0,
+        "search_id": 0,
+        "property_type": 296,
+        "property_grade": 296,
+        "user_rating_min": 144,
+        "price": 150,
+        "amenity_count": 0,
+        "region": 45,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "search_filter_id": 0,
+        "search_id": 0,
+        "property_type": 0,
+        "property_grade": 0,
+        "user_rating_min": 0,
+        "price": 0,
+        "amenity_count": 0,
+        "region": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {},
+      "numeric_ranges": {
+        "property_grade": {
+          "min": null,
+          "max": null
+        },
+        "user_rating_min": {
+          "min": 7.0,
+          "max": 9.0
+        },
+        "price": {
+          "min": 50000,
+          "max": 500000
+        },
+        "amenity_count": {
+          "min": 0,
+          "max": 14
+        }
+      }
+    },
+    "search_result": {
+      "row_count": 8555,
+      "expected": 8555,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "search_result_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "search_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "hotel_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "room_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "result_score",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "result_rank",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "price_rank",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "search_result_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_search_result_room_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "room_id"
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "idx_search_result_hotel_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "hotel_id"
+          ]
+        },
+        {
+          "seq": 2,
+          "name": "idx_search_result_search_id",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            "search_id"
+          ]
+        },
+        {
+          "seq": 3,
+          "name": "sqlite_autoindex_search_result_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "search_result_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "search_result_id": 0,
+        "search_id": 0,
+        "hotel_id": 0,
+        "room_id": 0,
+        "result_score": 0,
+        "result_rank": 0,
+        "price_rank": 0,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "search_result_id": 0,
+        "search_id": 0,
+        "hotel_id": 0,
+        "room_id": 0,
+        "result_score": 0,
+        "result_rank": 0,
+        "price_rank": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {},
+      "numeric_ranges": {
+        "result_score": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "result_rank": {
+          "min": 1,
+          "max": 1000
+        },
+        "price_rank": {
+          "min": 1,
+          "max": 1000
+        }
+      }
+    },
+    "user": {
+      "row_count": 89,
+      "expected": 89,
+      "row_count_match": true,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "user_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "user_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "age_group",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "email",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "signup_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "data_origin",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "pk": [
+        "user_id"
+      ],
+      "pk_duplicate_groups": 0,
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_user_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            "user_id"
+          ]
+        }
+      ],
+      "foreign_keys": [],
+      "nulls": {
+        "user_id": 0,
+        "user_name": 0,
+        "age_group": 48,
+        "email": 0,
+        "signup_at": 0,
+        "data_origin": 0
+      },
+      "blank_strings": {
+        "user_id": 0,
+        "user_name": 0,
+        "age_group": 0,
+        "email": 48,
+        "signup_at": 0,
+        "data_origin": 0
+      },
+      "full_row_duplicate_groups": 0,
+      "date_parsing": {
+        "signup_at": {
+          "nonblank": 89,
+          "failures": 0,
+          "examples": []
+        }
+      },
+      "numeric_ranges": {}
+    }
+  },
+  "checks": {
+    "search_without_filter": {
+      "count": 0
+    },
+    "filter_without_search": {
+      "count": 0
+    },
+    "duplicate_filter_per_search": {
+      "count": 0
+    },
+    "result_count_delta": {
+      "count": 0
+    },
+    "duplicate_search_hotel": {
+      "count": 0
+    },
+    "duplicate_search_rank": {
+      "count": 0
+    },
+    "result_room_hotel_mismatch": {
+      "count": 0
+    },
+    "search_date_reversal": {
+      "count": 9,
+      "examples": [
+        {
+          "search_id": "Q0CqLhuf7C",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "Q333t6naRT",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "Q3Hfff0KOt",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "QDX2vny39Z",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "QN1X76RVBO",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "QX121uaX47",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "QYMZRtxiN1",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "QZ0FLsEEjB",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        },
+        {
+          "search_id": "QdPLnzMcro",
+          "checkin_date": "2026-10-03",
+          "checkout_date": "2026-09-17"
+        }
+      ]
+    },
+    "booking_date_reversal": {
+      "count": 0
+    },
+    "booking_room_hotel_mismatch": {
+      "count": 2,
+      "examples": [
+        {
+          "booking_id": "B369bYIG26",
+          "booking_hotel_id": "H0084",
+          "room_id": "R0196_1",
+          "room_hotel_id": "H0196"
+        },
+        {
+          "booking_id": "B4nGXKXBqN",
+          "booking_hotel_id": "H0084",
+          "room_id": "R0196_1",
+          "room_hotel_id": "H0196"
+        }
+      ]
+    },
+    "clicked_hotel_not_in_result": {
+      "count": 2,
+      "examples": [
+        {
+          "event_id": "EUDMKVOFRk",
+          "search_id": "QgOAz8QOQt",
+          "hotel_id": "H0022",
+          "event_at": "2026-08-30 00:55:32 KST"
+        },
+        {
+          "event_id": "EglOupSyiI",
+          "search_id": "QgOAz8QOQt",
+          "hotel_id": "H0022",
+          "event_at": "2026-08-30 00:55:41 KST"
+        }
+      ]
+    },
+    "confirmed_room_overlap_review": {
+      "count": 8
+    },
+    "orphan_keys": [
+      {
+        "child": "booking",
+        "column": "user_id",
+        "parent": "user",
+        "count": 0
+      },
+      {
+        "child": "booking",
+        "column": "hotel_id",
+        "parent": "hotel",
+        "count": 0
+      },
+      {
+        "child": "booking",
+        "column": "room_id",
+        "parent": "room",
+        "count": 0
+      },
+      {
+        "child": "event",
+        "column": "hotel_id",
+        "parent": "hotel",
+        "count": 0
+      },
+      {
+        "child": "event",
+        "column": "search_filter_id",
+        "parent": "search_filter",
+        "count": 0
+      },
+      {
+        "child": "event",
+        "column": "search_id",
+        "parent": "search",
+        "count": 0
+      },
+      {
+        "child": "event",
+        "column": "user_id",
+        "parent": "user",
+        "count": 0
+      },
+      {
+        "child": "room",
+        "column": "hotel_id",
+        "parent": "hotel",
+        "count": 0
+      },
+      {
+        "child": "search_filter",
+        "column": "search_id",
+        "parent": "search",
+        "count": 0
+      },
+      {
+        "child": "search_result",
+        "column": "search_id",
+        "parent": "search",
+        "count": 0
+      },
+      {
+        "child": "search_result",
+        "column": "hotel_id",
+        "parent": "hotel",
+        "count": 0
+      },
+      {
+        "child": "search_result",
+        "column": "room_id",
+        "parent": "room",
+        "count": 0
+      }
+    ],
+    "event_before_linked_search": {
+      "count": 0,
+      "examples": []
+    },
+    "event_after_own_session_end": {
+      "count": 0,
+      "examples": []
+    },
+    "cardinalities": {
+      "hotel_to_room": {
+        "min": 3,
+        "max": 3,
+        "avg": 3.0
+      },
+      "search_to_result": {
+        "min": 0,
+        "max": 1000,
+        "avg": 28.902027027027028
+      },
+      "search_to_event": {
+        "min": 1,
+        "max": 1001,
+        "avg": 34.70945945945946
+      },
+      "user_to_event": {
+        "min": 0,
+        "max": 1774,
+        "avg": 117.21348314606742
+      },
+      "user_to_booking": {
+        "min": 0,
+        "max": 3,
+        "avg": 0.4044943820224719
+      }
+    },
+    "declared_fk_violations": []
+  },
+  "source_unchanged": true
+}

@@ -1,0 +1,373 @@
+{
+  "generated_at": "2026-09-03T14:08:13.775818+09:00",
+  "source_db": "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+  "source_fingerprint": {
+    "size_bytes": 6340608,
+    "mtime_ns": 1788401785644897400,
+    "sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571"
+  },
+  "sqlite_mode": "URI mode=ro + PRAGMA query_only=ON",
+  "reference_comparison": [
+    {
+      "metric": "searches",
+      "actual": 296,
+      "reference": 296,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "zero_transitions",
+      "actual": 140,
+      "reference": 140,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "sessions",
+      "actual": 43,
+      "reference": 43,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "segment::직접 성공",
+      "actual": 27,
+      "reference": 27,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "segment::결과 노출·미선택",
+      "actual": 10,
+      "reference": 10,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "segment::재검색 회복",
+      "actual": 4,
+      "reference": 4,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "segment::지속 실패",
+      "actual": 2,
+      "reference": 2,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "transition::동일조건 반복",
+      "actual": 53,
+      "reference": 53,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "transition::조건 완화",
+      "actual": 41,
+      "reference": 41,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "transition::검색어 수정",
+      "actual": 10,
+      "reference": 10,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "transition::지역 변경",
+      "actual": 24,
+      "reference": 24,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "transition::조건 강화",
+      "actual": 10,
+      "reference": 10,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "transition::혼합 변경",
+      "actual": 2,
+      "reference": 2,
+      "difference": 0,
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A1::amenity_count>=3",
+      "actual": [
+        120,
+        136
+      ],
+      "reference": [
+        120,
+        136
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A1::amenity_count<3",
+      "actual": [
+        27,
+        160
+      ],
+      "reference": [
+        27,
+        160
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A1::rating_set",
+      "actual": [
+        115,
+        152
+      ],
+      "reference": [
+        115,
+        152
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A1::rating_unset",
+      "actual": [
+        32,
+        144
+      ],
+      "reference": [
+        32,
+        144
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A1::price_set",
+      "actual": [
+        106,
+        146
+      ],
+      "reference": [
+        106,
+        146
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A1::price_unset",
+      "actual": [
+        41,
+        150
+      ],
+      "reference": [
+        41,
+        150
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A2_region::Tokyo",
+      "actual": [
+        59,
+        118
+      ],
+      "reference": [
+        59,
+        118
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A2_region::Osaka",
+      "actual": [
+        49,
+        80
+      ],
+      "reference": [
+        49,
+        80
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A2_region::Kyoto",
+      "actual": [
+        6,
+        17
+      ],
+      "reference": [
+        6,
+        17
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A2_region::Sapporo",
+      "actual": [
+        3,
+        21
+      ],
+      "reference": [
+        3,
+        21
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A2_region::Fukuoka",
+      "actual": [
+        3,
+        15
+      ],
+      "reference": [
+        3,
+        15
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "A2_region::UNKNOWN",
+      "actual": [
+        27,
+        45
+      ],
+      "reference": [
+        27,
+        45
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "B1::zero",
+      "actual": [
+        140,
+        147
+      ],
+      "reference": [
+        140,
+        147
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "B1::positive",
+      "actual": [
+        113,
+        149
+      ],
+      "reference": [
+        113,
+        149
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "B3::immediate",
+      "actual": [
+        24,
+        140
+      ],
+      "reference": [
+        24,
+        140
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    },
+    {
+      "metric": "B3::final",
+      "actual": [
+        21,
+        28
+      ],
+      "reference": [
+        21,
+        28
+      ],
+      "difference": [
+        0,
+        0
+      ],
+      "diagnosis": "match"
+    }
+  ],
+  "reference_mismatches": [],
+  "analysis_units": {
+    "search": 296,
+    "zero_transition": 140,
+    "session": 43
+  },
+  "a3_excluded": true,
+  "blank_query_as_typo": false,
+  "booking_as_core_conversion": false,
+  "statistical_tests": [
+    "Fisher exact two-sided",
+    "Mann–Whitney U two-sided"
+  ],
+  "synthetic_data_generated": false
+}

@@ -1,0 +1,17 @@
+﻿metric,group,analysis_unit,numerator,denominator,rate,n,test,statistic,odds_ratio,ci_95_low,ci_95_high,p_value,interpretation,limitation
+search_count,,search,,,,296.0,,,,,,,원본 검색 행 수,
+session_count,,session,,,,43.0,,,,,,,세션 분모,
+result_count_min,,search,,,,,,0.0,,,,,,
+result_count_q1,,search,,,,,,0.0,,,,,,
+result_count_median,,search,,,,,,1.0,,,,,,
+result_count_mean,,search,,,,,,28.902027027027028,,,,,,
+result_count_q3,,search,,,,,,20.0,,,,,,
+result_count_max,,search,,,,,,1000.0,,,,,,
+zero_result_rate,,search,147.0,296.0,0.4966216216216216,296.0,,,,,,,,
+followup_rate_after_zero,,search,140.0,147.0,0.9523809523809523,147.0,,,,,,,,
+followup_rate_after_nonzero,,search,113.0,149.0,0.7583892617449665,149.0,,,,,,,,
+immediate_recovery_rate,,zero search with next search,24.0,140.0,0.17142857142857143,140.0,,,,,,,,
+session_final_recovery_rate,,session experiencing any zero result,21.0,28.0,0.75,28.0,,,,,,,,
+hotel_click_detail_entry_rate_all_searches,,search,45.0,296.0,0.15202702702702703,296.0,,,,,,,,hotel_click만 KPI로 사용; hotel_detail_view는 중복 KPI로 사용하지 않음
+hotel_click_detail_entry_rate_positive_result_searches,,positive-result search,45.0,149.0,0.30201342281879195,149.0,,,,,,,,노출 결과가 있는 검색만 분모; 미노출 클릭 이슈는 품질경고로 분리
+booking_room_hotel_mismatch,,booking,2.0,36.0,,36.0,,,,,,,참고·무결성 점검만 수행,BOOKING을 핵심 예약 전환율로 사용하지 않음

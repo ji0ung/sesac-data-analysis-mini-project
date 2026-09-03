@@ -1,0 +1,3 @@
+﻿metric,group,analysis_unit,numerator,denominator,rate,n,test,statistic,odds_ratio,ci_95_low,ci_95_high,p_value,interpretation,limitation
+immediate_followup_search_rate,zero_result,search,140,147,0.9523809523809523,147,Fisher exact (two-sided),6.371681415929204,6.371681415929204,2.732278365184569,14.85878034369134,1.808950691723377e-06,B1 채택: 0건 여부와 바로 다음 검색 존재의 관련,관찰 관련이며 인과효과로 단정하지 않음
+immediate_followup_search_rate,positive_result,search,113,149,0.7583892617449665,149,Fisher exact (two-sided),6.371681415929204,6.371681415929204,2.732278365184569,14.85878034369134,1.808950691723377e-06,B1 채택: 0건 여부와 바로 다음 검색 존재의 관련,관찰 관련이며 인과효과로 단정하지 않음

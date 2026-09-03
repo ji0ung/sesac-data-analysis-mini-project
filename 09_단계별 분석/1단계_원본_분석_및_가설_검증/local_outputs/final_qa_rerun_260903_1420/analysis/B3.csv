@@ -1,0 +1,3 @@
+﻿metric,group,analysis_unit,numerator,denominator,rate,n,test,statistic,odds_ratio,ci_95_low,ci_95_high,p_value,interpretation,limitation
+immediate_recovery,,zero search with immediate next search,24,140,0.17142857142857143,140,,,,,,,B3 즉시 회복,분모는 0건→바로 다음 검색 전이
+session_final_recovery,,session experiencing any zero result,21,28,0.75,28,,,,,,,B3 세션 최종 회복,분모는 0건을 1회 이상 경험한 세션; 즉시 회복과 다른 분모

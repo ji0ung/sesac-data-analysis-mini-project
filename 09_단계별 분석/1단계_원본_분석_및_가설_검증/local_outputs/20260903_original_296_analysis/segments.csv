@@ -1,0 +1,5 @@
+﻿metric,group,analysis_unit,numerator,denominator,rate,n,test,statistic,odds_ratio,ci_95_low,ci_95_high,p_value,interpretation,limitation
+session_result_segment,직접 성공,session,27,43,0.627906976744186,27,,,,,,,상호배타 4개 결과 세그먼트,비율 분모 n=43
+session_result_segment,결과 노출·미선택,session,10,43,0.23255813953488372,10,,,,,,,상호배타 4개 결과 세그먼트,비율 분모 n=43
+session_result_segment,재검색 회복,session,4,43,0.09302325581395349,4,,,,,,,상호배타 4개 결과 세그먼트,비율 분모 n=43
+session_result_segment,지속 실패,session,2,43,0.046511627906976744,2,,,,,,,상호배타 4개 결과 세그먼트,비율 분모 n=43

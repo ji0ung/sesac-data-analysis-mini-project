@@ -1,0 +1,22 @@
+﻿check_name,actual,expected,passed,severity
+search_base_rows,296,296,True,ERROR
+search_filter_1_to_1,296,296,True,ERROR
+event_search_flags_rows,296,296,True,ERROR
+ordered_searches_rows,296,296,True,ERROR
+zero_transitions_rows,140,140,True,ERROR
+session_summary_rows,43,43,True,ERROR
+session_segments_rows,43,43,True,ERROR
+segments_sum,43,43,True,ERROR
+segment_labels_count,4,4,True,ERROR
+transition_type::동일조건 반복,53,53,True,ERROR
+transition_type::조건 완화,41,41,True,ERROR
+transition_type::검색어 수정,10,10,True,ERROR
+transition_type::지역 변경,24,24,True,ERROR
+transition_type::조건 강화,10,10,True,ERROR
+transition_type::혼합 변경,2,2,True,ERROR
+hotel_impression_count,8555,8555,True,ERROR
+hotel_click_detail_distinct_key_count,67,67,True,ERROR
+hotel_click_detail_key_symmetric_difference,0,0,True,ERROR
+search_date_reversals,9,0,False,WARNING
+click_hotel_outside_results,2,0,False,WARNING
+booking_room_hotel_mismatch,2,0,False,WARNING

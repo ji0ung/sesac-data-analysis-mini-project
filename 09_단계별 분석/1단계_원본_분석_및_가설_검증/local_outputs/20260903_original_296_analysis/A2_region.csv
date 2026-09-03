@@ -1,0 +1,7 @@
+﻿metric,group,analysis_unit,numerator,denominator,rate,n,test,statistic,odds_ratio,ci_95_low,ci_95_high,p_value,interpretation,limitation
+zero_result_rate_by_region,Tokyo,search,59,118,0.5,118,,,,,,,기술통계,지역×의도 희소 셀은 우열·인과 해석 금지
+zero_result_rate_by_region,Osaka,search,49,80,0.6125,80,,,,,,,기술통계,지역×의도 희소 셀은 우열·인과 해석 금지
+zero_result_rate_by_region,Kyoto,search,6,17,0.35294117647058826,17,,,,,,,기술통계,지역×의도 희소 셀은 우열·인과 해석 금지
+zero_result_rate_by_region,Sapporo,search,3,21,0.14285714285714285,21,,,,,,,기술통계,지역×의도 희소 셀은 우열·인과 해석 금지
+zero_result_rate_by_region,Fukuoka,search,3,15,0.2,15,,,,,,,기술통계,지역×의도 희소 셀은 우열·인과 해석 금지
+zero_result_rate_by_region,UNKNOWN,search,27,45,0.6,45,,,,,,,기술통계,지역×의도 희소 셀은 우열·인과 해석 금지

@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-03T14:01:16.470445+09:00",
+  "source_db": "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+  "source_sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+  "source_size_bytes": 6340608,
+  "sqlite_mode": "file URI mode=ro; PRAGMA query_only=ON",
+  "analysis_scope": "original 296 descriptive marts only",
+  "denominators": {
+    "search": 296,
+    "zero_transition": 140,
+    "session": 43
+  },
+  "segment_counts": {
+    "결과 노출·미선택": 10,
+    "재검색 회복": 4,
+    "지속 실패": 2,
+    "직접 성공": 27
+  },
+  "transition_counts": {
+    "검색어 수정": 10,
+    "동일조건 반복": 53,
+    "조건 강화": 10,
+    "조건 완화": 41,
+    "지역 변경": 24,
+    "혼합 변경": 2
+  },
+  "sorting": [
+    "session_id",
+    "search_time",
+    "search_id"
+  ],
+  "text_normalization": "NFKC -> trim -> casefold",
+  "pii_exported": false,
+  "statistical_tests_executed": false,
+  "synthetic_data_generated": false
+}
