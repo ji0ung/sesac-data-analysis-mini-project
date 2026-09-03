@@ -1,0 +1,69 @@
+{
+  "dataset_version": "2026-09-03_v03",
+  "timezone": "Asia/Seoul",
+  "current_location": "03_data_modeling",
+  "source_snapshot": "03_data_modeling/archive/datasets/2026-09-03_v02",
+  "source_snapshot_policy": "immutable",
+  "quality_flag_storage": "columns_embedded_in_current_csv_and_sqlite_tables",
+  "rules": [
+    {
+      "rule_id": "DQ_SEARCH_001",
+      "table": "search",
+      "grain": ["search_id"],
+      "current_file": "../search_2026-09-03_v03_비식별.csv",
+      "flag_column": "invalid_stay_date_flag",
+      "flag_domain": [0, 1],
+      "expression": "CASE WHEN checkout_date < checkin_date THEN 1 ELSE 0 END",
+      "validated_population": 296,
+      "flagged_value": 1,
+      "flagged_rows": 9,
+      "exclude_from": [
+        "stay_nights",
+        "checkout_date_metrics",
+        "stay_period_comparison",
+        "stay_date_cohorts"
+      ],
+      "retain_for": [
+        "search_time_behavior",
+        "zero_result_behavior",
+        "requery_behavior",
+        "click_or_detail_existence"
+      ],
+      "prohibited_repairs": [
+        "swap_dates",
+        "take_absolute_duration",
+        "impute_dates"
+      ]
+    },
+    {
+      "rule_id": "DQ_EVENT_001",
+      "table": "event",
+      "grain": ["event_id"],
+      "current_file": "../event_2026-09-03_v03_비식별.csv",
+      "reference_table": "search_result",
+      "flag_column": "click_in_result_flag",
+      "flag_domain_for_hotel_click": [0, 1],
+      "non_hotel_click_value": null,
+      "null_semantics": "not_applicable_for_non_hotel_click_only",
+      "expression": "CASE WHEN EXISTS search_result ON event.search_id = search_result.search_id AND event.hotel_id = search_result.hotel_id THEN 1 ELSE 0 END FOR hotel_click",
+      "validated_population": 231,
+      "flagged_value": 0,
+      "flagged_rows": 2,
+      "exclude_from": [
+        "impression_to_click_conversion",
+        "exposure_based_ctr",
+        "search_result_hotel_attribution"
+      ],
+      "retain_for": [
+        "any_click_behavior",
+        "detail_entry_existence",
+        "event_sequence_analysis"
+      ],
+      "prohibited_repairs": [
+        "rewrite_search_id",
+        "rewrite_hotel_id",
+        "insert_inferred_search_result"
+      ]
+    }
+  ]
+}
