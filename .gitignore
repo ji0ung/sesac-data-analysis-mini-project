@@ -219,9 +219,33 @@ __marimo__/
 
 # Local temporary artifacts
 /tmp/
+/로컬작업공간/
+/.artifact_work/
+/.tmp_*/
+/docx_work/
+/qa/
+/qa_hypothesis/
+/qa_plan/
 
 # Local upload staging area
 /upload/
+
+# Local datasets and generated outputs
+/datasets/
+/temporary_data/
+/outputs/
+/docs/
+/audit_after_31.ps1
+/pandas_practice.ipynb
+/search_test.db
+/travel_data_filtered_complete_2026-09-01.sqlite
+
+# Expanded Microsoft Office package artifacts
+**/[[]Content_Types].xml
+**/_rels/
+**/docProps/
+**/customXml/
+**/word/
 
 # Microsoft Office temporary lock files
 ~$*

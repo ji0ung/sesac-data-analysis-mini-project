@@ -108,7 +108,7 @@ def main():
     section(doc,'10. 해석 한계');
     for text in ['원본은 세션 43개로 작고 지역×의도 희소 셀이 있다.','typo_flag/입력완료 상태가 없어 A1의 필터 효과와 입력 품질을 분리할 수 없다. A3는 제외했다.','B2와 H3는 자기선택·탐색지속성의 교란 가능성이 있다.','hotel_click과 hotel_detail_view는 동반 로그로 보고 중복 KPI로 사용하지 않았다.','BOOKING 36건은 참고·무결성 점검용이며 실제 예약 전환율로 확대 해석하지 않았다.']: doc.add_paragraph(text,style='List Bullet')
     section(doc,'11. 2단계 진입 판단','조건부 진입이다. 원본 관찰 결과와 품질 이슈를 기준선으로 동결하고, 후속 단계에서는 관찰값과 가정을 물리적·표시상 분리해야 한다. 1,000명은 구조·논리 검증 단계, 10,000명은 희소집단·시나리오 비교 단계의 명칭으로만 기록하며 이번 작업에서 생성·분석하지 않았다.')
-    section(doc,'12. 재현 방법과 산출물 목록'); doc.add_paragraph('python "1단계_원본_분석_및_가설_검증/scripts/analyze_original_296.py" --db "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite" --output-dir "1단계_원본_분석_및_가설_검증/local_outputs/20260903_original_296_analysis"',style=None); add_table(doc,['산출물','설명'],[[workbook.name,'9개 정규화 분석 시트'],[report.name,'제출·발표용 Word 보고서'],*[[p.name,f'차트 {i+1}'] for i,p in enumerate(charts)]])
+    section(doc,'12. 재현 방법과 산출물 목록'); doc.add_paragraph('python "1단계_원본_분석_및_가설_검증/scripts/analyze_original_296.py" --db "03_데이터모델링/이전버전/데이터셋/2026-09-03_v02/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite" --output-dir "1단계_원본_분석_및_가설_검증/local_outputs/20260903_original_296_analysis"',style=None); add_table(doc,['산출물','설명'],[[workbook.name,'9개 정규화 분석 시트'],[report.name,'제출·발표용 Word 보고서'],*[[p.name,f'차트 {i+1}'] for i,p in enumerate(charts)]])
     footer=sec.footer.paragraphs[0]; footer.alignment=WD_ALIGN_PARAGRAPH.CENTER; footer.add_run('일본 호텔 검색 원본 296건 분석 | 실제 관측과 후속 시나리오 계획 분리')
     doc.save(report)
     manifest={'timestamp_kst':now.isoformat(),'workbook':workbook.name,'report':report.name,'charts':[p.name for p in charts],'synthetic_generated':False}

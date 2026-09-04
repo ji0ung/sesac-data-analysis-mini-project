@@ -7,7 +7,7 @@
   },
   "file": {
     "display_name": "travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
-    "actual_path": "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+    "actual_path": "03_데이터모델링/이전버전/데이터셋/2026-09-03_v02/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
     "size_bytes": 6340608,
     "sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
     "mtime_ns": 1788401785644897400

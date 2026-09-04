@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-03T14:01:16.470445+09:00",
-  "source_db": "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+  "source_db": "03_데이터모델링/이전버전/데이터셋/2026-09-03_v02/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
   "source_sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
   "source_size_bytes": 6340608,
   "sqlite_mode": "file URI mode=ro; PRAGMA query_only=ON",

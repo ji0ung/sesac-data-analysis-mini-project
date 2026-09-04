@@ -1,6 +1,6 @@
 # 1단계 원본 분석 및 가설 검증
 
-이 폴더는 대화에서 생성한 일본 호텔 검색 원본 296건 분석의 코드·검증 자료·제출물을 한곳에 관리한다. 원본 SQLite는 이동하지 않고 저장소의 `03_data_modeling/` 위치에 보존한다.
+이 폴더는 대화에서 생성한 일본 호텔 검색 원본 296건 분석의 코드·검증 자료·제출물을 한곳에 관리한다. 원본 SQLite는 이 단계 폴더에 복제하지 않고 저장소의 `03_데이터모델링/이전버전/데이터셋/2026-09-03_v02/` 위치에 보존한다.
 
 ## 구조
 
@@ -15,7 +15,7 @@
 ## 전체 재실행
 
 ```powershell
-python "1단계_원본_분석_및_가설_검증/scripts/run_original_296_pipeline.py" --db "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite" --output-dir "1단계_원본_분석_및_가설_검증/local_outputs/rerun_NEW"
+python "1단계_원본_분석_및_가설_검증/scripts/run_original_296_pipeline.py" --db "03_데이터모델링/이전버전/데이터셋/2026-09-03_v02/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite" --output-dir "1단계_원본_분석_및_가설_검증/local_outputs/rerun_NEW"
 ```
 
 출력 폴더는 비어 있어야 하며 기존 파일은 덮어쓰지 않는다. 이 단계의 산출물에는 합성·스트레스·1,000명·10,000명 데이터가 없다.

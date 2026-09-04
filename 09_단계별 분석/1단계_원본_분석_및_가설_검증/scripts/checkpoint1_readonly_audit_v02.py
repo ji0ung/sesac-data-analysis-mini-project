@@ -10,7 +10,7 @@ from pathlib import Path
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = PACKAGE_ROOT.parent
-DB = PROJECT_ROOT / "03_data_modeling" / "travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite"
+DB = PROJECT_ROOT / "03_데이터모델링" / "이전버전" / "데이터셋" / "2026-09-03_v02" / "travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite"
 OUT = PACKAGE_ROOT / "artifacts" / "checkpoint1_readonly_audit_v02.json"
 EXPECTED = {"user": 89, "hotel": 1000, "room": 3000, "search": 296,
             "search_filter": 296, "search_result": 8555, "event": 10432, "booking": 36}

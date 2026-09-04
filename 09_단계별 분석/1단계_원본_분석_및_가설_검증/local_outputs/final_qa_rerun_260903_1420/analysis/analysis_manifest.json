@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-03T14:16:33.080146+09:00",
-  "source_db": "03_data_modeling/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+  "source_db": "03_데이터모델링/이전버전/데이터셋/2026-09-03_v02/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
   "source_fingerprint": {
     "size_bytes": 6340608,
     "mtime_ns": 1788401785644897400,
