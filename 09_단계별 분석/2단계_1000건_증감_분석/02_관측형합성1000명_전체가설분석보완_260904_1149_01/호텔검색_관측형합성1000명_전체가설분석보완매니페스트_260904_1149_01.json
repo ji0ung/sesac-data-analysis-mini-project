@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "OBSERVED_SYNTHETIC_1000_HYPOTHESIS_ANALYSIS_PACKAGE",
+  "bundle_run_id": "STAGE2_FULL_HYPOTHESIS_PACKAGE_260904_1149_01",
+  "BUNDLE_RUN_TS": "260904_1149",
+  "created_at_kst": "2026-09-04T13:17:57+09:00",
+  "parent_corrected_manifest": {
+    "role": "parent corrected manifest",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_QA교정_260903_1745_02/호텔검색_관측형합성1000명_실행묶음교정매니페스트_260903_1745_02.json",
+    "size_bytes": 9759,
+    "sha256": "af91c060a5eab8e69e3a190305c41238f6a9e53633de22b2efea6297156ed1cb"
+  },
+  "transport_normalization_addendum": {
+    "role": "transport normalization addendum",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_해시정규화보완매니페스트_260904_1149_01.json",
+    "size_bytes": 12259,
+    "sha256": "9d9a652692bb93865321f0e908e0cfead836049fa7235812c0106923bf501748"
+  },
+  "step1_context": {
+    "role": "STEP1 context",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설분석컨텍스트_260904_1149_01.json",
+    "size_bytes": 8459,
+    "sha256": "b1558b92f5dba089316dd9cae338f7b9a5a72685b878d81c9ffb15fe7f0723e9",
+    "status": "PASS"
+  },
+  "step2_code": {
+    "role": "STEP2 code",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설분석코드_260904_1149_02.py",
+    "size_bytes": 31169,
+    "sha256": "9c881ab9507f9222c99fa5cd03f76292dadbfcd95babf935d4f929bd797e1145",
+    "status": "PASS"
+  },
+  "step2_calculation_workbook": {
+    "role": "STEP2 calculation workbook",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설계산결과_260904_1149_02.xlsx",
+    "size_bytes": 40800,
+    "sha256": "efd48a3d8822d8148879ced2bfdaf01fe9b9bac0531f7e3885ff812cf4297c86",
+    "status": "PASS"
+  },
+  "step2_execution_log": {
+    "role": "STEP2 execution log",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설계산실행기록_260904_1149_02.md",
+    "size_bytes": 5331,
+    "sha256": "aa25c3950dd5298834664726fb4fc095baff28b45a9a5b4e78011a2b949e4a00",
+    "status": "PASS"
+  },
+  "step3_qa_code": {
+    "role": "STEP3 QA code",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설분석검수코드_260904_1149_02.py",
+    "size_bytes": 31375,
+    "sha256": "45b6e7aedf093b5ee3c179f944edd7e835f788997de6b455fa569429b50b9122",
+    "status": "PASS"
+  },
+  "step3_qa_workbook": {
+    "role": "STEP3 QA workbook",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설분석검수결과_260904_1149_02.xlsx",
+    "size_bytes": 74019,
+    "sha256": "220d5932fda9ae12eaa71f7f29a31cae494d319046a7476ba5cd156f710a4d2d",
+    "status": "PASS"
+  },
+  "step3_qa_log": {
+    "role": "STEP3 QA log",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설분석검수기록_260904_1149_02.md",
+    "size_bytes": 2813,
+    "sha256": "f7fa68cce318e62552d13de0dce6000f83ffc4be4afdb9415d605ea59284e88b",
+    "status": "PASS"
+  },
+  "original_database": {
+    "role": "original database",
+    "path": "travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+    "size_bytes": 6340608,
+    "sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "row_counts": {
+      "user": 89,
+      "search": 296,
+      "search_filter": 296,
+      "search_result": 8555,
+      "event": 10432,
+      "booking": 36
+    }
+  },
+  "synthetic_database": {
+    "role": "synthetic database",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite",
+    "size_bytes": 97898496,
+    "sha256": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896",
+    "row_counts": {
+      "user": 1000,
+      "search": 6900,
+      "search_filter": 6900,
+      "search_result": 198128,
+      "event": 238851,
+      "booking": 0,
+      "sessions": 1000
+    }
+  },
+  "generator_code": {
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_생성코드_260903_1606_01.py",
+    "current_raw_sha256": "23613d01960c245cf4dd360ae8138cec3da6e733d1f12dc9954efa35f996b288",
+    "lf_normalized_sha256": "b7e8cea58cc3fa653d9bcafe781a1d0be9f910cd0c5d1bc27ac04a2bddd1cf2a",
+    "parent_approved_sha256": "b7e8cea58cc3fa653d9bcafe781a1d0be9f910cd0c5d1bc27ac04a2bddd1cf2a"
+  },
+  "generator_config": {
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_생성설정_260903_1606_01.json",
+    "current_raw_sha256": "d795a96a4296b99c6ea1b12373ea55f0dff8a0af2b00ee7a6390cde5bfdd5c42",
+    "lf_normalized_sha256": "59e588293184a0a9c7c704752a72f276e1e1184660767cf77c0179fee4987512",
+    "parent_approved_sha256": "59e588293184a0a9c7c704752a72f276e1e1184660767cf77c0179fee4987512"
+  },
+  "report_workbook": {
+    "role": "report workbook",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설분석결과_260904_1149_01.xlsx",
+    "size_bytes": 39635,
+    "sha256": "82e3e8e568c41395b4752d8ff6b023899a118b3044672d5a7313a53fcd41725d"
+  },
+  "report_docx": {
+    "role": "report DOCX",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/호텔검색_관측형합성1000명_전체가설분석보고서_260904_1149_01.docx",
+    "size_bytes": 515185,
+    "sha256": "0d36ebec69ecca2f05a67a6731202f60d7bbeccc508abd0f1b1912cf983c5ba4"
+  },
+  "chart_files": [
+    {
+      "role": "report PNG",
+      "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_A1필터별결과없음률_시각화_260904_1149_01.png",
+      "size_bytes": 92727,
+      "sha256": "bccaa3dabc930638787820cff435342e71015b4c7a6cab9091c0d8e126951d4b"
+    },
+    {
+      "role": "report PNG",
+      "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_A2지역검색의도결과없음률_시각화_260904_1149_01.png",
+      "size_bytes": 154965,
+      "sha256": "377fc222b64d4e7985a085d4278f11cfb94b5a86192fce8630a5a8fdaaa1b2fa"
+    },
+    {
+      "role": "report PNG",
+      "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_B1후속검색률_시각화_260904_1149_01.png",
+      "size_bytes": 50516,
+      "sha256": "354eec92da7958c9149526cff0ab938f57788f59f457616ebefcea9e5c48f2eb"
+    },
+    {
+      "role": "report PNG",
+      "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_B3회복지표_시각화_260904_1149_01.png",
+      "size_bytes": 63849,
+      "sha256": "ebcf10964f987ecdc9e654f39c7b52b41e1cdabe976a808313feed4e50e0c71e"
+    },
+    {
+      "role": "report PNG",
+      "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_세션결과세그먼트_시각화_260904_1149_01.png",
+      "size_bytes": 57988,
+      "sha256": "1bada1dfe0c4ed6ce6ac687ef52ecc97bc7bb2ec8bfb9618cdd2273e4ef18e6d"
+    },
+    {
+      "role": "report PNG",
+      "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_H3재검색유형_시각화_260904_1149_01.png",
+      "size_bytes": 108147,
+      "sha256": "54955eeab823d5720f23bcf5c6f7a416d704b899e906f6dd27375f6fe83016b7"
+    }
+  ],
+  "packaging_execution_log": {
+    "role": "packaging execution log",
+    "path": "09_단계별 분석/2단계_1000건_증감_분석/02_관측형합성1000명_전체가설분석보완_260904_1149_01/호텔검색_관측형합성1000명_전체가설분석실행기록_260904_1149_01.md",
+    "size_bytes": 7460,
+    "sha256": "c185e01b35b74a35832c087178c8aac523ef5dd26237b8e3a9c8e085b03ec538"
+  },
+  "hypothesis_completion": {
+    "A1": "PASS",
+    "A2": "PASS",
+    "B1": "PASS",
+    "B2": "PASS",
+    "B3": "PASS",
+    "session_segments": "PASS",
+    "H3": "PASS"
+  },
+  "core_metrics": [
+    {
+      "dataset_type": "ORIGINAL_296",
+      "metric_id": "ZERO_RESULT_RATE",
+      "numerator": 147,
+      "denominator": 296,
+      "rate": 0.4966216216216216
+    },
+    {
+      "dataset_type": "ORIGINAL_296",
+      "metric_id": "ZERO_FOLLOWUP_RATE",
+      "numerator": 140,
+      "denominator": 147,
+      "rate": 0.9523809523809523
+    },
+    {
+      "dataset_type": "ORIGINAL_296",
+      "metric_id": "B3_IMMEDIATE_RECOVERY",
+      "numerator": 24,
+      "denominator": 140,
+      "rate": 0.1714285714285714
+    },
+    {
+      "dataset_type": "ORIGINAL_296",
+      "metric_id": "B3_SESSION_FINAL_RECOVERY",
+      "numerator": 21,
+      "denominator": 28,
+      "rate": 0.75
+    },
+    {
+      "dataset_type": "ORIGINAL_296",
+      "metric_id": "SEARCH_HOTEL_CLICK_RATE",
+      "numerator": 45,
+      "denominator": 296,
+      "rate": 0.152027027027027
+    },
+    {
+      "dataset_type": "ORIGINAL_296",
+      "metric_id": "DIAG_FIRST_SEARCH_ZERO_RECOVERY",
+      "numerator": 4,
+      "denominator": 6,
+      "rate": 0.6666666666666666
+    },
+    {
+      "dataset_type": "S0_1000",
+      "metric_id": "ZERO_RESULT_RATE",
+      "numerator": 3434,
+      "denominator": 6900,
+      "rate": 0.4976811594202898
+    },
+    {
+      "dataset_type": "S0_1000",
+      "metric_id": "ZERO_FOLLOWUP_RATE",
+      "numerator": 3271,
+      "denominator": 3434,
+      "rate": 0.9525334886429819
+    },
+    {
+      "dataset_type": "S0_1000",
+      "metric_id": "B3_IMMEDIATE_RECOVERY",
+      "numerator": 558,
+      "denominator": 3271,
+      "rate": 0.1705900336288597
+    },
+    {
+      "dataset_type": "S0_1000",
+      "metric_id": "B3_SESSION_FINAL_RECOVERY",
+      "numerator": 488,
+      "denominator": 651,
+      "rate": 0.7496159754224271
+    },
+    {
+      "dataset_type": "S0_1000",
+      "metric_id": "SEARCH_HOTEL_CLICK_RATE",
+      "numerator": 1052,
+      "denominator": 6900,
+      "rate": 0.152463768115942
+    },
+    {
+      "dataset_type": "S0_1000",
+      "metric_id": "DIAG_FIRST_SEARCH_ZERO_RECOVERY",
+      "numerator": 92,
+      "denominator": 139,
+      "rate": 0.6618705035971223
+    }
+  ],
+  "B3_definition_separation": true,
+  "calculation_mismatch_count": 0,
+  "duplicate_key_count": 0,
+  "missing_aggregate_row_count": 0,
+  "step2_assertion_count": 288,
+  "step2_assertion_pass_count": 288,
+  "deterministic_trace_count": 44,
+  "deterministic_trace_scope": "AGGREGATE_CONFIRMED",
+  "document_visual_qa": "STRUCTURAL_ONLY",
+  "known_limitations": [
+    "원본 296검색·43세션의 탐색적 분석",
+    "합성 결과·p값은 모형 내부 진단",
+    "반복검색 세션 내 상관에 따른 Fisher 독립성 한계",
+    "A1 입력 상태 구분 불가",
+    "A2 희소 셀 기술통계",
+    "B2 탐색지속성 교란 가능성",
+    "STEP2 행 단위 분류 미보존; AGGREGATE_CONFIRMED",
+    "A3·BOOKING 성과 KPI 제외",
+    "숙박일 역전 보정은 config 문구와 달리 실제 코드에서 원본 전체 정상 숙박기간 풀을 사용함"
+  ],
+  "forbidden_operations_not_run": [
+    "generator execution",
+    "S0 regeneration",
+    "10000 generation",
+    "STRESS",
+    "S1-S3",
+    "OVERSAMPLED",
+    "SX/A3",
+    "BOOKING analysis/generation"
+  ],
+  "generator_expansion_allowed": true,
+  "analysis_pipeline_ready_for_stage3": true,
+  "final_status": "PASS",
+  "manifest_self": {
+    "sha256": null,
+    "reason": "self-referential hash omitted"
+  },
+  "manual_visual_review_required": true,
+  "document_render_attempt": {
+    "renderer": "Microsoft Word COM",
+    "status": "FAILED",
+    "error": "HRESULT 0x800A13E9",
+    "attempts": 2,
+    "structural_validation": "PASS",
+    "embedded_image_count": 6
+  },
+  "report_content_addendum": {
+    "augmentation_method_detailed": true,
+    "table_inventory_detailed": true,
+    "single_final_report_path": "09_단계별 분석/2단계_1000건_증감_분석/호텔검색_관측형합성1000명_전체가설분석보고서_260904_1149_01.docx",
+    "synthetic_database_contains_original_behavior_rows": false,
+    "reference_tables_copied_from_original": [
+      "hotel",
+      "room"
+    ],
+    "behavior_tables_synthetic_only": [
+      "user",
+      "search",
+      "search_filter",
+      "search_result",
+      "event"
+    ],
+    "booking_rows": 0,
+    "config_code_difference_disclosed": "invalid stay dates: config says same source session; implementation samples from global valid-duration pool",
+    "human_reproducible_augmentation_procedure": true,
+    "detailed_procedure_section": "19",
+    "synthetic_regeneration_performed_during_documentation": false,
+    "table_of_contents_matches_document": true,
+    "table_explanation_count": 18,
+    "reader_route_added": true,
+    "heading_hierarchy_normalized": true,
+    "top_level_toc_count": 12,
+    "content_order": "augmentation_method_first_then_S0_1000_analysis_results",
+    "chart_explanation_count": 6
+  },
+  "report_content_revision": {
+    "date_kst": "2026-09-04",
+    "reason": "가설 코드를 한국어 가설문과 구체적 분석 방법으로 풀어 쓰고 가설 검증 목차로 재구성",
+    "report_sha256": "9daf2ca44e7118a54389fa0cbc6fb85bb8b96a90a278a4efb040ef4e7a293fdc",
+    "report_size_bytes": 514742,
+    "data_or_generator_rerun": false
+  },
+  "booking_scope_revision": {
+    "date_kst": "2026-09-04",
+    "reason": "BOOKING 미증강의 가설 범위·희소성·허위 전환효과 방지 근거 명시",
+    "report_sha256": "0d36ebec69ecca2f05a67a6731202f60d7bbeccc508abd0f1b1912cf983c5ba4",
+    "data_or_generator_rerun": false
+  }
+}
