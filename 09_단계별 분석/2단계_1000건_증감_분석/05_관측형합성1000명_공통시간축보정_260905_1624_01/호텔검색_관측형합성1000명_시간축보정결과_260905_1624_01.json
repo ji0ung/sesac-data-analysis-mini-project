@@ -1,0 +1,910 @@
+{
+  "counts": {
+    "source": {
+      "user": 89,
+      "hotel": 1000,
+      "room": 3000,
+      "search": 296,
+      "search_filter": 296,
+      "search_result": 8555,
+      "event": 10432,
+      "booking": 36
+    },
+    "parent_s0": {
+      "user": 1000,
+      "hotel": 1000,
+      "room": 3000,
+      "search": 6900,
+      "search_filter": 6900,
+      "search_result": 198128,
+      "event": 238851,
+      "booking": 0
+    },
+    "new": {
+      "user": 1000,
+      "hotel": 1000,
+      "room": 3000,
+      "search": 6900,
+      "search_filter": 6900,
+      "search_result": 198128,
+      "event": 238851,
+      "booking": 0
+    }
+  },
+  "qa_checks": [
+    {
+      "check": "integrity_check",
+      "expected": "ok",
+      "actual": "ok",
+      "status": "PASS"
+    },
+    {
+      "check": "USER 1000",
+      "expected": 1000,
+      "actual": 1000,
+      "status": "PASS"
+    },
+    {
+      "check": "session 1000",
+      "expected": 1000,
+      "actual": 1000,
+      "status": "PASS"
+    },
+    {
+      "check": "SEARCH 6900",
+      "expected": 6900,
+      "actual": 6900,
+      "status": "PASS"
+    },
+    {
+      "check": "SEARCH_FILTER 6900",
+      "expected": 6900,
+      "actual": 6900,
+      "status": "PASS"
+    },
+    {
+      "check": "SEARCH_RESULT same as S0",
+      "expected": 198128,
+      "actual": 198128,
+      "status": "PASS"
+    },
+    {
+      "check": "EVENT same as S0",
+      "expected": 238851,
+      "actual": 238851,
+      "status": "PASS"
+    },
+    {
+      "check": "BOOKING 0",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "PK duplicate 0",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "FK orphan 0",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "SEARCH-FILTER 1:1 failures",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "result count mismatch",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "unexposed click/detail",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "zero-result exposure/click/detail",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "negative SEARCH gap",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "negative EVENT gap",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "detail earlier than click",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "session_end before last EVENT",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "session_end before last SEARCH",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "timestamp parse failures",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    }
+  ],
+  "pk_duplicates": [
+    {
+      "table": "user",
+      "pk_columns": "user_id",
+      "duplicate_groups": 0
+    },
+    {
+      "table": "hotel",
+      "pk_columns": "hotel_id",
+      "duplicate_groups": 0
+    },
+    {
+      "table": "room",
+      "pk_columns": "room_id",
+      "duplicate_groups": 0
+    },
+    {
+      "table": "search",
+      "pk_columns": "search_id",
+      "duplicate_groups": 0
+    },
+    {
+      "table": "search_filter",
+      "pk_columns": "search_filter_id",
+      "duplicate_groups": 0
+    },
+    {
+      "table": "search_result",
+      "pk_columns": "search_result_id",
+      "duplicate_groups": 0
+    },
+    {
+      "table": "event",
+      "pk_columns": "event_id",
+      "duplicate_groups": 0
+    },
+    {
+      "table": "booking",
+      "pk_columns": "booking_id",
+      "duplicate_groups": 0
+    }
+  ],
+  "fk_orphans": [],
+  "time_invariants": [
+    {
+      "invariant": "adjacent_search_gap",
+      "comparable_n": 5900,
+      "mismatch_n": 0,
+      "max_abs_error_seconds": 0.0
+    },
+    {
+      "invariant": "adjacent_event_gap",
+      "comparable_n": 237851,
+      "mismatch_n": 0,
+      "max_abs_error_seconds": 0.0
+    },
+    {
+      "invariant": "event_minus_linked_search",
+      "comparable_n": 236268,
+      "mismatch_n": 0,
+      "max_abs_error_seconds": 0.0
+    },
+    {
+      "invariant": "event_minus_next_search",
+      "comparable_n": 167330,
+      "mismatch_n": 0,
+      "max_abs_error_seconds": 0.0
+    },
+    {
+      "invariant": "session_end_minus_last_event",
+      "comparable_n": 1000,
+      "mismatch_n": 0,
+      "max_abs_error_seconds": 0.0
+    },
+    {
+      "invariant": "session_end_minus_last_search",
+      "comparable_n": 1000,
+      "mismatch_n": 0,
+      "max_abs_error_seconds": 0.0
+    },
+    {
+      "invariant": "detail_minus_click_same_search_hotel",
+      "comparable_n": 1543,
+      "mismatch_n": 0,
+      "max_abs_error_seconds": 0.0
+    }
+  ],
+  "cross_stream_summary": [
+    {
+      "dataset": "ORIGINAL_296",
+      "키 부족": 158,
+      "다음 검색 없음": 2982,
+      "다음 검색 이전": 7146,
+      "다음 검색 이후": 57,
+      "다음 검색과 동일 시각": 7,
+      "비교 가능": 7210,
+      "중첩": 64,
+      "중첩률": 0.008876560332871012,
+      "영향 세션 수": 3,
+      "영향 검색 수": 5,
+      "초과시간 중앙값": 20.5,
+      "Q1": 16.75,
+      "Q3": 23.0,
+      "P90": 33.0,
+      "최대": 147.0
+    },
+    {
+      "dataset": "S0_1000",
+      "키 부족": 2583,
+      "다음 검색 이후": 148505,
+      "다음 검색 없음": 68938,
+      "다음 검색 이전": 18801,
+      "다음 검색과 동일 시각": 24,
+      "비교 가능": 167330,
+      "중첩": 148529,
+      "중첩률": 0.8876411880714755,
+      "영향 세션 수": 908,
+      "영향 검색 수": 5667,
+      "초과시간 중앙값": 114.0,
+      "Q1": 89.0,
+      "Q3": 9477.0,
+      "P90": 9529.0,
+      "최대": 164049.0
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "키 부족": 2583,
+      "다음 검색 이전": 165856,
+      "다음 검색 없음": 68938,
+      "다음 검색과 동일 시각": 161,
+      "다음 검색 이후": 1313,
+      "비교 가능": 167330,
+      "중첩": 1474,
+      "중첩률": 0.008808940417139784,
+      "영향 세션 수": 70,
+      "영향 검색 수": 117,
+      "초과시간 중앙값": 21.0,
+      "Q1": 17.0,
+      "Q3": 23.0,
+      "P90": 33.0,
+      "최대": 147.0
+    }
+  ],
+  "cross_stream_by_event_type": [
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "back_to_results",
+      "다음 검색 이전": 24,
+      "다음 검색 없음": 7
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "cart_add",
+      "다음 검색 없음": 1,
+      "다음 검색 이전": 3
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "cart_booking_start",
+      "다음 검색 이후": 1
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "cart_remove",
+      "다음 검색 이후": 1
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "cart_view",
+      "다음 검색 이전": 1,
+      "다음 검색 없음": 1
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "detail_calendar_change",
+      "다음 검색 없음": 21,
+      "다음 검색 이후": 3,
+      "다음 검색 이전": 6
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "experiment_assignment",
+      "다음 검색 없음": 154,
+      "다음 검색 이전": 92,
+      "다음 검색 이후": 15
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "hotel_click",
+      "다음 검색 없음": 133,
+      "다음 검색 이전": 88,
+      "다음 검색 이후": 10
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "hotel_detail_view",
+      "다음 검색 없음": 133,
+      "다음 검색 이전": 87,
+      "다음 검색 이후": 10,
+      "다음 검색과 동일 시각": 1
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "hotel_gallery_view",
+      "다음 검색 없음": 13,
+      "다음 검색 이전": 20
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "hotel_impression",
+      "다음 검색 없음": 2253,
+      "다음 검색 이전": 6300,
+      "다음 검색과 동일 시각": 2
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "keyword_search_error_exposure",
+      "다음 검색 이전": 4,
+      "다음 검색 없음": 1
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "keyword_search_result",
+      "다음 검색 이전": 160,
+      "다음 검색 없음": 21,
+      "다음 검색과 동일 시각": 2
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "option_mismatch_exposure",
+      "다음 검색 없음": 27,
+      "다음 검색 이전": 11
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "participant_logout",
+      "키 부족": 11
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "participant_profile_submit",
+      "키 부족": 56
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "room_option_view",
+      "다음 검색 없음": 127,
+      "다음 검색 이전": 81,
+      "다음 검색 이후": 15
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "room_select",
+      "다음 검색 없음": 30,
+      "다음 검색 이전": 12,
+      "다음 검색 이후": 1
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "search_submit",
+      "다음 검색 없음": 43,
+      "다음 검색 이전": 251,
+      "다음 검색과 동일 시각": 2
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "session_end",
+      "키 부족": 2
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "session_start",
+      "키 부족": 89
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "wishlist_add",
+      "다음 검색 이전": 4,
+      "다음 검색 없음": 14,
+      "다음 검색 이후": 1
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "wishlist_remove",
+      "다음 검색 없음": 2
+    },
+    {
+      "dataset": "ORIGINAL_296",
+      "event_type": "wishlist_view",
+      "다음 검색 이전": 2,
+      "다음 검색 없음": 1
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "back_to_results",
+      "다음 검색 이전": 166,
+      "다음 검색 이후": 404,
+      "다음 검색 없음": 164
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "cart_add",
+      "다음 검색 없음": 23,
+      "다음 검색 이후": 72
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "cart_booking_start",
+      "다음 검색 이후": 24
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "cart_remove",
+      "다음 검색 이후": 24
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "cart_view",
+      "다음 검색 없음": 24,
+      "다음 검색 이후": 24
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "detail_calendar_change",
+      "다음 검색 없음": 490,
+      "다음 검색 이후": 189,
+      "다음 검색 이전": 24
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "experiment_assignment",
+      "다음 검색 없음": 3575,
+      "다음 검색 이후": 1881,
+      "다음 검색 이전": 640
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "hotel_click",
+      "다음 검색 없음": 3037,
+      "다음 검색 이후": 1692,
+      "다음 검색 이전": 616
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "hotel_detail_view",
+      "다음 검색 없음": 3037,
+      "다음 검색 이후": 1692,
+      "다음 검색 이전": 616
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "hotel_gallery_view",
+      "다음 검색 이전": 168,
+      "다음 검색 없음": 305,
+      "다음 검색 이후": 312
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "hotel_impression",
+      "다음 검색 없음": 52104,
+      "다음 검색 이후": 130607,
+      "다음 검색 이전": 15417
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "keyword_search_error_exposure",
+      "다음 검색 이후": 96,
+      "다음 검색 없음": 24
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "keyword_search_result",
+      "다음 검색 이후": 3638,
+      "다음 검색 없음": 487,
+      "다음 검색 이전": 139
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "option_mismatch_exposure",
+      "다음 검색 이후": 260,
+      "다음 검색 없음": 629
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "participant_logout",
+      "키 부족": 258
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "participant_profile_submit",
+      "키 부족": 1302
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "room_option_view",
+      "다음 검색 없음": 2946,
+      "다음 검색 이후": 1621,
+      "다음 검색 이전": 640
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "room_select",
+      "다음 검색 없음": 699,
+      "다음 검색 이후": 256,
+      "다음 검색 이전": 23,
+      "다음 검색과 동일 시각": 24
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "search_submit",
+      "다음 검색 이후": 5572,
+      "다음 검색 없음": 1000,
+      "다음 검색 이전": 328
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "session_end",
+      "키 부족": 23
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "session_start",
+      "키 부족": 1000
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "wishlist_add",
+      "다음 검색 없음": 324,
+      "다음 검색 이후": 94,
+      "다음 검색 이전": 24
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "wishlist_remove",
+      "다음 검색 없음": 46
+    },
+    {
+      "dataset": "S0_1000",
+      "event_type": "wishlist_view",
+      "다음 검색 없음": 24,
+      "다음 검색 이후": 47
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "back_to_results",
+      "다음 검색 이전": 570,
+      "다음 검색 없음": 164
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "cart_add",
+      "다음 검색 없음": 23,
+      "다음 검색 이전": 72
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "cart_booking_start",
+      "다음 검색 이후": 24
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "cart_remove",
+      "다음 검색 이후": 24
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "cart_view",
+      "다음 검색 없음": 24,
+      "다음 검색 이전": 24
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "detail_calendar_change",
+      "다음 검색 없음": 490,
+      "다음 검색 이후": 69,
+      "다음 검색 이전": 144
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "experiment_assignment",
+      "다음 검색 없음": 3575,
+      "다음 검색 이후": 345,
+      "다음 검색 이전": 2176
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "hotel_click",
+      "다음 검색 없음": 3037,
+      "다음 검색 이후": 230,
+      "다음 검색 이전": 2078
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "hotel_detail_view",
+      "다음 검색 없음": 3037,
+      "다음 검색 이후": 230,
+      "다음 검색 이전": 2055,
+      "다음 검색과 동일 시각": 23
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "hotel_gallery_view",
+      "다음 검색 이전": 480,
+      "다음 검색 없음": 305
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "hotel_impression",
+      "다음 검색 없음": 52104,
+      "다음 검색 이전": 145978,
+      "다음 검색과 동일 시각": 46
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "keyword_search_error_exposure",
+      "다음 검색 이전": 96,
+      "다음 검색 없음": 24
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "keyword_search_result",
+      "다음 검색 이전": 3731,
+      "다음 검색 없음": 487,
+      "다음 검색과 동일 시각": 46
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "option_mismatch_exposure",
+      "다음 검색 이전": 260,
+      "다음 검색 없음": 629
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "participant_logout",
+      "키 부족": 258
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "participant_profile_submit",
+      "키 부족": 1302
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "room_option_view",
+      "다음 검색 없음": 2946,
+      "다음 검색 이후": 345,
+      "다음 검색 이전": 1916
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "room_select",
+      "다음 검색 없음": 699,
+      "다음 검색 이후": 23,
+      "다음 검색 이전": 280
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "search_submit",
+      "다음 검색 이전": 5854,
+      "다음 검색 없음": 1000,
+      "다음 검색과 동일 시각": 46
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "session_end",
+      "키 부족": 23
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "session_start",
+      "키 부족": 1000
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "wishlist_add",
+      "다음 검색 없음": 324,
+      "다음 검색 이후": 23,
+      "다음 검색 이전": 95
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "wishlist_remove",
+      "다음 검색 없음": 46
+    },
+    {
+      "dataset": "S0_TIME_ALIGNED_1000",
+      "event_type": "wishlist_view",
+      "다음 검색 없음": 24,
+      "다음 검색 이전": 47
+    }
+  ],
+  "deterministic_samples": [
+    {
+      "source_event_id": "Ej3gVZzpmK",
+      "old_event_id": "SYN_E0001_00003",
+      "new_event_id": "SYN_E0001_00003",
+      "source_search_id": "QuWhrCRuRZ",
+      "old_search_id": "SYN_Q0001_001",
+      "new_search_id": "SYN_Q0001_001",
+      "event_type": "keyword_search_result",
+      "source_event_time": "2026-08-31 10:13:42 KST",
+      "old_event_time": "2027-01-01 00:05:23 KST",
+      "new_event_time": "2027-01-01 00:05:23 KST",
+      "source_next_search_time": "2026-08-31 10:14:23 KST",
+      "old_next_search_time": "2027-01-01 00:01:41 KST",
+      "new_next_search_time": "2027-01-01 00:06:04 KST",
+      "source_relative_seconds": -41.0,
+      "old_relative_seconds": 222.0,
+      "new_relative_seconds": -41.0,
+      "before_judgment": "after",
+      "after_judgment": "before",
+      "sample_type": "이전→이후 왜곡",
+      "status": "TRACED"
+    },
+    {
+      "source_event_id": "ELjxC1EgGb",
+      "old_event_id": "SYN_E0026_00029",
+      "new_event_id": "SYN_E0026_00029",
+      "source_search_id": "Q3lldU1XCw",
+      "old_search_id": "SYN_Q0026_004",
+      "new_search_id": "SYN_Q0026_004",
+      "event_type": "hotel_impression",
+      "source_event_time": "2026-08-30 15:59:53 KST",
+      "old_event_time": "2027-01-08 21:38:13 KST",
+      "new_event_time": "2027-01-08 21:38:13 KST",
+      "source_next_search_time": "2026-08-30 16:00:00 KST",
+      "old_next_search_time": "2027-01-07 00:04:04 KST",
+      "new_next_search_time": "2027-01-08 21:38:20 KST",
+      "source_relative_seconds": -7.0,
+      "old_relative_seconds": 164049.0,
+      "new_relative_seconds": -7.0,
+      "before_judgment": "after",
+      "after_judgment": "before",
+      "sample_type": "최대 초과",
+      "status": "TRACED"
+    },
+    {
+      "source_event_id": "EBCtnzol8S",
+      "old_event_id": "SYN_E0006_00017",
+      "new_event_id": "SYN_E0006_00017",
+      "source_search_id": "QHiWt5hbZX",
+      "old_search_id": "SYN_Q0006_004",
+      "new_search_id": "SYN_Q0006_004",
+      "event_type": "hotel_click",
+      "source_event_time": "2026-08-30 23:58:36 KST",
+      "old_event_time": "2027-01-02 00:03:57 KST",
+      "new_event_time": "2027-01-02 00:03:57 KST",
+      "source_next_search_time": "2026-08-30 23:58:26 KST",
+      "old_next_search_time": "2027-01-02 00:03:02 KST",
+      "new_next_search_time": "2027-01-02 00:03:47 KST",
+      "source_relative_seconds": 10.0,
+      "old_relative_seconds": 55.0,
+      "new_relative_seconds": 10.0,
+      "before_judgment": "after",
+      "after_judgment": "after",
+      "sample_type": "hotel_click",
+      "status": "TRACED"
+    },
+    {
+      "source_event_id": "ExhiuXe2e7",
+      "old_event_id": "SYN_E0006_00018",
+      "new_event_id": "SYN_E0006_00018",
+      "source_search_id": "QHiWt5hbZX",
+      "old_search_id": "SYN_Q0006_004",
+      "new_search_id": "SYN_Q0006_004",
+      "event_type": "hotel_detail_view",
+      "source_event_time": "2026-08-30 23:58:40 KST",
+      "old_event_time": "2027-01-02 00:04:01 KST",
+      "new_event_time": "2027-01-02 00:04:01 KST",
+      "source_next_search_time": "2026-08-30 23:58:26 KST",
+      "old_next_search_time": "2027-01-02 00:03:02 KST",
+      "new_next_search_time": "2027-01-02 00:03:47 KST",
+      "source_relative_seconds": 14.0,
+      "old_relative_seconds": 59.0,
+      "new_relative_seconds": 14.0,
+      "before_judgment": "after",
+      "after_judgment": "after",
+      "sample_type": "hotel_detail_view",
+      "status": "TRACED"
+    },
+    {
+      "source_event_id": "E59clSgRnL",
+      "old_event_id": "SYN_E0006_00004",
+      "new_event_id": "SYN_E0006_00004",
+      "source_search_id": "QZAYOIWt5J",
+      "old_search_id": "SYN_Q0006_001",
+      "new_search_id": "SYN_Q0006_001",
+      "event_type": "keyword_search_result",
+      "source_event_time": "2026-08-30 23:57:24 KST",
+      "old_event_time": "2027-01-02 00:02:45 KST",
+      "new_event_time": "2027-01-02 00:02:45 KST",
+      "source_next_search_time": "2026-08-30 23:57:24 KST",
+      "old_next_search_time": "2027-01-02 00:02:00 KST",
+      "new_next_search_time": "2027-01-02 00:02:45 KST",
+      "source_relative_seconds": 0.0,
+      "old_relative_seconds": 45.0,
+      "new_relative_seconds": 0.0,
+      "before_judgment": "after",
+      "after_judgment": "equal",
+      "sample_type": "동일 시각",
+      "status": "TRACED"
+    },
+    {
+      "source_event_id": "E40elM4upP",
+      "old_event_id": "SYN_E0006_00003",
+      "new_event_id": "SYN_E0006_00003",
+      "source_search_id": "QqIN8jULWE",
+      "old_search_id": "SYN_Q0006_002",
+      "new_search_id": "SYN_Q0006_002",
+      "event_type": "keyword_search_result",
+      "source_event_time": "2026-08-30 23:57:24 KST",
+      "old_event_time": "2027-01-02 00:02:45 KST",
+      "new_event_time": "2027-01-02 00:02:45 KST",
+      "source_next_search_time": "2026-08-30 23:58:22 KST",
+      "old_next_search_time": "2027-01-02 00:02:58 KST",
+      "new_next_search_time": "2027-01-02 00:03:43 KST",
+      "source_relative_seconds": -58.0,
+      "old_relative_seconds": -13.0,
+      "new_relative_seconds": -58.0,
+      "before_judgment": "before",
+      "after_judgment": "before",
+      "sample_type": "정상 보존",
+      "status": "TRACED"
+    }
+  ],
+  "step": "STEP_R1",
+  "created_at_kst": "2026-09-05T16:39:04.859586+09:00",
+  "config": {
+    "run_id": "STEP_R1_260905_1624_01",
+    "scenario_id": "S0_TIME_ALIGNED",
+    "sample_set_type": "observational",
+    "generation_version": "S0_TIME_ALIGNED_V01",
+    "parent_s0_sha256": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896",
+    "source_db_sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "time_origin_policy": "common_session_origin_min_valid_search_and_replicated_event",
+    "time_origin_reason": "검색 전 session_start를 자연스럽게 유지하면서 SEARCH와 복제 대상 EVENT의 모든 교차 스트림 상대시간을 동일 이동량으로 보존",
+    "timestamp_policy": "preserve KST text format and NULL",
+    "random_seed": 20260903,
+    "n_users": 1000,
+    "n_sessions": 1000,
+    "base_time": "2027-01-01 00:00:00 KST",
+    "source_db_relative": "../../../../travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+    "parent_s0_relative": "../02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite"
+  },
+  "input_hashes_before": {
+    "source": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "parent_s0": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896"
+  },
+  "input_hashes_after": {
+    "source": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "parent_s0": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896"
+  },
+  "inputs_immutable": true,
+  "status": "PASS"
+}

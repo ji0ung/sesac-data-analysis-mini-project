@@ -1,0 +1,17 @@
+{
+  "run_id": "STEP_R1_260905_1624_01",
+  "scenario_id": "S0_TIME_ALIGNED",
+  "sample_set_type": "observational",
+  "generation_version": "S0_TIME_ALIGNED_V01",
+  "parent_s0_sha256": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896",
+  "source_db_sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+  "time_origin_policy": "common_session_origin_min_valid_search_and_replicated_event",
+  "time_origin_reason": "검색 전 session_start를 자연스럽게 유지하면서 SEARCH와 복제 대상 EVENT의 모든 교차 스트림 상대시간을 동일 이동량으로 보존",
+  "timestamp_policy": "preserve KST text format and NULL",
+  "random_seed": 20260903,
+  "n_users": 1000,
+  "n_sessions": 1000,
+  "base_time": "2027-01-01 00:00:00 KST",
+  "source_db_relative": "../../../../travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+  "parent_s0_relative": "../02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite"
+}

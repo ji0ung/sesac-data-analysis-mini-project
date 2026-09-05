@@ -1,0 +1,88 @@
+{
+  "authority_recalculation": {
+    "high_order_original": [
+      91,
+      104,
+      0.875
+    ],
+    "high_order_approved": [
+      2125,
+      2425,
+      0.8762886597938144
+    ],
+    "high_order_difference_pp": 0.12886597938144284,
+    "bn_original": [
+      0.942203,
+      0.19171,
+      0.823106,
+      0.17378
+    ],
+    "bn_approved": [
+      0.915162,
+      0.182365,
+      0.832769,
+      0.151952
+    ],
+    "bn_leakage": [
+      0,
+      0
+    ],
+    "timing_original": {
+      "dataset_type": "ORIGINAL_296",
+      "transition_n": 140,
+      "negative_n": 0,
+      "zero_n": 1,
+      "positive_n": 139,
+      "mean_seconds": 17.72142857142857,
+      "median_seconds": 12.0,
+      "q1_seconds": 7.0,
+      "q3_seconds": 18.0,
+      "p90_seconds": 31.10000000000001,
+      "p95_seconds": 39.099999999999966,
+      "max_seconds": 249.0,
+      "lognormal_mu": 2.5071990529681103,
+      "lognormal_sigma": 0.7306089619786528,
+      "ks_statistic": 0.08234046938485295,
+      "bootstrap_p": 0.01996007984031936,
+      "status": "WARN"
+    },
+    "timing_approved": {
+      "dataset_type": "S0_TIME_ALIGNED_1000",
+      "transition_n": 3271,
+      "negative_n": 0,
+      "zero_n": 23,
+      "positive_n": 3248,
+      "mean_seconds": 17.744726383369,
+      "median_seconds": 12.0,
+      "q1_seconds": 7.0,
+      "q3_seconds": 18.0,
+      "p90_seconds": 32.0,
+      "p95_seconds": 40.0,
+      "max_seconds": 249.0,
+      "lognormal_mu": 2.5077993501054316,
+      "lognormal_sigma": 0.7309052236397657,
+      "ks_statistic": 0.08263016044164706,
+      "bootstrap_p": 0.001996007984031936,
+      "status": "WARN"
+    },
+    "cross_approved": [
+      1474,
+      167330,
+      0.008808940417139784
+    ]
+  },
+  "required_missing": [],
+  "prohibited_found": [],
+  "base_paragraphs_missing_unexpected": [],
+  "base_table_count": 19,
+  "r3a_table_count": 26,
+  "final_table_count": 26,
+  "ratio_recalculation": {
+    "91/104": true,
+    "2125/2425": true,
+    "1474/167330": true,
+    "148529/167330": true
+  },
+  "final_sha256": "d8f8fc3950f3a012b1f5b424a2f0aa9a7c1f052d160e985823dadd3e12c43c7e",
+  "final_size": 571388
+}

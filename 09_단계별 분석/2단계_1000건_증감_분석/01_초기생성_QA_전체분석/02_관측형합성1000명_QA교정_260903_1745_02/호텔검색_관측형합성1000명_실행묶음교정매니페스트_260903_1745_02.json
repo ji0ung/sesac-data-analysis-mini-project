@@ -1,0 +1,193 @@
+{
+  "stage2_bundle_run_id": "STAGE2_QA_CORRECTION_260903_1745_02",
+  "correction_version": "02",
+  "supersedes_manifest": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_실행묶음매니페스트_260903_1606_01.json",
+  "supersedes_manifest_sha256": "047a1f3236d9207c8d2fa5d00f54fa752956cd3a8a9147d328847f1744581c7f",
+  "qa_correction_reason": "B3 session_final_recovery_rate incorrectly used first-search-zero cohort (4/6); corrected to any-zero-experience cohort with later positive search",
+  "source_db_sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+  "generation_code_sha256": "b7e8cea58cc3fa653d9bcafe781a1d0be9f910cd0c5d1bc27ac04a2bddd1cf2a",
+  "config_sha256": "59e588293184a0a9c7c704752a72f276e1e1184660767cf77c0179fee4987512",
+  "synthetic_db_sha256": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896",
+  "unchanged_generation_artifacts_verified": true,
+  "G1_G5": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "corrected_core_max_abs_difference_pp": 0.1059537798668242,
+  "final_qa_status": "PASS",
+  "expansion_allowed": true,
+  "stage3_entry_allowed": true,
+  "sole_approved_manifest_for_stage3": true,
+  "approval_statement": "This correction manifest is the only approved manifest for Stage 3; the superseded manifest must not be used for Stage 3 entry.",
+  "forbidden_sets_generated": false,
+  "actual_generated_at": "2026-09-03T17:48:16+09:00",
+  "corrected_metrics": [
+    {
+      "metric": "zero_result_rate",
+      "numerator_original": 147,
+      "denominator_original": 296,
+      "rate_original": 0.4966216216216216,
+      "analysis_unit_original": "search",
+      "numerator_synthetic": 3434,
+      "denominator_synthetic": 6900,
+      "rate_synthetic": 0.49768115942028984,
+      "analysis_unit_synthetic": "search",
+      "difference_pp": 0.1059537798668242,
+      "abs_difference_pp": 0.1059537798668242,
+      "tolerance_pp": 3,
+      "pass": true
+    },
+    {
+      "metric": "followup_rate_after_zero",
+      "numerator_original": 140,
+      "denominator_original": 147,
+      "rate_original": 0.9523809523809523,
+      "analysis_unit_original": "zero-result search",
+      "numerator_synthetic": 3271,
+      "denominator_synthetic": 3434,
+      "rate_synthetic": 0.9525334886429819,
+      "analysis_unit_synthetic": "zero-result search",
+      "difference_pp": 0.015253626202960113,
+      "abs_difference_pp": 0.015253626202960113,
+      "tolerance_pp": 3,
+      "pass": true
+    },
+    {
+      "metric": "immediate_recovery_rate",
+      "numerator_original": 24,
+      "denominator_original": 140,
+      "rate_original": 0.17142857142857143,
+      "analysis_unit_original": "zero-to-next transition",
+      "numerator_synthetic": 558,
+      "denominator_synthetic": 3271,
+      "rate_synthetic": 0.1705900336288597,
+      "analysis_unit_synthetic": "zero-to-next transition",
+      "difference_pp": -0.08385377997117416,
+      "abs_difference_pp": 0.08385377997117416,
+      "tolerance_pp": 3,
+      "pass": true
+    },
+    {
+      "metric": "session_final_recovery_rate",
+      "numerator_original": 21,
+      "denominator_original": 28,
+      "rate_original": 0.75,
+      "analysis_unit_original": "session experiencing any zero result",
+      "numerator_synthetic": 488,
+      "denominator_synthetic": 651,
+      "rate_synthetic": 0.7496159754224271,
+      "analysis_unit_synthetic": "session experiencing any zero result",
+      "difference_pp": -0.038402457757291675,
+      "abs_difference_pp": 0.038402457757291675,
+      "tolerance_pp": 3,
+      "pass": true
+    },
+    {
+      "metric": "hotel_click_rate",
+      "numerator_original": 45,
+      "denominator_original": 296,
+      "rate_original": 0.15202702702702703,
+      "analysis_unit_original": "search",
+      "numerator_synthetic": 1052,
+      "denominator_synthetic": 6900,
+      "rate_synthetic": 0.15246376811594203,
+      "analysis_unit_synthetic": "search",
+      "difference_pp": 0.043674108891500474,
+      "abs_difference_pp": 0.043674108891500474,
+      "tolerance_pp": 3,
+      "pass": true
+    },
+    {
+      "metric": "first_search_zero_session_research_recovery_rate",
+      "numerator_original": 4,
+      "denominator_original": 6,
+      "rate_original": 0.6666666666666666,
+      "analysis_unit_original": "session whose first search is zero",
+      "numerator_synthetic": 92,
+      "denominator_synthetic": 139,
+      "rate_synthetic": 0.6618705035971223,
+      "analysis_unit_synthetic": "session whose first search is zero",
+      "difference_pp": -0.47961630695443347,
+      "abs_difference_pp": 0.47961630695443347,
+      "tolerance_pp": 3,
+      "pass": true
+    }
+  ],
+  "referenced_unchanged_files": [
+    {
+      "role": "source SQLite",
+      "path": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+      "size_bytes": 6340608,
+      "sha256": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571"
+    },
+    {
+      "role": "synthetic SQLite",
+      "path": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite",
+      "size_bytes": 97898496,
+      "sha256": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896"
+    },
+    {
+      "role": "generation code",
+      "path": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_생성코드_260903_1606_01.py",
+      "size_bytes": 10195,
+      "sha256": "b7e8cea58cc3fa653d9bcafe781a1d0be9f910cd0c5d1bc27ac04a2bddd1cf2a"
+    },
+    {
+      "role": "generation config",
+      "path": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_생성설정_260903_1606_01.json",
+      "size_bytes": 1174,
+      "sha256": "59e588293184a0a9c7c704752a72f276e1e1184660767cf77c0179fee4987512"
+    },
+    {
+      "role": "stage1 canonical code",
+      "path": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/01_원본분석_실행묶음_260903_1519_01/호텔검색_원본분석_재현코드_260903_1519_01.py",
+      "size_bytes": 15169,
+      "sha256": "2178b4d7d09a512f2750036ca5cfa864a6c9c8850e6abd9faf7af90ca2d64556"
+    },
+    {
+      "role": "stage1 manifest",
+      "path": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/01_원본분석_실행묶음_260903_1519_01/호텔검색_원본분석_실행묶음매니페스트_260903_1519_01.json",
+      "size_bytes": 9315,
+      "sha256": "e804dd364465d8d36cdae974bc083a8e50025dc784997672099336cf2350e1c8"
+    },
+    {
+      "role": "superseded stage2 manifest",
+      "path": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_실행묶음매니페스트_260903_1606_01.json",
+      "size_bytes": 3617,
+      "sha256": "047a1f3236d9207c8d2fa5d00f54fa752956cd3a8a9147d328847f1744581c7f"
+    }
+  ],
+  "new_artifacts": [
+    {
+      "role": "corrected QA Excel",
+      "path": "호텔검색_관측형합성1000명_QA교정결과_260903_1745_02.xlsx",
+      "size_bytes": 12124,
+      "sha256": "017ebccebfbdcef90bd3fad10db4e05d8370838662a8489d76461850a439d566"
+    },
+    {
+      "role": "corrected QA Word",
+      "path": "호텔검색_관측형합성1000명_QA교정보고서_260903_1745_02.docx",
+      "size_bytes": 37711,
+      "sha256": "ccde522907a188af23d5ff4042e4d6010a991dc12d7300e6cee92b885a918864"
+    },
+    {
+      "role": "corrected execution record",
+      "path": "호텔검색_관측형합성1000명_QA교정실행기록_260903_1745_02.md",
+      "size_bytes": 619,
+      "sha256": "eb6240e08d246d5648ecb77d59b50f54b9721daa39763c6e83b8c182f4fab731"
+    },
+    {
+      "role": "correction calculation code",
+      "path": "correct_stage2_metrics.py",
+      "size_bytes": 11254,
+      "sha256": "c7cb831b710acc9a236db998810c103a17b73e0788d82712bf89f1eefb64dfe5"
+    }
+  ],
+  "manifest_self": {
+    "sha256": null,
+    "reason": "self-referential hash omitted"
+  }
+}

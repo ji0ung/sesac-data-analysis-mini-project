@@ -1,0 +1,242 @@
+{
+  "step": "STEP3",
+  "status": "PASS",
+  "input_before": "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+  "input_after": "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+  "workbook_comparison": [
+    {
+      "table": "G3_core_metrics",
+      "old_rows": 6,
+      "new_rows": 6,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "A1_filters",
+      "old_rows": 6,
+      "new_rows": 6,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "A2_region_intent",
+      "old_rows": 30,
+      "new_rows": 30,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "B1_followup",
+      "old_rows": 2,
+      "new_rows": 2,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "B2_search_count",
+      "old_rows": 2,
+      "new_rows": 2,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "B3_recovery",
+      "old_rows": 3,
+      "new_rows": 3,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "session_segments",
+      "old_rows": 4,
+      "new_rows": 4,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "H3_transitions",
+      "old_rows": 6,
+      "new_rows": 6,
+      "mismatch_n": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "raw_contingency_tables",
+      "old_rows": 16,
+      "new_rows": 16,
+      "mismatch_n": 0,
+      "status": "PASS"
+    }
+  ],
+  "independent_recalculation": [
+    {
+      "metric": "zero_n",
+      "expected": 3434,
+      "actual": 3434,
+      "status": "PASS"
+    },
+    {
+      "metric": "search_n",
+      "expected": 6900,
+      "actual": 6900,
+      "status": "PASS"
+    },
+    {
+      "metric": "followup_n",
+      "expected": 3271,
+      "actual": 3271,
+      "status": "PASS"
+    },
+    {
+      "metric": "immediate_recovery_n",
+      "expected": 558,
+      "actual": 558,
+      "status": "PASS"
+    },
+    {
+      "metric": "final_recovery_n",
+      "expected": 488,
+      "actual": 488,
+      "status": "PASS"
+    },
+    {
+      "metric": "final_recovery_den",
+      "expected": 651,
+      "actual": 651,
+      "status": "PASS"
+    },
+    {
+      "metric": "high_zero_n",
+      "expected": 2125,
+      "actual": 2125,
+      "status": "PASS"
+    },
+    {
+      "metric": "high_n",
+      "expected": 2425,
+      "actual": 2425,
+      "status": "PASS"
+    },
+    {
+      "metric": "직접 성공",
+      "expected": 630,
+      "actual": 630,
+      "status": "PASS"
+    },
+    {
+      "metric": "결과 노출·미선택",
+      "expected": 231,
+      "actual": 231,
+      "status": "PASS"
+    },
+    {
+      "metric": "재검색 회복",
+      "expected": 92,
+      "actual": 92,
+      "status": "PASS"
+    },
+    {
+      "metric": "지속 실패",
+      "expected": 47,
+      "actual": 47,
+      "status": "PASS"
+    }
+  ],
+  "supplemental_checks": [
+    {
+      "check": "BN S0 equals approved R2",
+      "mismatch_n": 0
+    },
+    {
+      "check": "time invariant mismatches",
+      "mismatch_n": 0
+    },
+    {
+      "check": "cross overlap",
+      "mismatch_n": 0
+    }
+  ],
+  "deterministic_trace_n": 44,
+  "deterministic_trace_fail_n": 0,
+  "integrity": [
+    {
+      "check": "integrity_check",
+      "expected": "ok",
+      "actual": "ok",
+      "status": "PASS"
+    },
+    {
+      "check": "booking_0",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "filter_1to1_fail",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "result_count_fail",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "user_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "hotel_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "room_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_result_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking_pk_duplicate",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "fk_orphan",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    }
+  ],
+  "total_mismatch_n": 0
+}

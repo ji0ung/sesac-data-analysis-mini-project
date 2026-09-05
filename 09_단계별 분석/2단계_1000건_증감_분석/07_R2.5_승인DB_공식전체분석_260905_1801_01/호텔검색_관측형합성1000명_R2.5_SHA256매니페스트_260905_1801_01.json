@@ -1,0 +1,121 @@
+﻿{
+    "step":  "STEP_R2.5",
+    "status":  "PASS",
+    "created_at_kst":  "2026-09-05T18:08:14+09:00",
+    "final_analysis_input":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\06_STEP_R2_독립검증_260905_1650_01\\호텔검색_관측형합성1000명_분석용lineage제거정제DB_260905_1650_01.sqlite",
+    "inputs":  [
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+                       "sha256":  "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+                       "size_bytes":  6340608
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite",
+                       "sha256":  "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896",
+                       "size_bytes":  97898496
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\05_관측형합성1000명_공통시간축보정_260905_1624_01\\호텔검색_관측형합성1000명_시간축보정데이터_260905_1624_01.sqlite",
+                       "sha256":  "6c96e5682a996b0c8e6de03a4037b6cd757e72a76e51da009251e451cd1e6467",
+                       "size_bytes":  154738688
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\06_STEP_R2_독립검증_260905_1650_01\\호텔검색_관측형합성1000명_분석용lineage제거정제DB_260905_1650_01.sqlite",
+                       "sha256":  "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+                       "size_bytes":  154738688
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\05_관측형합성1000명_공통시간축보정_260905_1624_01\\호텔검색_관측형합성1000명_시간축보정생성코드_260905_1624_01.py",
+                       "sha256":  "37eae5256ad719d45ab3288b4b282815e1e5564b8bc7cbc798470915ceb86def",
+                       "size_bytes":  32661
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\05_관측형합성1000명_공통시간축보정_260905_1624_01\\호텔검색_관측형합성1000명_보정설정_260905_1624_01.json",
+                       "sha256":  "2767493b55867fcfd0f7e79238ecf6c612636b681585b23a05261a7bfc659e18",
+                       "size_bytes":  1041
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\06_STEP_R2_독립검증_260905_1650_01\\호텔검색_관측형합성1000명_STEP_R2독립검증코드_260905_1650_01.py",
+                       "sha256":  "cdd0501f26230efbe5deab67f142ecd6d79bd618384fcf37afbd7bd9a529a218",
+                       "size_bytes":  24187
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\06_STEP_R2_독립검증_260905_1650_01\\호텔검색_관측형합성1000명_STEP_R2독립검증결과_260905_1650_01.json",
+                       "sha256":  "1f5d5b9cc6ec6d281e24e6c32aae3c66197bb19284d9d334459d296c613349da",
+                       "size_bytes":  331801
+                   },
+                   {
+                       "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\06_STEP_R2_독립검증_260905_1650_01\\호텔검색_관측형합성1000명_STEP_R2독립판단로그_260905_1650_01.md",
+                       "sha256":  "786c6f3ef66aa6e34c2d7deafec37693c674cfd6ee4566950ad6814f2a1ba9f7",
+                       "size_bytes":  338
+                   }
+               ],
+    "outputs":  [
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_R2.5실행로그_260905_1801_01.md",
+                        "sha256":  "95cf983b8c84ab7f89e9fc313a6f7813b3e0599157da1167e3d1353877ad3a83",
+                        "size_bytes":  464
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_R2.5판단로그_260905_1801_01.md",
+                        "sha256":  "651e0ae2b23f7fc0b47f45fb6708d7572666cfb3a48cad191f2236fa70276c3f",
+                        "size_bytes":  604
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_STEP3결정적표본추적표_260905_1801_01.xlsx",
+                        "sha256":  "6bcb77e28501c0c0ab258401df6e8b2af30ff53a543cf26def71b4e0f558c0f1",
+                        "size_bytes":  8606
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_STEP3독립검수결과_260905_1801_01.json",
+                        "sha256":  "e1714206510fec5f188b9d8b4399ee2dd8f156e0c4efe408522c054bbeb313e2",
+                        "size_bytes":  4937
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_STEP3독립검수결과_260905_1801_01.xlsx",
+                        "sha256":  "a2104cc4cc6315cc4383da1f180e8494c150c08e44f7e0939b746e92976eb101",
+                        "size_bytes":  10633
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_STEP3독립검수코드_260905_1801_01.py",
+                        "sha256":  "31ff39944ecc42790d270fcfc459186f22ed19e902b9a24de987eb54be6235c4",
+                        "size_bytes":  8473
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_고차결합BN시각화_260905_1801_01.png",
+                        "sha256":  "617d22f506f748368685ee6238278f5f0d343d86f37477989bc5936da8a269e1",
+                        "size_bytes":  33717
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_수정승인DB전체분석결과_260905_1801_01.json",
+                        "sha256":  "c3c77aece865fc0e955779d6e5f67d5a17644070c4f4cba638ee5c84ea8932f3",
+                        "size_bytes":  67125
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_수정승인DB전체분석결과_260905_1801_01.xlsx",
+                        "sha256":  "192841580da144af99445dd04a78c37aad0329af0f9ebbb7adb55fe43cd88faf",
+                        "size_bytes":  26763
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_수정승인DB전체분석코드_260905_1801_01.py",
+                        "sha256":  "9423c349ec858523d7cd688b498ee45f58750fd432184c1fc536af879fbdfc62",
+                        "size_bytes":  10098
+                    },
+                    {
+                        "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\07_R2.5_승인DB_공식전체분석_260905_1801_01\\호텔검색_관측형합성1000명_시간간격교차스트림시각화_260905_1801_01.png",
+                        "sha256":  "a6e09cf1bd2fbc1cb7e2315d17878f86852fc2ec17a64aa0ff76b40c042c90bd",
+                        "size_bytes":  30827
+                    }
+                ],
+    "step_status":  {
+                        "STEP2":  "PASS",
+                        "STEP1":  "PASS",
+                        "STEP3":  "PASS"
+                    },
+    "protection":  {
+                       "approved_db_before":  "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+                       "immutable":  true,
+                       "sqlite":  "URI mode=ro; PRAGMA query_only=ON",
+                       "approved_db_after":  "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04"
+                   }
+}

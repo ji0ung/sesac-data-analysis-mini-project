@@ -1,0 +1,319 @@
+{
+  "step": "STEP_B",
+  "status": "FAIL",
+  "started_at_kst": "2026-09-04T17:11:43.758250+09:00",
+  "finished_at_kst": "2026-09-04T17:13:46.692586+09:00",
+  "seed": 20260904,
+  "bootstrap_reps": 500,
+  "folds": 5,
+  "python": "3.13.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.2.1",
+    "pandas": "2.3.2",
+    "scipy": "1.17.1",
+    "openpyxl": "3.1.5",
+    "matplotlib": "3.10.0"
+  },
+  "sqlite_access": "URI mode=ro; PRAGMA query_only=ON",
+  "inputs_before": {
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_생성코드_260903_1606_01.py": "23613d01960c245cf4dd360ae8138cec3da6e733d1f12dc9954efa35f996b288",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_전체가설분석보완_260904_1149_01\\호텔검색_관측형합성1000명_전체가설계산결과_260904_1149_02.xlsx": "efd48a3d8822d8148879ced2bfdaf01fe9b9bac0531f7e3885ff812cf4297c86",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_전체가설분석보완_260904_1149_01\\호텔검색_관측형합성1000명_전체가설분석검수결과_260904_1149_02.xlsx": "220d5932fda9ae12eaa71f7f29a31cae494d319046a7476ba5cd156f710a4d2d"
+  },
+  "inputs_after": {
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite": "db80db7048add9c0c4cb1a985e67a77ae99bef3a30ce32bedb70cc0ee61dc896",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_생성코드_260903_1606_01.py": "23613d01960c245cf4dd360ae8138cec3da6e733d1f12dc9954efa35f996b288",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_전체가설분석보완_260904_1149_01\\호텔검색_관측형합성1000명_전체가설계산결과_260904_1149_02.xlsx": "efd48a3d8822d8148879ced2bfdaf01fe9b9bac0531f7e3885ff812cf4297c86",
+    "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_전체가설분석보완_260904_1149_01\\호텔검색_관측형합성1000명_전체가설분석검수결과_260904_1149_02.xlsx": "220d5932fda9ae12eaa71f7f29a31cae494d319046a7476ba5cd156f710a4d2d"
+  },
+  "inputs_immutable": true,
+  "analysis_definitions": [
+    {
+      "validation": "high_order",
+      "analysis_unit": "SEARCH 1 row",
+      "numerator": "total_result_count=0 searches",
+      "denominator": "searches in filter-count/combination cell",
+      "exclusion": "none; active_count>=3 defines high-order"
+    },
+    {
+      "validation": "BN",
+      "analysis_unit": "SEARCH 1 row; CV grouped by source-session template",
+      "numerator": "zero_result=1 probability scoring",
+      "denominator": "all held-out searches",
+      "exclusion": "none"
+    },
+    {
+      "validation": "timing",
+      "analysis_unit": "adjacent zero-to-next transition",
+      "numerator": "eligible zero-result current searches",
+      "denominator": "zero-result searches with immediate next search",
+      "exclusion": "no next search; log fit additionally excludes gaps<=0"
+    },
+    {
+      "validation": "mode",
+      "analysis_unit": "normalized search condition signature/session path",
+      "numerator": "frequency by signature/path",
+      "denominator": "all searches/all sessions",
+      "exclusion": "PII; unavailable room/cancel/pay fields recorded as null"
+    }
+  ],
+  "high_order": {
+    "original_n": 160,
+    "original_zero_n": 119,
+    "synthetic_n": 3741,
+    "synthetic_zero_n": 2783,
+    "max_combo_rate_difference_pp": 0.44067796610168797
+  },
+  "bn_scores": [
+    {
+      "dataset_type": "ORIGINAL_296",
+      "analysis_unit": "search; folds grouped by source-session template",
+      "model": "domain-constrained categorical Naive Bayes",
+      "dag": "region,intent,active flags,count bin -> zero_result",
+      "smoothing": "Laplace alpha=1",
+      "folds": 5,
+      "sessions": 43,
+      "cv_groups": 43,
+      "log_loss": 0.9647363690806693,
+      "brier_score": 0.2080653152617849,
+      "roc_auc": 0.8264393005524358,
+      "ece_10bin": 0.18563136622157064,
+      "log_loss_ci_low": 0.66550376867696,
+      "log_loss_ci_high": 1.3194815423011548,
+      "brier_score_ci_low": 0.14956297610522187,
+      "brier_score_ci_high": 0.2705873294144946,
+      "roc_auc_ci_low": 0.7510655033707904,
+      "roc_auc_ci_high": 0.9010146821324396
+    },
+    {
+      "dataset_type": "S0_1000",
+      "analysis_unit": "search; folds grouped by source-session template",
+      "model": "domain-constrained categorical Naive Bayes",
+      "dag": "region,intent,active flags,count bin -> zero_result",
+      "smoothing": "Laplace alpha=1",
+      "folds": 5,
+      "sessions": 1000,
+      "cv_groups": 43,
+      "log_loss": 0.9153334584288307,
+      "brier_score": 0.19274439166005528,
+      "roc_auc": 0.8382720939009485,
+      "ece_10bin": 0.17152771931260014,
+      "log_loss_ci_low": 0.6043598032877253,
+      "log_loss_ci_high": 1.2970124449254936,
+      "brier_score_ci_low": 0.13211935891768037,
+      "brier_score_ci_high": 0.2590909363417796,
+      "roc_auc_ci_low": 0.7594371946383989,
+      "roc_auc_ci_high": 0.9010965570953982
+    }
+  ],
+  "timing": [
+    {
+      "dataset_type": "ORIGINAL_296",
+      "analysis_unit": "current zero-result search with immediate next search in same session",
+      "numerator_definition": "eligible adjacent transitions",
+      "denominator_definition": "all zero-result searches with next_search_id",
+      "transition_n": 140,
+      "negative_n": 0,
+      "zero_n": 1,
+      "positive_n": 139,
+      "mean_seconds": 17.72142857142857,
+      "median_seconds": 12.0,
+      "q1_seconds": 7.0,
+      "q3_seconds": 18.0,
+      "p90_seconds": 31.10000000000001,
+      "p95_seconds": 39.099999999999966,
+      "max_seconds": 249.0,
+      "timestamp_tie_n": 1,
+      "search_time_reverse_n": 125,
+      "search_timestamp_tie_n_all_adjacent": 0,
+      "event_time_reverse_n": 2954,
+      "event_timestamp_tie_n_all_adjacent": 4429,
+      "lognormal_mu": 2.5071990529681103,
+      "lognormal_sigma": 0.7306089619786528,
+      "ks_statistic_fitted_parameters": 0.08234046938485295,
+      "ks_naive_pvalue_auxiliary": 0.2866904883038559,
+      "parametric_bootstrap_gof_pvalue": 0.01996007984031936,
+      "bootstrap_reps": 500,
+      "interpretation": "empirical source intervals preserved; not generated from lognormal"
+    },
+    {
+      "dataset_type": "S0_1000",
+      "analysis_unit": "current zero-result search with immediate next search in same session",
+      "numerator_definition": "eligible adjacent transitions",
+      "denominator_definition": "all zero-result searches with next_search_id",
+      "transition_n": 3271,
+      "negative_n": 0,
+      "zero_n": 23,
+      "positive_n": 3248,
+      "mean_seconds": 17.744726383369,
+      "median_seconds": 12.0,
+      "q1_seconds": 7.0,
+      "q3_seconds": 18.0,
+      "p90_seconds": 32.0,
+      "p95_seconds": 40.0,
+      "max_seconds": 249.0,
+      "timestamp_tie_n": 23,
+      "search_time_reverse_n": 0,
+      "search_timestamp_tie_n_all_adjacent": 46,
+      "event_time_reverse_n": 0,
+      "event_timestamp_tie_n_all_adjacent": 216021,
+      "lognormal_mu": 2.5077993501054316,
+      "lognormal_sigma": 0.7309052236397657,
+      "ks_statistic_fitted_parameters": 0.08263016044164706,
+      "ks_naive_pvalue_auxiliary": 9.700013999295918e-20,
+      "parametric_bootstrap_gof_pvalue": 0.001996007984031936,
+      "bootstrap_reps": 500,
+      "interpretation": "empirical source intervals preserved; not generated from lognormal"
+    }
+  ],
+  "mode_metrics": [
+    {
+      "dataset_type": "ORIGINAL_296",
+      "analysis_unit": "search condition signature",
+      "n": 296,
+      "unique_signatures": 206,
+      "unique_ratio": 0.6959459459459459,
+      "max_frequency": 5,
+      "top10_share": 0.125,
+      "singleton_signatures": 141,
+      "singleton_ratio_of_signatures": 0.6844660194174758,
+      "shannon_entropy_nats": 5.214061152879174,
+      "normalized_shannon_entropy": 0.978637826348681,
+      "hhi_simpson_concentration": 0.006231738495252012,
+      "session_paths": 43,
+      "unique_session_paths": 43,
+      "sessions_in_duplicated_paths": 0,
+      "duplicated_session_path_share": 0.0,
+      "max_identical_session_path_frequency": 1,
+      "source_template_count": 43,
+      "source_template_min_copies": 1,
+      "source_template_max_copies": 1,
+      "source_template_copy_distribution": "{\"1\": 43}"
+    },
+    {
+      "dataset_type": "S0_1000",
+      "analysis_unit": "search condition signature",
+      "n": 6900,
+      "unique_signatures": 218,
+      "unique_ratio": 0.03159420289855072,
+      "max_frequency": 120,
+      "top10_share": 0.12942028985507245,
+      "singleton_signatures": 4,
+      "singleton_ratio_of_signatures": 0.01834862385321101,
+      "shannon_entropy_nats": 5.218688276426269,
+      "normalized_shannon_entropy": 0.9692066230111956,
+      "hhi_simpson_concentration": 0.006294055870615418,
+      "session_paths": 1000,
+      "unique_session_paths": 65,
+      "sessions_in_duplicated_paths": 977,
+      "duplicated_session_path_share": 0.977,
+      "max_identical_session_path_frequency": 24,
+      "source_template_count": 43,
+      "source_template_min_copies": 23,
+      "source_template_max_copies": 24,
+      "source_template_copy_distribution": "{\"23\": 32, \"24\": 11}"
+    }
+  ],
+  "jitter_audit": {
+    "generator_sha256": "23613d01960c245cf4dd360ae8138cec3da6e733d1f12dc9954efa35f996b288",
+    "static_terms": {
+      "jitter": false,
+      "normal_draw": false,
+      "uniform_draw": false,
+      "choice_draw": true,
+      "clip": false,
+      "round": false
+    },
+    "jittering_applied": false,
+    "conditional_random_repair_only": "invalid checkout dates sample a duration with rng.choice; this is not continuous jittering",
+    "excluded_noise_candidates": "PK/FK, zero-result labels, event types, segment labels, result ranks",
+    "cause_of_duplication": "balanced session bootstrap repeats each of 43 source templates 23 or 24 times",
+    "jittering_expected_value": "limited unless applied to time/continuous fields; categorical condition repetition remains",
+    "integrity_risk": "filter or outcome jitter can change A1/A2/H3 and integrity",
+    "recommendation": "do not modify generator in STEP B; approve a narrowly scoped jitter policy first"
+  },
+  "regression_pass": false,
+  "gates": [
+    {
+      "validation": "고차 조건부 결합확률",
+      "status": "PASS",
+      "criterion": "max major-combination rate difference <=3pp and |CV log-loss delta|<=0.05",
+      "actual": "max_diff=0.440678pp; logloss_delta=-0.049403",
+      "interpretation": "joint/conditional preservation only; non-causal"
+    },
+    {
+      "validation": "세션 시계열 간격",
+      "status": "FAIL",
+      "criterion": "negative gaps/search reversals/event reversals all zero",
+      "actual": "negative=0; search_reverse=125; event_reverse=2954",
+      "interpretation": "empirical intervals preserved; not lognormal-generated"
+    },
+    {
+      "validation": "모드 붕괴와 Jittering",
+      "status": "WARN",
+      "criterion": "diagnose designed repetition separately from stochastic mode collapse",
+      "actual": "S0 unique ratio=0.031594; templates 32x23 + 11x24; jitter=false",
+      "interpretation": "designed balanced-bootstrap repetition; no learned generator collapse, but low diversity and exact duplication are material"
+    },
+    {
+      "validation": "필수 회귀검증",
+      "status": "FAIL",
+      "criterion": "all DB recalculations equal existing STEP2/STEP3 and integrity checks pass",
+      "actual": "regression_fail=108; trace_fail=0; integrity_fail=0",
+      "interpretation": "no existing result changed"
+    }
+  ],
+  "limitations": [
+    "Synthetic p-values and narrow intervals are model-internal diagnostics, not stronger real-population evidence.",
+    "The constrained Naive Bayes is a diagnostic DAG, not a causal graph.",
+    "KS naive p-values are auxiliary because lognormal parameters are estimated from the same sample.",
+    "S0 source templates repeat across sessions; CV groups use source-template fingerprints to avoid template leakage.",
+    "Room count, cancellation, and payment options are not search/search_filter condition columns and are null in the signature."
+  ],
+  "generated_files_pending_hash": [
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증_260904_1701_01\\호텔검색_관측형합성1000명_보완검증코드_260904_1701_01.py",
+      "size_bytes": 46128,
+      "sha256": "7497be5a928d890f29e8e73f23f2c21d832ce3146a97b79295e00f908fe42074"
+    },
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증결과_260904_1706_01\\호텔검색_관측형합성1000명_보완검증결과_260904_1706_01.xlsx",
+      "size_bytes": 43630,
+      "sha256": "85cb762e7892d97417b35832c1d234df8209b20cfdcad6ff7fb595f30f3196b2"
+    },
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증결과_260904_1706_01\\호텔검색_관측형합성1000명_보완검증결과_260904_1706_01.json",
+      "size_bytes": 15351,
+      "sha256": "b76bfb28f196abbf0e4294e5556687f679354b0c5b5bd11ca0f7c575331c7e10"
+    },
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증결과_260904_1706_01\\호텔검색_관측형합성1000명_시간간격시각화_260904_1706_01.png",
+      "size_bytes": 78553,
+      "sha256": "6fd40147210c4da70cd233081eab7594285a34b003c791c91572d77b3a38f82b"
+    },
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증결과_260904_1706_01\\호텔검색_관측형합성1000명_BN교정시각화_260904_1706_01.png",
+      "size_bytes": 77717,
+      "sha256": "2d2e3d9890f7b80a6e7de0a7d863a930c50a1a854f2985daa923f7d27db39a75"
+    },
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증결과_260904_1706_01\\호텔검색_관측형합성1000명_모드중복시각화_260904_1706_01.png",
+      "size_bytes": 70208,
+      "sha256": "403c2e37aedd17ef52cb3444af012dc99d22c8edd57caae361b0c5042cb52624"
+    },
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증결과_260904_1706_01\\호텔검색_관측형합성1000명_보완검증실행로그_260904_1706_01.md",
+      "size_bytes": 2851,
+      "sha256": "7644b7b647c68a860ba86fc986cf8801eb8ac067e3eb1d4853d3e1bc2ad0148d"
+    },
+    {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\03_관측형합성1000명_보완검증결과_260904_1706_01\\호텔검색_관측형합성1000명_검증판단로그_260904_1706_01.md",
+      "size_bytes": 1457,
+      "sha256": "4faee07dc54d06c3a267b249e4c0c71253929b9feee0cfc548273842883328df"
+    }
+  ]
+}
