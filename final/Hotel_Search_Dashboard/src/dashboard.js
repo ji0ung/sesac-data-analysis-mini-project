@@ -86,9 +86,11 @@ function renderGoal(){const input=$('#goal-rate'),raw=input.value.trim(),target=
 $('#goal-rate').oninput=renderGoal;$('#clear-goal').onclick=()=>{$('#goal-rate').value='';renderGoal();};renderGoal();
 
 const slides=[
-['주제 · 작성 템플릿',4,['#template-topic']],
+['프로젝트 주제와 분석 범위',4,['#template-topic']],
 ['팀원 구성 · 작성 템플릿',4,['#template-team']],
-['프로젝트 의도 · 작성 템플릿',4,['#template-intent']],
+['주제 선정 의도와 기획',4,['#template-intent']],
+['논문·데이터셋 · 자료 연결 대기',4,['#template-research']],
+['가상 사이트와 행동 데이터 수집',4,['#template-survey']],
 ['가설 · 작성 템플릿',4,['#template-hypotheses']],
 ['왜 호텔 검색 회복을 분석했는가?',4,['#page-4 .intro-kpis','#page-4 .callout']],
 ['발표에서 사용할 핵심 용어',4,['#term-definitions .scroll']],
