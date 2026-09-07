@@ -100,9 +100,8 @@ function renderGoal(){const input=$('#goal-rate'),raw=input.value.trim(),target=
 $('#goal-rate').oninput=renderGoal;$('#clear-goal').onclick=()=>{$('#goal-rate').value='';renderGoal();};renderGoal();
 
 const slides=[
-['프로젝트 주제와 분석 범위',4,['#template-topic']],
+['프로젝트 주제 · 기획 의도와 분석 범위',4,['#template-topic']],
 ['팀원 구성 · 작성 템플릿',4,['#template-team']],
-['주제 선정 의도와 기획',4,['#template-intent']],
 ['논문·데이터셋 · 자료 연결 대기',4,['#template-research']],
 ['가상 사이트와 행동 데이터 수집',4,['#template-survey']],
 ['StayTrace · 참여자 경험과 수집 과정',4,['#template-site_entry']],
@@ -135,7 +134,7 @@ const slides=[
 ['기존 A/B와 연결할 개선안',2,['#intent-content','#ab-protocol .scroll']],
 ['핵심 발견과 다음 의사결정',3,['#findings']]
 ];let slideIndex=0;
-const agendaGroups=[['기획과 수집',0,9],['데이터와 한계',9,19],['지표와 검증',19,25],['세그먼트와 여정',25,31],['해석과 의사결정',31,34]];
+const agendaGroups=[['기획과 수집',0,8],['데이터와 한계',8,18],['지표와 검증',18,24],['세그먼트와 여정',24,30],['해석과 의사결정',30,33]];
 const agendaHTML=agendaGroups.map(([name,start,end])=>`<section><h3>${name} · ${start+1}~${end}장</h3><ol start="${start+1}">${slides.slice(start,end).map(([title],i)=>`<li><button type="button" data-slide-jump="${start+i}">${title}</button></li>`).join('')}</ol></section>`).join('');
 ['#dashboard-agenda','#presentation-agenda'].forEach(id=>$(id).innerHTML=agendaHTML);
 document.querySelectorAll('[data-slide-jump]').forEach(button=>button.onclick=()=>{document.body.classList.add('presenting');$('#presentation-mode').setAttribute('aria-pressed','true');$('#presentation-mode').textContent='대시보드로 돌아가기';document.querySelectorAll('details').forEach(d=>d.open=false);slideIndex=Number(button.dataset.slideJump);renderSlide();$('#slide-title').focus({preventScroll:true});});

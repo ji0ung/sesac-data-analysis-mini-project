@@ -17,7 +17,7 @@ def render():
     assert code.count("{{DATA_PACK}}") == 1
     code = code.replace("{{DATA_PACK}}", payload)
     values = {"DASHBOARD_CSS": css, "DASHBOARD_JS": code}
-    for name in ("site_entry", "site_console", "site_experiment", "simulation_scope", "simulation_calibration", "simulation_impacts", "research", "survey", "topic", "team", "intent", "hypotheses", "lessons", "augmentation", "limitations", "optimization"):
+    for name in ("site_entry", "site_console", "site_experiment", "simulation_scope", "simulation_calibration", "simulation_impacts", "research", "survey", "topic", "team", "hypotheses", "lessons", "augmentation", "limitations", "optimization"):
         values["SLIDE_" + name.upper()] = (ROOT / f"slides/{name}.html").read_text(encoding="utf-8")
     for key, value in values.items():
         token = "{{" + key + "}}"
