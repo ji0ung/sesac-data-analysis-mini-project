@@ -103,8 +103,7 @@ const slides=[
 ['프로젝트 주제 · 기획 의도와 분석 범위',4,['#template-topic']],
 ['팀원 구성 · 작성 템플릿',4,['#template-team']],
 ['논문·데이터셋 · 자료 연결 대기',4,['#template-research']],
-['StayTrace · 참여자 경험과 수집 과정',4,['#template-site_entry']],
-['데이터 콘솔 · 캡처 시점의 수집 현황',4,['#template-site_console']],
+['StayTrace · 데이터를 수집한 과정',4,['#template-site_entry']],
 ['사이트의 옵션 일치·불일치 실험',4,['#template-site_experiment']],
 ['문서 기준 가설 · H1·H2·H5',4,['#template-hypotheses']],
 ['왜 호텔 검색 회복을 분석했는가?',4,['#page-4 .intro-kpis','#page-4 .callout']],
@@ -133,7 +132,7 @@ const slides=[
 ['기존 A/B와 연결할 개선안',2,['#intent-content','#ab-protocol .scroll']],
 ['핵심 발견과 다음 의사결정',3,['#findings']]
 ];let slideIndex=0;
-const agendaGroups=[['기획과 수집',0,7],['데이터와 한계',7,17],['지표와 검증',17,23],['세그먼트와 여정',23,29],['해석과 의사결정',29,32]];
+const agendaGroups=[['기획과 수집',0,6],['데이터와 한계',6,16],['지표와 검증',16,22],['세그먼트와 여정',22,28],['해석과 의사결정',28,31]];
 const agendaHTML=agendaGroups.map(([name,start,end])=>`<section><h3>${name} · ${start+1}~${end}장</h3><ol start="${start+1}">${slides.slice(start,end).map(([title],i)=>`<li><button type="button" data-slide-jump="${start+i}">${title}</button></li>`).join('')}</ol></section>`).join('');
 ['#dashboard-agenda','#presentation-agenda'].forEach(id=>$(id).innerHTML=agendaHTML);
 document.querySelectorAll('[data-slide-jump]').forEach(button=>button.onclick=()=>{document.body.classList.add('presenting');$('#presentation-mode').setAttribute('aria-pressed','true');$('#presentation-mode').textContent='대시보드로 돌아가기';document.querySelectorAll('details').forEach(d=>d.open=false);slideIndex=Number(button.dataset.slideJump);renderSlide();$('#slide-title').focus({preventScroll:true});});
