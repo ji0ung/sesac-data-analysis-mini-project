@@ -1,0 +1,59 @@
+{
+  "original_hashes_unchanged": {
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K_추가경량화.sqlite": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\sqlite_compact_lossless.py": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_생성코드_260903_1606_01.py": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_생성설정_260903_1606_01.json": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_실행묶음매니페스트_260903_1606_01.json": true
+  },
+  "recommendation_columns": 87,
+  "current_physical_columns": 113,
+  "current_view_columns": 87,
+  "profile_total": 384,
+  "benchmark_trials": 105,
+  "benchmark_timeouts": 0,
+  "logical_equality": {
+    "booking": {
+      "rows": 0,
+      "sha256_rows": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact": true
+    },
+    "event": {
+      "rows": 238851,
+      "sha256_rows": "f989f36482da4b3f7953a55d27814b356caf7452963438533d180831f21021dc",
+      "exact": true
+    },
+    "hotel": {
+      "rows": 1000,
+      "sha256_rows": "11bab2358e14db6549235990f84c04b40c57b9376b0b292b720b56ed6a3748ec",
+      "exact": true
+    },
+    "room": {
+      "rows": 3000,
+      "sha256_rows": "f9707908244fc70acfc444b02102a7e34f312f7fd6d1ef59e2975210feee1853",
+      "exact": true
+    },
+    "search": {
+      "rows": 6900,
+      "sha256_rows": "c1624e4daecf103fd7793e70004ec4cf451213ef0df3fa91ee7fca1fb4f29029",
+      "exact": true
+    },
+    "search_filter": {
+      "rows": 6900,
+      "sha256_rows": "3aa2a5918dfb0fe58a997ed05af46819f9bc222c209f7693a75552759b2ffdb6",
+      "exact": true
+    },
+    "search_result": {
+      "rows": 198128,
+      "sha256_rows": "0bb9a9f5f5bb301a3f99865f8e3cfde3ea9aff167bb764fee374917cfd14a02d",
+      "exact": true
+    },
+    "user": {
+      "rows": 1000,
+      "sha256_rows": "90e2ed734efc1b7c953aa0809642102dc3578dbdbc0b772623edf00d1b3bb89f",
+      "exact": true
+    }
+  }
+}

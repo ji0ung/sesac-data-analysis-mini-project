@@ -1,0 +1,100 @@
+{
+  "stage2_bundle_run_id": "STAGE2_260904_1259_01",
+  "sample_set_type": "observed_like",
+  "scenario_id": "S0",
+  "sample_design_id": "OBSERVED_BALANCED_SESSION_BOOTSTRAP_43_V02",
+  "random_seed": 20260903,
+  "approved_generation_version": "02",
+  "approved_qa_correction_run_id": "STAGE2_QA_260903_1745_02",
+  "approved_qa_correction_manifest_sha256": "af91c060a5eab8e69e3a190305c41238f6a9e53633de22b2efea6297156ed1cb",
+  "actual_completed_at": "2026-09-04T13:05:55+09:00",
+  "runtime": {
+    "python": "3.14.6",
+    "sqlite": "3.50.4",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "openpyxl": "3.1.5",
+    "python_docx": "1.2.0"
+  },
+  "source": {
+    "path": "03_데이터모델링/이전버전/데이터셋/2026-09-03_v02/travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+    "access": "SQLite mode=ro and PRAGMA query_only=ON",
+    "sha256_before": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "sha256_after": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "preserved": true
+  },
+  "row_counts": {
+    "user": 1000,
+    "hotel": 1000,
+    "room": 3000,
+    "search": 6900,
+    "search_filter": 6900,
+    "search_result": 198128,
+    "event": 238851,
+    "booking": 0
+  },
+  "G1_G5": {
+    "G1_structure": "PASS",
+    "G2_semantic_integrity": "PASS",
+    "G3_core_metric_similarity": "PASS",
+    "G4_source_preservation": "PASS",
+    "G5_scope_and_provenance": "PASS"
+  },
+  "corrected_core_max_abs_difference_pp": 0.1059537798668242,
+  "final_qa_status": "PASS",
+  "expansion_allowed": true,
+  "forbidden_sets_generated": false,
+  "compatibility_patch": {
+    "reason": "Current pandas/Python represents missing session_end_time as NaN; the approved generator's truthiness check attempted to parse it as an ISO timestamp.",
+    "change": "Use pandas.notna plus a non-empty-string check before timestamp conversion.",
+    "generation_logic_changed": false
+  },
+  "artifacts": [
+    {
+      "role": "synthetic SQLite",
+      "path": "호텔검색_관측형합성1000명_데이터_260904_1259_01.sqlite",
+      "size_bytes": 97898496,
+      "sha256": "d30f40b9d0c85a8f8469f48b37daae5f6dc3e4a77eea81671310dda7cbd8e79d"
+    },
+    {
+      "role": "generation config",
+      "path": "호텔검색_관측형합성1000명_생성설정_260904_1259_01.json",
+      "size_bytes": 1556,
+      "sha256": "e58672ae8cbb89bf74a3e907b6b0626220eb67d8dd4afc77ebf363271d3683fb"
+    },
+    {
+      "role": "generation code",
+      "path": "호텔검색_관측형합성1000명_생성코드_260904_1259_01.py",
+      "size_bytes": 10377,
+      "sha256": "60d8d5c871fe46799db1e1b9e7f6255463d620f88c9ed809cdacfc277de01e1e"
+    },
+    {
+      "role": "raw QA payload",
+      "path": "qa_payload.json",
+      "size_bytes": 1041,
+      "sha256": "42690177d7c1fcd8623d0e3eb75c4d366f2ab51dc41e71a509cb1b5e90362648"
+    },
+    {
+      "role": "corrected QA code",
+      "path": "호텔검색_관측형합성1000명_QA검증코드_260904_1259_01.py",
+      "size_bytes": 10210,
+      "sha256": "70784ac152f1cc76b3cbb4f82c3a6add6a38b1cd58f1219dbd4dd10bdd8fc6ab"
+    },
+    {
+      "role": "corrected QA result",
+      "path": "호텔검색_관측형합성1000명_QA결과_260904_1259_01.json",
+      "size_bytes": 5887,
+      "sha256": "52d592537b8fe5805cd889af999cb57dd5187593760fe57ac4453ca4b4154fa9"
+    },
+    {
+      "role": "execution log",
+      "path": "호텔검색_관측형합성1000명_증강실행로그_260904_1259_01.md",
+      "size_bytes": 4545,
+      "sha256": "58f227ef4bc688a9e39fc2868b4b6954b29f4266205237a68ecc2e5ba077dae6"
+    }
+  ],
+  "manifest_self": {
+    "sha256": null,
+    "reason": "self-referential hash omitted"
+  }
+}

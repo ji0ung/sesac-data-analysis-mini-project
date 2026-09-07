@@ -1,0 +1,95 @@
+{
+  "event_type_group": {
+    "sql": [
+      "select event_type,count(*) from event group by event_type order by event_type"
+    ],
+    "mode": "stream"
+  },
+  "event_id_lookup": {
+    "sql": [
+      "select event_id,event_type,hotel_id from event where event_id='SYN_E0500_00001'"
+    ],
+    "mode": "stream"
+  },
+  "session_search": {
+    "sql": [
+      "select search_id,total_result_count from search where session_id='SYN_S0500' order by search_time,search_id"
+    ],
+    "mode": "stream"
+  },
+  "search_result_join": {
+    "sql": [
+      "select r.result_rank,h.hotel_name from search_result r join hotel h on r.hotel_id=h.hotel_id where r.search_id=(select search_id from search where total_result_count>0 order by search_id limit 1) order by r.result_rank,h.hotel_name"
+    ],
+    "mode": "stream"
+  },
+  "all_text_stream": {
+    "sql": [
+      "select \"booking_id\",\"user_id\",\"hotel_id\",\"room_id\",\"booking_status\",\"booking_at\",\"checkin_date\",\"checkout_date\",\"cancellation_deadline\" from \"booking\"",
+      "select \"event_id\",\"session_id\",\"event_type\",\"event_at\",\"hotel_id\",\"search_filter_id\",\"search_id\",\"user_id\",\"session_end_time\",\"review_completed_at\",\"review_text\",\"device\" from \"event\"",
+      "select \"hotel_id\",\"hotel_name\",\"city_name\",\"hotel_address\",\"property_type\",\"actual_address\",\"actual_city\",\"actual_prefecture\",\"actual_postal_code\",\"actual_phone\",\"supplier_hotel_code\",\"rtx_code\",\"agoda_code\",\"expedia_code\",\"source_last_mapped_at\",\"actual_data_sources\" from \"hotel\"",
+      "select \"room_id\",\"hotel_id\",\"room_options\",\"room_type\" from \"room\"",
+      "select \"search_id\",\"session_id\",\"search_time\",\"query_text\",\"checkin_date\",\"checkout_date\",\"sort_option\",\"destination\" from \"search\"",
+      "select \"search_filter_id\",\"search_id\",\"property_type\",\"region\" from \"search_filter\"",
+      "select \"search_result_id\",\"search_id\",\"hotel_id\",\"room_id\" from \"search_result\"",
+      "select \"user_id\",\"user_name\",\"age_group\",\"email\",\"signup_at\" from \"user\""
+    ],
+    "original_sql": [
+      "select \"booking_id\",\"user_id\",\"hotel_id\",\"room_id\",\"booking_status\",\"booking_at\",\"checkin_date\",\"checkout_date\",\"cancellation_deadline\" from \"booking\"",
+      "select \"event_id\",\"session_id\",\"event_type\",replace(\"event_at\",' KST','') AS \"event_at\",\"hotel_id\",\"search_filter_id\",\"search_id\",\"user_id\",replace(\"session_end_time\",' KST','') AS \"session_end_time\",\"review_completed_at\",\"review_text\",\"device\" from \"event\"",
+      "select \"hotel_id\",\"hotel_name\",\"city_name\",\"hotel_address\",\"property_type\",\"actual_address\",\"actual_city\",\"actual_prefecture\",\"actual_postal_code\",\"actual_phone\",\"supplier_hotel_code\",\"rtx_code\",\"agoda_code\",\"expedia_code\",\"source_last_mapped_at\",\"actual_data_sources\" from \"hotel\"",
+      "select \"room_id\",\"hotel_id\",\"room_options\",\"room_type\" from \"room\"",
+      "select \"search_id\",\"session_id\",replace(\"search_time\",' KST','') AS \"search_time\",\"query_text\",\"checkin_date\",\"checkout_date\",\"sort_option\",\"destination\" from \"search\"",
+      "select \"search_filter_id\",\"search_id\",\"property_type\",\"region\" from \"search_filter\"",
+      "select \"search_result_id\",\"search_id\",\"hotel_id\",\"room_id\" from \"search_result\"",
+      "select \"user_id\",\"user_name\",\"age_group\",\"email\",replace(\"signup_at\",' KST','') AS \"signup_at\" from \"user\""
+    ],
+    "mode": "stream"
+  },
+  "all_columns_stream": {
+    "sql": [
+      "select \"booking_id\",\"user_id\",\"hotel_id\",\"room_id\",\"booking_status\",\"booking_amount\",\"booking_at\",\"checkin_date\",\"checkout_date\",\"guest_count\",\"room_count\",\"cancellation_deadline\" from \"booking\"",
+      "select \"event_id\",\"session_id\",\"event_type\",\"event_at\",\"hotel_id\",\"search_filter_id\",\"search_id\",\"user_id\",\"rating\",\"session_end_time\",\"review_completed_at\",\"review_text\",\"device\" from \"event\"",
+      "select \"hotel_id\",\"hotel_name\",\"city_name\",\"grade\",\"hotel_address\",\"user_rating\",\"review_count\",\"property_type\",\"actual_address\",\"actual_city\",\"actual_prefecture\",\"actual_postal_code\",\"actual_latitude\",\"actual_longitude\",\"actual_phone\",\"actual_star_rating\",\"supplier_hotel_code\",\"rtx_code\",\"agoda_code\",\"expedia_code\",\"top_selling_rank\",\"source_last_mapped_at\",\"actual_data_sources\" from \"hotel\"",
+      "select \"room_id\",\"hotel_id\",\"guest_count\",\"room_count\",\"room_options\",\"pay_later_flag\",\"free_cancel_flag\",\"room_price\",\"room_type\" from \"room\"",
+      "select \"search_id\",\"session_id\",\"search_time\",\"query_text\",\"checkin_date\",\"checkout_date\",\"total_result_count\",\"sort_option\",\"guest_count\",\"destination\" from \"search\"",
+      "select \"search_filter_id\",\"search_id\",\"property_type\",\"property_grade\",\"user_rating_min\",\"price\",\"amenity_count\",\"region\" from \"search_filter\"",
+      "select \"search_result_id\",\"search_id\",\"hotel_id\",\"room_id\",\"result_score\",\"result_rank\",\"price_rank\" from \"search_result\"",
+      "select \"user_id\",\"user_name\",\"age_group\",\"email\",\"signup_at\" from \"user\""
+    ],
+    "original_sql": [
+      "select \"booking_id\",\"user_id\",\"hotel_id\",\"room_id\",\"booking_status\",\"booking_amount\",\"booking_at\",\"checkin_date\",\"checkout_date\",\"guest_count\",\"room_count\",\"cancellation_deadline\" from \"booking\"",
+      "select \"event_id\",\"session_id\",\"event_type\",replace(\"event_at\",' KST','') AS \"event_at\",\"hotel_id\",\"search_filter_id\",\"search_id\",\"user_id\",\"rating\",replace(\"session_end_time\",' KST','') AS \"session_end_time\",\"review_completed_at\",\"review_text\",\"device\" from \"event\"",
+      "select \"hotel_id\",\"hotel_name\",\"city_name\",\"grade\",\"hotel_address\",\"user_rating\",\"review_count\",\"property_type\",\"actual_address\",\"actual_city\",\"actual_prefecture\",\"actual_postal_code\",\"actual_latitude\",\"actual_longitude\",\"actual_phone\",\"actual_star_rating\",\"supplier_hotel_code\",\"rtx_code\",\"agoda_code\",\"expedia_code\",\"top_selling_rank\",\"source_last_mapped_at\",\"actual_data_sources\" from \"hotel\"",
+      "select \"room_id\",\"hotel_id\",\"guest_count\",\"room_count\",\"room_options\",\"pay_later_flag\",\"free_cancel_flag\",\"room_price\",\"room_type\" from \"room\"",
+      "select \"search_id\",\"session_id\",replace(\"search_time\",' KST','') AS \"search_time\",\"query_text\",\"checkin_date\",\"checkout_date\",\"total_result_count\",\"sort_option\",\"guest_count\",\"destination\" from \"search\"",
+      "select \"search_filter_id\",\"search_id\",\"property_type\",\"property_grade\",\"user_rating_min\",\"price\",\"amenity_count\",\"region\" from \"search_filter\"",
+      "select \"search_result_id\",\"search_id\",\"hotel_id\",\"room_id\",\"result_score\",\"result_rank\",\"price_rank\" from \"search_result\"",
+      "select \"user_id\",\"user_name\",\"age_group\",\"email\",replace(\"signup_at\",' KST','') AS \"signup_at\" from \"user\""
+    ],
+    "mode": "stream"
+  },
+  "all_columns_materialize": {
+    "sql": [
+      "select \"booking_id\",\"user_id\",\"hotel_id\",\"room_id\",\"booking_status\",\"booking_amount\",\"booking_at\",\"checkin_date\",\"checkout_date\",\"guest_count\",\"room_count\",\"cancellation_deadline\" from \"booking\"",
+      "select \"event_id\",\"session_id\",\"event_type\",\"event_at\",\"hotel_id\",\"search_filter_id\",\"search_id\",\"user_id\",\"rating\",\"session_end_time\",\"review_completed_at\",\"review_text\",\"device\" from \"event\"",
+      "select \"hotel_id\",\"hotel_name\",\"city_name\",\"grade\",\"hotel_address\",\"user_rating\",\"review_count\",\"property_type\",\"actual_address\",\"actual_city\",\"actual_prefecture\",\"actual_postal_code\",\"actual_latitude\",\"actual_longitude\",\"actual_phone\",\"actual_star_rating\",\"supplier_hotel_code\",\"rtx_code\",\"agoda_code\",\"expedia_code\",\"top_selling_rank\",\"source_last_mapped_at\",\"actual_data_sources\" from \"hotel\"",
+      "select \"room_id\",\"hotel_id\",\"guest_count\",\"room_count\",\"room_options\",\"pay_later_flag\",\"free_cancel_flag\",\"room_price\",\"room_type\" from \"room\"",
+      "select \"search_id\",\"session_id\",\"search_time\",\"query_text\",\"checkin_date\",\"checkout_date\",\"total_result_count\",\"sort_option\",\"guest_count\",\"destination\" from \"search\"",
+      "select \"search_filter_id\",\"search_id\",\"property_type\",\"property_grade\",\"user_rating_min\",\"price\",\"amenity_count\",\"region\" from \"search_filter\"",
+      "select \"search_result_id\",\"search_id\",\"hotel_id\",\"room_id\",\"result_score\",\"result_rank\",\"price_rank\" from \"search_result\"",
+      "select \"user_id\",\"user_name\",\"age_group\",\"email\",\"signup_at\" from \"user\""
+    ],
+    "original_sql": [
+      "select \"booking_id\",\"user_id\",\"hotel_id\",\"room_id\",\"booking_status\",\"booking_amount\",\"booking_at\",\"checkin_date\",\"checkout_date\",\"guest_count\",\"room_count\",\"cancellation_deadline\" from \"booking\"",
+      "select \"event_id\",\"session_id\",\"event_type\",replace(\"event_at\",' KST','') AS \"event_at\",\"hotel_id\",\"search_filter_id\",\"search_id\",\"user_id\",\"rating\",replace(\"session_end_time\",' KST','') AS \"session_end_time\",\"review_completed_at\",\"review_text\",\"device\" from \"event\"",
+      "select \"hotel_id\",\"hotel_name\",\"city_name\",\"grade\",\"hotel_address\",\"user_rating\",\"review_count\",\"property_type\",\"actual_address\",\"actual_city\",\"actual_prefecture\",\"actual_postal_code\",\"actual_latitude\",\"actual_longitude\",\"actual_phone\",\"actual_star_rating\",\"supplier_hotel_code\",\"rtx_code\",\"agoda_code\",\"expedia_code\",\"top_selling_rank\",\"source_last_mapped_at\",\"actual_data_sources\" from \"hotel\"",
+      "select \"room_id\",\"hotel_id\",\"guest_count\",\"room_count\",\"room_options\",\"pay_later_flag\",\"free_cancel_flag\",\"room_price\",\"room_type\" from \"room\"",
+      "select \"search_id\",\"session_id\",replace(\"search_time\",' KST','') AS \"search_time\",\"query_text\",\"checkin_date\",\"checkout_date\",\"total_result_count\",\"sort_option\",\"guest_count\",\"destination\" from \"search\"",
+      "select \"search_filter_id\",\"search_id\",\"property_type\",\"property_grade\",\"user_rating_min\",\"price\",\"amenity_count\",\"region\" from \"search_filter\"",
+      "select \"search_result_id\",\"search_id\",\"hotel_id\",\"room_id\",\"result_score\",\"result_rank\",\"price_rank\" from \"search_result\"",
+      "select \"user_id\",\"user_name\",\"age_group\",\"email\",replace(\"signup_at\",' KST','') AS \"signup_at\" from \"user\""
+    ],
+    "mode": "materialize"
+  }
+}

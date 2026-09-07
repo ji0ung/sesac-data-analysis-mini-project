@@ -1,0 +1,511 @@
+{
+  "assumption": "Conditional: 1000 users/sessions to 10000 users/sessions, same per-session behavior frequency, fixed hotel/room catalogs; not an approved generation specification.",
+  "row_scenario": {
+    "booking": {
+      "now": 0,
+      "x10_users": 0
+    },
+    "event": {
+      "now": 238851,
+      "x10_users": 2388510
+    },
+    "hotel": {
+      "now": 1000,
+      "x10_users": 1000
+    },
+    "room": {
+      "now": 3000,
+      "x10_users": 3000
+    },
+    "search": {
+      "now": 6900,
+      "x10_users": 69000
+    },
+    "search_filter": {
+      "now": 6900,
+      "x10_users": 69000
+    },
+    "search_result": {
+      "now": 198128,
+      "x10_users": 1981280
+    },
+    "user": {
+      "now": 1000,
+      "x10_users": 10000
+    }
+  },
+  "dictionary_scenarios": [
+    {
+      "table": "event",
+      "column": "event_type",
+      "dictionary": "_dict_event_event_type",
+      "N_nonnull_10k": 2388510,
+      "mean_dictionary_text_bytes": 16.166666666666668,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 24,
+          "dictionary_bytes_estimate": 17012.0,
+          "code_bytes_upper": 2388510,
+          "net_bytes_estimate": 36067258.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 240,
+          "dictionary_bytes_estimate": 22664.0,
+          "code_bytes_upper": 4777020,
+          "net_bytes_estimate": 33673096.0,
+          "code_width_upper": 2
+        },
+        "all_new_values": {
+          "distinct": 2388510,
+          "dictionary_bytes_estimate": 62515729.0,
+          "code_bytes_upper": 7165530,
+          "net_bytes_estimate": -31208479.0,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "dictionary": "_dict_event_event_at",
+      "N_nonnull_10k": 2388510,
+      "mean_dictionary_text_bytes": 19.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 22129,
+          "dictionary_bytes_estimate": 658125.0,
+          "code_bytes_upper": 4777020,
+          "net_bytes_estimate": 39946545.0,
+          "code_width_upper": 2
+        },
+        "same_unique_ratio": {
+          "distinct": 221290,
+          "dictionary_bytes_estimate": 6433794.0,
+          "code_bytes_upper": 7165530,
+          "net_bytes_estimate": 31782366.0,
+          "code_width_upper": 3
+        },
+        "all_new_values": {
+          "distinct": 2388510,
+          "dictionary_bytes_estimate": 69283174.0,
+          "code_bytes_upper": 7165530,
+          "net_bytes_estimate": -31067014.0,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "event",
+      "column": "device",
+      "dictionary": "_dict_event_device",
+      "N_nonnull_10k": 162240,
+      "mean_dictionary_text_bytes": 6.5,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 2,
+          "dictionary_bytes_estimate": 16417.0,
+          "code_bytes_upper": 162240,
+          "net_bytes_estimate": 821273.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 20,
+          "dictionary_bytes_estimate": 16714.0,
+          "code_bytes_upper": 162240,
+          "net_bytes_estimate": 820976.0,
+          "code_width_upper": 1
+        },
+        "all_new_values": {
+          "distinct": 162240,
+          "dictionary_bytes_estimate": 2693344.0,
+          "code_bytes_upper": 486720,
+          "net_bytes_estimate": -2180134.0,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "hotel",
+      "column": "actual_data_sources",
+      "dictionary": "_dict_hotel_actual_data_sources",
+      "N_nonnull_10k": 491,
+      "mean_dictionary_text_bytes": 48.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 3,
+          "dictionary_bytes_estimate": 16558.0,
+          "code_bytes_upper": 491,
+          "net_bytes_estimate": 11017.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 3,
+          "dictionary_bytes_estimate": 16558.0,
+          "code_bytes_upper": 491,
+          "net_bytes_estimate": 11017.0,
+          "code_width_upper": 1
+        },
+        "all_new_values": {
+          "distinct": 491,
+          "dictionary_bytes_estimate": 44862.0,
+          "code_bytes_upper": 982,
+          "net_bytes_estimate": -17778.0,
+          "code_width_upper": 2
+        }
+      }
+    },
+    {
+      "table": "room",
+      "column": "room_options",
+      "dictionary": "_dict_room_room_options",
+      "N_nonnull_10k": 3000,
+      "mean_dictionary_text_bytes": 178.66666666666666,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 36,
+          "dictionary_bytes_estimate": 23176.0,
+          "code_bytes_upper": 3000,
+          "net_bytes_estimate": 513146.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 36,
+          "dictionary_bytes_estimate": 23176.0,
+          "code_bytes_upper": 3000,
+          "net_bytes_estimate": 513146.0,
+          "code_width_upper": 1
+        },
+        "all_new_values": {
+          "distinct": 3000,
+          "dictionary_bytes_estimate": 582384.0,
+          "code_bytes_upper": 6000,
+          "net_bytes_estimate": -49062.0,
+          "code_width_upper": 2
+        }
+      }
+    },
+    {
+      "table": "room",
+      "column": "room_type",
+      "dictionary": "_dict_room_room_type",
+      "N_nonnull_10k": 3000,
+      "mean_dictionary_text_bytes": 19.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 3,
+          "dictionary_bytes_estimate": 16471.0,
+          "code_bytes_upper": 3000,
+          "net_bytes_estimate": 37529.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 3,
+          "dictionary_bytes_estimate": 16471.0,
+          "code_bytes_upper": 3000,
+          "net_bytes_estimate": 37529.0,
+          "code_width_upper": 1
+        },
+        "all_new_values": {
+          "distinct": 3000,
+          "dictionary_bytes_estimate": 103384.0,
+          "code_bytes_upper": 6000,
+          "net_bytes_estimate": -52384.0,
+          "code_width_upper": 2
+        }
+      }
+    },
+    {
+      "table": "search",
+      "column": "query_text",
+      "dictionary": "_dict_search_query_text",
+      "N_nonnull_10k": 43840,
+      "mean_dictionary_text_bytes": 12.565217391304348,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 23,
+          "dictionary_bytes_estimate": 16903.0,
+          "code_bytes_upper": 43840,
+          "net_bytes_estimate": 372407.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 230,
+          "dictionary_bytes_estimate": 21574.0,
+          "code_bytes_upper": 87680,
+          "net_bytes_estimate": 323896.0,
+          "code_width_upper": 2
+        },
+        "all_new_values": {
+          "distinct": 43840,
+          "dictionary_bytes_estimate": 1005643.1304347826,
+          "code_bytes_upper": 131520,
+          "net_bytes_estimate": -704013.1304347826,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "search",
+      "column": "checkin_date",
+      "dictionary": "_dict_search_checkin_date",
+      "N_nonnull_10k": 69000,
+      "mean_dictionary_text_bytes": 10.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 23,
+          "dictionary_bytes_estimate": 16844.0,
+          "code_bytes_upper": 69000,
+          "net_bytes_estimate": 604156.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 230,
+          "dictionary_bytes_estimate": 20984.0,
+          "code_bytes_upper": 138000,
+          "net_bytes_estimate": 531016.0,
+          "code_width_upper": 2
+        },
+        "all_new_values": {
+          "distinct": 69000,
+          "dictionary_bytes_estimate": 1396384.0,
+          "code_bytes_upper": 207000,
+          "net_bytes_estimate": -913384.0,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "search",
+      "column": "checkout_date",
+      "dictionary": "_dict_search_checkout_date",
+      "N_nonnull_10k": 69000,
+      "mean_dictionary_text_bytes": 10.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 25,
+          "dictionary_bytes_estimate": 16884.0,
+          "code_bytes_upper": 69000,
+          "net_bytes_estimate": 604116.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 250,
+          "dictionary_bytes_estimate": 21384.0,
+          "code_bytes_upper": 138000,
+          "net_bytes_estimate": 530616.0,
+          "code_width_upper": 2
+        },
+        "all_new_values": {
+          "distinct": 69000,
+          "dictionary_bytes_estimate": 1396384.0,
+          "code_bytes_upper": 207000,
+          "net_bytes_estimate": -913384.0,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "search",
+      "column": "sort_option",
+      "dictionary": "_dict_search_sort_option",
+      "N_nonnull_10k": 69000,
+      "mean_dictionary_text_bytes": 7.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 4,
+          "dictionary_bytes_estimate": 16452.0,
+          "code_bytes_upper": 69000,
+          "net_bytes_estimate": 341408.0,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 40,
+          "dictionary_bytes_estimate": 17064.0,
+          "code_bytes_upper": 69000,
+          "net_bytes_estimate": 340796.0,
+          "code_width_upper": 1
+        },
+        "all_new_values": {
+          "distinct": 69000,
+          "dictionary_bytes_estimate": 1189384.0,
+          "code_bytes_upper": 207000,
+          "net_bytes_estimate": -969524.0,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "search",
+      "column": "destination",
+      "dictionary": "_dict_search_destination",
+      "N_nonnull_10k": 58500,
+      "mean_dictionary_text_bytes": 19.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 26,
+          "dictionary_bytes_estimate": 17138.0,
+          "code_bytes_upper": 58500,
+          "net_bytes_estimate": 960681.9999999999,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 260,
+          "dictionary_bytes_estimate": 23924.0,
+          "code_bytes_upper": 117000,
+          "net_bytes_estimate": 895395.9999999999,
+          "code_width_upper": 2
+        },
+        "all_new_values": {
+          "distinct": 58500,
+          "dictionary_bytes_estimate": 1712884.0,
+          "code_bytes_upper": 175500,
+          "net_bytes_estimate": -852064.0000000001,
+          "code_width_upper": 3
+        }
+      }
+    },
+    {
+      "table": "search_filter",
+      "column": "region",
+      "dictionary": "_dict_search_filter_region",
+      "N_nonnull_10k": 58500,
+      "mean_dictionary_text_bytes": 19.0,
+      "cases": {
+        "same_vocabulary": {
+          "distinct": 26,
+          "dictionary_bytes_estimate": 17138.0,
+          "code_bytes_upper": 58500,
+          "net_bytes_estimate": 960681.9999999999,
+          "code_width_upper": 1
+        },
+        "same_unique_ratio": {
+          "distinct": 260,
+          "dictionary_bytes_estimate": 23924.0,
+          "code_bytes_upper": 117000,
+          "net_bytes_estimate": 895395.9999999999,
+          "code_width_upper": 2
+        },
+        "all_new_values": {
+          "distinct": 58500,
+          "dictionary_bytes_estimate": 1712884.0,
+          "code_bytes_upper": 175500,
+          "net_bytes_estimate": -852064.0000000001,
+          "code_width_upper": 3
+        }
+      }
+    }
+  ],
+  "db_scale": {
+    "original": {
+      "page_linear_estimate_bytes": 967335936,
+      "method": "Current object page bytes times 10 for behavioral objects; static catalog and stable dictionaries fixed. compact event_at dictionary grows 10x. No output file generated."
+    },
+    "plain": {
+      "page_linear_estimate_bytes": 460062720,
+      "method": "Current object page bytes times 10 for behavioral objects; static catalog and stable dictionaries fixed. compact event_at dictionary grows 10x. No output file generated."
+    },
+    "compact": {
+      "page_linear_estimate_bytes": 145047552,
+      "method": "Current object page bytes times 10 for behavioral objects; static catalog and stable dictionaries fixed. compact event_at dictionary grows 10x. No output file generated."
+    }
+  },
+  "compact_all_unique_timestamp_estimate_bytes": 207896932.0,
+  "temporal_qa": {
+    "search_rows": 6900,
+    "checkin_before_search_date": 6900
+  },
+  "generator_schema_error": "TypeError: 'NoneType' object is not subscriptable",
+  "source_missing_generated_columns": {
+    "user": [
+      "data_origin"
+    ],
+    "search": [
+      "data_origin"
+    ],
+    "search_filter": [
+      "data_origin"
+    ],
+    "search_result": [
+      "data_origin"
+    ],
+    "event": [
+      "data_origin"
+    ]
+  },
+  "pandas_input_memory_bytes": {
+    "search": 1164391,
+    "search_filter": 946427,
+    "search_result": 19614804,
+    "event": 59943937
+  },
+  "generator_filter_cost_model": [
+    {
+      "operation": "search_by_session",
+      "source_rows": 6900,
+      "keys_sampled": 30,
+      "median_seconds_per_call": 0.000752656666660793,
+      "calls_scenario": 10000,
+      "estimated_seconds": 7.52656666660793,
+      "element_comparisons_scenario": 69000000
+    },
+    {
+      "operation": "filter_by_search",
+      "source_rows": 6900,
+      "keys_sampled": 30,
+      "median_seconds_per_call": 0.0004313666666651746,
+      "calls_scenario": 69000,
+      "estimated_seconds": 29.764299999897048,
+      "element_comparisons_scenario": 476100000
+    },
+    {
+      "operation": "results_by_search",
+      "source_rows": 198128,
+      "keys_sampled": 30,
+      "median_seconds_per_call": 0.0022721133333258575,
+      "calls_scenario": 69000,
+      "estimated_seconds": 156.77581999948416,
+      "element_comparisons_scenario": 13670832000
+    },
+    {
+      "operation": "events_by_session",
+      "source_rows": 238851,
+      "keys_sampled": 30,
+      "median_seconds_per_call": 0.0027176400000068195,
+      "calls_scenario": 10000,
+      "estimated_seconds": 27.176400000068195,
+      "element_comparisons_scenario": 2388510000
+    },
+    {
+      "operation": "results_isin_session_searches",
+      "source_rows": 198128,
+      "keys_sampled": 30,
+      "median_seconds_per_call": 0.0034679333333315298,
+      "calls_scenario": 10000,
+      "estimated_seconds": 34.6793333333153,
+      "element_comparisons_scenario": 1981280000
+    }
+  ],
+  "output_dict_shell_lower_bound_bytes": 1697960800,
+  "id_boundary_and_rebuild": {
+    "current_user_view_10000": {
+      "object": "user",
+      "integer": 10000,
+      "expected": "SYN_U10000",
+      "actual": "SYN_U1000",
+      "pass_test": false
+    },
+    "mixed_width_encoder_accepts": false,
+    "hardcoded_result_view_if_search_id_stored_as_text": "SYN_Q0000_000",
+    "existing_user_ids_reused_if_i_restarts_at_one": 1000
+  },
+  "protected_files_unchanged": {
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01.sqlite": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K_추가경량화.sqlite": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\sqlite_compact_lossless.py": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_생성코드_260903_1606_01.py": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_생성설정_260903_1606_01.json": true,
+    "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_실행묶음매니페스트_260903_1606_01.json": true
+  }
+}

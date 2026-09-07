@@ -1,0 +1,68 @@
+{
+  "source_bytes": 46891008,
+  "tables": {
+    "booking": {
+      "rows": 0,
+      "verified_exact": true
+    },
+    "event": {
+      "rows": 238851,
+      "verified_exact": true
+    },
+    "hotel": {
+      "rows": 1000,
+      "verified_exact": true
+    },
+    "room": {
+      "rows": 3000,
+      "verified_exact": true
+    },
+    "search": {
+      "rows": 6900,
+      "verified_exact": true
+    },
+    "search_filter": {
+      "rows": 6900,
+      "verified_exact": true
+    },
+    "search_result": {
+      "rows": 198128,
+      "verified_exact": true
+    },
+    "user": {
+      "rows": 1000,
+      "verified_exact": true
+    }
+  },
+  "transforms": [
+    "event.event_id: arithmetic ID",
+    "event.event_type: dictionary",
+    "event.event_at: dictionary",
+    "event.hotel_id: arithmetic ID",
+    "event.search_id: arithmetic ID",
+    "event.device: dictionary",
+    "hotel.hotel_id: arithmetic ID",
+    "hotel.actual_data_sources: dictionary",
+    "room.room_id: arithmetic ID",
+    "room.hotel_id: arithmetic ID",
+    "room.room_options: dictionary",
+    "room.room_type: dictionary",
+    "search.search_id: arithmetic ID",
+    "search.session_id: arithmetic ID",
+    "search.query_text: dictionary",
+    "search.checkin_date: dictionary",
+    "search.checkout_date: dictionary",
+    "search.sort_option: dictionary",
+    "search.destination: dictionary",
+    "search_filter.search_filter_id: arithmetic ID",
+    "search_filter.search_id: arithmetic ID",
+    "search_filter.region: dictionary",
+    "search_result.search_result_id: arithmetic ID",
+    "search_result.search_id: arithmetic ID",
+    "search_result.room_id: arithmetic ID",
+    "user.user_id: arithmetic ID"
+  ],
+  "note": "Compatibility views preserve values; physical storage is normalized.",
+  "output_bytes": 14991360,
+  "reduction_percent": 68.03
+}

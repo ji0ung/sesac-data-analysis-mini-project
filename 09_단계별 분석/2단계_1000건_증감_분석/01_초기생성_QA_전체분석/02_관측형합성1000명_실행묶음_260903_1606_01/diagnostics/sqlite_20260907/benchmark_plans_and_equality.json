@@ -1,0 +1,1530 @@
+{
+  "plans": {
+    "original": {
+      "event_type_group": [
+        [
+          [
+            7,
+            0,
+            211,
+            "SCAN event USING COVERING INDEX idx_syn_event_session_type"
+          ],
+          [
+            9,
+            0,
+            0,
+            "USE TEMP B-TREE FOR GROUP BY"
+          ]
+        ]
+      ],
+      "event_id_lookup": [
+        [
+          [
+            3,
+            0,
+            39,
+            "SEARCH event USING INDEX sqlite_autoindex_event_1 (event_id=?)"
+          ]
+        ]
+      ],
+      "session_search": [
+        [
+          [
+            4,
+            0,
+            62,
+            "SEARCH search USING INDEX idx_syn_search_session_time (session_id=?)"
+          ]
+        ]
+      ],
+      "search_result_join": [
+        [
+          [
+            6,
+            0,
+            62,
+            "SEARCH r USING INDEX idx_syn_result_search_hotel (search_id=?)"
+          ],
+          [
+            9,
+            0,
+            0,
+            "SCALAR SUBQUERY 1"
+          ],
+          [
+            19,
+            9,
+            223,
+            "SCAN search USING INDEX sqlite_autoindex_search_1"
+          ],
+          [
+            32,
+            0,
+            46,
+            "SEARCH h USING INDEX sqlite_autoindex_hotel_1 (hotel_id=?)"
+          ],
+          [
+            43,
+            0,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        ]
+      ],
+      "all_text_stream": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN booking"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN event"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN hotel"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN room"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_filter"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN user"
+          ]
+        ]
+      ],
+      "all_columns_stream": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN booking"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN event"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN hotel"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN room"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_filter"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN user"
+          ]
+        ]
+      ],
+      "all_columns_materialize": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN booking"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN event"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN hotel"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN room"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_filter"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN user"
+          ]
+        ]
+      ]
+    },
+    "plain": {
+      "event_type_group": [
+        [
+          [
+            7,
+            0,
+            216,
+            "SCAN event"
+          ],
+          [
+            9,
+            0,
+            0,
+            "USE TEMP B-TREE FOR GROUP BY"
+          ]
+        ]
+      ],
+      "event_id_lookup": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN event"
+          ]
+        ]
+      ],
+      "session_search": [
+        [
+          [
+            3,
+            0,
+            216,
+            "SCAN search"
+          ],
+          [
+            13,
+            0,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        ]
+      ],
+      "search_result_join": [
+        [
+          [
+            4,
+            0,
+            216,
+            "SCAN r"
+          ],
+          [
+            9,
+            0,
+            0,
+            "SCALAR SUBQUERY 1"
+          ],
+          [
+            18,
+            9,
+            216,
+            "SCAN search"
+          ],
+          [
+            31,
+            9,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ],
+          [
+            46,
+            0,
+            53,
+            "SEARCH h USING AUTOMATIC COVERING INDEX (hotel_id=?)"
+          ],
+          [
+            57,
+            0,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        ]
+      ],
+      "all_text_stream": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN booking"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN event"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN hotel"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN room"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_filter"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN user"
+          ]
+        ]
+      ],
+      "all_columns_stream": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN booking"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN event"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN hotel"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN room"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_filter"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN user"
+          ]
+        ]
+      ],
+      "all_columns_materialize": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN booking"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN event"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN hotel"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN room"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_filter"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN user"
+          ]
+        ]
+      ]
+    },
+    "compact": {
+      "event_type_group": [
+        [
+          [
+            7,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            9,
+            0,
+            0,
+            "USE TEMP B-TREE FOR GROUP BY"
+          ],
+          [
+            11,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            15,
+            11,
+            33,
+            "SEARCH _dict_event_event_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            51,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            55,
+            51,
+            33,
+            "SEARCH _dict_event_event_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            68,
+            0,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        ]
+      ],
+      "event_id_lookup": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            33,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            37,
+            33,
+            33,
+            "SEARCH _dict_event_event_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ]
+      ],
+      "session_search": [
+        [
+          [
+            3,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            33,
+            0,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        ]
+      ],
+      "search_result_join": [
+        [
+          [
+            4,
+            0,
+            216,
+            "SCAN _data_search_result"
+          ],
+          [
+            17,
+            0,
+            0,
+            "SCALAR SUBQUERY 1"
+          ],
+          [
+            26,
+            17,
+            216,
+            "SCAN p"
+          ],
+          [
+            52,
+            17,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ],
+          [
+            58,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            82,
+            0,
+            0,
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        ]
+      ],
+      "all_text_stream": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            19,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            23,
+            19,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            32,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            36,
+            32,
+            33,
+            "SEARCH _dict_event_event_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            45,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 5"
+          ],
+          [
+            49,
+            45,
+            33,
+            "SEARCH _dict_event_event_at USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            98,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 6"
+          ],
+          [
+            102,
+            98,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            115,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 7"
+          ],
+          [
+            119,
+            115,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            132,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 8"
+          ],
+          [
+            136,
+            132,
+            33,
+            "SEARCH _dict_event_device USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            28,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            32,
+            28,
+            33,
+            "SEARCH _dict_hotel_actual_data_sources USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            28,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            32,
+            28,
+            33,
+            "SEARCH _dict_room_room_options USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            41,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            45,
+            41,
+            33,
+            "SEARCH _dict_room_room_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            29,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            33,
+            29,
+            33,
+            "SEARCH _dict_search_query_text USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            42,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            46,
+            42,
+            33,
+            "SEARCH _dict_search_checkin_date USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            55,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 5"
+          ],
+          [
+            59,
+            55,
+            33,
+            "SEARCH _dict_search_checkout_date USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            68,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 6"
+          ],
+          [
+            72,
+            68,
+            33,
+            "SEARCH _dict_search_sort_option USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            81,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 7"
+          ],
+          [
+            85,
+            81,
+            33,
+            "SEARCH _dict_search_destination USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            34,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            38,
+            34,
+            33,
+            "SEARCH _dict_search_filter_region USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN _data_search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ]
+        ]
+      ],
+      "all_columns_stream": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            19,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            23,
+            19,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            32,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            36,
+            32,
+            33,
+            "SEARCH _dict_event_event_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            45,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 5"
+          ],
+          [
+            49,
+            45,
+            33,
+            "SEARCH _dict_event_event_at USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            98,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 6"
+          ],
+          [
+            102,
+            98,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            117,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 7"
+          ],
+          [
+            121,
+            117,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            134,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 8"
+          ],
+          [
+            138,
+            134,
+            33,
+            "SEARCH _dict_event_device USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            39,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            43,
+            39,
+            33,
+            "SEARCH _dict_hotel_actual_data_sources USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            30,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            34,
+            30,
+            33,
+            "SEARCH _dict_room_room_options USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            46,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            50,
+            46,
+            33,
+            "SEARCH _dict_room_room_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            29,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            33,
+            29,
+            33,
+            "SEARCH _dict_search_query_text USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            42,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            46,
+            42,
+            33,
+            "SEARCH _dict_search_checkin_date USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            55,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 5"
+          ],
+          [
+            59,
+            55,
+            33,
+            "SEARCH _dict_search_checkout_date USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            69,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 6"
+          ],
+          [
+            73,
+            69,
+            33,
+            "SEARCH _dict_search_sort_option USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            83,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 7"
+          ],
+          [
+            87,
+            83,
+            33,
+            "SEARCH _dict_search_destination USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            39,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            43,
+            39,
+            33,
+            "SEARCH _dict_search_filter_region USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN _data_search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ]
+        ]
+      ],
+      "all_columns_materialize": [
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            19,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            23,
+            19,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            32,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            36,
+            32,
+            33,
+            "SEARCH _dict_event_event_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            45,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 5"
+          ],
+          [
+            49,
+            45,
+            33,
+            "SEARCH _dict_event_event_at USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            98,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 6"
+          ],
+          [
+            102,
+            98,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            117,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 7"
+          ],
+          [
+            121,
+            117,
+            33,
+            "SEARCH _sessions USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            134,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 8"
+          ],
+          [
+            138,
+            134,
+            33,
+            "SEARCH _dict_event_device USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            39,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            43,
+            39,
+            33,
+            "SEARCH _dict_hotel_actual_data_sources USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            30,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            34,
+            30,
+            33,
+            "SEARCH _dict_room_room_options USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            46,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            50,
+            46,
+            33,
+            "SEARCH _dict_room_room_type USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            29,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            33,
+            29,
+            33,
+            "SEARCH _dict_search_query_text USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            42,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 4"
+          ],
+          [
+            46,
+            42,
+            33,
+            "SEARCH _dict_search_checkin_date USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            55,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 5"
+          ],
+          [
+            59,
+            55,
+            33,
+            "SEARCH _dict_search_checkout_date USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            69,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 6"
+          ],
+          [
+            73,
+            69,
+            33,
+            "SEARCH _dict_search_sort_option USING INTEGER PRIMARY KEY (rowid=?)"
+          ],
+          [
+            83,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 7"
+          ],
+          [
+            87,
+            83,
+            33,
+            "SEARCH _dict_search_destination USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ],
+          [
+            39,
+            0,
+            0,
+            "CORRELATED SCALAR SUBQUERY 3"
+          ],
+          [
+            43,
+            39,
+            33,
+            "SEARCH _dict_search_filter_region USING INTEGER PRIMARY KEY (rowid=?)"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN _data_search_result"
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            216,
+            "SCAN p"
+          ]
+        ]
+      ]
+    }
+  },
+  "equality": {
+    "event_type_group": {
+      "original": [
+        "307174a3577d4d5c8dd76164804479b7a8bcf4ed1e0e9363ab6bfbbe8346b3d2"
+      ],
+      "plain": [
+        "307174a3577d4d5c8dd76164804479b7a8bcf4ed1e0e9363ab6bfbbe8346b3d2"
+      ],
+      "compact": [
+        "307174a3577d4d5c8dd76164804479b7a8bcf4ed1e0e9363ab6bfbbe8346b3d2"
+      ]
+    },
+    "event_id_lookup": {
+      "original": [
+        "bc2bd99d6306ae1c6d533746c63c840fe3cebb6b6b0321e9238175ea3710346c"
+      ],
+      "plain": [
+        "bc2bd99d6306ae1c6d533746c63c840fe3cebb6b6b0321e9238175ea3710346c"
+      ],
+      "compact": [
+        "bc2bd99d6306ae1c6d533746c63c840fe3cebb6b6b0321e9238175ea3710346c"
+      ]
+    },
+    "session_search": {
+      "original": [
+        "1e8b393c4dc9ae043b2273392ba21a2df9e06b33c4e977fba1cf415ae56742a7"
+      ],
+      "plain": [
+        "1e8b393c4dc9ae043b2273392ba21a2df9e06b33c4e977fba1cf415ae56742a7"
+      ],
+      "compact": [
+        "1e8b393c4dc9ae043b2273392ba21a2df9e06b33c4e977fba1cf415ae56742a7"
+      ]
+    },
+    "search_result_join": {
+      "original": [
+        "bcd00b0c3100a545a8c1c1c75703a0094fd515d4e100a7b0c627d542bc38f84d"
+      ],
+      "plain": [
+        "bcd00b0c3100a545a8c1c1c75703a0094fd515d4e100a7b0c627d542bc38f84d"
+      ],
+      "compact": [
+        "bcd00b0c3100a545a8c1c1c75703a0094fd515d4e100a7b0c627d542bc38f84d"
+      ]
+    },
+    "all_text_stream": {
+      "original": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "b80ae3df473a14e4736227000debabda0546ca3ba011b8c57ab812880955c4ce",
+        "2eb1ffa72623504a822a15ecbfcb1b517ee4063ac65a14b4a94b94e77838d792",
+        "64848132290439eef5b12ee2e24185b7b92dc79f32857fba5b9413c219674c06",
+        "19ede61a742f9c96464bb49049abaaf8d4bd6d3cd6cc22f2ee50e1ac022de4a9",
+        "596d80767e691fc1af4b3e21d2625aa1a982602eefab9ca81ab5ee5145898084",
+        "9e119a25d34dd9df1f758abb91f14808356bc98600a0220bbb2b1de5b086093e",
+        "79a1d9f0f7debc7ce39ee9f3cca2a36aa5da486d1983db40c579a9849489f765"
+      ],
+      "plain": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "b80ae3df473a14e4736227000debabda0546ca3ba011b8c57ab812880955c4ce",
+        "2eb1ffa72623504a822a15ecbfcb1b517ee4063ac65a14b4a94b94e77838d792",
+        "64848132290439eef5b12ee2e24185b7b92dc79f32857fba5b9413c219674c06",
+        "19ede61a742f9c96464bb49049abaaf8d4bd6d3cd6cc22f2ee50e1ac022de4a9",
+        "596d80767e691fc1af4b3e21d2625aa1a982602eefab9ca81ab5ee5145898084",
+        "9e119a25d34dd9df1f758abb91f14808356bc98600a0220bbb2b1de5b086093e",
+        "79a1d9f0f7debc7ce39ee9f3cca2a36aa5da486d1983db40c579a9849489f765"
+      ],
+      "compact": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "b80ae3df473a14e4736227000debabda0546ca3ba011b8c57ab812880955c4ce",
+        "2eb1ffa72623504a822a15ecbfcb1b517ee4063ac65a14b4a94b94e77838d792",
+        "64848132290439eef5b12ee2e24185b7b92dc79f32857fba5b9413c219674c06",
+        "19ede61a742f9c96464bb49049abaaf8d4bd6d3cd6cc22f2ee50e1ac022de4a9",
+        "596d80767e691fc1af4b3e21d2625aa1a982602eefab9ca81ab5ee5145898084",
+        "9e119a25d34dd9df1f758abb91f14808356bc98600a0220bbb2b1de5b086093e",
+        "79a1d9f0f7debc7ce39ee9f3cca2a36aa5da486d1983db40c579a9849489f765"
+      ]
+    },
+    "all_columns_stream": {
+      "original": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "8e9f9523e58b83e239e31d43ff1617e6d017febd5e667ef5d5ff6d0f6f9f2757",
+        "bb189afcffc7118c30b14dbee19e0d00c4c30514ab4702a1a388115fc0755c32",
+        "b0eb52d447487ddf34c2060392481e47dca5424dc1051ecf830eee6cce661499",
+        "f9aaae1aea15488c64a59d6395e7ec58e76f924f8f4b299a8b890d28d915660b",
+        "a4a96bf4311e73092df451a0330bce8889f712b08a25469673388ec5243aa7c0",
+        "58848d223c4ad370af341501f37cc8c098635cb2d36540cc23f17bbb52787854",
+        "79a1d9f0f7debc7ce39ee9f3cca2a36aa5da486d1983db40c579a9849489f765"
+      ],
+      "plain": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "8e9f9523e58b83e239e31d43ff1617e6d017febd5e667ef5d5ff6d0f6f9f2757",
+        "bb189afcffc7118c30b14dbee19e0d00c4c30514ab4702a1a388115fc0755c32",
+        "b0eb52d447487ddf34c2060392481e47dca5424dc1051ecf830eee6cce661499",
+        "f9aaae1aea15488c64a59d6395e7ec58e76f924f8f4b299a8b890d28d915660b",
+        "a4a96bf4311e73092df451a0330bce8889f712b08a25469673388ec5243aa7c0",
+        "58848d223c4ad370af341501f37cc8c098635cb2d36540cc23f17bbb52787854",
+        "79a1d9f0f7debc7ce39ee9f3cca2a36aa5da486d1983db40c579a9849489f765"
+      ],
+      "compact": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "8e9f9523e58b83e239e31d43ff1617e6d017febd5e667ef5d5ff6d0f6f9f2757",
+        "bb189afcffc7118c30b14dbee19e0d00c4c30514ab4702a1a388115fc0755c32",
+        "b0eb52d447487ddf34c2060392481e47dca5424dc1051ecf830eee6cce661499",
+        "f9aaae1aea15488c64a59d6395e7ec58e76f924f8f4b299a8b890d28d915660b",
+        "a4a96bf4311e73092df451a0330bce8889f712b08a25469673388ec5243aa7c0",
+        "58848d223c4ad370af341501f37cc8c098635cb2d36540cc23f17bbb52787854",
+        "79a1d9f0f7debc7ce39ee9f3cca2a36aa5da486d1983db40c579a9849489f765"
+      ]
+    }
+  }
+}

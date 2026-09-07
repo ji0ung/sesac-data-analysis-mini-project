@@ -1,0 +1,190 @@
+{
+  "run_id": "STAGE2_260904_1259_01",
+  "ordering": "session_id, parsed search_time, search_id; stable chronological order",
+  "source_db": {
+    "path": "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\03_데이터모델링\\이전버전\\데이터셋\\2026-09-03_v02\\travel_data_filtered_complete_2026-09-03_v02_비식별.sqlite",
+    "sha256_before": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "sha256_after": "a0cbf893663b99f1a2e4bb8f5e1c202f0a2467f7baccf01f9e858ff54d955571",
+    "preserved": true,
+    "row_counts": {
+      "user": 89,
+      "hotel": 1000,
+      "room": 3000,
+      "search": 296,
+      "search_filter": 296,
+      "search_result": 8555,
+      "event": 10432,
+      "booking": 36
+    },
+    "coverage": {
+      "search_time_min": "2026-08-28 18:18:23 KST",
+      "search_time_max": "2026-08-31 19:43:27 KST",
+      "distinct_sessions": 43
+    },
+    "integrity": "ok"
+  },
+  "synthetic_db": {
+    "path": "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260904_1259_01\\호텔검색_관측형합성1000명_데이터_260904_1259_01.sqlite",
+    "sha256": "d30f40b9d0c85a8f8469f48b37daae5f6dc3e4a77eea81671310dda7cbd8e79d",
+    "row_counts": {
+      "user": 1000,
+      "hotel": 1000,
+      "room": 3000,
+      "search": 6900,
+      "search_filter": 6900,
+      "search_result": 198128,
+      "event": 238851,
+      "booking": 0
+    },
+    "coverage": {
+      "search_time_min": "2027-01-01 00:01:00 KST",
+      "search_time_max": "2027-09-08 00:02:30 KST",
+      "distinct_sessions": 1000
+    },
+    "integrity": "ok"
+  },
+  "structural_checks": {
+    "user_1000": true,
+    "sessions_1000": true,
+    "hotel_1000": true,
+    "room_3000": true,
+    "booking_0": true,
+    "search_filter_1to1": true,
+    "result_sum_matches": true,
+    "duplicate_search_hotel_0": true,
+    "room_hotel_mismatch_0": true,
+    "unexposed_click_0": true,
+    "invalid_stay_0": true,
+    "zero_result_behavior_0": true,
+    "synthetic_origin_only": true,
+    "integrity_ok": true,
+    "scenario_s0": true,
+    "observed_like": true
+  },
+  "corrected_metric_comparison": [
+    {
+      "metric": "zero_result_rate",
+      "original": {
+        "numerator": 147,
+        "denominator": 296,
+        "rate": 0.4966216216216216,
+        "analysis_unit": "search"
+      },
+      "synthetic": {
+        "numerator": 3434,
+        "denominator": 6900,
+        "rate": 0.49768115942028984,
+        "analysis_unit": "search"
+      },
+      "difference_pp": 0.1059537798668242,
+      "abs_difference_pp": 0.1059537798668242,
+      "tolerance_pp": 3.0,
+      "pass": true
+    },
+    {
+      "metric": "followup_rate_after_zero",
+      "original": {
+        "numerator": 140,
+        "denominator": 147,
+        "rate": 0.9523809523809523,
+        "analysis_unit": "zero-result search"
+      },
+      "synthetic": {
+        "numerator": 3271,
+        "denominator": 3434,
+        "rate": 0.9525334886429819,
+        "analysis_unit": "zero-result search"
+      },
+      "difference_pp": 0.015253626202960113,
+      "abs_difference_pp": 0.015253626202960113,
+      "tolerance_pp": 3.0,
+      "pass": true
+    },
+    {
+      "metric": "immediate_recovery_rate",
+      "original": {
+        "numerator": 24,
+        "denominator": 140,
+        "rate": 0.17142857142857143,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "synthetic": {
+        "numerator": 558,
+        "denominator": 3271,
+        "rate": 0.1705900336288597,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "difference_pp": -0.08385377997117416,
+      "abs_difference_pp": 0.08385377997117416,
+      "tolerance_pp": 3.0,
+      "pass": true
+    },
+    {
+      "metric": "session_final_recovery_rate",
+      "original": {
+        "numerator": 21,
+        "denominator": 28,
+        "rate": 0.75,
+        "analysis_unit": "session experiencing any zero result"
+      },
+      "synthetic": {
+        "numerator": 488,
+        "denominator": 651,
+        "rate": 0.7496159754224271,
+        "analysis_unit": "session experiencing any zero result"
+      },
+      "difference_pp": -0.038402457757291675,
+      "abs_difference_pp": 0.038402457757291675,
+      "tolerance_pp": 3.0,
+      "pass": true
+    },
+    {
+      "metric": "hotel_click_rate",
+      "original": {
+        "numerator": 45,
+        "denominator": 296,
+        "rate": 0.15202702702702703,
+        "analysis_unit": "search"
+      },
+      "synthetic": {
+        "numerator": 1052,
+        "denominator": 6900,
+        "rate": 0.15246376811594203,
+        "analysis_unit": "search"
+      },
+      "difference_pp": 0.043674108891500474,
+      "abs_difference_pp": 0.043674108891500474,
+      "tolerance_pp": 3.0,
+      "pass": true
+    },
+    {
+      "metric": "first_search_zero_session_research_recovery_rate",
+      "original": {
+        "numerator": 4,
+        "denominator": 6,
+        "rate": 0.6666666666666666,
+        "analysis_unit": "session whose first search is zero"
+      },
+      "synthetic": {
+        "numerator": 92,
+        "denominator": 139,
+        "rate": 0.6618705035971223,
+        "analysis_unit": "session whose first search is zero"
+      },
+      "difference_pp": -0.47961630695443347,
+      "abs_difference_pp": 0.47961630695443347,
+      "tolerance_pp": null,
+      "pass": null
+    }
+  ],
+  "core_max_abs_difference_pp": 0.1059537798668242,
+  "gates": {
+    "G1_structure": "PASS",
+    "G2_semantic_integrity": "PASS",
+    "G3_core_metric_similarity": "PASS",
+    "G4_source_preservation": "PASS",
+    "G5_scope_and_provenance": "PASS"
+  },
+  "final_qa_status": "PASS",
+  "expansion_allowed": true
+}

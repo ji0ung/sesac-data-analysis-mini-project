@@ -28,8 +28,8 @@
 저장소 루트에서 다음 명령을 실행합니다. Python 3 표준 라이브러리만 사용합니다.
 
 ```sh
-python3 final/Hotel_Search_Dashboard/scripts/build.py
-python3 final/Hotel_Search_Dashboard/scripts/build.py --check
+python "05_발표자료/팀프로젝트/2026/09/호텔검색_최종대시보드_20260907_v01_현행본/scripts/build.py"
+python "05_발표자료/팀프로젝트/2026/09/호텔검색_최종대시보드_20260907_v01_현행본/scripts/build.py" --check
 ```
 
 `index.html`은 생성 파일입니다. 직접 수정하지 말고 원본 파일을 수정한 뒤 다시 생성하세요. 결과 파일 하나만 전달해도 대시보드·슬라이드를 열 수 있습니다. 기존 날짜별 초안 폴더는 참고용이며, 이후 수정은 이 최종본 폴더에서 진행합니다.

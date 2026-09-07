@@ -1,0 +1,284 @@
+{
+  "analysis": {
+    "database": "C:\\Users\\ENCO\\Documents\\mission1\\team_i\\09_단계별 분석\\2단계_1000건_증감_분석\\02_관측형합성1000명_실행묶음_260904_1259_01\\호텔검색_관측형합성1000명_데이터_260904_1259_01.sqlite",
+    "database_sha256_before": "d30f40b9d0c85a8f8469f48b37daae5f6dc3e4a77eea81671310dda7cbd8e79d",
+    "database_sha256_after": "d30f40b9d0c85a8f8469f48b37daae5f6dc3e4a77eea81671310dda7cbd8e79d",
+    "access": "SQLite mode=ro and PRAGMA query_only=ON",
+    "python": "3.14.6",
+    "pandas": "3.0.5",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "statsmodels": "0.15.0"
+  },
+  "coverage": {
+    "row_counts": {
+      "user": 1000,
+      "hotel": 1000,
+      "room": 3000,
+      "search": 6900,
+      "search_filter": 6900,
+      "search_result": 198128,
+      "event": 238851,
+      "booking": 0
+    },
+    "search_time_min": "2027-01-01 00:01:00 KST",
+    "search_time_max": "2027-09-08 00:02:30 KST",
+    "searches": 6900,
+    "sessions": 1000,
+    "reconstructed_source_trajectories": 43,
+    "trajectory_replication_counts": {
+      "23": 32,
+      "24": 11
+    }
+  },
+  "quality_checks": {
+    "sqlite_integrity_ok": true,
+    "search_rows_6900": true,
+    "session_rows_1000": true,
+    "search_filter_one_to_one": true,
+    "search_result_reconciliation": true,
+    "all_zero_transitions_classified": true,
+    "session_segments_sum_1000": true,
+    "source_trajectory_signatures_43": true,
+    "representative_searches_296": true,
+    "representative_zero_searches_147": true,
+    "model_converged": true,
+    "source_hash_unchanged": true
+  },
+  "card_A": {
+    "amenity_count_ge_3": {
+      "numerator": 2808,
+      "denominator": 3181,
+      "rate": 0.8827412763281987,
+      "analysis_unit": "search"
+    },
+    "minimum_rating_set": {
+      "numerator": 2695,
+      "denominator": 3558,
+      "rate": 0.7574480044969084,
+      "analysis_unit": "search"
+    },
+    "price_filter_set": {
+      "numerator": 2473,
+      "denominator": 3408,
+      "rate": 0.7256455399061033,
+      "analysis_unit": "search"
+    }
+  },
+  "card_B": {
+    "followup_after_zero": {
+      "numerator": 3271,
+      "denominator": 3434,
+      "rate": 0.9525334886429819,
+      "analysis_unit": "zero-result search"
+    },
+    "search_sessions": 1000,
+    "session_start_events": 1000,
+    "session_end_events": 23,
+    "immediate_exit_rate_calculable": false
+  },
+  "card_C": {
+    "immediate_recovery": {
+      "numerator": 558,
+      "denominator": 3271,
+      "rate": 0.1705900336288597,
+      "analysis_unit": "zero-to-next transition"
+    },
+    "session_final_recovery": {
+      "numerator": 488,
+      "denominator": 651,
+      "rate": 0.7496159754224271,
+      "analysis_unit": "session experiencing any zero result"
+    }
+  },
+  "card_D_F": {
+    "동일조건 반복": {
+      "transitions": 1238,
+      "recovery": {
+        "numerator": 0,
+        "denominator": 1238,
+        "rate": 0.0,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "detail_entry": {
+        "numerator": 0,
+        "denominator": 1238,
+        "rate": 0.0,
+        "analysis_unit": "zero-to-next transition"
+      }
+    },
+    "조건 완화": {
+      "transitions": 959,
+      "recovery": {
+        "numerator": 256,
+        "denominator": 959,
+        "rate": 0.2669447340980188,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "detail_entry": {
+        "numerator": 187,
+        "denominator": 959,
+        "rate": 0.19499478623566216,
+        "analysis_unit": "zero-to-next transition"
+      }
+    },
+    "검색어 변경": {
+      "transitions": 234,
+      "recovery": {
+        "numerator": 69,
+        "denominator": 234,
+        "rate": 0.2948717948717949,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "detail_entry": {
+        "numerator": 69,
+        "denominator": 234,
+        "rate": 0.2948717948717949,
+        "analysis_unit": "zero-to-next transition"
+      }
+    },
+    "지역 변경": {
+      "transitions": 563,
+      "recovery": {
+        "numerator": 233,
+        "denominator": 563,
+        "rate": 0.413854351687389,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "detail_entry": {
+        "numerator": 70,
+        "denominator": 563,
+        "rate": 0.12433392539964476,
+        "analysis_unit": "zero-to-next transition"
+      }
+    },
+    "조건 강화": {
+      "transitions": 231,
+      "recovery": {
+        "numerator": 0,
+        "denominator": 231,
+        "rate": 0.0,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "detail_entry": {
+        "numerator": 0,
+        "denominator": 231,
+        "rate": 0.0,
+        "analysis_unit": "zero-to-next transition"
+      }
+    },
+    "완화·강화 혼합": {
+      "transitions": 46,
+      "recovery": {
+        "numerator": 0,
+        "denominator": 46,
+        "rate": 0.0,
+        "analysis_unit": "zero-to-next transition"
+      },
+      "detail_entry": {
+        "numerator": 0,
+        "denominator": 46,
+        "rate": 0.0,
+        "analysis_unit": "zero-to-next transition"
+      }
+    }
+  },
+  "card_G": {
+    "직접 상호작용 성공": {
+      "numerator": 69,
+      "denominator": 1000,
+      "rate": 0.069,
+      "analysis_unit": "session"
+    },
+    "재검색 후 상호작용 성공": {
+      "numerator": 630,
+      "denominator": 1000,
+      "rate": 0.63,
+      "analysis_unit": "session"
+    },
+    "상호작용 없음": {
+      "numerator": 301,
+      "denominator": 1000,
+      "rate": 0.301,
+      "analysis_unit": "session"
+    }
+  },
+  "card_H": {
+    "1": {
+      "numerator": 680,
+      "denominator": 3466,
+      "rate": 0.19619157530294287,
+      "analysis_unit": "exposed search-result pair"
+    },
+    "2": {
+      "numerator": 255,
+      "denominator": 3183,
+      "rate": 0.08011310084825636,
+      "analysis_unit": "exposed search-result pair"
+    },
+    "3": {
+      "numerator": 139,
+      "denominator": 2717,
+      "rate": 0.051159366948840636,
+      "analysis_unit": "exposed search-result pair"
+    },
+    "4": {
+      "numerator": 69,
+      "denominator": 2576,
+      "rate": 0.026785714285714284,
+      "analysis_unit": "exposed search-result pair"
+    },
+    "5": {
+      "numerator": 93,
+      "denominator": 2528,
+      "rate": 0.036787974683544306,
+      "analysis_unit": "exposed search-result pair"
+    }
+  },
+  "A2_adjusted_model": {
+    "formula": "zero_result ~ price_set + rating_set + amenity_ge3 + C(city) + C(checkin_month) + guest_count + stay_nights",
+    "population": "296 searches from one representative of each of 43 reconstructed source trajectories",
+    "covariance": "cluster-robust by representative session (43 clusters)",
+    "n_searches": 296,
+    "n_session_clusters": 43,
+    "aic": 244.36585911947736,
+    "converged": true,
+    "constraint_terms": {
+      "price_set": {
+        "odds_ratio": 2.2568459403630823,
+        "odds_ratio_ci95_low": 0.37842432416931354,
+        "odds_ratio_ci95_high": 13.459371592230077,
+        "p_value": 0.37164377056874875,
+        "standardized_probability_if_off": 0.4502479859629583,
+        "standardized_probability_if_on": 0.5518807287432299,
+        "standardized_difference_pp": 10.163274278027162
+      },
+      "rating_set": {
+        "odds_ratio": 1.378618970892609,
+        "odds_ratio_ci95_low": 0.3322584708661648,
+        "odds_ratio_ci95_high": 5.720216137606204,
+        "p_value": 0.6582974456865525,
+        "standardized_probability_if_off": 0.4777841942940042,
+        "standardized_probability_if_on": 0.5154603493547993,
+        "standardized_difference_pp": 3.7676155060795136
+      },
+      "amenity_ge3": {
+        "odds_ratio": 29.69483994047841,
+        "odds_ratio_ci95_low": 8.877238730141624,
+        "odds_ratio_ci95_high": 99.33083314484254,
+        "p_value": 3.709197595582934e-08,
+        "standardized_probability_if_off": 0.21239991804428443,
+        "standardized_probability_if_on": 0.8232499293141455,
+        "standardized_difference_pp": 61.085001126986114
+      }
+    }
+  },
+  "limitations": [
+    "The 1,000 sessions are balanced copies of 43 source trajectories, not 1,000 independent observations.",
+    "Stay dates are excluded from trajectory fingerprinting because invalid source stays were repaired with sampled valid durations.",
+    "The adjusted model is observational and does not identify a causal effect of relaxing a condition.",
+    "Immediate exit cannot be measured because only 23 session_end events exist for 1,000 sessions.",
+    "Booking conversion and revenue cannot be measured because booking and booking events contain zero rows.",
+    "Intervention exposure events for condition-relaxation choices and repeat-search warnings do not yet exist."
+  ]
+}
