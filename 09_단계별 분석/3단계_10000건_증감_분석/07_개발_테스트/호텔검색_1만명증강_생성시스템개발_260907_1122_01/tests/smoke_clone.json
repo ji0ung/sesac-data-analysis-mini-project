@@ -1,0 +1,71 @@
+{
+  "condition_signature": {
+    "n": 547,
+    "unique": 173,
+    "mode_share": 0.025594149908592323,
+    "hhi": 0.009655458224852862,
+    "shannon": 4.864168013936517,
+    "duplicate_excess": 374
+  },
+  "condition_path": {
+    "n": 200,
+    "unique": 149,
+    "mode_share": 0.03,
+    "hhi": 0.00935,
+    "shannon": 4.864551005852186,
+    "duplicate_excess": 51
+  },
+  "behavior_path": {
+    "n": 200,
+    "unique": 101,
+    "mode_share": 0.105,
+    "hhi": 0.03225,
+    "shannon": 4.071154944022811,
+    "duplicate_excess": 99
+  },
+  "template_cluster": {
+    "n": 200,
+    "unique": 32,
+    "mode_share": 0.375,
+    "hhi": 0.1639,
+    "shannon": 2.5759096175760634,
+    "duplicate_excess": 168
+  },
+  "full_path": {
+    "n": 200,
+    "unique": 193,
+    "mode_share": 0.01,
+    "hhi": 0.005350000000000001,
+    "shannon": 5.24979706390884,
+    "duplicate_excess": 7
+  },
+  "delay_vector": {
+    "n": 200,
+    "unique": 107,
+    "mode_share": 0.435,
+    "hhi": 0.19245,
+    "shannon": 3.304510791575274,
+    "duplicate_excess": 93
+  },
+  "arm_full_path": {
+    "control": {
+      "n": 100,
+      "unique": 100,
+      "mode_share": 0.01,
+      "hhi": 0.01,
+      "shannon": 4.605170185988091,
+      "duplicate_excess": 0
+    },
+    "treatment": {
+      "n": 100,
+      "unique": 100,
+      "mode_share": 0.01,
+      "hhi": 0.01,
+      "shannon": 4.605170185988091,
+      "duplicate_excess": 0
+    }
+  },
+  "reference_exact_session_clone": 0,
+  "reference_exact_delay_vector_clone": 0,
+  "definition_note": "reference schema differs; canonical generated paths are stochastic and no source row/session is materialized"
+}

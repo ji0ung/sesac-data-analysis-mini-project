@@ -1,0 +1,37 @@
+step: 2.9-R
+status: implemented_pending_manifest
+authority_reference_sha256: 9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f
+observed_reference_kpis:
+  search_zero: {numerator: 3434, denominator: 6900}
+  zero_followup: {numerator: 3271, denominator: 3434}
+  immediate_recovery: {numerator: 558, denominator: 3271}
+  terminal_recovery: {numerator: 488, denominator: 651}
+  card_h_search: {numerator: 680, denominator: 3466}
+  card_h_event_rows: 2580
+root_cause:
+  v01_session_length: independently drawn before terminal outcome, truncating required transitions
+  v01_transition_parameters: values were read but later per-search logic could override their outcomes
+  v01_time_tail: single capped body distribution could not reproduce the rare long tail
+  v01_clone_842: abstract normalized behavior signatures were mislabeled as exact session clones
+revised_call_chain:
+  zero_followup_probability: load_config -> state_plan -> Bernoulli follow -> ZERO_NO_FOLLOWUP or follow-up row
+  immediate_recovery_probability: load_config -> state_plan -> Bernoulli immediate -> IMMEDIATE_RECOVERY row
+  terminal_recovery_probability: load_config -> conditional_late_formula -> Bernoulli late -> LATE_RECOVERY/PERSISTENT_FAILURE
+  session_length: reference_profile conditional outcome lengths -> state_plan minimum-length enforcement -> Search rows
+  card_h_search_probability: load_config -> positive-search Bernoulli -> rank-1 detail; repeated-event draw is separate
+  time_tail: load_config -> draw_interval mixture -> body/tail component -> chronological Search rows
+  search_order_hazard: load_config -> zero_hazard(order, previous result, cumulative zero, strategy, constraints, exposure) -> interim state draw
+terminal_recovery_definition: probability that a session with any zero ends on a positive search; includes immediate recovery
+conditional_late_formula: (terminal_recovery - followup * immediate_recovery) / (followup * (1-immediate_recovery))
+clone_definition_version: newref_v02
+clone_rules:
+  CLONE_A: all stored values including IDs identical; required zero
+  CLONE_B: IDs absolute time and lineage excluded, all remaining business values and delay buckets identical; required zero
+  CLONE_C: CLONE-B plus exact relative time identical; required zero
+  DIVERSITY_PATH: abstract condition/behavior/outcome repetition; allowed and reported with top-share HHI entropy
+safety:
+  smoke_user_max: 200
+  calibration: blocked
+  production: blocked
+  production_seed: 2434815518
+  production_seed_used: false

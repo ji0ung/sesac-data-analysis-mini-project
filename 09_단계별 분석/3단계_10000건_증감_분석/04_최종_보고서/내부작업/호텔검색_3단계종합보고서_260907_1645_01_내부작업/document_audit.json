@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "checks": {
+    "valid_zip_package": true,
+    "all_required_chapters": true,
+    "tables_at_least_20": true,
+    "images_at_least_6": true,
+    "update_fields_on_open": true,
+    "toc_field_present": true,
+    "page_field_present": true,
+    "required_limitation_statement": true,
+    "strict_hold_preserved": true,
+    "card_h_history_present": true,
+    "bootstrap_documented": true,
+    "database_hash_present": true,
+    "no_nan_or_none_tokens": true,
+    "single_final_docx_in_stage": true,
+    "database_hash_unchanged": true
+  },
+  "docx": {
+    "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_3단계증강및AB분석종합보고서_260907_1645_02.docx",
+    "sha256": "8e0db825b95cb276553637f64e153cc6ae60e4c7a7481bacbd02657d810066cc",
+    "bytes": 300591,
+    "paragraphs": 111,
+    "tables": 22,
+    "images": 6,
+    "headings": [
+      "목차",
+      "제1장. 핵심 요약과 보고서의 사용 범위",
+      "제2장. 데이터 계보와 기준 DB 채택",
+      "제3장. 증강 계획과 실제 생성 방법",
+      "3.1 증강 단위와 paired 설계",
+      "3.2 대조군·실험군 상태 전이",
+      "3.3 결과·상세·시간 생성",
+      "3.4 복제 방지와 재현성",
+      "제4장. 수정·검증 과정과 한계 명시형 사용 전환",
+      "제5장. 시나리오와 분석 질문",
+      "제6장. 지표 정의와 분석 방법",
+      "제7장. 실제 분석 결과",
+      "7.1 규모와 전수 품질",
+      "7.2 기준선 재현",
+      "7.3 전체 배정군 A/B 비교",
+      "7.4 사전 조건별 탐색적 차이",
+      "7.5 상태 전이와 종료",
+      "7.6 시간분포",
+      "7.7 기존 시나리오 민감도",
+      "제8장. 인사이트와 실행 제안",
+      "제9장. 증강과 본 분석의 한계",
+      "제10장. 결론과 후속 검증 계획",
+      "부록 A. 핵심 SQL·계산 절차",
+      "부록 B. 입력·출력·버전·SHA-256",
+      "부록 C. 출처 매핑과 미실시 분석"
+    ],
+    "text_characters": 23041,
+    "max_table_cell_characters": 116
+  },
+  "visual_checks": {
+    "embedded_chart_pngs_inspected": 6,
+    "chart_legibility": "PASS",
+    "full_docx_page_render": "NOT_COMPLETED",
+    "reason": "Microsoft Word COM failed even for a blank document; Computer Use native pipe unavailable. Structural Open XML and python-docx validation completed."
+  }
+}

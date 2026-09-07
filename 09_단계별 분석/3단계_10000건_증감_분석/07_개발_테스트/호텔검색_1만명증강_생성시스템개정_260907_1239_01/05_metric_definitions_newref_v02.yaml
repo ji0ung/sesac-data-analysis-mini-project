@@ -1,0 +1,12 @@
+version: newref_v02
+final_recovery_definition: "terminal recovery among all sessions experiencing at least one zero; includes immediate recovery"
+conditional_late_recovery_formula: "(terminal_recovery - zero_followup * immediate_recovery) / (zero_followup * (1-immediate_recovery))"
+metrics:
+  search_zero: {grain: search_id, numerator: "COUNT DISTINCT search_id WHERE total_result_count=0", denominator: "COUNT DISTINCT search_id"}
+  zero_followup: {grain: zero search, numerator: "zero search having LEAD(search_id)", denominator: "all zero searches"}
+  immediate_recovery: {grain: followed zero search, numerator: "next search total_result_count>0", denominator: "zero searches having a next search"}
+  final_recovery: {grain: session_id, numerator: "zero-experienced session whose final search is positive", denominator: "zero-experienced session"}
+  persistent_failure: {grain: session_id, numerator: "zero-experienced final-zero session", denominator: "zero-experienced session"}
+  card_h_search: {grain: search_id, numerator: "positive searches with >=1 rank-1 hotel_detail_view", denominator: "positive searches"}
+  card_h_event: {grain: event_row, value: "rank-1 hotel_detail_view row count", ratio_prohibited: true}
+  booking: {grain: booking_id, required_rows: 0, core_kpi: false}

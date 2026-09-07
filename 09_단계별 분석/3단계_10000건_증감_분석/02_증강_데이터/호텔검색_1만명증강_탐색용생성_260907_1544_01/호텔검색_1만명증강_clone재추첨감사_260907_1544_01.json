@@ -1,0 +1,47 @@
+{
+  "purpose": "deterministic read-only replay of approved internal clone collision redraw",
+  "production_database_sha256_before": "f6de5834ea326bb165efdd16e73ba4b1ff3939d1c8ecce27b3517d55b2a5819a",
+  "seed": 2434815518,
+  "pairs": 5000,
+  "sessions": 10000,
+  "max_redraw_attempts": 30,
+  "collision_redraw_count": {
+    "control": 0,
+    "treatment": 4
+  },
+  "collision_redraw_total": 4,
+  "accepted_attempt_distribution": {
+    "control": {
+      "1": 5000
+    },
+    "treatment": {
+      "1": 4996,
+      "2": 4
+    }
+  },
+  "redraw_failure_count": 0,
+  "redraw_failures": [],
+  "replayed_counts": {
+    "control": {
+      "searches": 33572,
+      "zero_searches": 16761
+    },
+    "treatment": {
+      "searches": 31783,
+      "zero_searches": 13853
+    }
+  },
+  "database_counts": {
+    "control": {
+      "searches": 33572,
+      "zero_searches": 16761
+    },
+    "treatment": {
+      "searches": 31783,
+      "zero_searches": 13853
+    }
+  },
+  "exact_replay_match": true,
+  "production_database_sha256_after": "f6de5834ea326bb165efdd16e73ba4b1ff3939d1c8ecce27b3517d55b2a5819a",
+  "database_unchanged": true
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_role": "STEP_2_10_ENTRY_CANDIDATE_NOT_PRODUCTION_APPROVAL",
+  "status": "STEP_2_9_PASS",
+  "step_2_8_inputs": {
+    "reference_manifest_sha256": "d00a361d2a42de363b879a165a9faa3efe0fbaeb160654667d83552400eca3db",
+    "generation_requirements_sha256": "5109088fbe5efe802755509df6b4c9080808b5f74aee9974789392de8f31345d",
+    "gate_report_sha256": "9af0b08a97d6b1856b28dbf38911f2734e805893f0c14410b6ef61421e305f61",
+    "audit_code_sha256": "42c32d81c3918388356ec35a45661d3be2d0df65f6bd182cd4ac33d0816ed5c1"
+  },
+  "reference_db_absolute_path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\01_초기생성_QA_전체분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite",
+  "reference_db_sha256": "9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f",
+  "reference_authority": "USER_SELECTED_AUTHORITATIVE_REFERENCE",
+  "reference_policy": "INDEPENDENT_BASELINE_NOT_LEGACY_EQUIVALENCE",
+  "treatment_source_document": "BI시각화_34일차_2팀_TO-BE실행안_교수판단회신_260904_1803_01.docx",
+  "treatment_source_sha256": "ec2e5eb5ce18badf5d09d528bf0e0aeedc61a606a082a4219a483d83508c86f0",
+  "artifacts": {
+    "generator_sha256": "87d5d165391acca08c10cbf9d6dab9535ad61aa5056f7ea4268ecb4f254c8821",
+    "config_sha256": "bb21cd182af19b4cdf2ccf065243d263346f14d19ddefae4dac822327c36633d",
+    "config_schema_sha256": "56d34f391674fc217124913a3104961518d33a917485282f9c96906e5eb8cd1d",
+    "sqlite_schema_sha256": "5a16e0295e78515f8028292aa8d33135dd8825d79d2b9a8259d5755ec7ab3a2d",
+    "calibration_sha256": "fe415703243c0ad97dfa7f6382e68b7535e8d146c6550bdcb347a92491823916",
+    "quality_gate_sha256": "917990031cdf1242e62fc427a8f8c58adb9ef746f737bba6b3f019cba030b461",
+    "clone_audit_sha256": "bf9ce78fa76a0b44712d077598a4697035dbe035b86f241f36671358ae6cb22e",
+    "metric_definitions_sha256": "4a9b7a0f12a40c87ef654c2ddc82f7e72c258fcbfa569545801c09e883f4e454",
+    "test_manifest_sha256": "f4bf3a71969e8c8181448561bdb4daa70a3b7ce4a7669b8dc5e7b1860b225b42",
+    "readiness_report_sha256": "e10341964ce5012b9045acecc4ca25adff3ca570bc1dcf390fee22a82baba00f"
+  },
+  "tests_total": 21,
+  "tests_passed": 21,
+  "smoke_test_seed": 2026090711,
+  "smoke_test_users": 200,
+  "smoke_test_control": 100,
+  "smoke_test_treatment": 100,
+  "smoke_test_pairs": 100,
+  "production_executed": false,
+  "ten_thousand_db_generated": false,
+  "step_2_10_allowed": true,
+  "production_execution_authorized": false,
+  "created_at": "2026-09-07T11:30:17+09:00"
+}

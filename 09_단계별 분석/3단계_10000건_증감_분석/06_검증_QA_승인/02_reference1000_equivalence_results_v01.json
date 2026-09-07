@@ -1,0 +1,3800 @@
+{
+  "physical": [
+    {
+      "db": "previous",
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\03_데이터모델링\\합성데이터\\관측형합성1000명_최종승인본\\호텔검색_관측형합성1000명_분석용lineage제거정제DB_260905_1650_01.sqlite",
+      "bytes": 154738688,
+      "sha256": "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+      "sqlite_version": "3.45.3",
+      "integrity": "ok",
+      "quick": "ok",
+      "page_size": 4096,
+      "page_count": 37778,
+      "freelist": 12523,
+      "metadata": 1,
+      "user_indexes": 4
+    },
+    {
+      "db": "optimized",
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\01_초기생성_QA_전체분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite",
+      "bytes": 46891008,
+      "sha256": "9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f",
+      "sqlite_version": "3.45.3",
+      "integrity": "ok",
+      "quick": "ok",
+      "page_size": 16384,
+      "page_count": 2862,
+      "freelist": 0,
+      "metadata": 0,
+      "user_indexes": 0
+    }
+  ],
+  "schema": [
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "user_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "user_name",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "age_group",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "email",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "signup_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "hotel_name",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "city_name",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "grade",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "hotel_address",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "user_rating",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "review_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "property_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_address",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_city",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_prefecture",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_postal_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_latitude",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_longitude",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_phone",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_star_rating",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "supplier_hotel_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "rtx_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "agoda_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "expedia_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "top_selling_rank",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "source_last_mapped_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_data_sources",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "guest_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_options",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "pay_later_flag",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "free_cancel_flag",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_price",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "session_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "search_time",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "query_text",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "checkin_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "checkout_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "total_result_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "sort_option",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "guest_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "destination",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "search_filter_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "property_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "property_grade",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "user_rating_min",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "price",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "amenity_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "region",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "search_result_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "room_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "result_score",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "result_rank",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "price_rank",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "event_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "session_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "event_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "event_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "search_filter_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "user_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "rating",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "session_end_time",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "review_completed_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "review_text",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "device",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 1
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "user_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "room_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_status",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_amount",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "checkin_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "checkout_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "guest_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "room_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "cancellation_deadline",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "data_origin",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "user_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "user_name",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "age_group",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "email",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "signup_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "hotel_name",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "city_name",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "grade",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "hotel_address",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "user_rating",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "review_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "property_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_address",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_city",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_prefecture",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_postal_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_latitude",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_longitude",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_phone",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_star_rating",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "supplier_hotel_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "rtx_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "agoda_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "expedia_code",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "top_selling_rank",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "source_last_mapped_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_data_sources",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "guest_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_options",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "pay_later_flag",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "free_cancel_flag",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_price",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "session_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "search_time",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "query_text",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "checkin_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "checkout_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "total_result_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "sort_option",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "guest_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "destination",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "search_filter_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "property_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "property_grade",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "user_rating_min",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "price",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "amenity_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "region",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "search_result_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "room_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "result_score",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "result_rank",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "price_rank",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "event_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "session_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "event_type",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "event_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "search_filter_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "search_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "user_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "rating",
+      "type": "REAL",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "session_end_time",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "review_completed_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "review_text",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "device",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "user_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "hotel_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "room_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_status",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_amount",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "checkin_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "checkout_date",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "guest_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "room_count",
+      "type": "INTEGER",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "cancellation_deadline",
+      "type": "TEXT",
+      "notnull": 0,
+      "default": null,
+      "pk": 0
+    }
+  ],
+  "data": [
+    {
+      "table": "user",
+      "old_rows": 1000,
+      "new_rows": 1000,
+      "common_columns": 5,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 1000,
+      "normalized_row_difference": 0
+    },
+    {
+      "table": "hotel",
+      "old_rows": 1000,
+      "new_rows": 1000,
+      "common_columns": 23,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 0,
+      "normalized_row_difference": 0
+    },
+    {
+      "table": "room",
+      "old_rows": 3000,
+      "new_rows": 3000,
+      "common_columns": 9,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 0,
+      "normalized_row_difference": 0
+    },
+    {
+      "table": "search",
+      "old_rows": 6900,
+      "new_rows": 6900,
+      "common_columns": 10,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 6900,
+      "normalized_row_difference": 6900
+    },
+    {
+      "table": "search_filter",
+      "old_rows": 6900,
+      "new_rows": 6900,
+      "common_columns": 8,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 0,
+      "normalized_row_difference": 0
+    },
+    {
+      "table": "search_result",
+      "old_rows": 198128,
+      "new_rows": 198128,
+      "common_columns": 7,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 0,
+      "normalized_row_difference": 0
+    },
+    {
+      "table": "event",
+      "old_rows": 238851,
+      "new_rows": 238851,
+      "common_columns": 13,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 238851,
+      "normalized_row_difference": 0
+    },
+    {
+      "table": "booking",
+      "old_rows": 0,
+      "new_rows": 0,
+      "common_columns": 12,
+      "old_only_columns": "data_origin",
+      "new_only_columns": "",
+      "key_set_difference": 0,
+      "raw_row_difference": 0,
+      "normalized_row_difference": 0
+    }
+  ],
+  "cell_differences": [
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0001",
+      "old_value": "2026-12-02 00:01:00 KST",
+      "new_value": "2026-12-02 00:01:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0002",
+      "old_value": "2026-12-02 00:02:00 KST",
+      "new_value": "2026-12-02 00:02:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0003",
+      "old_value": "2026-12-02 00:03:00 KST",
+      "new_value": "2026-12-02 00:03:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0004",
+      "old_value": "2026-12-03 00:00:00 KST",
+      "new_value": "2026-12-03 00:00:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0005",
+      "old_value": "2026-12-03 00:01:00 KST",
+      "new_value": "2026-12-03 00:01:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0006",
+      "old_value": "2026-12-03 00:02:00 KST",
+      "new_value": "2026-12-03 00:02:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0007",
+      "old_value": "2026-12-03 00:03:00 KST",
+      "new_value": "2026-12-03 00:03:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0008",
+      "old_value": "2026-12-04 00:00:00 KST",
+      "new_value": "2026-12-04 00:00:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0009",
+      "old_value": "2026-12-04 00:01:00 KST",
+      "new_value": "2026-12-04 00:01:00"
+    },
+    {
+      "table": "user",
+      "column": "signup_at",
+      "changed_rows": 1000,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_U0010",
+      "old_value": "2026-12-04 00:02:00 KST",
+      "new_value": "2026-12-04 00:02:00"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0001_001",
+      "old_value": "2027-01-01 00:05:23 KST",
+      "new_value": "2027-01-01 00:01:00"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0001_002",
+      "old_value": "2027-01-01 00:06:04 KST",
+      "new_value": "2027-01-01 00:01:41"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0001_003",
+      "old_value": "2027-01-01 00:06:09 KST",
+      "new_value": "2027-01-01 00:01:46"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0001_004",
+      "old_value": "2027-01-01 00:06:22 KST",
+      "new_value": "2027-01-01 00:01:59"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0001_005",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:02:11"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0002_001",
+      "old_value": "2027-01-01 00:02:45 KST",
+      "new_value": "2027-01-01 00:02:00"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0002_002",
+      "old_value": "2027-01-01 00:02:56 KST",
+      "new_value": "2027-01-01 00:02:11"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0002_003",
+      "old_value": "2027-01-01 00:03:15 KST",
+      "new_value": "2027-01-01 00:02:30"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0002_004",
+      "old_value": "2027-01-01 00:03:22 KST",
+      "new_value": "2027-01-01 00:02:37"
+    },
+    {
+      "table": "search",
+      "column": "search_time",
+      "changed_rows": 6900,
+      "normalized_changed_rows": 6900,
+      "business_key": "SYN_Q0003_001",
+      "old_value": "2027-01-01 00:04:20 KST",
+      "new_value": "2027-01-01 00:03:00"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00001",
+      "old_value": "2027-01-01 00:01:00 KST",
+      "new_value": "2027-01-01 00:01:00"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00002",
+      "old_value": "2027-01-01 00:02:06 KST",
+      "new_value": "2027-01-01 00:02:06"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00003",
+      "old_value": "2027-01-01 00:05:23 KST",
+      "new_value": "2027-01-01 00:05:23"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00004",
+      "old_value": "2027-01-01 00:05:23 KST",
+      "new_value": "2027-01-01 00:05:23"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00005",
+      "old_value": "2027-01-01 00:06:04 KST",
+      "new_value": "2027-01-01 00:06:04"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00006",
+      "old_value": "2027-01-01 00:06:04 KST",
+      "new_value": "2027-01-01 00:06:04"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00007",
+      "old_value": "2027-01-01 00:06:09 KST",
+      "new_value": "2027-01-01 00:06:09"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00008",
+      "old_value": "2027-01-01 00:06:09 KST",
+      "new_value": "2027-01-01 00:06:09"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00009",
+      "old_value": "2027-01-01 00:06:22 KST",
+      "new_value": "2027-01-01 00:06:22"
+    },
+    {
+      "table": "event",
+      "column": "event_at",
+      "changed_rows": 238851,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00010",
+      "old_value": "2027-01-01 00:06:22 KST",
+      "new_value": "2027-01-01 00:06:22"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00001",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00002",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00003",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00004",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00005",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00006",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00007",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00008",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00009",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "changed_rows": 193472,
+      "normalized_changed_rows": 0,
+      "business_key": "SYN_E0001_00010",
+      "old_value": "2027-01-01 00:06:34 KST",
+      "new_value": "2027-01-01 00:06:34"
+    }
+  ],
+  "nulls": [
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "user_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "user_name",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "age_group",
+      "null_count": 1000,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "email",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "signup_at",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "user",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 1
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "hotel_name",
+      "null_count": 0,
+      "distinct_count": 991
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "city_name",
+      "null_count": 0,
+      "distinct_count": 5
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "grade",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "hotel_address",
+      "null_count": 0,
+      "distinct_count": 535
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "user_rating",
+      "null_count": 0,
+      "distinct_count": 28
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "review_count",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "property_type",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_address",
+      "null_count": 509,
+      "distinct_count": 485
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_city",
+      "null_count": 509,
+      "distinct_count": 37
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_prefecture",
+      "null_count": 678,
+      "distinct_count": 14
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_postal_code",
+      "null_count": 678,
+      "distinct_count": 196
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_latitude",
+      "null_count": 509,
+      "distinct_count": 474
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_longitude",
+      "null_count": 509,
+      "distinct_count": 471
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_phone",
+      "null_count": 520,
+      "distinct_count": 465
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_star_rating",
+      "null_count": 688,
+      "distinct_count": 9
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "supplier_hotel_code",
+      "null_count": 552,
+      "distinct_count": 442
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "rtx_code",
+      "null_count": 678,
+      "distinct_count": 318
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "agoda_code",
+      "null_count": 695,
+      "distinct_count": 301
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "expedia_code",
+      "null_count": 831,
+      "distinct_count": 165
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "top_selling_rank",
+      "null_count": 881,
+      "distinct_count": 93
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "source_last_mapped_at",
+      "null_count": 552,
+      "distinct_count": 118
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "actual_data_sources",
+      "null_count": 509,
+      "distinct_count": 3
+    },
+    {
+      "db": "previous",
+      "table": "hotel",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 1
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_id",
+      "null_count": 0,
+      "distinct_count": 3000
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "guest_count",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_count",
+      "null_count": 0,
+      "distinct_count": 4
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_options",
+      "null_count": 0,
+      "distinct_count": 36
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "pay_later_flag",
+      "null_count": 0,
+      "distinct_count": 2
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "free_cancel_flag",
+      "null_count": 0,
+      "distinct_count": 2
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_price",
+      "null_count": 0,
+      "distinct_count": 58
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "room_type",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "previous",
+      "table": "room",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 1
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "search_id",
+      "null_count": 0,
+      "distinct_count": 6900
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "session_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "search_time",
+      "null_count": 0,
+      "distinct_count": 6782
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "query_text",
+      "null_count": 2516,
+      "distinct_count": 23
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "checkin_date",
+      "null_count": 0,
+      "distinct_count": 23
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "checkout_date",
+      "null_count": 0,
+      "distinct_count": 25
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "total_result_count",
+      "null_count": 0,
+      "distinct_count": 30
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "sort_option",
+      "null_count": 0,
+      "distinct_count": 4
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "guest_count",
+      "null_count": 0,
+      "distinct_count": 5
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "destination",
+      "null_count": 1050,
+      "distinct_count": 26
+    },
+    {
+      "db": "previous",
+      "table": "search",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 1
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "search_filter_id",
+      "null_count": 0,
+      "distinct_count": 6900
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "search_id",
+      "null_count": 0,
+      "distinct_count": 6900
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "property_type",
+      "null_count": 6900,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "property_grade",
+      "null_count": 6900,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "user_rating_min",
+      "null_count": 3342,
+      "distinct_count": 3
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "price",
+      "null_count": 3492,
+      "distinct_count": 8
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "amenity_count",
+      "null_count": 0,
+      "distinct_count": 12
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "region",
+      "null_count": 1050,
+      "distinct_count": 26
+    },
+    {
+      "db": "previous",
+      "table": "search_filter",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 1
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "search_result_id",
+      "null_count": 0,
+      "distinct_count": 198128
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "search_id",
+      "null_count": 0,
+      "distinct_count": 3466
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "room_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "result_score",
+      "null_count": 0,
+      "distinct_count": 101
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "result_rank",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "price_rank",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "search_result",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 1
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "event_id",
+      "null_count": 0,
+      "distinct_count": 238851
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "session_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "event_type",
+      "null_count": 0,
+      "distinct_count": 24
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "event_at",
+      "null_count": 0,
+      "distinct_count": 22129
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "hotel_id",
+      "null_count": 13986,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "search_filter_id",
+      "null_count": 2583,
+      "distinct_count": 6900
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "search_id",
+      "null_count": 2583,
+      "distinct_count": 6900
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "user_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "rating",
+      "null_count": 235293,
+      "distinct_count": 3
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "session_end_time",
+      "null_count": 45379,
+      "distinct_count": 931
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "review_completed_at",
+      "null_count": 238851,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "review_text",
+      "null_count": 238851,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "device",
+      "null_count": 222627,
+      "distinct_count": 2
+    },
+    {
+      "db": "previous",
+      "table": "event",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 1
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "user_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "room_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_status",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_amount",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "booking_at",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "checkin_date",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "checkout_date",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "guest_count",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "room_count",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "cancellation_deadline",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "previous",
+      "table": "booking",
+      "column": "data_origin",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "user_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "user_name",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "age_group",
+      "null_count": 1000,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "email",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "user",
+      "column": "signup_at",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "hotel_name",
+      "null_count": 0,
+      "distinct_count": 991
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "city_name",
+      "null_count": 0,
+      "distinct_count": 5
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "grade",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "hotel_address",
+      "null_count": 0,
+      "distinct_count": 535
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "user_rating",
+      "null_count": 0,
+      "distinct_count": 28
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "review_count",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "property_type",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_address",
+      "null_count": 509,
+      "distinct_count": 485
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_city",
+      "null_count": 509,
+      "distinct_count": 37
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_prefecture",
+      "null_count": 678,
+      "distinct_count": 14
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_postal_code",
+      "null_count": 678,
+      "distinct_count": 196
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_latitude",
+      "null_count": 509,
+      "distinct_count": 474
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_longitude",
+      "null_count": 509,
+      "distinct_count": 471
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_phone",
+      "null_count": 520,
+      "distinct_count": 465
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_star_rating",
+      "null_count": 688,
+      "distinct_count": 9
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "supplier_hotel_code",
+      "null_count": 552,
+      "distinct_count": 442
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "rtx_code",
+      "null_count": 678,
+      "distinct_count": 318
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "agoda_code",
+      "null_count": 695,
+      "distinct_count": 301
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "expedia_code",
+      "null_count": 831,
+      "distinct_count": 165
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "top_selling_rank",
+      "null_count": 881,
+      "distinct_count": 93
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "source_last_mapped_at",
+      "null_count": 552,
+      "distinct_count": 118
+    },
+    {
+      "db": "optimized",
+      "table": "hotel",
+      "column": "actual_data_sources",
+      "null_count": 509,
+      "distinct_count": 3
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_id",
+      "null_count": 0,
+      "distinct_count": 3000
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "guest_count",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_count",
+      "null_count": 0,
+      "distinct_count": 4
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_options",
+      "null_count": 0,
+      "distinct_count": 36
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "pay_later_flag",
+      "null_count": 0,
+      "distinct_count": 2
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "free_cancel_flag",
+      "null_count": 0,
+      "distinct_count": 2
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_price",
+      "null_count": 0,
+      "distinct_count": 58
+    },
+    {
+      "db": "optimized",
+      "table": "room",
+      "column": "room_type",
+      "null_count": 0,
+      "distinct_count": 3
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "search_id",
+      "null_count": 0,
+      "distinct_count": 6900
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "session_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "search_time",
+      "null_count": 0,
+      "distinct_count": 6728
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "query_text",
+      "null_count": 2516,
+      "distinct_count": 23
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "checkin_date",
+      "null_count": 0,
+      "distinct_count": 23
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "checkout_date",
+      "null_count": 0,
+      "distinct_count": 25
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "total_result_count",
+      "null_count": 0,
+      "distinct_count": 30
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "sort_option",
+      "null_count": 0,
+      "distinct_count": 4
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "guest_count",
+      "null_count": 0,
+      "distinct_count": 5
+    },
+    {
+      "db": "optimized",
+      "table": "search",
+      "column": "destination",
+      "null_count": 1050,
+      "distinct_count": 26
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "search_filter_id",
+      "null_count": 0,
+      "distinct_count": 6900
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "search_id",
+      "null_count": 0,
+      "distinct_count": 6900
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "property_type",
+      "null_count": 6900,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "property_grade",
+      "null_count": 6900,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "user_rating_min",
+      "null_count": 3342,
+      "distinct_count": 3
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "price",
+      "null_count": 3492,
+      "distinct_count": 8
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "amenity_count",
+      "null_count": 0,
+      "distinct_count": 12
+    },
+    {
+      "db": "optimized",
+      "table": "search_filter",
+      "column": "region",
+      "null_count": 1050,
+      "distinct_count": 26
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "search_result_id",
+      "null_count": 0,
+      "distinct_count": 198128
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "search_id",
+      "null_count": 0,
+      "distinct_count": 3466
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "room_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "result_score",
+      "null_count": 0,
+      "distinct_count": 101
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "result_rank",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "search_result",
+      "column": "price_rank",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "event_id",
+      "null_count": 0,
+      "distinct_count": 238851
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "session_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "event_type",
+      "null_count": 0,
+      "distinct_count": 24
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "event_at",
+      "null_count": 0,
+      "distinct_count": 22129
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "hotel_id",
+      "null_count": 13986,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "search_filter_id",
+      "null_count": 2583,
+      "distinct_count": 6900
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "search_id",
+      "null_count": 2583,
+      "distinct_count": 6900
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "user_id",
+      "null_count": 0,
+      "distinct_count": 1000
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "rating",
+      "null_count": 235293,
+      "distinct_count": 3
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "session_end_time",
+      "null_count": 45379,
+      "distinct_count": 931
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "review_completed_at",
+      "null_count": 238851,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "review_text",
+      "null_count": 238851,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "event",
+      "column": "device",
+      "null_count": 222627,
+      "distinct_count": 2
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "user_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "hotel_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "room_id",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_status",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_amount",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "booking_at",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "checkin_date",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "checkout_date",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "guest_count",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "room_count",
+      "null_count": 0,
+      "distinct_count": 0
+    },
+    {
+      "db": "optimized",
+      "table": "booking",
+      "column": "cancellation_deadline",
+      "null_count": 0,
+      "distinct_count": 0
+    }
+  ],
+  "null_trace": [
+    {
+      "table": "user",
+      "column": "age_group",
+      "old_nulls": 1000,
+      "new_nulls": 1000,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_address",
+      "old_nulls": 509,
+      "new_nulls": 509,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_city",
+      "old_nulls": 509,
+      "new_nulls": 509,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_prefecture",
+      "old_nulls": 678,
+      "new_nulls": 678,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_postal_code",
+      "old_nulls": 678,
+      "new_nulls": 678,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_latitude",
+      "old_nulls": 509,
+      "new_nulls": 509,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_longitude",
+      "old_nulls": 509,
+      "new_nulls": 509,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_phone",
+      "old_nulls": 520,
+      "new_nulls": 520,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_star_rating",
+      "old_nulls": 688,
+      "new_nulls": 688,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "supplier_hotel_code",
+      "old_nulls": 552,
+      "new_nulls": 552,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "rtx_code",
+      "old_nulls": 678,
+      "new_nulls": 678,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "agoda_code",
+      "old_nulls": 695,
+      "new_nulls": 695,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "expedia_code",
+      "old_nulls": 831,
+      "new_nulls": 831,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "top_selling_rank",
+      "old_nulls": 881,
+      "new_nulls": 881,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "source_last_mapped_at",
+      "old_nulls": 552,
+      "new_nulls": 552,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "hotel",
+      "column": "actual_data_sources",
+      "old_nulls": 509,
+      "new_nulls": 509,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "search",
+      "column": "query_text",
+      "old_nulls": 2516,
+      "new_nulls": 2516,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "search",
+      "column": "destination",
+      "old_nulls": 1050,
+      "new_nulls": 1050,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "search_filter",
+      "column": "property_type",
+      "old_nulls": 6900,
+      "new_nulls": 6900,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "search_filter",
+      "column": "property_grade",
+      "old_nulls": 6900,
+      "new_nulls": 6900,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "search_filter",
+      "column": "user_rating_min",
+      "old_nulls": 3342,
+      "new_nulls": 3342,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "search_filter",
+      "column": "price",
+      "old_nulls": 3492,
+      "new_nulls": 3492,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "search_filter",
+      "column": "region",
+      "old_nulls": 1050,
+      "new_nulls": 1050,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "hotel_id",
+      "old_nulls": 13986,
+      "new_nulls": 13986,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "search_filter_id",
+      "old_nulls": 2583,
+      "new_nulls": 2583,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "search_id",
+      "old_nulls": 2583,
+      "new_nulls": 2583,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "rating",
+      "old_nulls": 235293,
+      "new_nulls": 235293,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "session_end_time",
+      "old_nulls": 45379,
+      "new_nulls": 45379,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "review_completed_at",
+      "old_nulls": 238851,
+      "new_nulls": 238851,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "review_text",
+      "old_nulls": 238851,
+      "new_nulls": 238851,
+      "location_difference": 0,
+      "keys": ""
+    },
+    {
+      "table": "event",
+      "column": "device",
+      "old_nulls": 222627,
+      "new_nulls": 222627,
+      "location_difference": 0,
+      "keys": ""
+    }
+  ],
+  "kpis": [
+    {
+      "metric": "users",
+      "old_num": 1000,
+      "old_den": 1,
+      "old_rate": 1000.0,
+      "new_num": 1000,
+      "new_den": 1,
+      "new_rate": 1000.0,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "sessions",
+      "old_num": 1000,
+      "old_den": 1,
+      "old_rate": 1000.0,
+      "new_num": 1000,
+      "new_den": 1,
+      "new_rate": 1000.0,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "search_zero",
+      "old_num": 3434,
+      "old_den": 6900,
+      "old_rate": 0.49768115942028984,
+      "new_num": 3434,
+      "new_den": 6900,
+      "new_rate": 0.49768115942028984,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "positive_search",
+      "old_num": 3466,
+      "old_den": 6900,
+      "old_rate": 0.5023188405797101,
+      "new_num": 3466,
+      "new_den": 6900,
+      "new_rate": 0.5023188405797101,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "zero_followup",
+      "old_num": 3271,
+      "old_den": 3434,
+      "old_rate": 0.9525334886429819,
+      "new_num": 3271,
+      "new_den": 3434,
+      "new_rate": 0.9525334886429819,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "immediate_recovery",
+      "old_num": 558,
+      "old_den": 3271,
+      "old_rate": 0.1705900336288597,
+      "new_num": 558,
+      "new_den": 3271,
+      "new_rate": 0.1705900336288597,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "final_recovery",
+      "old_num": 488,
+      "old_den": 651,
+      "old_rate": 0.7496159754224271,
+      "new_num": 488,
+      "new_den": 651,
+      "new_rate": 0.7496159754224271,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "card_h_search",
+      "old_num": 680,
+      "old_den": 3466,
+      "old_rate": 0.19619157530294287,
+      "new_num": 680,
+      "new_den": 3466,
+      "new_rate": 0.19619157530294287,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "card_h_event",
+      "old_num": 2580,
+      "old_den": 1,
+      "old_rate": 2580.0,
+      "new_num": 2580,
+      "new_den": 1,
+      "new_rate": 2580.0,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    },
+    {
+      "metric": "booking",
+      "old_num": 0,
+      "old_den": 1,
+      "old_rate": 0.0,
+      "new_num": 0,
+      "new_den": 1,
+      "new_rate": 0.0,
+      "abs_diff": 0.0,
+      "result": "PASS"
+    }
+  ],
+  "clone": [
+    {
+      "table": "user",
+      "exact_row_clone_excess": 0
+    },
+    {
+      "table": "hotel",
+      "exact_row_clone_excess": 0
+    },
+    {
+      "table": "room",
+      "exact_row_clone_excess": 0
+    },
+    {
+      "table": "search",
+      "exact_row_clone_excess": 0
+    },
+    {
+      "table": "search_filter",
+      "exact_row_clone_excess": 0
+    },
+    {
+      "table": "search_result",
+      "exact_row_clone_excess": 0
+    },
+    {
+      "table": "event",
+      "exact_row_clone_excess": 0
+    },
+    {
+      "table": "booking",
+      "exact_row_clone_excess": 0
+    }
+  ],
+  "clone3_sessions": 977,
+  "clone3_groups": 42,
+  "full_path_clone_excess": 935,
+  "schema_diff_classification": "UNEXPLAINED_DIFFERENCE"
+}

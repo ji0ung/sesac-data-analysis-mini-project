@@ -1,0 +1,13 @@
+{
+  "authorization_role": "STEP_2_10_CALIBRATION_ONLY",
+  "calibration_authorized": true,
+  "production_authorized": false,
+  "max_users_per_run": 2000,
+  "expected_seeds": [260701,260702,260703,260704,260705,260706,260707,260708,260709,260710,260711,260712,260713,260714,260715,260716,260717,260718,260719,260720],
+  "conservative_seeds": [260721,260722,260723,260724,260725],
+  "optimistic_seeds": [260726,260727,260728,260729,260730],
+  "prohibited_production_seed": 2434815518,
+  "generator_sha256": "87d5d165391acca08c10cbf9d6dab9535ad61aa5056f7ea4268ecb4f254c8821",
+  "candidate_manifest_sha256": "7030dbe7f2f14c0f5fb2cb1924aefbb8c1b0919464c8a2554be7f813c93dfd68",
+  "authorized_at": "2026-09-07T11:46:26+09:00"
+}

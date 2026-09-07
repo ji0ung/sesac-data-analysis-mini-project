@@ -1,0 +1,22 @@
+{
+  "authorization_kind": "interface_regression",
+  "limited_use_status": "ACCEPTED_FOR_EXPLORATORY_SIMULATION_WITH_LIMITATIONS",
+  "purpose": "interface_regression",
+  "strict_calibration_status": "HOLD",
+  "strict_calibration_passed": false,
+  "execution_authorized": true,
+  "general_production_approved": false,
+  "users": 200,
+  "control_users": 100,
+  "treatment_users": 100,
+  "pairs": 100,
+  "scenario": "expected",
+  "seed": 2026090712,
+  "overwrite": false,
+  "full_run_limit": 1,
+  "config_sha256": "32341f518e2edf251af08769aca11955e28d2e135bd6b0d24f4a995401b07a6b",
+  "reference_sha256": "9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f",
+  "execution_manifest_path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_탐색용생성_260907_1544_01\\호텔검색_1만명증강_실행파일manifest_260907_1544_01.json",
+  "execution_manifest_sha256": "53cac5058060d81734a98d8f8ba82706b0b30102f903899970490035b009f2c0",
+  "allowed_output_file": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_탐색용생성_260907_1544_01\\tests\\호텔검색_1만명증강_회귀200_260907_1544_01.sqlite"
+}

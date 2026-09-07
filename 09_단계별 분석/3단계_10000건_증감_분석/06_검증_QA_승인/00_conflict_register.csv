@@ -1,0 +1,6 @@
+conflict_id,topic,higher_authority_or_observation,conflicting_reference,resolution,status
+C-001,카드 G,"교수회신 및 v03 SQLite 직접 재계산: 27/10/4/2","TO-BE의 3범주 직접 3/43·재검색 후 28/43·미상호작 12/43","승인 4범주를 카드 G로 잠금; 3범주는 G-1 후보로 격리",RESOLVED
+C-002,카드 H,"교수회신 및 v03 SQLite 직접 재계산: hotel_detail_view 110/149=73.8%","고유 1위 클릭 29/149=19.5%","110/149를 카드 H 기준선으로 잠금; 고유 클릭 정의는 H-1 후보로 격리",RESOLVED
+C-003,1000명 DB 용량,"지정 승인 파일 현재 실측: 154738688 bytes=154.738688 MB=147.570313 MiB","증강계획서 v02: 97898496 bytes=97.9 MB=93.4 MiB; 교수회신은 과거 약 93MB/99.8MB 불일치 지적","파일명과 승인 SHA-256이 일치하는 현재 지정 파일 실측값을 채택; 과거 용량값은 다른 측정 대상 또는 시점으로 표시",RESOLVED
+C-004,v02/v03 입력 표기,"3단계 v03 SHA-256이 공식 현행 v03과 동일; 공식 대장·갱신안내는 v02를 불변 source_snapshot으로 명시","일부 참고 문서 부록은 첨부 원본을 v02로 표기","동일 바이트 파일은 아님. v03은 v02 행·원천값을 유지하고 품질 플래그 2개를 추가한 공식 후속본으로 계보 입증; INPUT_VERSION_MISMATCH 미발생",RESOLVED
+C-005,BOOKING KPI,"교수회신: 중복·ROOM 연결 미해결 시 보류; SQLite는 가상 출처 36건 및 ROOM-HOTEL 불일치 2건 확인","일부 TO-BE 문서가 예약완료를 2차 성과 후보로 열어 둠","승인 전 최종 KPI와 생성 범위에서 제외; 참고 지표로도 실제 예약 성과 표현 금지",RESOLVED

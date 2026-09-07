@@ -1,0 +1,48 @@
+config_version: "02.1"
+seed: 20260904
+full_design:
+  pair_profiles: 5000
+  control_users: 5000
+  treatment_users: 5000
+dry_run:
+  max_total_users: 200
+  default_total_users: 200
+source:
+  observed_db: "travel_data_filtered_complete_2026-09-03_v03_비식별.sqlite"
+  observed_db_sha256: "2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80"
+  reference_1000_db: "../../03_데이터모델링/합성데이터/관측형합성1000명_최종승인본/호텔검색_관측형합성1000명_분석용lineage제거정제DB_260905_1650_01.sqlite"
+  reference_1000_db_sha256: "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04"
+  probability_parameters: "01_probability_parameters.csv"
+scenario:
+  name: "paired_segment_treatment"
+  effect_level: "base"
+  run_id: "dryrun_200_seed_20260904"
+effects:
+  conservative:
+    recovery_lift_pp: 0.02
+    detail_lift_pp: 0.02
+    repeat_reduction_pp: 0.02
+  base:
+    recovery_lift_pp: 0.06
+    detail_lift_pp: 0.05
+    repeat_reduction_pp: 0.06
+  optimistic:
+    recovery_lift_pp: 0.12
+    detail_lift_pp: 0.10
+    repeat_reduction_pp: 0.12
+generation:
+  max_template_share: 0.05
+  max_searches_per_session: 20
+  max_results_per_search: 40
+  interarrival:
+    distribution: "positive_lognormal_fitted_from_observed_zero_transitions"
+    min_seconds: 1
+    max_seconds: 249
+  continuous_jitter:
+    result_score_sd: 0.015
+    clip_min: 0.0
+    clip_max: 1.0
+qa:
+  template_cap_rounding: "ceil"
+  require_zero_logic_violations: true
+  require_source_immutable: true

@@ -1,0 +1,114 @@
+{
+  "input_sqlite": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_통합평가결과_260907_1418_03.sqlite",
+  "scope": "projection for one future 5,000-user control arm; synthetic-model risk, not observed business impact",
+  "metric_impacts": [
+    {
+      "metric": "search_zero_rate",
+      "reference_rate": 0.49768115942028984,
+      "expected20_pooled_rate": 0.502232612846781,
+      "difference_percentage_points": 0.4551453426491159,
+      "seed_standard_deviation_pp": 0.8335001417279781,
+      "production_control_expected_denominator": 34432.75,
+      "production_control_central_excess_numerator": 156.71905797101346,
+      "production_control_seed_min_excess_numerator": -343.3927536231883,
+      "production_control_seed_max_excess_numerator": 633.2536231884048,
+      "seed_p05_rate": 0.4911985305372723,
+      "seed_p95_rate": 0.5141951289811212,
+      "interval_fail_seed_count": 4,
+      "severity": "HIGH"
+    },
+    {
+      "metric": "zero_followup_rate",
+      "reference_rate": 0.9525334886429819,
+      "expected20_pooled_rate": 0.9516863516111778,
+      "difference_percentage_points": -0.08471370318041682,
+      "seed_standard_deviation_pp": 0.29030294692862113,
+      "production_control_expected_denominator": 17293.25,
+      "production_control_central_excess_numerator": -14.649752475247432,
+      "production_control_seed_min_excess_numerator": -107.45049504950516,
+      "production_control_seed_max_excess_numerator": 64.39720442632569,
+      "seed_p05_rate": 0.9465532948679016,
+      "seed_p95_rate": 0.9557918298824846,
+      "interval_fail_seed_count": 0,
+      "severity": "LOW"
+    },
+    {
+      "metric": "immediate_recovery_transition_rate",
+      "reference_rate": 0.1705900336288597,
+      "expected20_pooled_rate": 0.16871990399659734,
+      "difference_percentage_points": -0.18701296322623517,
+      "seed_standard_deviation_pp": 0.6293831318895698,
+      "production_control_expected_denominator": 16457.75,
+      "production_control_central_excess_numerator": -30.77812595536572,
+      "production_control_seed_min_excess_numerator": -227.94252522164493,
+      "production_control_seed_max_excess_numerator": 123.79394680525799,
+      "seed_p05_rate": 0.1609261939218524,
+      "seed_p95_rate": 0.17811550151975683,
+      "interval_fail_seed_count": 1,
+      "severity": "MEDIUM"
+    },
+    {
+      "metric": "first_zero_immediate_recovery_rate",
+      "reference_rate": 0.10987261146496816,
+      "expected20_pooled_rate": 0.10864551022031337,
+      "difference_percentage_points": -0.12271012446547908,
+      "seed_standard_deviation_pp": 1.394398601719836,
+      "production_control_expected_denominator": 3143.25,
+      "production_control_central_excess_numerator": -3.857085987261171,
+      "production_control_seed_min_excess_numerator": -75.11146496815289,
+      "production_control_seed_max_excess_numerator": 69.50636942675156,
+      "seed_p05_rate": 0.0858085808580858,
+      "seed_p95_rate": 0.1253968253968254,
+      "interval_fail_seed_count": null,
+      "severity": "LOW"
+    },
+    {
+      "metric": "final_recovery_rate",
+      "reference_rate": 0.7496159754224271,
+      "expected20_pooled_rate": 0.7439669041599632,
+      "difference_percentage_points": -0.5649071262463834,
+      "seed_standard_deviation_pp": 1.4442250355040989,
+      "production_control_expected_denominator": 3263.25,
+      "production_control_central_excess_numerator": -18.434331797235107,
+      "production_control_seed_min_excess_numerator": -102.45775729646715,
+      "production_control_seed_max_excess_numerator": 56.2826420890937,
+      "seed_p05_rate": 0.7259842519685039,
+      "seed_p95_rate": 0.7654135338345864,
+      "interval_fail_seed_count": 0,
+      "severity": "MEDIUM"
+    },
+    {
+      "metric": "card_h_search_rate",
+      "reference_rate": 0.19619157530294287,
+      "expected20_pooled_rate": 0.1963155284576563,
+      "difference_percentage_points": 0.012395315471341872,
+      "seed_standard_deviation_pp": 0.6386411505766558,
+      "production_control_expected_denominator": 17139.5,
+      "production_control_central_excess_numerator": 2.1244950952106403,
+      "production_control_seed_min_excess_numerator": -172.28505481823407,
+      "production_control_seed_max_excess_numerator": 225.57126370455873,
+      "seed_p05_rate": 0.18792152053954628,
+      "seed_p95_rate": 0.20875995449374288,
+      "interval_fail_seed_count": 0,
+      "severity": "LOW"
+    }
+  ],
+  "structural_impacts": [
+    {
+      "metric": "ever_zero_session_rate",
+      "reference": 0.651,
+      "generated": 0.65265,
+      "difference_percentage_points": 0.16499999999999293,
+      "projected_control_5000_difference": 8.249999999999647
+    },
+    {
+      "metric": "searches_per_session",
+      "reference": 6.9,
+      "generated": 6.88655,
+      "difference_percentage_points": null,
+      "projected_control_5000_difference": -67.25000000000314
+    }
+  ],
+  "single_seed_search_zero_interval_failure_frequency": "4/20 = 20% in frozen independent evaluation",
+  "prohibited_interpretation": "Do not treat projected count differences as observed losses or causal effects."
+}

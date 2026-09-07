@@ -1,0 +1,93 @@
+spec_version: "2.8.0"
+status: HOLD_AUTHORITATIVE_REFERENCE_NOT_UNIQUE
+reference:
+  authority_status: USER_SELECTED_AUTHORITATIVE_REFERENCE
+  policy: INDEPENDENT_BASELINE_NOT_LEGACY_EQUIVALENCE
+  sha256: 9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f
+  sample_semantics: observed_form_synthetic_reference
+  actual_ab_result: false
+population:
+  total_users: 10000
+  paired_profiles: 5000
+  arms:
+    control: 5000
+    treatment: 5000
+  prohibit_row_or_session_resampling: true
+  source_session_id_is_lineage_only: true
+required_fields:
+  - sample_set_type
+  - sample_stratum
+  - simulation_run_id
+  - random_seed
+  - source_session_id
+  - pair_id
+  - treatment_scenario
+  - generation_model_version
+production_schema:
+  require_pk: true
+  require_fk: true
+  require_analysis_indexes: true
+  require_sample_set_type_check: true
+  preserve_null5_structure: true
+baseline_targets:
+  search_zero: {numerator: 3434, denominator: 6900}
+  positive_search: {numerator: 3466, denominator: 6900}
+  zero_followup: {numerator: 3271, denominator: 3434}
+  immediate_recovery: {numerator: 558, denominator: 3271}
+  final_recovery: {numerator: 488, denominator: 651}
+  card_h_search: {numerator: 680, denominator: 3466}
+  card_h_event_rows: 2580
+  card_h_repeat_mean: 3.7941176470588234
+  booking_rows: 0
+time_model:
+  source_time_min: "2027-01-01 00:01:00"
+  source_time_max: "2027-09-08 00:02:30"
+  search_interarrival_seconds: {n: 5900, median: 15.0, mean: 263.12220338983053, p90: 74.0, p95: 109.0, max: 51304.0, zero_rate: 0.007796610169491526}
+  positive_interarrival_lognormal_reference: {n: 5854, log_mu: 2.8997251506627992, log_sigma: 1.1448258029245166}
+  zero_to_research_seconds: {n: 3271, median: 12.0, mean: 17.744726383369, p90: 32.0, p95: 40.0, max: 249.0, zero_rate: 0.007031488841332926}
+  positive_to_top_detail_seconds: {n: 680, median: 152.0, p90: 32168.0, max: 51313.0}
+  click_to_detail_seconds: {n: 5345, median: 1.0, mean: 1.3231057062675398, zero_rate: 0.33882132834424694}
+  requirements:
+    - use_positive_or_explicit_zero_mixture
+    - preserve_event_and_search_order
+    - model_long_tail_conditionally_and_do_not_copy_exact_delays
+    - document_click_detail_same_timestamp_as_logging_characteristic
+generation_model:
+  - hierarchical_conditional_probabilities
+  - posterior_smoothing_and_per_run_probability_draws
+  - stochastic_state_transitions
+  - session_length_draw
+  - search_sequence_zero_result_hazard
+  - zero_result_followup_decision
+  - transition_specific_recovery_draw
+  - session_termination_rule
+  - conditional_card_h_search_draw
+  - detail_repeat_event_count_draw
+  - conditional_categorical_sampling
+  - bounded_jitter_for_continuous_variables_only
+treatment:
+  authority: professor_judgment_reply
+  scenarios: [conservative, expected, optimistic]
+  production_default_requires_prior_approval: true
+  interventions:
+    - zero_result_relaxation_guidance
+    - filter_relaxation_or_alternative_query
+    - shorter_research_path
+    - improved_recovery_probability
+    - top_result_detail_guidance_after_recovery
+    - reduced_persistent_failure_and_exit
+  conditional_on: [segment, search_sequence, filter_complexity, previous_failure_count]
+  observed_effect_claim_prohibited: true
+clone_policy:
+  preserve_reference_observed_probabilities: true
+  reproduce_reference_template_repetition: false
+  exact_row_clone_max: 0
+  id_only_session_clone_max: 0
+  control_full_session_clone_max: 0
+  treatment_full_session_clone_max: 0
+  paired_control_treatment_full_path_identity_max: 0
+  thresholds_to_finalize_in: [STEP_2_9, STEP_2_10]
+  prohibit_blanket_two_percent_rule: true
+next_step:
+  step_2_9_allowed: false
+  ten_thousand_generation_allowed_now: false

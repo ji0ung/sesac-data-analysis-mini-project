@@ -1,0 +1,701 @@
+{
+  "definition": "deterministic replay of pre-commit business signature collision guard; same seed/config/source profile",
+  "runs": [
+    {
+      "scenario": "expected",
+      "seed": 260901,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13094,
+        "zero": 6026,
+        "follow": 5735,
+        "immediate": 1147,
+        "zsess": 1311,
+        "final": 1020
+      },
+      "post_kpi": {
+        "search": 13096,
+        "zero": 6028,
+        "follow": 5737,
+        "immediate": 1147,
+        "zsess": 1311,
+        "final": 1020
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260902,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13292,
+        "zero": 6180,
+        "follow": 5891,
+        "immediate": 1170,
+        "zsess": 1309,
+        "final": 1020
+      },
+      "post_kpi": {
+        "search": 13292,
+        "zero": 6180,
+        "follow": 5891,
+        "immediate": 1170,
+        "zsess": 1309,
+        "final": 1020
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260903,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13301,
+        "zero": 6297,
+        "follow": 5981,
+        "immediate": 1135,
+        "zsess": 1318,
+        "final": 1002
+      },
+      "post_kpi": {
+        "search": 13303,
+        "zero": 6298,
+        "follow": 5983,
+        "immediate": 1136,
+        "zsess": 1318,
+        "final": 1003
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260904,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13291,
+        "zero": 6306,
+        "follow": 6018,
+        "immediate": 1175,
+        "zsess": 1325,
+        "final": 1037
+      },
+      "post_kpi": {
+        "search": 13291,
+        "zero": 6306,
+        "follow": 6018,
+        "immediate": 1175,
+        "zsess": 1325,
+        "final": 1037
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260905,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13275,
+        "zero": 6364,
+        "follow": 6069,
+        "immediate": 1159,
+        "zsess": 1311,
+        "final": 1016
+      },
+      "post_kpi": {
+        "search": 13275,
+        "zero": 6364,
+        "follow": 6069,
+        "immediate": 1159,
+        "zsess": 1311,
+        "final": 1016
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260906,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 12973,
+        "zero": 6084,
+        "follow": 5787,
+        "immediate": 1131,
+        "zsess": 1300,
+        "final": 1003
+      },
+      "post_kpi": {
+        "search": 12973,
+        "zero": 6084,
+        "follow": 5787,
+        "immediate": 1131,
+        "zsess": 1300,
+        "final": 1003
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260907,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13213,
+        "zero": 6271,
+        "follow": 5957,
+        "immediate": 1146,
+        "zsess": 1331,
+        "final": 1017
+      },
+      "post_kpi": {
+        "search": 13213,
+        "zero": 6271,
+        "follow": 5957,
+        "immediate": 1146,
+        "zsess": 1331,
+        "final": 1017
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260908,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 12967,
+        "zero": 6036,
+        "follow": 5729,
+        "immediate": 1143,
+        "zsess": 1297,
+        "final": 990
+      },
+      "post_kpi": {
+        "search": 12967,
+        "zero": 6036,
+        "follow": 5729,
+        "immediate": 1143,
+        "zsess": 1297,
+        "final": 990
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260909,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 12887,
+        "zero": 6011,
+        "follow": 5714,
+        "immediate": 1125,
+        "zsess": 1265,
+        "final": 968
+      },
+      "post_kpi": {
+        "search": 12891,
+        "zero": 6009,
+        "follow": 5713,
+        "immediate": 1126,
+        "zsess": 1265,
+        "final": 969
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260910,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13137,
+        "zero": 6134,
+        "follow": 5834,
+        "immediate": 1135,
+        "zsess": 1304,
+        "final": 1004
+      },
+      "post_kpi": {
+        "search": 13143,
+        "zero": 6138,
+        "follow": 5839,
+        "immediate": 1136,
+        "zsess": 1304,
+        "final": 1005
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260911,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 12891,
+        "zero": 5944,
+        "follow": 5639,
+        "immediate": 1137,
+        "zsess": 1313,
+        "final": 1008
+      },
+      "post_kpi": {
+        "search": 12891,
+        "zero": 5944,
+        "follow": 5639,
+        "immediate": 1137,
+        "zsess": 1313,
+        "final": 1008
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260912,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13387,
+        "zero": 6363,
+        "follow": 6050,
+        "immediate": 1141,
+        "zsess": 1311,
+        "final": 998
+      },
+      "post_kpi": {
+        "search": 13387,
+        "zero": 6363,
+        "follow": 6050,
+        "immediate": 1141,
+        "zsess": 1311,
+        "final": 998
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260913,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13291,
+        "zero": 6373,
+        "follow": 6046,
+        "immediate": 1145,
+        "zsess": 1322,
+        "final": 995
+      },
+      "post_kpi": {
+        "search": 13296,
+        "zero": 6370,
+        "follow": 6044,
+        "immediate": 1146,
+        "zsess": 1322,
+        "final": 996
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260914,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13297,
+        "zero": 6186,
+        "follow": 5887,
+        "immediate": 1179,
+        "zsess": 1317,
+        "final": 1018
+      },
+      "post_kpi": {
+        "search": 13297,
+        "zero": 6186,
+        "follow": 5887,
+        "immediate": 1179,
+        "zsess": 1317,
+        "final": 1018
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260915,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13123,
+        "zero": 6108,
+        "follow": 5821,
+        "immediate": 1164,
+        "zsess": 1295,
+        "final": 1008
+      },
+      "post_kpi": {
+        "search": 13123,
+        "zero": 6108,
+        "follow": 5821,
+        "immediate": 1164,
+        "zsess": 1295,
+        "final": 1008
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260916,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13266,
+        "zero": 6311,
+        "follow": 5998,
+        "immediate": 1154,
+        "zsess": 1303,
+        "final": 990
+      },
+      "post_kpi": {
+        "search": 13266,
+        "zero": 6311,
+        "follow": 5998,
+        "immediate": 1154,
+        "zsess": 1303,
+        "final": 990
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260917,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 12866,
+        "zero": 5969,
+        "follow": 5675,
+        "immediate": 1118,
+        "zsess": 1284,
+        "final": 990
+      },
+      "post_kpi": {
+        "search": 12866,
+        "zero": 5969,
+        "follow": 5675,
+        "immediate": 1118,
+        "zsess": 1284,
+        "final": 990
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260918,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13296,
+        "zero": 6223,
+        "follow": 5926,
+        "immediate": 1151,
+        "zsess": 1303,
+        "final": 1006
+      },
+      "post_kpi": {
+        "search": 13296,
+        "zero": 6223,
+        "follow": 5926,
+        "immediate": 1151,
+        "zsess": 1303,
+        "final": 1006
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260919,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13422,
+        "zero": 6276,
+        "follow": 5986,
+        "immediate": 1167,
+        "zsess": 1300,
+        "final": 1010
+      },
+      "post_kpi": {
+        "search": 13422,
+        "zero": 6276,
+        "follow": 5986,
+        "immediate": 1167,
+        "zsess": 1300,
+        "final": 1010
+      }
+    },
+    {
+      "scenario": "expected",
+      "seed": 260920,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13449,
+        "zero": 6324,
+        "follow": 6045,
+        "immediate": 1142,
+        "zsess": 1283,
+        "final": 1004
+      },
+      "post_kpi": {
+        "search": 13449,
+        "zero": 6324,
+        "follow": 6045,
+        "immediate": 1142,
+        "zsess": 1283,
+        "final": 1004
+      }
+    },
+    {
+      "scenario": "conservative",
+      "seed": 260901,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13366,
+        "zero": 6382,
+        "follow": 6069,
+        "immediate": 1124,
+        "zsess": 1311,
+        "final": 998
+      },
+      "post_kpi": {
+        "search": 13368,
+        "zero": 6384,
+        "follow": 6071,
+        "immediate": 1124,
+        "zsess": 1311,
+        "final": 998
+      }
+    },
+    {
+      "scenario": "conservative",
+      "seed": 260902,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13500,
+        "zero": 6444,
+        "follow": 6144,
+        "immediate": 1160,
+        "zsess": 1309,
+        "final": 1009
+      },
+      "post_kpi": {
+        "search": 13500,
+        "zero": 6444,
+        "follow": 6144,
+        "immediate": 1160,
+        "zsess": 1309,
+        "final": 1009
+      }
+    },
+    {
+      "scenario": "conservative",
+      "seed": 260903,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13541,
+        "zero": 6605,
+        "follow": 6276,
+        "immediate": 1123,
+        "zsess": 1318,
+        "final": 989
+      },
+      "post_kpi": {
+        "search": 13543,
+        "zero": 6606,
+        "follow": 6278,
+        "immediate": 1124,
+        "zsess": 1318,
+        "final": 990
+      }
+    },
+    {
+      "scenario": "conservative",
+      "seed": 260904,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13451,
+        "zero": 6527,
+        "follow": 6217,
+        "immediate": 1146,
+        "zsess": 1325,
+        "final": 1015
+      },
+      "post_kpi": {
+        "search": 13451,
+        "zero": 6527,
+        "follow": 6217,
+        "immediate": 1146,
+        "zsess": 1325,
+        "final": 1015
+      }
+    },
+    {
+      "scenario": "conservative",
+      "seed": 260905,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13551,
+        "zero": 6688,
+        "follow": 6375,
+        "immediate": 1140,
+        "zsess": 1311,
+        "final": 998
+      },
+      "post_kpi": {
+        "search": 13551,
+        "zero": 6688,
+        "follow": 6375,
+        "immediate": 1140,
+        "zsess": 1311,
+        "final": 998
+      }
+    },
+    {
+      "scenario": "optimistic",
+      "seed": 260901,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 12858,
+        "zero": 5757,
+        "follow": 5477,
+        "immediate": 1158,
+        "zsess": 1311,
+        "final": 1031
+      },
+      "post_kpi": {
+        "search": 12860,
+        "zero": 5759,
+        "follow": 5479,
+        "immediate": 1158,
+        "zsess": 1311,
+        "final": 1031
+      }
+    },
+    {
+      "scenario": "optimistic",
+      "seed": 260902,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13117,
+        "zero": 5914,
+        "follow": 5642,
+        "immediate": 1191,
+        "zsess": 1309,
+        "final": 1037
+      },
+      "post_kpi": {
+        "search": 13117,
+        "zero": 5914,
+        "follow": 5642,
+        "immediate": 1191,
+        "zsess": 1309,
+        "final": 1037
+      }
+    },
+    {
+      "scenario": "optimistic",
+      "seed": 260903,
+      "precommit_collisions": 1,
+      "redraw_attempts": 1,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13093,
+        "zero": 6028,
+        "follow": 5724,
+        "immediate": 1146,
+        "zsess": 1318,
+        "final": 1014
+      },
+      "post_kpi": {
+        "search": 13095,
+        "zero": 6029,
+        "follow": 5726,
+        "immediate": 1147,
+        "zsess": 1318,
+        "final": 1015
+      }
+    },
+    {
+      "scenario": "optimistic",
+      "seed": 260904,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 13000,
+        "zero": 6001,
+        "follow": 5730,
+        "immediate": 1185,
+        "zsess": 1325,
+        "final": 1054
+      },
+      "post_kpi": {
+        "search": 13000,
+        "zero": 6001,
+        "follow": 5730,
+        "immediate": 1185,
+        "zsess": 1325,
+        "final": 1054
+      }
+    },
+    {
+      "scenario": "optimistic",
+      "seed": 260905,
+      "precommit_collisions": 0,
+      "redraw_attempts": 0,
+      "max_attempt_failures": 0,
+      "pre_kpi": {
+        "search": 12987,
+        "zero": 6059,
+        "follow": 5780,
+        "immediate": 1174,
+        "zsess": 1311,
+        "final": 1032
+      },
+      "post_kpi": {
+        "search": 12987,
+        "zero": 6059,
+        "follow": 5780,
+        "immediate": 1174,
+        "zsess": 1311,
+        "final": 1032
+      }
+    }
+  ],
+  "totals": {
+    "precommit_collisions": 9,
+    "redraw_attempts": 9,
+    "max_attempt_failures": 0
+  },
+  "production_seed_used": false
+}

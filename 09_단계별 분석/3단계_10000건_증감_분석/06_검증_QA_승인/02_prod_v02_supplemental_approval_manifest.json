@@ -1,0 +1,18 @@
+{
+  "judgment":"STEP 2.6-S=PASS",
+  "created_at":"2026-09-07T04:40:00+09:00",
+  "existing_approval_manifest":{"path":"09_단계별 분석/3단계_10000건_증감_분석/02_prod_v02_approval_manifest.json","sha256":"7cf1b1584248ca00223a26e28025e6252b69dec5bd66cca5db965962a49ef5d8"},
+  "approved_inputs":{"generator":"ea0514c04fcd89f89f8a334908b998b878c1817e8fb05d428b3c59c779a22270","config":"d15219bbe085b5177ef02345ab1865cf50cfb47bb0a23e14a97cdf93ceb1443b","schema":"845374f167086251e302ce779bebdcebd9bc8e5134cad76cd0e2a0f7035026ec","calibration":"5d69c7878751f54ba00e2459b7244a1dfbec6f7e319de9fb536292a555e7bf0b"},
+  "audit_artifacts":{"02_clone_audit_v01.py":"41280b9ce21d0fb0403ee284c7f6af960887212190412d027fb3fd309ce4a714","02_clone_definition_v01.md":"84dc4784fe5ddee47be187c504f78147072ced1b3cbf0c3418603210b9566a5d","02_clone_audit_by_seed_v01.xlsx":"06a63e7b3cb5c4d7d2c63b8baf6dd736c2ebda46d279cb97158fcb84990ddcd6","02_clone_candidate_trace_v01.xlsx":"ae52a75b68475fab2c14a863522c8aa731cd9330678b5b24103d059a900584e4","02_clone_audit_report_v01.md":"026e504f034d6aaf24c505ada757fcb2d797545ab4db27eddde2b2f1b647c1d1","02_step26_s_gate_report.md":"9166d42b471473897b93bb71b5a768a601a1a08b083196603803d8c8a51ce749"},
+  "qa_database_directory":"09_단계별 분석/3단계_10000건_증감_분석/02_clone_qa_seed_dbs_v01",
+  "qa_database_sha256":{
+    "260601":"dc58de71107477a79d105a42d43fef3f81824698dc63be06794837fa264d03e1","260602":"e04b302fe695d9a70a6178d907f33a3013ee7196c510b89b3c624534e30dc847","260603":"dd0f856dd6a4643ac47581cd2b8ad92b6abcdf9e7111199d7add7e3f788c3ceb","260604":"9c9c1892311538a7a70d8e12afb20212621c23566baaf159c8e64a57c5816711","260605":"c8524530bb4a3d4c1ee79a133ea3e43264a0a28a91f6648c99ae3f0e04e6f33c","260606":"1f9d4e1ebdb7c18c1f6f61b8860e5b8b02fabd85315aa3f10c8c4b83af780f13","260607":"0a9fbabd67ac0a1f4c74182b57dd2350dde22a585454a147244e0cecb4ca3c67","260608":"0bea25e4a43e98666068f538ae3f6841f595cabd65e8da7c600b16e11d80b2bf","260609":"b4b445724f507b0edd2368ab5c9463f596d0c5a5bbe70cdf6d971a3a0145bb89","260610":"e13771161ab20295cf68311ee2c4383ca4816098266ca9e555e5d97dcca6abf0","260611":"92dcda7defb008dbba94225a247e899c8b088eeb5d2e74915a619b85559a5949","260612":"6ac1fd40c595294bb6c293d1d4700ec91dd774ea57f8fa3d43ca6d99f85360c6","260613":"4ffb7e9e58dbf932198a03e57c03a1b8163600c1d32dbff91306a1d7138d8174","260614":"f30e20d68227686ba32583db4c58fb3241f1046657d0622a516939b4dbf92027","260615":"20bf00e79a5a601e8d6ed396c2a2f41d1857ad80a8ad9a6beedbba6fbb1a51e1","260616":"41e9795eae0d1c16fcf01797c24b2db8bd387f8f11e0153842aa48ce6a0f870a","260617":"78a02cffeba186875be9a266b2bcdf04f82b9666e635ec4068d2383d18c2fc80","260618":"c2bdb2944bdd2b377ee5f978a1248d709366a678ba241f62373bd43e3d500236","260619":"54c3233d7ba4aba1de1718d374c90c634732a249046b29f97a961b37014e0df1","260620":"a68d9ab90b69853a74f53bfe44d3c2cc30ac559d52fab9e1a5da9dafed490979"
+  },
+  "clone_results":{"clone_1_total":0,"clone_2_is_reference_only":true,"clone_3_candidate_groups":0,"clone_3_sessions":0,"full_path_clone_sessions":0,"pair_full_path_identical":"N/A control-only calibration"},
+  "existing_kpi_results_match":true,
+  "existing_diversity_results_match":true,
+  "production_output_directory":"C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/03_10k_ab_generation_v02_approved",
+  "production_output_directory_empty":true,
+  "production_10000_generated":false,
+  "prompt_3r_allowed":true
+}

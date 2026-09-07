@@ -1,0 +1,42 @@
+generator_version: "02.prod.1"
+config_version: "02.prod.1"
+schema_version: "02.prod.1"
+execution_mode: production
+n_users_total: 10000
+n_users_control: 5000
+n_users_treatment: 5000
+max_users_allowed: 10000
+require_paired_assignment: true
+allow_full_generation: true
+dry_run_users: 200
+random_seed: 20260904
+scenario_type: base
+approved_output_dir: "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/03_10k_ab_generation_approved"
+source:
+  observed_db: "travel_data_filtered_complete_2026-09-03_v03_비식별.sqlite"
+  observed_db_sha256: "2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80"
+  reference_1000_db: "../../03_데이터모델링/합성데이터/관측형합성1000명_최종승인본/호텔검색_관측형합성1000명_분석용lineage제거정제DB_260905_1650_01.sqlite"
+  reference_1000_db_sha256: "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04"
+  probability_parameters: "01_probability_parameters.csv"
+posterior_sampling:
+  resample_each_run: true
+  persistent_failure_source_n: 43
+  query_detail_source_n: 10
+effects:
+  conservative: {proposal_select_prob: 0.35, condition_change_prob: 0.55, recovery_lift_pp: 0.02, detail_lift_pp: 0.02, repeat_reduction_pp: 0.02}
+  base: {proposal_select_prob: 0.50, condition_change_prob: 0.70, recovery_lift_pp: 0.06, detail_lift_pp: 0.05, repeat_reduction_pp: 0.06}
+  optimistic: {proposal_select_prob: 0.65, condition_change_prob: 0.82, recovery_lift_pp: 0.12, detail_lift_pp: 0.10, repeat_reduction_pp: 0.12}
+generation:
+  max_searches_per_session: 20
+  max_exposures_per_positive_search: 10
+  interarrival_min_seconds: 1
+  interarrival_max_seconds: 249
+  lineage_policy: "row-level source lineage removed"
+  store_full_detail_base_run_only: true
+qa_limits:
+  max_abs_smd: 0.05
+  max_template_cluster_share: 0.20
+  max_exact_condition_signature_duplicate_rate: 0.02
+  max_exact_path_duplicate_rate: 0.02
+  control_tolerance_pp: 0.03
+  capacity_limit_bytes: 1273344000

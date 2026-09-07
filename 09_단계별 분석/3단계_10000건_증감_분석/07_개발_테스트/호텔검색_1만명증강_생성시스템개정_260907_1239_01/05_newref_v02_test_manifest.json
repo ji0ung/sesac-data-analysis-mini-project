@@ -1,0 +1,36 @@
+{
+  "step": "2.9-R",
+  "test_framework": "python unittest",
+  "automated_tests": {"total": 42, "passed": 42, "failed": 0},
+  "statistical_tests": {
+    "fixed_seeds": [991, 992, 993, 994],
+    "draws_per_probability": [200000, 100000, 100000, 100000],
+    "criterion": "absolute error <= 5 binomial standard errors",
+    "followup_convergence": "PASS",
+    "immediate_recovery_convergence": "PASS",
+    "card_h_convergence": "PASS",
+    "tail_mixture_convergence": "PASS",
+    "scenario_monotonicity": "PASS"
+  },
+  "smoke": {
+    "path": "tests/smoke_200_approved_v03.sqlite",
+    "sha256": "011db3a08be2963ed42cafa4d5457f08cc2a5e86fb6c0635486565051e07157a",
+    "bytes": 14921728,
+    "seed": 2026090718,
+    "users": 200,
+    "control": 100,
+    "treatment": 100,
+    "pairs": 100,
+    "pair_precondition_mismatch": 0,
+    "max_absolute_smd": 0,
+    "integrity_fk_relation_time_violations": 0,
+    "booking_rows": 0,
+    "clone_a": 0,
+    "clone_b": 0,
+    "clone_c": 0
+  },
+  "production_seed_used": false,
+  "calibration_runs": 0,
+  "production_runs": 0,
+  "ten_thousand_user_databases": 0
+}

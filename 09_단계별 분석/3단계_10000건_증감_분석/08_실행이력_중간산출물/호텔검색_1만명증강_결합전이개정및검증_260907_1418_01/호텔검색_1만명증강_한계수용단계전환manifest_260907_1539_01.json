@@ -1,0 +1,47 @@
+{
+  "decision": "KNOWN_LIMITATION_ACCEPTED_FOR_NEXT_STAGE_PLANNING",
+  "technical_status_preserved": {
+    "model_revision": "PASS",
+    "integration": "PASS",
+    "calibration_validation": "HOLD"
+  },
+  "known_limitation": "Expected control search-zero rate passed 16/20 seeds versus the predeclared 18/20 requirement; 4 failures were upper-bound exceedances.",
+  "risk_flags": [
+    "KNOWN_LIMITATION_SEED_INSTABILITY",
+    "UPSTREAM_ZERO_PATH_DEPENDENCY",
+    "SYNTHETIC_PRECISION_NOT_OBSERVED_INFORMATION",
+    "SIMULATED_SCENARIO_CONTRAST_NOT_ACTUAL_AB"
+  ],
+  "next_stage": {
+    "planning_allowed": true,
+    "limitation_aware_analysis_design_allowed": true,
+    "production_execution_authorized": false,
+    "execution_authorized": false,
+    "production_run_count": 0,
+    "requires_separate_execution_instruction": true
+  },
+  "prior_handoff_manifest": {
+    "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_handoff_manifest_260907_1418_04.json",
+    "sha256": "32d150f92cb8c9740a4e41d9d91023e9432b5e096198dcd4a1fab2eb6284548b"
+  },
+  "mandatory_files": {
+    "limitation_register": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_잔여한계영향등록부_260907_1539_01.md",
+      "sha256": "d37b64a7406756d255aa84b0d332791015424c09f70fe6e695d1bee44fb7e8af"
+    },
+    "quantified_impact_csv": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_잔여한계정량영향_260907_1539_01.csv",
+      "sha256": "1e1b37295f415d8b5f13c4dd3e11aa6adad944ff15ae237dbea2f94298e0f974"
+    },
+    "quantified_impact_json": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_잔여한계정량영향_260907_1539_01.json",
+      "sha256": "158b6bc779852fa0a754981e014833d4b73fa2929883bc506a633c899f78f74c"
+    },
+    "final_plan_report_disclosure_template": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_최종계획서보고서_의무고지템플릿_260907_1539_01.md",
+      "sha256": "c688cbf6de58fb46aeb83afd1aa1cbc89c5760d46c1e429f8e853d13ba839ab4"
+    }
+  },
+  "inheritance_rule": "All future 10,000-user generation plans, manifests, QA reports and analysis reports must reference the limitation register and reproduce the mandatory disclosure without weakening its meaning.",
+  "self_hash_policy": "SHA-256 is calculated externally and not embedded in this file."
+}

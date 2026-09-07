@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Production 10k paired A/B simulation configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "generator_version", "config_version", "schema_version", "execution_mode",
+    "n_users_total", "n_users_control", "n_users_treatment", "max_users_allowed",
+    "require_paired_assignment", "allow_full_generation", "dry_run_users",
+    "random_seed", "scenario_type", "approved_output_dir", "source",
+    "posterior_sampling", "effects", "generation", "qa_limits"
+  ],
+  "properties": {
+    "generator_version": {"const": "02.prod.1"},
+    "config_version": {"const": "02.prod.1"},
+    "schema_version": {"const": "02.prod.1"},
+    "execution_mode": {"enum": ["dry_run", "production"]},
+    "n_users_total": {"const": 10000},
+    "n_users_control": {"const": 5000},
+    "n_users_treatment": {"const": 5000},
+    "max_users_allowed": {"const": 10000},
+    "require_paired_assignment": {"const": true},
+    "allow_full_generation": {"const": true},
+    "dry_run_users": {"type": "integer", "minimum": 2, "maximum": 200, "multipleOf": 2},
+    "random_seed": {"type": "integer", "minimum": 0, "maximum": 2147483647},
+    "scenario_type": {"const": "base"},
+    "approved_output_dir": {"type": "string", "minLength": 3},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["observed_db", "observed_db_sha256", "reference_1000_db", "reference_1000_db_sha256", "probability_parameters"],
+      "properties": {
+        "observed_db": {"type": "string"},
+        "observed_db_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "reference_1000_db": {"type": "string"},
+        "reference_1000_db_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "probability_parameters": {"type": "string"}
+      }
+    },
+    "posterior_sampling": {
+      "type": "object", "additionalProperties": false,
+      "required": ["resample_each_run", "persistent_failure_source_n", "query_detail_source_n"],
+      "properties": {
+        "resample_each_run": {"const": true},
+        "persistent_failure_source_n": {"const": 43},
+        "query_detail_source_n": {"const": 10}
+      }
+    },
+    "effects": {
+      "type": "object", "additionalProperties": false,
+      "required": ["conservative", "base", "optimistic"],
+      "properties": {
+        "conservative": {"$ref": "#/$defs/effect"},
+        "base": {"$ref": "#/$defs/effect"},
+        "optimistic": {"$ref": "#/$defs/effect"}
+      }
+    },
+    "generation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["max_searches_per_session", "max_exposures_per_positive_search", "interarrival_min_seconds", "interarrival_max_seconds", "lineage_policy", "store_full_detail_base_run_only"],
+      "properties": {
+        "max_searches_per_session": {"type": "integer", "minimum": 2, "maximum": 30},
+        "max_exposures_per_positive_search": {"type": "integer", "minimum": 1, "maximum": 20},
+        "interarrival_min_seconds": {"type": "integer", "minimum": 1},
+        "interarrival_max_seconds": {"type": "integer", "minimum": 2},
+        "lineage_policy": {"const": "row-level source lineage removed"},
+        "store_full_detail_base_run_only": {"const": true}
+      }
+    },
+    "qa_limits": {
+      "type": "object", "additionalProperties": false,
+      "required": ["max_abs_smd", "max_template_cluster_share", "max_exact_condition_signature_duplicate_rate", "max_exact_path_duplicate_rate", "control_tolerance_pp", "capacity_limit_bytes"],
+      "properties": {
+        "max_abs_smd": {"type": "number", "minimum": 0, "maximum": 0.05},
+        "max_template_cluster_share": {"type": "number", "exclusiveMinimum": 0, "maximum": 0.25},
+        "max_exact_condition_signature_duplicate_rate": {"type": "number", "minimum": 0, "maximum": 0.05},
+        "max_exact_path_duplicate_rate": {"type": "number", "minimum": 0, "maximum": 0.05},
+        "control_tolerance_pp": {"type": "number", "minimum": 0, "maximum": 0.05},
+        "capacity_limit_bytes": {"type": "integer", "minimum": 1000000}
+      }
+    }
+  },
+  "$defs": {
+    "effect": {
+      "type": "object", "additionalProperties": false,
+      "required": ["proposal_select_prob", "condition_change_prob", "recovery_lift_pp", "detail_lift_pp", "repeat_reduction_pp"],
+      "properties": {
+        "proposal_select_prob": {"type": "number", "minimum": 0, "maximum": 1},
+        "condition_change_prob": {"type": "number", "minimum": 0, "maximum": 1},
+        "recovery_lift_pp": {"type": "number", "minimum": 0, "maximum": 0.2},
+        "detail_lift_pp": {"type": "number", "minimum": 0, "maximum": 0.2},
+        "repeat_reduction_pp": {"type": "number", "minimum": 0, "maximum": 0.2}
+      }
+    }
+  }
+}

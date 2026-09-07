@@ -1,0 +1,14 @@
+version: newref_v01
+metrics:
+  search_zero_rate: {grain: search_id, numerator: "distinct search_id where total_result_count=0", denominator: "all distinct search_id"}
+  zero_followup_rate: {grain: zero_search_transition, numerator: "zero searches with a following search", denominator: "all zero searches"}
+  immediate_recovery_rate: {grain: zero_search_transition, numerator: "zero searches whose next search has results", denominator: "zero searches with a following search"}
+  final_recovery_rate: {grain: session_id, numerator: "zero-experienced sessions ending positive", denominator: "zero-experienced sessions"}
+  card_h_search: {grain: search_id, numerator: "positive searches with >=1 hotel_detail_view for rank-1 hotel", denominator: "positive searches"}
+  card_h_event: {grain: event_row, value: "rank-1 hotel_detail_view rows", prohibited_ratio: "event rows / searches"}
+  sg3: {grain: session_id, definition: "zero-experienced and final positive"}
+  sg4: {grain: session_id, definition: "zero-experienced and final zero"}
+exclusions:
+  - booking_as_core_kpi
+  - 110_div_149_as_conversion_rate
+  - hotel_click_and_detail_as_independent_serial_funnel

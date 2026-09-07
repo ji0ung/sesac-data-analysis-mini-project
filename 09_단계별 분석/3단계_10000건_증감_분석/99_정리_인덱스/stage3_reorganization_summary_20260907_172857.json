@@ -1,0 +1,67 @@
+﻿{
+    "executed_at":  "2026-09-07T17:28:58+09:00",
+    "stage_root":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석",
+    "moved_top_level_items":  72,
+    "held_items":  1,
+    "moved_file_count":  305,
+    "moved_bytes":  1563692723,
+    "remaining_unclassified_top_level":  [
+                                             {
+                                                 "Name":  "호텔검색_1만명증강_결합전이개정및검증_260907_1418_01",
+                                                 "FullName":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01",
+                                                 "Length":  null,
+                                                 "Mode":  "d-----"
+                                             }
+                                         ],
+    "categories":  [
+                       {
+                           "name":  "01_증강_계획과_방법",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\01_증강_계획과_방법",
+                           "files":  15,
+                           "bytes":  153427
+                       },
+                       {
+                           "name":  "02_증강_데이터",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_증강_데이터",
+                           "files":  19,
+                           "bytes":  808043519
+                       },
+                       {
+                           "name":  "03_분석_계획과_방법",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\03_분석_계획과_방법",
+                           "files":  8,
+                           "bytes":  112864
+                       },
+                       {
+                           "name":  "04_최종_보고서",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\04_최종_보고서",
+                           "files":  19,
+                           "bytes":  1810610
+                       },
+                       {
+                           "name":  "05_권위자료_원본입력",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\05_권위자료_원본입력",
+                           "files":  6,
+                           "bytes":  6649910
+                       },
+                       {
+                           "name":  "06_검증_QA_승인",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\06_검증_QA_승인",
+                           "files":  50,
+                           "bytes":  127504311
+                       },
+                       {
+                           "name":  "07_개발_테스트",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\07_개발_테스트",
+                           "files":  60,
+                           "bytes":  69172523
+                       },
+                       {
+                           "name":  "08_실행이력_중간산출물",
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\08_실행이력_중간산출물",
+                           "files":  283,
+                           "bytes":  6664194079
+                       }
+                   ],
+    "plan_csv":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\99_정리_인덱스\\stage3_reorganization_plan_20260907_172857.csv"
+}

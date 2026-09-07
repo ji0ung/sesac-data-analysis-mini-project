@@ -1,0 +1,22 @@
+{
+  "allowed_mode": "calibration",
+  "execution_manifest_path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_개발동결manifest_260907_1418_03.json",
+  "execution_manifest_sha256": "6cf9f88f3453ebe5ca1cfb3a0cf31bdaeee04b18a4f2e8eb57ba8bcbc98c19c1",
+  "allowed_config_sha256": [
+    "32341f518e2edf251af08769aca11955e28d2e135bd6b0d24f4a995401b07a6b"
+  ],
+  "reference_sha256": "9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f",
+  "allowed_seeds": {
+    "260801": "expected",
+    "260802": "expected",
+    "260803": "expected"
+  },
+  "max_users": 2000,
+  "users_per_db": 2000,
+  "users_per_arm": 1000,
+  "pairs_per_db": 1000,
+  "allowed_output_directory": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\development",
+  "overwrite": false,
+  "production_execution_authorized": false,
+  "production_seed": 2434815518
+}

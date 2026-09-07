@@ -1,0 +1,272 @@
+[
+  {
+    "db": "calibration_conservative_260721.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_conservative_260722.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_conservative_260723.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_conservative_260724.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_conservative_260725.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260701.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260702.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260703.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260704.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260705.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260706.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260707.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260708.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260709.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260710.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260711.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260712.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260713.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260714.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260715.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260716.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260717.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260718.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260719.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_expected_260720.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_optimistic_260726.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_optimistic_260727.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_optimistic_260728.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_optimistic_260729.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  },
+  {
+    "db": "calibration_optimistic_260730.sqlite",
+    "sha_match": true,
+    "quality_pass": true,
+    "control": 1000,
+    "treatment": 1000,
+    "pairs": 1000,
+    "failed_checks": []
+  }
+]

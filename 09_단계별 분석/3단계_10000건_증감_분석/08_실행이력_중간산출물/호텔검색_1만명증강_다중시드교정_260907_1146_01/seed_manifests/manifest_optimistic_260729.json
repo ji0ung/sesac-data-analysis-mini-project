@@ -1,0 +1,16 @@
+{
+  "scenario": "optimistic",
+  "seed": 260729,
+  "users": 2000,
+  "control": 1000,
+  "treatment": 1000,
+  "pairs": 1000,
+  "db_path": "C:\\Users\\\uc774\uc18c\uc774\\Desktop\\[\uc740\ud3c94\uae30] AI\ub85c \ub05d\ub0b4\uc790! \ubc14\uc774\ube0c\ucf54\ub529\uc73c\ub85c \ubc30\uc6b0\ub294 \ub370\uc774\ud130\ubd84\uc11d \uc2e4\uc804 \uacfc\uc815\\\ubbf8\ub2c8 \ud504\ub85c\uc81d\ud2b8\\\uae43\ud5c8\ube0c \uc5c5\ub85c\ub4dc\uc6a9\\sesac-data-analysis-mini-project\\09_\ub2e8\uacc4\ubcc4 \ubd84\uc11d\\3\ub2e8\uacc4_10000\uac74_\uc99d\uac10_\ubd84\uc11d\\\ud638\ud154\uac80\uc0c9_1\ub9cc\uba85\uc99d\uac15_\ub2e4\uc911\uc2dc\ub4dc\uad50\uc815_260907_1146_01\\calibration_dbs\\calibration_optimistic_260729.sqlite",
+  "db_bytes": 6348800,
+  "db_sha256": "c9dbf74965c5f8c2e0150e433d2aef67247c55080bfe80a3d465377755aacaf6",
+  "config_sha256": "12dfc84e36559c24d738b0abecfb2a0b2ee5fffd2ab878b7bafe9d6677322a22",
+  "generator_sha256": "87d5d165391acca08c10cbf9d6dab9535ad61aa5056f7ea4268ecb4f254c8821",
+  "production_mode": false,
+  "production_seed_used": false,
+  "elapsed_seconds": 3.1076672077178955
+}

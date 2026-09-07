@@ -1,0 +1,19 @@
+status: PROVISIONAL_NOT_PRODUCTION_APPROVED
+binary_metric_reference_intervals:
+  search_zero: {wilson95: [0.4858882623, 0.5094766370], beta11_95: [0.4858879210, 0.5094770142], required_seed_passes: 18}
+  zero_followup: {wilson95: [0.9449020003, 0.9591536513], beta11_95: [0.9448970946, 0.9591445650], required_seed_passes: 18}
+  immediate_recovery: {wilson95: [0.1580877222, 0.1838651548], beta11_95: [0.1580931217, 0.1838705759], required_seed_passes: 18}
+  final_recovery: {wilson95: [0.7149373604, 0.7813659747], beta11_95: [0.7149091595, 0.7813500336], required_seed_passes: 18}
+  card_h_search: {wilson95: [0.1833103888, 0.2097454539], beta11_95: [0.1833148988, 0.2097503584], required_seed_passes: 18}
+mandatory_zero:
+  - pk_duplicate
+  - fk_orphan
+  - time_inversion
+  - event_before_search
+  - event_after_session
+  - exact_row_clone
+  - arm_internal_id_only_full_session_clone
+  - reference_exact_session_clone
+  - reference_exact_delay_vector_clone
+diversity_threshold_policy: "Not finalized because arm-internal clone mandatory-zero gate failed. Provisional empirical distributions are in 04_clone_diversity_v01.xlsx."
+production_gate_active: false

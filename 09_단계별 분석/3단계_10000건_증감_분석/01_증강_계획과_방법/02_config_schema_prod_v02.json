@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object","additionalProperties":false,
+  "required":["generator_version","config_version","schema_version","execution_mode","n_users_total","n_users_control","n_users_treatment","dry_run_users","calibration_users_control","calibration_seeds","random_seed","scenario_type","detail_event_policy","approved_output_dir","source","model","diversity_limits"],
+  "properties":{
+    "generator_version":{"const":"02.prod.2"},"config_version":{"const":"02.prod.2"},"schema_version":{"const":"02.prod.2"},
+    "execution_mode":{"const":"production"},"n_users_total":{"const":10000},"n_users_control":{"const":5000},"n_users_treatment":{"const":5000},"dry_run_users":{"const":200},"calibration_users_control":{"const":1000},
+    "calibration_seeds":{"type":"array","minItems":20,"maxItems":20,"uniqueItems":true,"items":{"type":"integer"}},
+    "random_seed":{"type":"integer"},"scenario_type":{"const":"base"},"detail_event_policy":{"const":"detail_only"},"approved_output_dir":{"type":"string","minLength":1},
+    "source":{"type":"object","additionalProperties":false,"required":["observed_db","observed_db_sha256","reference_1000_db","reference_1000_db_sha256","revision_spec","revision_spec_sha256"],"properties":{"observed_db":{"type":"string"},"observed_db_sha256":{"pattern":"^[0-9a-f]{64}$"},"reference_1000_db":{"type":"string"},"reference_1000_db_sha256":{"pattern":"^[0-9a-f]{64}$"},"revision_spec":{"type":"string"},"revision_spec_sha256":{"pattern":"^[0-9a-f]{64}$"}}},
+    "model":{"type":"object","additionalProperties":false,"required":["first_zero_probability","experienced_zero_probability","zero_followup_probability","final_recovery_probability","immediate_recovery_probability","card_h_search_probability","detail_repeat_mean","max_searches","max_same_action_run","template_cluster_cap"],"properties":{"first_zero_probability":{"type":"number","minimum":0,"maximum":1},"experienced_zero_probability":{"type":"number","minimum":0,"maximum":1},"zero_followup_probability":{"type":"number","minimum":0,"maximum":1},"final_recovery_probability":{"type":"number","minimum":0,"maximum":1},"immediate_recovery_probability":{"type":"number","minimum":0,"maximum":1},"card_h_search_probability":{"type":"number","minimum":0,"maximum":1},"detail_repeat_mean":{"type":"number","minimum":1},"max_searches":{"type":"integer","minimum":2},"max_same_action_run":{"type":"integer","minimum":1},"template_cluster_cap":{"type":"number","exclusiveMinimum":0,"maximum":1}}},
+    "diversity_limits":{"type":"object","additionalProperties":{"type":"number"},"minProperties":10}
+  }
+}

@@ -1,0 +1,29 @@
+status: HOLD_NOT_APPROVED_FOR_PRODUCTION
+reason: CONTROL_FIDELITY_AND_ARM_INTERNAL_CLONE_FAILURE
+calibration_cycle_count: 0
+calibration_cycle_note: "No parameter-only correction was applied because zero-followup failure is caused by a hard-coded session-length mechanism and requires generator revision."
+reference_db:
+  path: "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/2단계_1000건_증감_분석/01_초기생성_QA_전체분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite"
+  sha256: 9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f
+approved_inputs:
+  generator_sha256: 87d5d165391acca08c10cbf9d6dab9535ad61aa5056f7ea4268ecb4f254c8821
+  schema_sha256: 5a16e0295e78515f8028292aa8d33135dd8825d79d2b9a8259d5755ec7ab3a2d
+  config_schema_sha256: 56d34f391674fc217124913a3104961518d33a917485282f9c96906e5eb8cd1d
+  metric_definitions_sha256: 4a9b7a0f12a40c87ef654c2ddc82f7e72c258fcbfa569545801c09e883f4e454
+fixed_design: {users: 10000, control: 5000, treatment: 5000, pairs: 5000, scenario: expected, production_seed: 2434815518, booking_rows: 0}
+probability_parameters:
+  search_zero_probability: 0.49768115942028984
+  zero_followup_probability: 0.9525334886429819
+  immediate_recovery_probability: 0.1705900336288597
+  final_recovery_probability: 0.7496159754224271
+  card_h_search_probability: 0.19619157530294287
+time_parameters: {interarrival_log_mu: 2.899725, interarrival_log_sigma: 1.144826, same_timestamp_probability: 0.007797}
+smoothing: {prior: "Beta(1,1)", scenario_mapping: "posterior mean plus scenario-specific posterior SD"}
+production_output_dir: null
+execution_authorized: false
+overwrite_prohibited: true
+required_revision:
+  - make_session_length_and_zero_followup_joint_model_configurable
+  - implement_final_recovery_probability_in_session_termination
+  - regenerate_full_paths_when_arm_internal_collision_occurs
+  - recalibrate_card_h_search_without_posthoc_quota

@@ -1,0 +1,14 @@
+﻿table,rows
+ActionEvent,2152148
+Booking,0
+Hotel,1000
+Room,1000
+Search,65355
+SearchFilter,65355
+SearchResult,2023419
+SearchTransition,55355
+SessionSynthetic,10000
+SimulationRun,1
+UserSynthetic,10000
+_generation_metadata,11
+QA_FAIL_COUNT,0

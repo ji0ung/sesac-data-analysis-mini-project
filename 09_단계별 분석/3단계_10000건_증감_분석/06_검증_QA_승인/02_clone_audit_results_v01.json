@@ -1,0 +1,2387 @@
+{
+  "results": [
+    {
+      "seed": 260601,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260601.sqlite",
+      "bytes": 6332416,
+      "sha256": "dc58de71107477a79d105a42d43fef3f81824698dc63be06794837fa264d03e1",
+      "clone1": 0,
+      "clone2_groups": 842,
+      "clone2_rows": 21279,
+      "clone2_ratio": 0.5061728395061729,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.5053967327887982,
+        "recovery": 0.7411944869831547,
+        "card_h": 0.1916838690651725
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014585764294049007,
+          "hhi": 0.00014585764294049004,
+          "entropy": 8.832879460277615
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.005,
+          "hhi": 0.001236,
+          "entropy": 6.772114804063423
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260602,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260602.sqlite",
+      "bytes": 6316032,
+      "sha256": "e04b302fe695d9a70a6178d907f33a3013ee7196c510b89b3c624534e30dc847",
+      "clone1": 0,
+      "clone2_groups": 843,
+      "clone2_rows": 21269,
+      "clone2_ratio": 0.5074438135229279,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.5022750623807427,
+        "recovery": 0.7523364485981309,
+        "card_h": 0.201120613388381
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.0001467782181124321,
+          "hhi": 0.00014677821811243208,
+          "entropy": 8.826587830773668
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.00123,
+          "entropy": 6.770457933097754
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260603,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260603.sqlite",
+      "bytes": 6230016,
+      "sha256": "dd0f856dd6a4643ac47581cd2b8ad92b6abcdf9e7111199d7add7e3f788c3ceb",
+      "clone1": 0,
+      "clone2_groups": 841,
+      "clone2_rows": 20756,
+      "clone2_ratio": 0.5025787549335335,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.518038580474157,
+        "recovery": 0.7451564828614009,
+        "card_h": 0.1894286587228842
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014725371815638345,
+          "hhi": 0.00014725371815638345,
+          "entropy": 8.823353485113792
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.006,
+          "hhi": 0.001278,
+          "entropy": 6.755226600190769
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260604,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260604.sqlite",
+      "bytes": 6467584,
+      "sha256": "9c9c1892311538a7a70d8e12afb20212621c23566baaf159c8e64a57c5816711",
+      "clone1": 0,
+      "clone2_groups": 844,
+      "clone2_rows": 21938,
+      "clone2_ratio": 0.5121871497945462,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4881124963757611,
+        "recovery": 0.7269938650306749,
+        "card_h": 0.19711129991503823
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014496955639315743,
+          "hhi": 0.00014496955639315743,
+          "entropy": 8.838986793496787
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.007,
+          "hhi": 0.00123,
+          "entropy": 6.781450062480934
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260605,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260605.sqlite",
+      "bytes": 6529024,
+      "sha256": "c8524530bb4a3d4c1ee79a133ea3e43264a0a28a91f6648c99ae3f0e04e6f33c",
+      "clone1": 0,
+      "clone2_groups": 843,
+      "clone2_rows": 22320,
+      "clone2_ratio": 0.514013310918177,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.48148679678530426,
+        "recovery": 0.7777777777777778,
+        "card_h": 0.19236091890395793
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014351320321469576,
+          "hhi": 0.00014351320321469576,
+          "entropy": 8.849083518532339
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.006,
+          "hhi": 0.001206,
+          "entropy": 6.794915085520905
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260606,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260606.sqlite",
+      "bytes": 6352896,
+      "sha256": "1f9d4e1ebdb7c18c1f6f61b8860e5b8b02fabd85315aa3f10c8c4b83af780f13",
+      "clone1": 0,
+      "clone2_groups": 839,
+      "clone2_rows": 21196,
+      "clone2_ratio": 0.5026918060002372,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.514005197805371,
+        "recovery": 0.7416413373860182,
+        "card_h": 0.19102792632204396
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014438348252959862,
+          "hhi": 0.00014438348252959862,
+          "entropy": 8.843037724962366
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.005,
+          "hhi": 0.001198,
+          "entropy": 6.79118312704551
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260607,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260607.sqlite",
+      "bytes": 6381568,
+      "sha256": "0a9fbabd67ac0a1f4c74182b57dd2350dde22a585454a147244e0cecb4ca3c67",
+      "clone1": 0,
+      "clone2_groups": 849,
+      "clone2_rows": 21466,
+      "clone2_ratio": 0.5072186385009806,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.502177068214804,
+        "recovery": 0.785824345146379,
+        "card_h": 0.19416909620991255
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014513788098693758,
+          "hhi": 0.00014513788098693755,
+          "entropy": 8.837826364007704
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.006,
+          "hhi": 0.001238,
+          "entropy": 6.782456341336158
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260608,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260608.sqlite",
+      "bytes": 6303744,
+      "sha256": "0bea25e4a43e98666068f538ae3f6841f595cabd65e8da7c600b16e11d80b2bf",
+      "clone1": 0,
+      "clone2_groups": 855,
+      "clone2_rows": 21280,
+      "clone2_ratio": 0.5088839467202334,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4997789892441432,
+        "recovery": 0.7503875968992249,
+        "card_h": 0.18969072164948453
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014734050390452334,
+          "hhi": 0.00014734050390452334,
+          "entropy": 8.822764296703758
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.0012259999999999999,
+          "entropy": 6.773413971890168
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260609,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260609.sqlite",
+      "bytes": 6291456,
+      "sha256": "b4b445724f507b0edd2368ab5c9463f596d0c5a5bbe70cdf6d971a3a0145bb89",
+      "clone1": 0,
+      "clone2_groups": 829,
+      "clone2_rows": 21106,
+      "clone2_ratio": 0.5057267455791441,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.5065373879829587,
+        "recovery": 0.799079754601227,
+        "card_h": 0.1988687109258708
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014690759512266783,
+          "hhi": 0.00014690759512266783,
+          "entropy": 8.82570677344795
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.001238,
+          "entropy": 6.769594886880399
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260610,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260610.sqlite",
+      "bytes": 6402048,
+      "sha256": "e13771161ab20295cf68311ee2c4383ca4816098266ca9e555e5d97dcca6abf0",
+      "clone1": 0,
+      "clone2_groups": 849,
+      "clone2_rows": 21548,
+      "clone2_ratio": 0.5068448040645435,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.5062066974595842,
+        "recovery": 0.7441860465116279,
+        "card_h": 0.185910552470038
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.0001443418013856813,
+          "hhi": 0.0001443418013856813,
+          "entropy": 8.843326450242271
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.005,
+          "hhi": 0.00123,
+          "entropy": 6.7785501297920145
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260611,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260611.sqlite",
+      "bytes": 6225920,
+      "sha256": "92dcda7defb008dbba94225a247e899c8b088eeb5d2e74915a619b85559a5949",
+      "clone1": 0,
+      "clone2_groups": 846,
+      "clone2_rows": 21102,
+      "clone2_ratio": 0.5120229053939291,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4939015208552929,
+        "recovery": 0.7386018237082067,
+        "card_h": 0.20440345135376375
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.0001505797319680771,
+          "hhi": 0.0001505797319680771,
+          "entropy": 8.801017833540715
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.005,
+          "hhi": 0.001214,
+          "entropy": 6.787364042035741
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260612,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260612.sqlite",
+      "bytes": 6299648,
+      "sha256": "6ac1fd40c595294bb6c293d1d4700ec91dd774ea57f8fa3d43ca6d99f85360c6",
+      "clone1": 0,
+      "clone2_groups": 845,
+      "clone2_rows": 21273,
+      "clone2_ratio": 0.509020865237366,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4996314315199764,
+        "recovery": 0.7612403100775194,
+        "card_h": 0.19121979964643487
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014742739200943535,
+          "hhi": 0.00014742739200943535,
+          "entropy": 8.82217476094608
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.005,
+          "hhi": 0.001214,
+          "entropy": 6.784774903383676
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260613,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260613.sqlite",
+      "bytes": 6172672,
+      "sha256": "4ffb7e9e58dbf932198a03e57c03a1b8163600c1d32dbff91306a1d7138d8174",
+      "clone1": 0,
+      "clone2_groups": 841,
+      "clone2_rows": 20354,
+      "clone2_ratio": 0.4976284778250452,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.538166814028883,
+        "recovery": 0.7368421052631579,
+        "card_h": 0.19591576260370133
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014736221632773356,
+          "hhi": 0.00014736221632773353,
+          "entropy": 8.822616945344176
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.00122,
+          "entropy": 6.777572854973528
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260614,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260614.sqlite",
+      "bytes": 6520832,
+      "sha256": "f30e20d68227686ba32583db4c58fb3241f1046657d0622a516939b4dbf92027",
+      "clone1": 0,
+      "clone2_groups": 848,
+      "clone2_rows": 22171,
+      "clone2_ratio": 0.5128614388156373,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4873490511788384,
+        "recovery": 0.7441130298273155,
+        "card_h": 0.20246775098149186
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.0001437607820586544,
+          "hhi": 0.0001437607820586544,
+          "entropy": 8.847359875474174
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.0011979999999999998,
+          "entropy": 6.787276915501367
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260615,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260615.sqlite",
+      "bytes": 6217728,
+      "sha256": "20bf00e79a5a601e8d6ed396c2a2f41d1857ad80a8ad9a6beedbba6fbb1a51e1",
+      "clone1": 0,
+      "clone2_groups": 852,
+      "clone2_rows": 21099,
+      "clone2_ratio": 0.5121862407146672,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.49141307622777947,
+        "recovery": 0.7245696400625978,
+        "card_h": 0.19845971563981044
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00015064778547755348,
+          "hhi": 0.00015064778547755348,
+          "entropy": 8.80056599227992
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.005,
+          "hhi": 0.001186,
+          "entropy": 6.796911754560163
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260616,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260616.sqlite",
+      "bytes": 6275072,
+      "sha256": "41e9795eae0d1c16fcf01797c24b2db8bd387f8f11e0153842aa48ce6a0f870a",
+      "clone1": 0,
+      "clone2_groups": 848,
+      "clone2_rows": 20657,
+      "clone2_ratio": 0.4967416135625827,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.5355696934644303,
+        "recovery": 0.7652303120356612,
+        "card_h": 0.19551681195516812
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014459224985540774,
+          "hhi": 0.0001445922498554077,
+          "entropy": 8.84159284680318
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.005,
+          "hhi": 0.001202,
+          "entropy": 6.790320080828155
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260617,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260617.sqlite",
+      "bytes": 6639616,
+      "sha256": "78a02cffeba186875be9a266b2bcdf04f82b9666e635ec4068d2383d18c2fc80",
+      "clone1": 0,
+      "clone2_groups": 850,
+      "clone2_rows": 22632,
+      "clone2_ratio": 0.5146209468370548,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4842419080068143,
+        "recovery": 0.760655737704918,
+        "card_h": 0.20726672171758878
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014196479273140261,
+          "hhi": 0.00014196479273140261,
+          "entropy": 8.859931469616097
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.00123,
+          "entropy": 6.774277018107523
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260618,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260618.sqlite",
+      "bytes": 6557696,
+      "sha256": "c2bdb2944bdd2b377ee5f978a1248d709366a678ba241f62373bd43e3d500236",
+      "clone1": 0,
+      "clone2_groups": 844,
+      "clone2_rows": 22330,
+      "clone2_ratio": 0.5135104058870875,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4838201603665521,
+        "recovery": 0.748006379585327,
+        "card_h": 0.19861303744798892
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.000143184421534937,
+          "hhi": 0.000143184421534937,
+          "entropy": 8.851377097519437
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.00123,
+          "entropy": 6.778279553187466
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260619,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260619.sqlite",
+      "bytes": 6270976,
+      "sha256": "54c3233d7ba4aba1de1718d374c90c634732a249046b29f97a961b37014e0df1",
+      "clone1": 0,
+      "clone2_groups": 848,
+      "clone2_rows": 21160,
+      "clone2_ratio": 0.5087027598807577,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.4993340239751369,
+        "recovery": 0.7519500780031201,
+        "card_h": 0.18622524386639078
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.0001479946721918011,
+          "hhi": 0.0001479946721918011,
+          "entropy": 8.818334283552174
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.004,
+          "hhi": 0.001214,
+          "entropy": 6.780868691839531
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    },
+    {
+      "seed": 260620,
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_clone_qa_seed_dbs_v01\\calibration_control_260620.sqlite",
+      "bytes": 6418432,
+      "sha256": "a68d9ab90b69853a74f53bfe44d3c2cc30ac559d52fab9e1a5da9dafed490979",
+      "clone1": 0,
+      "clone2_groups": 835,
+      "clone2_rows": 21463,
+      "clone2_ratio": 0.5041221374045801,
+      "clone3_sessions": 0,
+      "clone3_groups": 0,
+      "full_path_clone_sessions": 0,
+      "kpi": {
+        "zero": 0.507681263460158,
+        "recovery": 0.7701863354037267,
+        "card_h": 0.19539224263633712
+      },
+      "diversity": {
+        "signature": {
+          "mode_share": 0.00014357501794687725,
+          "hhi": 0.00014357501794687725,
+          "entropy": 8.848652886213907
+        },
+        "condition": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        },
+        "behavior": {
+          "mode_share": 0.003,
+          "hhi": 0.001162,
+          "entropy": 6.806685036557045
+        },
+        "template": {
+          "mode_share": 0.001,
+          "hhi": 0.001,
+          "entropy": 6.907755278982137
+        }
+      },
+      "kpi_match": true,
+      "diversity_match": true
+    }
+  ],
+  "tables": [
+    {
+      "seed": 260601,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260601,
+      "table": "Search",
+      "rows": 6856,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260601,
+      "table": "SearchFilter",
+      "rows": 6856,
+      "clone1": 0,
+      "payload_groups": 3,
+      "payload_rows": 7,
+      "payload_ratio": 0.0010210035005834305,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 1.0]",
+      "top_n": 3
+    },
+    {
+      "seed": 260601,
+      "table": "SearchResult",
+      "rows": 10199,
+      "clone1": 0,
+      "payload_groups": 600,
+      "payload_rows": 10199,
+      "payload_ratio": 1.0,
+      "top_payload": "[111, 111, 1]",
+      "top_n": 38
+    },
+    {
+      "seed": 260601,
+      "table": "ActionEvent",
+      "rows": 10272,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10272,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6856
+    },
+    {
+      "seed": 260601,
+      "table": "SearchTransition",
+      "rows": 5856,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260601,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 118,
+      "payload_rows": 801,
+      "payload_ratio": 0.801,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 63
+    },
+    {
+      "seed": 260602,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260602,
+      "table": "Search",
+      "rows": 6813,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260602,
+      "table": "SearchFilter",
+      "rows": 6813,
+      "clone1": 0,
+      "payload_groups": 5,
+      "payload_rows": 10,
+      "payload_ratio": 0.0014677821811243212,
+      "top_payload": "[\"coastal\", \"<NULL>\", 2, \"base\", 0.451245]",
+      "top_n": 2
+    },
+    {
+      "seed": 260602,
+      "table": "SearchResult",
+      "rows": 10077,
+      "clone1": 0,
+      "payload_groups": 595,
+      "payload_rows": 10072,
+      "payload_ratio": 0.9995038205815223,
+      "top_payload": "[103, 103, 1]",
+      "top_n": 39
+    },
+    {
+      "seed": 260602,
+      "table": "ActionEvent",
+      "rows": 10398,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10398,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6813
+    },
+    {
+      "seed": 260602,
+      "table": "SearchTransition",
+      "rows": 5813,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260602,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 789,
+      "payload_ratio": 0.789,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 57
+    },
+    {
+      "seed": 260603,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260603,
+      "table": "Search",
+      "rows": 6791,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260603,
+      "table": "SearchFilter",
+      "rows": 6791,
+      "clone1": 0,
+      "payload_groups": 4,
+      "payload_rows": 12,
+      "payload_ratio": 0.0017670446178766014,
+      "top_payload": "[\"coastal\", \"<NULL>\", 2, \"base\", 0.0]",
+      "top_n": 6
+    },
+    {
+      "seed": 260603,
+      "table": "SearchResult",
+      "rows": 9736,
+      "clone1": 0,
+      "payload_groups": 597,
+      "payload_rows": 9734,
+      "payload_ratio": 0.9997945768282662,
+      "top_payload": "[19, 19, 1]",
+      "top_n": 37
+    },
+    {
+      "seed": 260603,
+      "table": "ActionEvent",
+      "rows": 10190,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10190,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6791
+    },
+    {
+      "seed": 260603,
+      "table": "SearchTransition",
+      "rows": 5791,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260603,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 118,
+      "payload_rows": 820,
+      "payload_ratio": 0.82,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 74
+    },
+    {
+      "seed": 260604,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260604,
+      "table": "Search",
+      "rows": 6898,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260604,
+      "table": "SearchFilter",
+      "rows": 6898,
+      "clone1": 0,
+      "payload_groups": 5,
+      "payload_rows": 10,
+      "payload_ratio": 0.0014496955639315744,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 0.336455]",
+      "top_n": 2
+    },
+    {
+      "seed": 260604,
+      "table": "SearchResult",
+      "rows": 10534,
+      "clone1": 0,
+      "payload_groups": 598,
+      "payload_rows": 10532,
+      "payload_ratio": 0.9998101385988228,
+      "top_payload": "[30, 30, 1]",
+      "top_n": 39
+    },
+    {
+      "seed": 260604,
+      "table": "ActionEvent",
+      "rows": 10604,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10604,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6898
+    },
+    {
+      "seed": 260604,
+      "table": "SearchTransition",
+      "rows": 5898,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260604,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 119,
+      "payload_rows": 792,
+      "payload_ratio": 0.792,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 67
+    },
+    {
+      "seed": 260605,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260605,
+      "table": "Search",
+      "rows": 6968,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260605,
+      "table": "SearchFilter",
+      "rows": 6968,
+      "clone1": 0,
+      "payload_groups": 4,
+      "payload_rows": 13,
+      "payload_ratio": 0.0018656716417910447,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 0.0]",
+      "top_n": 4
+    },
+    {
+      "seed": 260605,
+      "table": "SearchResult",
+      "rows": 10887,
+      "clone1": 0,
+      "payload_groups": 594,
+      "payload_rows": 10882,
+      "payload_ratio": 0.9995407366583999,
+      "top_payload": "[87, 87, 1]",
+      "top_n": 40
+    },
+    {
+      "seed": 260605,
+      "table": "ActionEvent",
+      "rows": 10632,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10632,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6968
+    },
+    {
+      "seed": 260605,
+      "table": "SearchTransition",
+      "rows": 5968,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260605,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 123,
+      "payload_rows": 793,
+      "payload_ratio": 0.793,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 58
+    },
+    {
+      "seed": 260606,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260606,
+      "table": "Search",
+      "rows": 6926,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260606,
+      "table": "SearchFilter",
+      "rows": 6926,
+      "clone1": 0,
+      "payload_groups": 1,
+      "payload_rows": 2,
+      "payload_ratio": 0.00028876696505919725,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 0.677261]",
+      "top_n": 2
+    },
+    {
+      "seed": 260606,
+      "table": "SearchResult",
+      "rows": 10057,
+      "clone1": 0,
+      "payload_groups": 598,
+      "payload_rows": 10055,
+      "payload_ratio": 0.9998011335388287,
+      "top_payload": "[104, 104, 1]",
+      "top_n": 37
+    },
+    {
+      "seed": 260606,
+      "table": "ActionEvent",
+      "rows": 10330,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10330,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6926
+    },
+    {
+      "seed": 260606,
+      "table": "SearchTransition",
+      "rows": 5926,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260606,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 118,
+      "payload_rows": 809,
+      "payload_ratio": 0.809,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 53
+    },
+    {
+      "seed": 260607,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260607,
+      "table": "Search",
+      "rows": 6890,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260607,
+      "table": "SearchFilter",
+      "rows": 6890,
+      "clone1": 0,
+      "payload_groups": 3,
+      "payload_rows": 6,
+      "payload_ratio": 0.0008708272859216256,
+      "top_payload": "[\"island\", \"<NULL>\", 0, \"base\", 0.327377]",
+      "top_n": 2
+    },
+    {
+      "seed": 260607,
+      "table": "SearchResult",
+      "rows": 10225,
+      "clone1": 0,
+      "payload_groups": 599,
+      "payload_rows": 10224,
+      "payload_ratio": 0.9999022004889976,
+      "top_payload": "[98, 98, 1]",
+      "top_n": 40
+    },
+    {
+      "seed": 260607,
+      "table": "ActionEvent",
+      "rows": 10426,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10426,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6890
+    },
+    {
+      "seed": 260607,
+      "table": "SearchTransition",
+      "rows": 5890,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260607,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 126,
+      "payload_rows": 810,
+      "payload_ratio": 0.81,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 71
+    },
+    {
+      "seed": 260608,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260608,
+      "table": "Search",
+      "rows": 6787,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260608,
+      "table": "SearchFilter",
+      "rows": 6787,
+      "clone1": 0,
+      "payload_groups": 6,
+      "payload_rows": 12,
+      "payload_ratio": 0.0017680860468542803,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 0.860522]",
+      "top_n": 2
+    },
+    {
+      "seed": 260608,
+      "table": "SearchResult",
+      "rows": 10218,
+      "clone1": 0,
+      "payload_groups": 596,
+      "payload_rows": 10214,
+      "payload_ratio": 0.999608533959679,
+      "top_payload": "[65, 65, 1]",
+      "top_n": 39
+    },
+    {
+      "seed": 260608,
+      "table": "ActionEvent",
+      "rows": 10238,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10238,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6787
+    },
+    {
+      "seed": 260608,
+      "table": "SearchTransition",
+      "rows": 5787,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260608,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 131,
+      "payload_rows": 816,
+      "payload_ratio": 0.816,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 69
+    },
+    {
+      "seed": 260609,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260609,
+      "table": "Search",
+      "rows": 6807,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260609,
+      "table": "SearchFilter",
+      "rows": 6807,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260609,
+      "table": "SearchResult",
+      "rows": 10020,
+      "clone1": 0,
+      "payload_groups": 595,
+      "payload_rows": 10016,
+      "payload_ratio": 0.9996007984031936,
+      "top_payload": "[49, 49, 1]",
+      "top_n": 40
+    },
+    {
+      "seed": 260609,
+      "table": "ActionEvent",
+      "rows": 10293,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10293,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6807
+    },
+    {
+      "seed": 260609,
+      "table": "SearchTransition",
+      "rows": 5807,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260609,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 113,
+      "payload_rows": 797,
+      "payload_ratio": 0.797,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 73
+    },
+    {
+      "seed": 260610,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260610,
+      "table": "Search",
+      "rows": 6928,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260610,
+      "table": "SearchFilter",
+      "rows": 6928,
+      "clone1": 0,
+      "payload_groups": 7,
+      "payload_rows": 14,
+      "payload_ratio": 0.0020207852193995382,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 0.498059]",
+      "top_n": 2
+    },
+    {
+      "seed": 260610,
+      "table": "SearchResult",
+      "rows": 10353,
+      "clone1": 0,
+      "payload_groups": 596,
+      "payload_rows": 10350,
+      "payload_ratio": 0.9997102289191538,
+      "top_payload": "[111, 111, 1]",
+      "top_n": 39
+    },
+    {
+      "seed": 260610,
+      "table": "ActionEvent",
+      "rows": 10377,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10376,
+      "payload_ratio": 0.9999036330345957,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6928
+    },
+    {
+      "seed": 260610,
+      "table": "SearchTransition",
+      "rows": 5928,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260610,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 125,
+      "payload_rows": 808,
+      "payload_ratio": 0.808,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 67
+    },
+    {
+      "seed": 260611,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260611,
+      "table": "Search",
+      "rows": 6641,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260611,
+      "table": "SearchFilter",
+      "rows": 6641,
+      "clone1": 0,
+      "payload_groups": 3,
+      "payload_rows": 6,
+      "payload_ratio": 0.0009034783918084626,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 0.854375]",
+      "top_n": 2
+    },
+    {
+      "seed": 260611,
+      "table": "SearchResult",
+      "rows": 10012,
+      "clone1": 0,
+      "payload_groups": 597,
+      "payload_rows": 10010,
+      "payload_ratio": 0.9998002397123452,
+      "top_payload": "[51, 51, 1]",
+      "top_n": 40
+    },
+    {
+      "seed": 260611,
+      "table": "ActionEvent",
+      "rows": 10278,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10278,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6641
+    },
+    {
+      "seed": 260611,
+      "table": "SearchTransition",
+      "rows": 5641,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260611,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 124,
+      "payload_rows": 808,
+      "payload_ratio": 0.808,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 61
+    },
+    {
+      "seed": 260612,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260612,
+      "table": "Search",
+      "rows": 6783,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260612,
+      "table": "SearchFilter",
+      "rows": 6783,
+      "clone1": 0,
+      "payload_groups": 5,
+      "payload_rows": 12,
+      "payload_ratio": 0.0017691287041132243,
+      "top_payload": "[\"metro\", \"<NULL>\", 0, \"base\", 1.0]",
+      "top_n": 4
+    },
+    {
+      "seed": 260612,
+      "table": "SearchResult",
+      "rows": 10146,
+      "clone1": 0,
+      "payload_groups": 595,
+      "payload_rows": 10141,
+      "payload_ratio": 0.9995071949536763,
+      "top_payload": "[30, 30, 1]",
+      "top_n": 41
+    },
+    {
+      "seed": 260612,
+      "table": "ActionEvent",
+      "rows": 10297,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10297,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6783
+    },
+    {
+      "seed": 260612,
+      "table": "SearchTransition",
+      "rows": 5783,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260612,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 124,
+      "payload_rows": 823,
+      "payload_ratio": 0.823,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 70
+    },
+    {
+      "seed": 260613,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260613,
+      "table": "Search",
+      "rows": 6786,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260613,
+      "table": "SearchFilter",
+      "rows": 6786,
+      "clone1": 0,
+      "payload_groups": 7,
+      "payload_rows": 15,
+      "payload_ratio": 0.0022104332449160036,
+      "top_payload": "[\"inland\", \"<NULL>\", 2, \"base\", 1.0]",
+      "top_n": 3
+    },
+    {
+      "seed": 260613,
+      "table": "SearchResult",
+      "rows": 9355,
+      "clone1": 0,
+      "payload_groups": 594,
+      "payload_rows": 9349,
+      "payload_ratio": 0.9993586317477284,
+      "top_payload": "[50, 50, 1]",
+      "top_n": 35
+    },
+    {
+      "seed": 260613,
+      "table": "ActionEvent",
+      "rows": 10189,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10189,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6786
+    },
+    {
+      "seed": 260613,
+      "table": "SearchTransition",
+      "rows": 5786,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260613,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 118,
+      "payload_rows": 801,
+      "payload_ratio": 0.801,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 73
+    },
+    {
+      "seed": 260614,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260614,
+      "table": "Search",
+      "rows": 6956,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260614,
+      "table": "SearchFilter",
+      "rows": 6956,
+      "clone1": 0,
+      "payload_groups": 2,
+      "payload_rows": 4,
+      "payload_ratio": 0.0005750431282346176,
+      "top_payload": "[\"island\", \"<NULL>\", 0, \"base\", 0.400197]",
+      "top_n": 2
+    },
+    {
+      "seed": 260614,
+      "table": "SearchResult",
+      "rows": 10659,
+      "clone1": 0,
+      "payload_groups": 597,
+      "payload_rows": 10656,
+      "payload_ratio": 0.9997185477061638,
+      "top_payload": "[55, 55, 1]",
+      "top_n": 40
+    },
+    {
+      "seed": 260614,
+      "table": "ActionEvent",
+      "rows": 10703,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10703,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6956
+    },
+    {
+      "seed": 260614,
+      "table": "SearchTransition",
+      "rows": 5956,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260614,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 127,
+      "payload_rows": 808,
+      "payload_ratio": 0.808,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 62
+    },
+    {
+      "seed": 260615,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260615,
+      "table": "Search",
+      "rows": 6638,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260615,
+      "table": "SearchFilter",
+      "rows": 6638,
+      "clone1": 0,
+      "payload_groups": 2,
+      "payload_rows": 4,
+      "payload_ratio": 0.0006025911419102139,
+      "top_payload": "[\"inland\", \"<NULL>\", 0, \"base\", 0.332624]",
+      "top_n": 2
+    },
+    {
+      "seed": 260615,
+      "table": "SearchResult",
+      "rows": 10088,
+      "clone1": 0,
+      "payload_groups": 598,
+      "payload_rows": 10087,
+      "payload_ratio": 0.9999008723235527,
+      "top_payload": "[100, 100, 1]",
+      "top_n": 37
+    },
+    {
+      "seed": 260615,
+      "table": "ActionEvent",
+      "rows": 10192,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10192,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6638
+    },
+    {
+      "seed": 260615,
+      "table": "SearchTransition",
+      "rows": 5638,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260615,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 131,
+      "payload_rows": 816,
+      "payload_ratio": 0.816,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 58
+    },
+    {
+      "seed": 260616,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260616,
+      "table": "Search",
+      "rows": 6916,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260616,
+      "table": "SearchFilter",
+      "rows": 6916,
+      "clone1": 0,
+      "payload_groups": 4,
+      "payload_rows": 8,
+      "payload_ratio": 0.001156737998843262,
+      "top_payload": "[\"metro\", \"<NULL>\", 0, \"base\", 1.0]",
+      "top_n": 2
+    },
+    {
+      "seed": 260616,
+      "table": "SearchResult",
+      "rows": 9588,
+      "clone1": 0,
+      "payload_groups": 599,
+      "payload_rows": 9588,
+      "payload_ratio": 1.0,
+      "top_payload": "[68, 68, 1]",
+      "top_n": 35
+    },
+    {
+      "seed": 260616,
+      "table": "ActionEvent",
+      "rows": 10249,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10249,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6916
+    },
+    {
+      "seed": 260616,
+      "table": "SearchTransition",
+      "rows": 5916,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260616,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 123,
+      "payload_rows": 812,
+      "payload_ratio": 0.812,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 66
+    },
+    {
+      "seed": 260617,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260617,
+      "table": "Search",
+      "rows": 7044,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260617,
+      "table": "SearchFilter",
+      "rows": 7044,
+      "clone1": 0,
+      "payload_groups": 3,
+      "payload_rows": 9,
+      "payload_ratio": 0.0012776831345826234,
+      "top_payload": "[\"coastal\", \"<NULL>\", 0, \"base\", 1.0]",
+      "top_n": 5
+    },
+    {
+      "seed": 260617,
+      "table": "SearchResult",
+      "rows": 10896,
+      "clone1": 0,
+      "payload_groups": 600,
+      "payload_rows": 10896,
+      "payload_ratio": 1.0,
+      "top_payload": "[43, 43, 1]",
+      "top_n": 42
+    },
+    {
+      "seed": 260617,
+      "table": "ActionEvent",
+      "rows": 10950,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10950,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 7044
+    },
+    {
+      "seed": 260617,
+      "table": "SearchTransition",
+      "rows": 6044,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260617,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 126,
+      "payload_rows": 777,
+      "payload_ratio": 0.777,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 68
+    },
+    {
+      "seed": 260618,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260618,
+      "table": "Search",
+      "rows": 6984,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260618,
+      "table": "SearchFilter",
+      "rows": 6984,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260618,
+      "table": "SearchResult",
+      "rows": 10805,
+      "clone1": 0,
+      "payload_groups": 597,
+      "payload_rows": 10802,
+      "payload_ratio": 0.9997223507635354,
+      "top_payload": "[8, 8, 1]",
+      "top_n": 46
+    },
+    {
+      "seed": 260618,
+      "table": "ActionEvent",
+      "rows": 10728,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10728,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6984
+    },
+    {
+      "seed": 260618,
+      "table": "SearchTransition",
+      "rows": 5984,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260618,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 125,
+      "payload_rows": 800,
+      "payload_ratio": 0.8,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 67
+    },
+    {
+      "seed": 260619,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260619,
+      "table": "Search",
+      "rows": 6757,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260619,
+      "table": "SearchFilter",
+      "rows": 6757,
+      "clone1": 0,
+      "payload_groups": 8,
+      "payload_rows": 18,
+      "payload_ratio": 0.0026639040994524197,
+      "top_payload": "[\"metro\", \"<NULL>\", 0, \"base\", 1.0]",
+      "top_n": 4
+    },
+    {
+      "seed": 260619,
+      "table": "SearchResult",
+      "rows": 10159,
+      "clone1": 0,
+      "payload_groups": 600,
+      "payload_rows": 10159,
+      "payload_ratio": 1.0,
+      "top_payload": "[22, 22, 1]",
+      "top_n": 39
+    },
+    {
+      "seed": 260619,
+      "table": "ActionEvent",
+      "rows": 10166,
+      "clone1": 0,
+      "payload_groups": 122,
+      "payload_rows": 10166,
+      "payload_ratio": 1.0,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6757
+    },
+    {
+      "seed": 260619,
+      "table": "SearchTransition",
+      "rows": 5757,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260619,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 118,
+      "payload_rows": 817,
+      "payload_ratio": 0.817,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 66
+    },
+    {
+      "seed": 260620,
+      "table": "ExperimentAssignment",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260620,
+      "table": "Search",
+      "rows": 6965,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260620,
+      "table": "SearchFilter",
+      "rows": 6965,
+      "clone1": 0,
+      "payload_groups": 5,
+      "payload_rows": 10,
+      "payload_ratio": 0.0014357501794687725,
+      "top_payload": "[\"inland\", \"<NULL>\", 0, \"base\", 0.457559]",
+      "top_n": 2
+    },
+    {
+      "seed": 260620,
+      "table": "SearchResult",
+      "rows": 10123,
+      "clone1": 0,
+      "payload_groups": 598,
+      "payload_rows": 10121,
+      "payload_ratio": 0.9998024301096513,
+      "top_payload": "[77, 77, 1]",
+      "top_n": 44
+    },
+    {
+      "seed": 260620,
+      "table": "ActionEvent",
+      "rows": 10557,
+      "clone1": 0,
+      "payload_groups": 121,
+      "payload_rows": 10556,
+      "payload_ratio": 0.9999052761201099,
+      "top_payload": "[\"search_submit\", \"<NULL>\", 0]",
+      "top_n": 6965
+    },
+    {
+      "seed": 260620,
+      "table": "SearchTransition",
+      "rows": 5965,
+      "clone1": 0,
+      "payload_groups": 0,
+      "payload_rows": 0,
+      "payload_ratio": 0.0,
+      "top_payload": "[]",
+      "top_n": 0
+    },
+    {
+      "seed": 260620,
+      "table": "SessionSummary",
+      "rows": 1000,
+      "clone1": 0,
+      "payload_groups": 111,
+      "payload_rows": 776,
+      "payload_ratio": 0.776,
+      "top_payload": "[2, 1, 1, 0, 0, \"sg3\"]",
+      "top_n": 62
+    }
+  ],
+  "traces": []
+}

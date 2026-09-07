@@ -1,0 +1,256 @@
+{
+  "classification": "synthetic scenario simulation; not observed A/B",
+  "evaluation_runs": 30,
+  "integrated_gate_pass": 30,
+  "expected_runs": 20,
+  "metric_summary": [
+    {
+      "metric": "search_zero_rate",
+      "reference_lower": 0.485888,
+      "reference_upper": 0.509477,
+      "mean": 0.5021238823185467,
+      "minimum": 0.4876154184376374,
+      "maximum": 0.5158650394831299,
+      "pooled_numerator": 69173,
+      "pooled_denominator": 137731,
+      "pooled_value": 0.502232612846781,
+      "pass_seeds": 16,
+      "required_pass_seeds": 18,
+      "status": "HOLD"
+    },
+    {
+      "metric": "zero_followup_rate",
+      "reference_lower": 0.944902,
+      "reference_upper": 0.959154,
+      "mean": 0.9516539655691438,
+      "minimum": 0.945845004668534,
+      "maximum": 0.9561111111111111,
+      "pooled_numerator": 65831,
+      "pooled_denominator": 69173,
+      "pooled_value": 0.9516863516111778,
+      "pass_seeds": 20,
+      "required_pass_seeds": 18,
+      "status": "PASS"
+    },
+    {
+      "metric": "immediate_recovery_transition_rate",
+      "reference_lower": 0.158088,
+      "reference_upper": 0.183871,
+      "mean": 0.16890072589425176,
+      "minimum": 0.15726395790704473,
+      "maximum": 0.17834814083580125,
+      "pooled_numerator": 11107,
+      "pooled_denominator": 65831,
+      "pooled_value": 0.16871990399659734,
+      "pass_seeds": 19,
+      "required_pass_seeds": 18,
+      "status": "PASS"
+    },
+    {
+      "metric": "first_zero_immediate_recovery_rate",
+      "reference_lower": null,
+      "reference_upper": null,
+      "mean": 0.10842140679307806,
+      "minimum": 0.08524590163934426,
+      "maximum": 0.13166144200626959,
+      "pooled_numerator": 1366,
+      "pooled_denominator": 12573,
+      "pooled_value": 0.10864551022031337,
+      "pass_seeds": 0,
+      "required_pass_seeds": null,
+      "status": "PASS"
+    },
+    {
+      "metric": "final_recovery_rate",
+      "reference_lower": 0.714909,
+      "reference_upper": 0.781366,
+      "mean": 0.7439547185287014,
+      "minimum": 0.7191679049034175,
+      "maximum": 0.7664670658682635,
+      "pooled_numerator": 9711,
+      "pooled_denominator": 13053,
+      "pooled_value": 0.7439669041599632,
+      "pass_seeds": 20,
+      "required_pass_seeds": 18,
+      "status": "PASS"
+    },
+    {
+      "metric": "card_h_search_rate",
+      "reference_lower": 0.18331,
+      "reference_upper": 0.20975,
+      "mean": 0.19622925958213797,
+      "minimum": 0.18589360430364615,
+      "maximum": 0.20909610983981694,
+      "pooled_numerator": 13459,
+      "pooled_denominator": 68558,
+      "pooled_value": 0.1963155284576563,
+      "pass_seeds": 20,
+      "required_pass_seeds": 18,
+      "status": "PASS"
+    }
+  ],
+  "reference_transitions": {
+    "Z_to_Z": 2713,
+    "Z_to_P": 558,
+    "Z_to_END": 163,
+    "P_to_Z": 582,
+    "P_to_P": 2047,
+    "P_to_END": 837,
+    "searches": 6900,
+    "first_Z": 139,
+    "first_P": 861,
+    "first_P_then_Z": 512,
+    "ever_Z": 651,
+    "never_Z": 349,
+    "final_recovered": 488,
+    "final_Z": 163,
+    "average_searches": 6.9,
+    "first_Z_to_Z": 559,
+    "first_Z_to_P": 69,
+    "first_Z_to_END": 23
+  },
+  "pooled_expected_control_transitions": {
+    "Z_to_Z": 54724,
+    "Z_to_P": 11107,
+    "Z_to_END": 3342,
+    "P_to_Z": 11665,
+    "P_to_P": 40235,
+    "P_to_END": 16658,
+    "searches": 137731,
+    "first_Z": 2784,
+    "first_P": 17216,
+    "ever_Z": 13053,
+    "never_Z": 6947,
+    "final_recovered": 9711,
+    "final_Z": 3342,
+    "first_Z_to_Z": 11207,
+    "first_Z_to_P": 1366,
+    "first_Z_to_END": 480,
+    "average_searches": 6.88655
+  },
+  "common_seed_control": [
+    {
+      "seed": 260901,
+      "conservative": "b7451b8dcba4a90149dde27e15dc7b468b872c2ba9ebaecbfa2faed887b302ae",
+      "expected": "b7451b8dcba4a90149dde27e15dc7b468b872c2ba9ebaecbfa2faed887b302ae",
+      "optimistic": "b7451b8dcba4a90149dde27e15dc7b468b872c2ba9ebaecbfa2faed887b302ae",
+      "identical": true
+    },
+    {
+      "seed": 260902,
+      "conservative": "09485438797f9628268f4ca90f98a595393d66cbd9438eb9ab2207c7f9800e92",
+      "expected": "09485438797f9628268f4ca90f98a595393d66cbd9438eb9ab2207c7f9800e92",
+      "optimistic": "09485438797f9628268f4ca90f98a595393d66cbd9438eb9ab2207c7f9800e92",
+      "identical": true
+    },
+    {
+      "seed": 260903,
+      "conservative": "de70c34c475dfbb31f0a536eb200b1764096c3b7a82236cab4ea84f15ab4d531",
+      "expected": "de70c34c475dfbb31f0a536eb200b1764096c3b7a82236cab4ea84f15ab4d531",
+      "optimistic": "de70c34c475dfbb31f0a536eb200b1764096c3b7a82236cab4ea84f15ab4d531",
+      "identical": true
+    },
+    {
+      "seed": 260904,
+      "conservative": "68ea35ade239b17b36b2b3b1e8736662d0dae3493e1c86dc6f7a2f7f873501b8",
+      "expected": "68ea35ade239b17b36b2b3b1e8736662d0dae3493e1c86dc6f7a2f7f873501b8",
+      "optimistic": "68ea35ade239b17b36b2b3b1e8736662d0dae3493e1c86dc6f7a2f7f873501b8",
+      "identical": true
+    },
+    {
+      "seed": 260905,
+      "conservative": "97d114cb3d0598969522d42d7f68715744a167cf31478727562d6899dbe09cc0",
+      "expected": "97d114cb3d0598969522d42d7f68715744a167cf31478727562d6899dbe09cc0",
+      "optimistic": "97d114cb3d0598969522d42d7f68715744a167cf31478727562d6899dbe09cc0",
+      "identical": true
+    }
+  ],
+  "scenario_treatment_means": [
+    {
+      "scenario": "conservative",
+      "arm": "treatment",
+      "metric": "search_zero_rate",
+      "mean": 0.4687283487003942
+    },
+    {
+      "scenario": "conservative",
+      "arm": "treatment",
+      "metric": "immediate_recovery_transition_rate",
+      "mean": 0.19627349233379404
+    },
+    {
+      "scenario": "conservative",
+      "arm": "treatment",
+      "metric": "final_recovery_rate",
+      "mean": 0.7681463121112484
+    },
+    {
+      "scenario": "conservative",
+      "arm": "treatment",
+      "metric": "card_h_search_rate",
+      "mean": 0.19594948487651476
+    },
+    {
+      "scenario": "expected",
+      "arm": "treatment",
+      "metric": "search_zero_rate",
+      "mean": 0.43929211834983944
+    },
+    {
+      "scenario": "expected",
+      "arm": "treatment",
+      "metric": "immediate_recovery_transition_rate",
+      "mean": 0.22385583812421284
+    },
+    {
+      "scenario": "expected",
+      "arm": "treatment",
+      "metric": "final_recovery_rate",
+      "mean": 0.7944597098145428
+    },
+    {
+      "scenario": "expected",
+      "arm": "treatment",
+      "metric": "card_h_search_rate",
+      "mean": 0.19306707619864227
+    },
+    {
+      "scenario": "optimistic",
+      "arm": "treatment",
+      "metric": "search_zero_rate",
+      "mean": 0.41018067711893363
+    },
+    {
+      "scenario": "optimistic",
+      "arm": "treatment",
+      "metric": "immediate_recovery_transition_rate",
+      "mean": 0.2548220214765469
+    },
+    {
+      "scenario": "optimistic",
+      "arm": "treatment",
+      "metric": "final_recovery_rate",
+      "mean": 0.8168406000468311
+    },
+    {
+      "scenario": "optimistic",
+      "arm": "treatment",
+      "metric": "card_h_search_rate",
+      "mean": 0.19161237786858573
+    }
+  ],
+  "clone_totals": {
+    "clone_a": 0,
+    "control_clone_b": 0,
+    "control_clone_c": 0,
+    "treatment_clone_b": 0,
+    "treatment_clone_c": 0,
+    "reference_exact_session": 0,
+    "reference_exact_relative_path": 0
+  },
+  "production_seed_used": false,
+  "production_run_count": 0,
+  "calibration_validation": "HOLD",
+  "hold_reason": "search_zero_rate individual-seed pass count below predeclared 18/20",
+  "files": {}
+}

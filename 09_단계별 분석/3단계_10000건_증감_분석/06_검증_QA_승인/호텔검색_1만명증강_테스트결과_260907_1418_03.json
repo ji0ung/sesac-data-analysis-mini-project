@@ -1,0 +1,9 @@
+{
+  "unit_and_regression_tests": {"executed": 11, "passed": 11, "failed": 0, "status": "PASS"},
+  "smoke": {"users": 200, "control": 100, "treatment": 100, "integrated_gate": "PASS", "clone_a_b_c": 0, "foreign_keys": 0, "time_inversion": 0, "event_after_end": 0},
+  "development": {"candidates": 3, "fixed_seeds": [260801,260802,260803], "selected_candidate": 3},
+  "independent_evaluation": {"runs": 30, "integrated_gate_pass": 30, "integrated_gate_fail": 0},
+  "authorization": {"missing_or_out_of_scope_rejected": true, "production_mode_blocked": true, "production_seed_blocked": true, "overwrite_false": true},
+  "reference_contract": {"search_zero": [3434,6900], "zero_followup": [3271,3434], "immediate_recovery": [558,3271], "first_zero_immediate": [69,628], "final_recovery": [488,651], "card_h_search": [680,3466], "status": "PASS"},
+  "classification": "synthetic scenario simulation; not observed A/B"
+}

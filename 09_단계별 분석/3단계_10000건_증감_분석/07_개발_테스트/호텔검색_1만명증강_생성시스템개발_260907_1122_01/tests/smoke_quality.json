@@ -1,0 +1,144 @@
+{
+  "checks": [
+    {
+      "check": "integrity",
+      "value": "ok",
+      "expected": "ok",
+      "status": "PASS"
+    },
+    {
+      "check": "foreign_key_check",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "UserSynthetic_pk",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "SessionSynthetic_pk",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Search_pk",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "SearchFilter_pk",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "SearchResult_pk",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "ActionEvent_pk",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "SearchTransition_pk",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter_1to1",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "result_count",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "duplicate_hotel",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event_before_search",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event_after_session",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "time_inversion",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "arm_balance",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "pair_completeness",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    }
+  ],
+  "metrics": {
+    "users": 200,
+    "arms": {
+      "control": 100,
+      "treatment": 100
+    },
+    "pairs": 100,
+    "search_zero": [
+      330,
+      547
+    ],
+    "zero_followup": [
+      286,
+      330
+    ],
+    "immediate_recovery": [
+      56,
+      286
+    ],
+    "final_recovery": [
+      55,
+      99
+    ],
+    "card_h_search": [
+      47,
+      217
+    ],
+    "card_h_event": 195,
+    "sg3": 54,
+    "sg4": 40
+  },
+  "pass": true
+}

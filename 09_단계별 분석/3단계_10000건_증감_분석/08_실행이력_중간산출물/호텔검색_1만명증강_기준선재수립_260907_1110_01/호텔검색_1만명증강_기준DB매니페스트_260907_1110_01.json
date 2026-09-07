@@ -1,0 +1,23 @@
+{
+  "optimized_db_filename": "호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite",
+  "optimized_db_absolute_path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\01_초기생성_QA_전체분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite",
+  "optimized_db_sha256": "9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f",
+  "optimized_db_size_bytes": 46891008,
+  "authority_status": "USER_SELECTED_AUTHORITATIVE_REFERENCE",
+  "reference_policy": "INDEPENDENT_BASELINE_NOT_LEGACY_EQUIVALENCE",
+  "table_row_counts": {"user":1000,"hotel":1000,"room":3000,"search":6900,"search_filter":6900,"search_result":198128,"event":238851,"booking":0},
+  "core_kpi_numerators_denominators": {"search_zero":[3434,6900],"positive_search":[3466,6900],"zero_followup":[3271,3434],"immediate_recovery":[558,3271],"final_recovery":[488,651],"persistent_failure":[163,651],"session_final_failure":[163,1000],"card_h_search":[680,3466],"card_h_event_rows":2580,"card_h_repeat_mean":3.7941176470588234},
+  "null5_definition": ["event.review_completed_at","event.review_text","search_filter.property_type","search_filter.property_grade","user.age_group"],
+  "time_authority": {"column":"search.search_time","minimum":"2027-01-01 00:01:00","maximum":"2027-09-08 00:02:30","sequence_inversions":0,"policy":"NEW_REFERENCE_VALUES_ARE_AUTHORITATIVE"},
+  "path_repetition": {"full_path_duplicate_groups":42,"duplicate_related_sessions":977,"full_path_clone_excess":935,"interpretation":"REFERENCE_TEMPLATE_REPETITION_NOT_FOR_PRODUCTION_COPY"},
+  "observed_pattern_policy": "preserve conditional distributions, hazards, session lengths and event intensity without copying rows or sessions",
+  "previous_reference_sha256": "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+  "previous_reference_role": "LEGACY_REFERENCE_ONLY",
+  "simple_copy_prohibited": true,
+  "ab_design": {"total_users":10000,"control":5000,"treatment":5000,"paired_profiles":5000,"actual_ab_result":false},
+  "ten_thousand_db_generated": false,
+  "adopted_at": "2026-09-07T11:10:15+09:00",
+  "verification_script_sha256": "42c32d81c3918388356ec35a45661d3be2d0df65f6bd182cd4ac33d0816ed5c1",
+  "candidate_filename_match_count": 1,
+  "step_2_9_allowed": true
+}

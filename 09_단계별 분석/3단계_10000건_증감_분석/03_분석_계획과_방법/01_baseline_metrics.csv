@@ -1,0 +1,39 @@
+﻿metric_id,metric_name,dataset_class,grain,numerator,denominator,value,rate_pct,unit,sql_query_id,source_db_sha256,note
+zero_result_rate,0건률,observed_v03,search_id,147,296,0.4966216216216216,49.7,rate,Q04,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+zero_followup_rate,0건 후 후속검색률,observed_v03,zero_result_search_id,140,147,0.9523809523809523,95.2,rate,Q04,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+immediate_recovery_rate,즉시 회복률,observed_v03,zero_to_next_search_transition,24,140,0.17142857142857143,17.1,rate,Q04,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+session_final_recovery_rate,세션 최종 회복률,observed_v03,session_id_experiencing_zero,21,28,0.75,75.0,rate,Q04,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+card_g_direct_success,카드 G direct_success,observed_v03,session_id,27,43,0.627906976744186,62.8,rate,Q05,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+card_g_exposed_unselected,카드 G exposed_unselected,observed_v03,session_id,10,43,0.23255813953488372,23.3,rate,Q05,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+card_g_persistent_failure,카드 G persistent_failure,observed_v03,session_id,2,43,0.046511627906976744,4.7,rate,Q05,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+card_g_requery_recovery,카드 G requery_recovery,observed_v03,session_id,4,43,0.09302325581395349,9.3,rate,Q05,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+card_h_rank1_detail_event,카드 H 1위 상세진입,observed_v03,rank1_search_result_exposure_row,110,149,0.738255033557047,73.8,rate,Q06,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,분자는 hotel_detail_view EVENT 행 수; H-1 고유쌍과 혼용 금지
+linked_search_users,검색 연결 사용자,observed_v03,user_id,41,41,1.0,100.0,count,,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,분자=분모=고유 사용자 수
+search_sessions,검색 세션,observed_v03,session_id,43,43,1.0,100.0,count,,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+exposure_rows,검색결과 노출행,observed_v03,search_result_id,8555,8555,1.0,100.0,count,,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+active_filters_ge3_zero_rate,활성 필터 3개 이상 결합 0건률,observed_v03,search_id,119,160,0.74375,74.4,rate,Q08,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+gap_n,gap_n,observed_v03,zero_to_next_search_transition,140,140,140,,count,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_min_seconds,gap_min_seconds,observed_v03,zero_to_next_search_transition,0,140,0,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_mean_seconds,gap_mean_seconds,observed_v03,zero_to_next_search_transition,17.721,140,17.721,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_p25_seconds,gap_p25_seconds,observed_v03,zero_to_next_search_transition,7,140,7,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_median_seconds,gap_median_seconds,observed_v03,zero_to_next_search_transition,12,140,12,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_p75_seconds,gap_p75_seconds,observed_v03,zero_to_next_search_transition,18,140,18,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_p90_seconds,gap_p90_seconds,observed_v03,zero_to_next_search_transition,31,140,31,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_p95_seconds,gap_p95_seconds,observed_v03,zero_to_next_search_transition,39,140,39,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+gap_max_seconds,gap_max_seconds,observed_v03,zero_to_next_search_transition,249,140,249,,seconds,Q09,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,nearest-rank percentile; KST timestamp suffix stripped for julianday
+syn_user_count,합성 사용자 수,synthetic_1000,user_id,1000,1000,1000,,count,Q02,7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04,관측형 합성 QA; 실제 관측 아님
+syn_search_sessions,합성 검색 세션 수,synthetic_1000,session_id,1000,1000,1000,,count,Q02,7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04,관측형 합성 QA; 실제 관측 아님
+syn_search_count,합성 검색 수,synthetic_1000,search_id,6900,6900,6900,,count,Q02,7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04,관측형 합성 QA; 실제 관측 아님
+syn_booking_count,합성 예약 수,synthetic_1000,booking_id,0,0,0,,count,Q02,7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04,관측형 합성 QA; 실제 관측 아님
+behavior_mixed_recovery,mixed 행동 회복률,observed_v03,zero_to_next_search_transition,0,2,0.0,0.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_mixed_detail,mixed 행동 후 상세진입률,observed_v03,zero_to_next_search_transition,0,2,0.0,0.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_query_recovery,query 행동 회복률,observed_v03,zero_to_next_search_transition,3,10,0.3,30.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_query_detail,query 행동 후 상세진입률,observed_v03,zero_to_next_search_transition,3,10,0.3,30.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_region_recovery,region 행동 회복률,observed_v03,zero_to_next_search_transition,10,24,0.4166666666666667,41.7,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_region_detail,region 행동 후 상세진입률,observed_v03,zero_to_next_search_transition,3,24,0.125,12.5,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_relax_recovery,relax 행동 회복률,observed_v03,zero_to_next_search_transition,11,41,0.2682926829268293,26.8,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_relax_detail,relax 행동 후 상세진입률,observed_v03,zero_to_next_search_transition,8,41,0.1951219512195122,19.5,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_same_recovery,same 행동 회복률,observed_v03,zero_to_next_search_transition,0,53,0.0,0.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_same_detail,same 행동 후 상세진입률,observed_v03,zero_to_next_search_transition,0,53,0.0,0.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_strengthen_recovery,strengthen 행동 회복률,observed_v03,zero_to_next_search_transition,0,10,0.0,0.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,
+behavior_strengthen_detail,strengthen 행동 후 상세진입률,observed_v03,zero_to_next_search_transition,0,10,0.0,0.0,rate,Q07,2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80,

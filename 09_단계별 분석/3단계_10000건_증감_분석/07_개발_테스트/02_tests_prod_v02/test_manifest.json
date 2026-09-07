@@ -1,0 +1,10 @@
+{
+  "suite": "PROMPT 2.6 production v02 readiness",
+  "test_file_sha256": "76ccf27e5e4d6ebef3a48938c17462dea93e3e90fc4007aa5e9fbf8356486638",
+  "tests_run": 19,
+  "tests_passed": 19,
+  "tests_failed": 0,
+  "result": "PASS",
+  "calibration_seeds_fixed_before_execution": 20,
+  "full_10000_generation_executed": false
+}

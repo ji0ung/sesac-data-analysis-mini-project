@@ -1,0 +1,11 @@
+STEP 2.10-R calibration execution log
+Authorized seeds only: expected 260701-260720; conservative 260721-260725; optimistic 260726-260730.
+Runs completed: 30/30.
+Users per run: 2,000; control 1,000; treatment 1,000; pairs 1,000.
+Total simulated users: 60,000.
+Production seed 2434815518 used: false.
+Production mode used: false.
+Production DB generated: false.
+Existing output overwritten: false.
+Each SQLite and its sidecar manifest are stored under calibration_dbs and seed_manifests.
+Final state: HOLD due control fidelity and arm-internal full-path clone violations.

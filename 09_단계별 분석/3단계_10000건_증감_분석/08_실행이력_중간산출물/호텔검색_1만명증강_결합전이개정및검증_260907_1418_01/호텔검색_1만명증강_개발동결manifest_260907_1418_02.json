@@ -1,0 +1,29 @@
+{
+  "candidate": 2,
+  "files": {
+    "v05_generator": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_generator_sequential_v05_260907_1418_02.py",
+      "sha256": "0a25be0996ce4ccd56d47a2e4dd478decb074844f88e2dd37e17097fb8ec5bd3"
+    },
+    "v04_generator": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_generator_sequential_v04_260907_1418_01.py",
+      "sha256": "823a7bc7241f6670093b5f8224fe00547be44d3b26e37a675a3c96dfbf427b24"
+    },
+    "config": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_config_expected_v05_260907_1418_02.yaml",
+      "sha256": "5057fc57a80928d1335d81b106fa43f4973492b0e7a30eeaa8550eac1cfa13ca"
+    },
+    "schema": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\호텔검색_1만명증강_config_schema_v05_260907_1418_02.json",
+      "sha256": "dc7ae020d0b45cd56a95bdc7a901f25755c4391ec14f2daa8904fb11a3b96101"
+    },
+    "v02_generator": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_생성시스템개정_260907_1239_01\\05_generator_newref_v02.py",
+      "sha256": "150b7bae317809c0007335311b41bdff663e7f81d4b9fbab1083bdfc01fcbd56"
+    },
+    "auth_wrapper": {
+      "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_승인인터페이스수정및교정_260907_1351_01\\호텔검색_1만명증강_generator_authorized_v03_260907_1351_01.py",
+      "sha256": "40192ea7fe212cec7b98206be51c8be4175af8a7c0396541b946e81726087edc"
+    }
+  }
+}

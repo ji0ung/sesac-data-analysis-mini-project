@@ -1,0 +1,38 @@
+{
+  "judgment": "STEP 2.6=PASS",
+  "approval_scope": "v02 generator, calibration, schema, config and tests; no 10000-user DB generated",
+  "approved_output_directory": "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/03_10k_ab_generation_v02_approved",
+  "approved_output_directory_file_count": 0,
+  "approved_users": {"total": 10000, "control": 5000, "treatment": 5000, "pairs": 5000},
+  "versions": {"generator": "02.prod.2", "config": "02.prod.2", "schema": "02.prod.2"},
+  "calibration": {
+    "control_users_per_seed": 1000,
+    "seeds": [260601,260602,260603,260604,260605,260606,260607,260608,260609,260610,260611,260612,260613,260614,260615,260616,260617,260618,260619,260620],
+    "seed_count": 20,
+    "search_zero_pass": 18,
+    "final_recovery_pass": 20,
+    "card_h_search_pass": 20,
+    "diversity_pass": 20,
+    "simultaneous_pass": 18,
+    "mean_search_zero_rate": 0.5022561976297742,
+    "mean_final_recovery_rate": 0.7532986946733583,
+    "mean_card_h_search_rate": 0.19534264527107298
+  },
+  "tests": {"run": 19, "passed": 19, "failed": 0},
+  "sha256": {
+    "02_generator_prod_v02.py": "ea0514c04fcd89f89f8a334908b998b878c1817e8fb05d428b3c59c779a22270",
+    "02_base_config_prod_v02.yaml": "d15219bbe085b5177ef02345ab1865cf50cfb47bb0a23e14a97cdf93ceb1443b",
+    "02_config_schema_prod_v02.json": "39fe21825e2756b7ce99bee90ff7fabc1d25059065a8252c0df40920caf2ad1a",
+    "02_schema_prod_v02.sql": "845374f167086251e302ce779bebdcebd9bc8e5134cad76cd0e2a0f7035026ec",
+    "02_calibration_prod_v02.py": "5d69c7878751f54ba00e2459b7244a1dfbec6f7e319de9fb536292a555e7bf0b",
+    "02_tests_prod_v02/test_manifest.json": "53d7b901005253e030de1f292a05e68ea0f9ac4232a6e59124867bcf04debdfa",
+    "02_prod_v02_calibration_results.xlsx": "5f80a51a0770c083446a0f5a9e5def8f059bbb6392dcccddacf095d25e7e8c9c",
+    "02_prod_v02_readiness_report.md": "3aa8554a2a3071802f5092bbcd40eb2e33ae0547b48cc8737394b77ddb9145db",
+    "approved_source_db": "2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80",
+    "reference_1000_db": "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+    "03A_revision_spec_v02.yaml": "c72a9c90724e6ede970b09abcf416de0d13f4ff0c3a80a2381067fcd9b3c1419"
+  },
+  "production_database_generated": false,
+  "next_10000_generation_allowed": true,
+  "conditions": ["all hashes match", "approved folder remains empty", "explicit production confirmation"]
+}

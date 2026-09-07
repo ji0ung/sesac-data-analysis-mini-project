@@ -1,0 +1,55 @@
+version: newref_v01
+mode: calibration
+seed: 260705
+n_users: 2000
+scenario: expected
+reference:
+  path: C:\Users\이소이\Desktop\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\미니 프로젝트\깃허브 업로드용\sesac-data-analysis-mini-project\09_단계별
+    분석\2단계_1000건_증감_분석\01_초기생성_QA_전체분석\02_관측형합성1000명_실행묶음_260903_1606_01\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite
+  sha256: 9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f
+output:
+  allowed_test_root: C:\Users\이소이\Desktop\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\미니
+    프로젝트\깃허브 업로드용\sesac-data-analysis-mini-project\09_단계별 분석\3단계_10000건_증감_분석\호텔검색_1만명증강_다중시드교정_260907_1146_01\calibration_dbs
+  production_root: ../../../03_10k_ab_generation_v02_approved
+model:
+  search_zero_probability: 0.49768115942028984
+  zero_followup_probability: 0.9525334886429819
+  immediate_recovery_probability: 0.1705900336288597
+  final_recovery_probability: 0.7496159754224271
+  card_h_search_probability: 0.19619157530294287
+  detail_repeat_mean: 3.7941176470588234
+  max_searches: 12
+  interarrival_log_mu: 2.899725
+  interarrival_log_sigma: 1.144826
+  zero_research_median_seconds: 12
+treatment_posteriors:
+  region_change:
+    raw_success: 10
+    raw_n: 24
+    prior_alpha: 1
+    prior_beta: 1
+  query_change:
+    raw_success: 3
+    raw_n: 10
+    prior_alpha: 1
+    prior_beta: 1
+  constraint_relax:
+    raw_success: 11
+    raw_n: 41
+    prior_alpha: 1
+    prior_beta: 1
+  same_condition:
+    raw_success: 0
+    raw_n: 53
+    prior_alpha: 1
+    prior_beta: 1
+  condition_strengthen:
+    raw_success: 0
+    raw_n: 10
+    prior_alpha: 1
+    prior_beta: 1
+safety:
+  unit_test_max_users: 40
+  smoke_test_max_users: 200
+  calibration_authorized: false
+  production_execution_authorized: false

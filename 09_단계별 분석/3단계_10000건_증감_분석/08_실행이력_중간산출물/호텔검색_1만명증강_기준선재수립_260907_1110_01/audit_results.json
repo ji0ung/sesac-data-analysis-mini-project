@@ -1,0 +1,794 @@
+{
+  "db": {
+    "path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\2단계_1000건_증감_분석\\01_초기생성_QA_전체분석\\02_관측형합성1000명_실행묶음_260903_1606_01\\호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite",
+    "bytes": 46891008,
+    "sha256": "9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f",
+    "integrity": "ok",
+    "quick": "ok",
+    "page_size": 16384
+  },
+  "rows": {
+    "user": 1000,
+    "hotel": 1000,
+    "room": 3000,
+    "search": 6900,
+    "search_filter": 6900,
+    "search_result": 198128,
+    "event": 238851,
+    "booking": 0
+  },
+  "qa": [
+    {
+      "check": "missing_business_tables",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "user.user_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "user.user_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "hotel.hotel_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "hotel.hotel_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "room.room_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "room.room_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search.search_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search.search_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter.search_filter_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter.search_filter_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_result.search_result_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_result.search_result_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.event_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.event_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking.booking_id.null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking.booking_id.duplicate_excess",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "room.hotel_id->hotel.hotel_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter.search_id->search.search_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_result.search_id->search.search_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_result.hotel_id->hotel.hotel_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_result.room_id->room.room_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.hotel_id->hotel.hotel_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.search_filter_id->search_filter.search_filter_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.search_id->search.search_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.user_id->user.user_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking.user_id->user.user_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking.hotel_id->hotel.hotel_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking.room_id->room.room_id.orphan",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter_not_1to1",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "result_count_mismatch",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "duplicate_hotel_within_search",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event_search_session_mismatch",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "session_multiple_users",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_session_without_user",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_sequence_duplicate",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_sequence_time_inversion",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event_before_search",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "session_end_before_event",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "booking_rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.review_completed_at.not_null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "event.review_text.not_null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter.property_type.not_null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "search_filter.property_grade.not_null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "user.age_group.not_null",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    }
+  ],
+  "kpis": [
+    {
+      "metric": "search_zero",
+      "numerator": 3434,
+      "denominator": 6900,
+      "rate": 0.49768115942028984
+    },
+    {
+      "metric": "positive_search",
+      "numerator": 3466,
+      "denominator": 6900,
+      "rate": 0.5023188405797101
+    },
+    {
+      "metric": "zero_followup",
+      "numerator": 3271,
+      "denominator": 3434,
+      "rate": 0.9525334886429819
+    },
+    {
+      "metric": "immediate_recovery",
+      "numerator": 558,
+      "denominator": 3271,
+      "rate": 0.1705900336288597
+    },
+    {
+      "metric": "final_recovery",
+      "numerator": 488,
+      "denominator": 651,
+      "rate": 0.7496159754224271
+    },
+    {
+      "metric": "persistent_failure_among_zero_sessions",
+      "numerator": 163,
+      "denominator": 651,
+      "rate": 0.250384024577573
+    },
+    {
+      "metric": "session_final_failure_all",
+      "numerator": 163,
+      "denominator": 1000,
+      "rate": 0.163
+    },
+    {
+      "metric": "card_h_search",
+      "numerator": 680,
+      "denominator": 3466,
+      "rate": 0.19619157530294287
+    },
+    {
+      "metric": "card_h_event",
+      "numerator": 2580,
+      "denominator": 1,
+      "rate": 2580.0
+    },
+    {
+      "metric": "card_h_repeat_mean",
+      "numerator": 2580,
+      "denominator": 680,
+      "rate": 3.7941176470588234
+    }
+  ],
+  "session_length": [
+    {
+      "searches": 1,
+      "sessions": 92
+    },
+    {
+      "searches": 2,
+      "sessions": 140
+    },
+    {
+      "searches": 3,
+      "sessions": 140
+    },
+    {
+      "searches": 4,
+      "sessions": 69
+    },
+    {
+      "searches": 5,
+      "sessions": 93
+    },
+    {
+      "searches": 6,
+      "sessions": 23
+    },
+    {
+      "searches": 7,
+      "sessions": 139
+    },
+    {
+      "searches": 8,
+      "sessions": 46
+    },
+    {
+      "searches": 9,
+      "sessions": 47
+    },
+    {
+      "searches": 10,
+      "sessions": 24
+    },
+    {
+      "searches": 11,
+      "sessions": 47
+    },
+    {
+      "searches": 14,
+      "sessions": 46
+    },
+    {
+      "searches": 17,
+      "sessions": 23
+    },
+    {
+      "searches": 18,
+      "sessions": 24
+    },
+    {
+      "searches": 22,
+      "sessions": 24
+    },
+    {
+      "searches": 31,
+      "sessions": 23
+    }
+  ],
+  "hazard": [
+    {
+      "sequence": 1,
+      "zero": 139,
+      "total": 1000,
+      "rate": 0.139
+    },
+    {
+      "sequence": 2,
+      "zero": 558,
+      "total": 908,
+      "rate": 0.6145374449339207
+    },
+    {
+      "sequence": 3,
+      "zero": 513,
+      "total": 768,
+      "rate": 0.66796875
+    },
+    {
+      "sequence": 4,
+      "zero": 420,
+      "total": 628,
+      "rate": 0.6687898089171974
+    },
+    {
+      "sequence": 5,
+      "zero": 373,
+      "total": 559,
+      "rate": 0.667262969588551
+    },
+    {
+      "sequence": 6,
+      "zero": 350,
+      "total": 466,
+      "rate": 0.7510729613733905
+    },
+    {
+      "sequence": 7,
+      "zero": 211,
+      "total": 443,
+      "rate": 0.4762979683972912
+    },
+    {
+      "sequence": 8,
+      "zero": 164,
+      "total": 304,
+      "rate": 0.5394736842105263
+    },
+    {
+      "sequence": 9,
+      "zero": 141,
+      "total": 258,
+      "rate": 0.5465116279069767
+    },
+    {
+      "sequence": 10,
+      "zero": 117,
+      "total": 211,
+      "rate": 0.5545023696682464
+    },
+    {
+      "sequence": 11,
+      "zero": 70,
+      "total": 187,
+      "rate": 0.37433155080213903
+    },
+    {
+      "sequence": 12,
+      "zero": 47,
+      "total": 140,
+      "rate": 0.3357142857142857
+    },
+    {
+      "sequence": 13,
+      "zero": 47,
+      "total": 140,
+      "rate": 0.3357142857142857
+    },
+    {
+      "sequence": 14,
+      "zero": 47,
+      "total": 140,
+      "rate": 0.3357142857142857
+    },
+    {
+      "sequence": 15,
+      "zero": 47,
+      "total": 94,
+      "rate": 0.5
+    },
+    {
+      "sequence": 16,
+      "zero": 47,
+      "total": 94,
+      "rate": 0.5
+    },
+    {
+      "sequence": 17,
+      "zero": 48,
+      "total": 94,
+      "rate": 0.5106382978723404
+    },
+    {
+      "sequence": 18,
+      "zero": 24,
+      "total": 71,
+      "rate": 0.3380281690140845
+    },
+    {
+      "sequence": 19,
+      "zero": 24,
+      "total": 47,
+      "rate": 0.5106382978723404
+    },
+    {
+      "sequence": 20,
+      "zero": 24,
+      "total": 47,
+      "rate": 0.5106382978723404
+    },
+    {
+      "sequence": 21,
+      "zero": 0,
+      "total": 47,
+      "rate": 0.0
+    },
+    {
+      "sequence": 22,
+      "zero": 0,
+      "total": 47,
+      "rate": 0.0
+    },
+    {
+      "sequence": 23,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    },
+    {
+      "sequence": 24,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    },
+    {
+      "sequence": 25,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    },
+    {
+      "sequence": 26,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    },
+    {
+      "sequence": 27,
+      "zero": 23,
+      "total": 23,
+      "rate": 1.0
+    },
+    {
+      "sequence": 28,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    },
+    {
+      "sequence": 29,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    },
+    {
+      "sequence": 30,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    },
+    {
+      "sequence": 31,
+      "zero": 0,
+      "total": 23,
+      "rate": 0.0
+    }
+  ],
+  "first_zero_research_count_distribution": {
+    "0": 23,
+    "1": 69,
+    "2": 46,
+    "3": 70,
+    "4": 69,
+    "5": 93,
+    "6": 23,
+    "7": 70,
+    "8": 24,
+    "9": 47,
+    "12": 23,
+    "15": 23,
+    "16": 24,
+    "20": 24,
+    "29": 23
+  },
+  "time": {
+    "search_time_min": "2027-01-01 00:01:00",
+    "search_time_max": "2027-09-08 00:02:30",
+    "intervals": [
+      {
+        "n": 5900,
+        "min": 0.0,
+        "p25": 9.0,
+        "median": 15.0,
+        "mean": 263.12220338983053,
+        "p75": 26.0,
+        "p90": 74.0,
+        "p95": 109.0,
+        "max": 51304.0,
+        "metric": "search_interarrival_seconds",
+        "negative": 0,
+        "zero": 46,
+        "same_timestamp_rate": 0.007796610169491526,
+        "mode_share": 0.05898305084745763
+      },
+      {
+        "n": 3271,
+        "min": 0.0,
+        "p25": 7.0,
+        "median": 12.0,
+        "mean": 17.744726383369,
+        "p75": 18.0,
+        "p90": 32.0,
+        "p95": 40.0,
+        "max": 249.0,
+        "metric": "zero_to_research_seconds",
+        "negative": 0,
+        "zero": 23,
+        "same_timestamp_rate": 0.007031488841332926,
+        "mode_share": 0.08560073372057475
+      },
+      {
+        "n": 680,
+        "min": 59.0,
+        "p25": 105.0,
+        "median": 152.0,
+        "mean": 4761.104411764706,
+        "p75": 185.0,
+        "p90": 32168.0,
+        "p95": 32173.0,
+        "max": 51313.0,
+        "metric": "positive_to_top_detail_seconds",
+        "negative": 0,
+        "zero": 0,
+        "same_timestamp_rate": 0.0,
+        "mode_share": 0.07058823529411765
+      },
+      {
+        "n": 5345,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 1.0,
+        "mean": 1.3231057062675398,
+        "p75": 2.0,
+        "p90": 3.0,
+        "p95": 3.0,
+        "max": 14.0,
+        "metric": "click_to_detail_seconds",
+        "negative": 0,
+        "zero": 1811,
+        "same_timestamp_rate": 0.33882132834424694,
+        "mode_share": 0.3724976613657624
+      },
+      {
+        "metric": "positive_interarrival_lognormal_reference",
+        "n": 5854,
+        "mean": 2.8997251506627992,
+        "median": null,
+        "min": 1.0986122886681098,
+        "p25": 2.1972245773362196,
+        "p75": 3.258096538021482,
+        "p90": 4.343805421853684,
+        "p95": 4.6913478822291435,
+        "max": 10.845524000828698,
+        "negative": 0,
+        "zero": 0,
+        "same_timestamp_rate": 0,
+        "mode_share": null,
+        "log_mu": 2.8997251506627992,
+        "log_sigma_sample": 1.1448258029245166
+      }
+    ],
+    "sequence_time_inversions": 0
+  },
+  "diversity": [
+    {
+      "n": 6900,
+      "unique": 226,
+      "mode_count": 120,
+      "mode_share": 0.017391304347826087,
+      "hhi": 0.005995379122033187,
+      "shannon_entropy": 5.263592661296224,
+      "duplicate_excess": 6674,
+      "definition": "condition_signature"
+    },
+    {
+      "n": 1000,
+      "unique": 65,
+      "mode_count": 24,
+      "mode_share": 0.024,
+      "hhi": 0.022758,
+      "shannon_entropy": 3.833141691812796,
+      "duplicate_excess": 935,
+      "definition": "condition_path"
+    },
+    {
+      "n": 1000,
+      "unique": 43,
+      "mode_count": 24,
+      "mode_share": 0.024,
+      "hhi": 0.023264,
+      "shannon_entropy": 3.7610253248464254,
+      "duplicate_excess": 957,
+      "definition": "behavior_path"
+    },
+    {
+      "n": 1000,
+      "unique": 32,
+      "mode_count": 117,
+      "mode_share": 0.117,
+      "hhi": 0.048292,
+      "shannon_entropy": 3.282349907878281,
+      "duplicate_excess": 968,
+      "definition": "template_cluster_derived_session_length_and_outcome_sequence"
+    },
+    {
+      "n": 1000,
+      "unique": 65,
+      "mode_count": 24,
+      "mode_share": 0.024,
+      "hhi": 0.022758,
+      "shannon_entropy": 3.833141691812796,
+      "duplicate_excess": 935,
+      "definition": "full_session_path"
+    }
+  ],
+  "clone": {
+    "full_path_duplicate_groups": 42,
+    "duplicate_related_sessions": 977,
+    "full_path_clone_excess": 935,
+    "classification": "REFERENCE_TEMPLATE_REPETITION_NOT_FOR_REPRODUCTION"
+  },
+  "null5": [
+    [
+      "event",
+      "review_completed_at"
+    ],
+    [
+      "event",
+      "review_text"
+    ],
+    [
+      "search_filter",
+      "property_type"
+    ],
+    [
+      "search_filter",
+      "property_grade"
+    ],
+    [
+      "user",
+      "age_group"
+    ]
+  ]
+}

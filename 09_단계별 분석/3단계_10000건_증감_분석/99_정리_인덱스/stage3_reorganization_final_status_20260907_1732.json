@@ -1,0 +1,75 @@
+﻿{
+    "verified_at":  "2026-09-07T17:31:12+09:00",
+    "categories":  [
+                       {
+                           "name":  "01_증강_계획과_방법",
+                           "files":  15,
+                           "bytes":  153427
+                       },
+                       {
+                           "name":  "02_증강_데이터",
+                           "files":  19,
+                           "bytes":  808043519
+                       },
+                       {
+                           "name":  "03_분석_계획과_방법",
+                           "files":  8,
+                           "bytes":  112864
+                       },
+                       {
+                           "name":  "04_최종_보고서",
+                           "files":  19,
+                           "bytes":  1810610
+                       },
+                       {
+                           "name":  "05_권위자료_원본입력",
+                           "files":  6,
+                           "bytes":  6649910
+                       },
+                       {
+                           "name":  "06_검증_QA_승인",
+                           "files":  50,
+                           "bytes":  127504311
+                       },
+                       {
+                           "name":  "07_개발_테스트",
+                           "files":  60,
+                           "bytes":  69172523
+                       },
+                       {
+                           "name":  "08_실행이력_중간산출물",
+                           "files":  286,
+                           "bytes":  6698746866
+                       },
+                       {
+                           "name":  "99_정리_인덱스",
+                           "files":  6,
+                           "bytes":  175344
+                       }
+                   ],
+    "current_report":  {
+                           "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\04_최종_보고서\\현재본\\호텔검색_3단계증강및AB분석종합보고서_260907_1720_01.docx",
+                           "bytes":  306038,
+                           "sha256":  "2bb0dd2c07a0210ca1deb8245eb2332fa192ae78ec58d6a32c553aa0185a4b5f"
+                       },
+    "augmented_db":  {
+                         "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\02_증강_데이터\\호텔검색_1만명증강_탐색용생성_260907_1544_01\\output\\호텔검색_1만명증강_탐색용AB10000_260907_1544_01.sqlite",
+                         "bytes":  790736896,
+                         "sha256":  "f6de5834ea326bb165efdd16e73ba4b1ff3939d1c8ecce27b3517d55b2a5819a"
+                     },
+    "remaining_top_level":  [
+                                "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01"
+                            ],
+    "pending_locked_file":  {
+                                "path":  "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\tests\\sequential_smoke_200.sqlite",
+                                "exists":  true,
+                                "locked":  true,
+                                "bytes":  17440768,
+                                "holding_process":  {
+                                                        "ProcessId":  34576,
+                                                        "Name":  "python.exe",
+                                                        "CreationDate":  "\/Date(1788424233033)\/",
+                                                        "CommandLine":  "python  -m streamlit run webapp/app.py --server.headless true --server.address localhost --browser.gatherUsageStats false"
+                                                    }
+                            }
+}

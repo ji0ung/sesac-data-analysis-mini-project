@@ -1,0 +1,19 @@
+{
+  "manifest_role": "step_2_7_rebase_gate_record",
+  "approval_status": "HOLD_NOT_APPROVED",
+  "execution_authorized": false,
+  "reason_codes": ["UNEXPLAINED_SEARCH_TIME_VALUE_CHANGE", "REFERENCE_INTERNAL_CLONE_VIOLATION", "RUNTIME_REBASE_NOT_EXECUTED"],
+  "previous_reference_sha256": "7d449fab6847730be38fe46ebb6bd6a5b31690cdf38cf4bdbadeaa75edd1ae04",
+  "candidate_reference_sha256": "9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f",
+  "runtime_dependency_case": "B",
+  "existing_approved_chain_remains_active": true,
+  "candidate_must_not_be_used_for_prompt_3r_opt": true,
+  "rebased_code_config_schema_created": false,
+  "calibration_rerun": false,
+  "clone_audit_rerun_for_production": false,
+  "production_output_path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\03_10k_ab_generation_v02_approved",
+  "production_output_files": 0,
+  "production_output_directories": 0,
+  "ten_thousand_db_generated": false,
+  "created_at": "2026-09-07T10:51:50+09:00"
+}

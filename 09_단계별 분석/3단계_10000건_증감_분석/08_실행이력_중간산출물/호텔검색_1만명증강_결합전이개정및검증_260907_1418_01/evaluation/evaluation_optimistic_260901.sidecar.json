@@ -1,0 +1,324 @@
+{
+  "created_at": "2026-09-07T06:05:21.331403+00:00",
+  "classification": "synthetic scenario simulation; not an observed A/B result",
+  "scenario": "optimistic",
+  "seed": 260901,
+  "production_seed_used": false,
+  "db_path": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_결합전이개정및검증_260907_1418_01\\evaluation\\evaluation_optimistic_260901.sqlite",
+  "db_sha256": "448e641a217bc9bb52c3c839adf13fb59395260305099396b247a27148fb8043",
+  "db_bytes": 165335040,
+  "control_metrics": {
+    "search_zero_rate": {
+      "numerator": 3327,
+      "denominator": 6823,
+      "value": 0.4876154184376374,
+      "interval_pass": true
+    },
+    "zero_followup_rate": {
+      "numerator": 3171,
+      "denominator": 3327,
+      "value": 0.9531109107303878,
+      "interval_pass": true
+    },
+    "immediate_recovery_transition_rate": {
+      "numerator": 560,
+      "denominator": 3171,
+      "value": 0.17660044150110377,
+      "interval_pass": true
+    },
+    "first_zero_immediate_recovery_rate": {
+      "numerator": 79,
+      "denominator": 639,
+      "value": 0.12363067292644757,
+      "interval_pass": null
+    },
+    "final_recovery_rate": {
+      "numerator": 505,
+      "denominator": 661,
+      "value": 0.7639939485627837,
+      "interval_pass": true
+    },
+    "card_h_search_rate": {
+      "numerator": 709,
+      "denominator": 3496,
+      "value": 0.20280320366132723,
+      "interval_pass": true
+    },
+    "card_h_event_rows": {
+      "numerator": 2688,
+      "denominator": null,
+      "value": null,
+      "interval_pass": null
+    }
+  },
+  "treatment_metrics": {
+    "search_zero_rate": {
+      "numerator": 2432,
+      "denominator": 6037,
+      "value": 0.40284909723372536,
+      "interval_pass": false
+    },
+    "zero_followup_rate": {
+      "numerator": 2308,
+      "denominator": 2432,
+      "value": 0.9490131578947368,
+      "interval_pass": true
+    },
+    "immediate_recovery_transition_rate": {
+      "numerator": 598,
+      "denominator": 2308,
+      "value": 0.25909878682842286,
+      "interval_pass": false
+    },
+    "first_zero_immediate_recovery_rate": {
+      "numerator": 122,
+      "denominator": 616,
+      "value": 0.19805194805194806,
+      "interval_pass": null
+    },
+    "final_recovery_rate": {
+      "numerator": 526,
+      "denominator": 650,
+      "value": 0.8092307692307692,
+      "interval_pass": false
+    },
+    "card_h_search_rate": {
+      "numerator": 722,
+      "denominator": 3605,
+      "value": 0.20027739251040222,
+      "interval_pass": true
+    },
+    "card_h_event_rows": {
+      "numerator": 2945,
+      "denominator": null,
+      "value": null,
+      "interval_pass": null
+    }
+  },
+  "control_transitions": {
+    "Z_to_Z": 2611,
+    "Z_to_P": 560,
+    "Z_to_END": 156,
+    "P_to_Z": 560,
+    "P_to_P": 2092,
+    "P_to_END": 844,
+    "searches": 6823,
+    "first_Z": 156,
+    "first_P": 844,
+    "ever_Z": 661,
+    "never_Z": 339,
+    "final_recovered": 505,
+    "final_Z": 156,
+    "average_searches": 6.823,
+    "first_Z_to_Z": 560,
+    "first_Z_to_P": 79,
+    "first_Z_to_END": 22,
+    "length_distribution": {
+      "1": 211,
+      "2": 100,
+      "3": 77,
+      "4": 71,
+      "5": 57,
+      "6": 51,
+      "7": 59,
+      "8": 62,
+      "9": 49,
+      "10": 36,
+      "11": 42,
+      "12": 24,
+      "13": 34,
+      "14": 15,
+      "15": 23,
+      "16": 15,
+      "17": 12,
+      "18": 10,
+      "19": 6,
+      "20": 6,
+      "21": 6,
+      "22": 7,
+      "23": 6,
+      "24": 6,
+      "25": 2,
+      "26": 1,
+      "27": 2,
+      "28": 3,
+      "29": 1,
+      "31": 6
+    }
+  },
+  "treatment_transitions": {
+    "Z_to_Z": 1710,
+    "Z_to_P": 598,
+    "Z_to_END": 124,
+    "P_to_Z": 566,
+    "P_to_P": 2163,
+    "P_to_END": 876,
+    "searches": 6037,
+    "first_Z": 156,
+    "first_P": 844,
+    "ever_Z": 650,
+    "never_Z": 350,
+    "final_recovered": 526,
+    "final_Z": 124,
+    "average_searches": 6.037,
+    "first_Z_to_Z": 494,
+    "first_Z_to_P": 122,
+    "first_Z_to_END": 34,
+    "length_distribution": {
+      "1": 205,
+      "2": 116,
+      "3": 75,
+      "4": 78,
+      "5": 90,
+      "6": 71,
+      "7": 64,
+      "8": 45,
+      "9": 44,
+      "10": 36,
+      "11": 36,
+      "12": 36,
+      "13": 17,
+      "14": 17,
+      "15": 15,
+      "16": 9,
+      "17": 9,
+      "18": 6,
+      "19": 4,
+      "20": 4,
+      "21": 5,
+      "22": 5,
+      "23": 1,
+      "24": 5,
+      "25": 1,
+      "26": 1,
+      "27": 2,
+      "28": 2,
+      "31": 1
+    }
+  },
+  "structural_qa": {
+    "users": 2000,
+    "control_users": 1000,
+    "treatment_users": 1000,
+    "complete_pairs": 1000,
+    "pair_pre_attribute_mismatch": 0,
+    "booking_rows": 0,
+    "control_treatment_leakage": 0,
+    "sample_set_null_or_other": 0
+  },
+  "integrated_gate": {
+    "status": "PASS",
+    "metrics_source": "contract_executed",
+    "metrics": [
+      {
+        "metric_id": "search_zero_rate",
+        "definition_version": "newref_v03_20260907",
+        "grain": "search_id",
+        "numerator": 5759,
+        "denominator": 12860,
+        "value": 0.4478227060653188,
+        "sql": "SELECT COUNT(DISTINCT CASE WHEN total_result_count=0 THEN search_id END), COUNT(DISTINCT search_id) FROM Search",
+        "sql_sha256": "d36997d956487acac117b9c7e7f65c40c40f428ddee4b178e5c490edf864f754"
+      },
+      {
+        "metric_id": "zero_followup_rate",
+        "definition_version": "newref_v03_20260907",
+        "grain": "zero search transition",
+        "numerator": 5479,
+        "denominator": 5759,
+        "value": 0.9513804479944434,
+        "sql": "WITH o AS (SELECT search_id,session_id,total_result_count,LEAD(search_id) OVER(PARTITION BY session_id ORDER BY search_sequence,search_time,search_id) nxt FROM Search) SELECT SUM(total_result_count=0 AND nxt IS NOT NULL),SUM(total_result_count=0) FROM o",
+        "sql_sha256": "17831486b1556f085586d6782fcf1af173cbc5a57af168081082f4c8ba5976e5"
+      },
+      {
+        "metric_id": "immediate_recovery_transition_rate",
+        "definition_version": "newref_v03_20260907",
+        "grain": "adjacent transition whose source is a zero search",
+        "numerator": 1158,
+        "denominator": 5479,
+        "value": 0.21135243657601752,
+        "sql": "WITH o AS (SELECT search_id,session_id,total_result_count,LEAD(total_result_count) OVER(PARTITION BY session_id ORDER BY search_sequence,search_time,search_id) nxt FROM Search) SELECT SUM(total_result_count=0 AND nxt>0),SUM(total_result_count=0 AND nxt IS NOT NULL) FROM o",
+        "sql_sha256": "68c79609b0b5b6d82f2b3e7c34909068b05827c8d5b0c7d2b6d696a6d5650a0d"
+      },
+      {
+        "metric_id": "first_zero_immediate_recovery_rate",
+        "definition_version": "newref_v03_20260907",
+        "grain": "session first-zero transition",
+        "numerator": 201,
+        "denominator": 1255,
+        "value": 0.1601593625498008,
+        "sql": "WITH o AS (SELECT search_id,session_id,total_result_count,LEAD(total_result_count) OVER(PARTITION BY session_id ORDER BY search_sequence,search_time,search_id) nxt,search_sequence FROM Search),z AS (SELECT *,ROW_NUMBER() OVER(PARTITION BY session_id ORDER BY search_sequence,search_id) zr FROM o WHERE total_result_count=0) SELECT SUM(zr=1 AND nxt>0),SUM(zr=1 AND nxt IS NOT NULL) FROM z",
+        "sql_sha256": "3e67738e5ef3db225b02670b3d2f10e9ae190e4768eda05c0f617c8af36a7219"
+      },
+      {
+        "metric_id": "final_recovery_rate",
+        "definition_version": "newref_v03_20260907",
+        "grain": "session_id",
+        "numerator": 1031,
+        "denominator": 1311,
+        "value": 0.7864225781845919,
+        "sql": "WITH o AS (SELECT session_id,total_result_count,ROW_NUMBER() OVER(PARTITION BY session_id ORDER BY search_sequence DESC,search_time DESC,search_id DESC) rn,MAX(total_result_count=0) OVER(PARTITION BY session_id) z FROM Search) SELECT SUM(rn=1 AND z=1 AND total_result_count>0),SUM(rn=1 AND z=1) FROM o",
+        "sql_sha256": "b684ed4ea1c5a6b172ceea19f714550b40c44484b2b8d0021eb752e27df3848c"
+      },
+      {
+        "metric_id": "card_h_search_rate",
+        "definition_version": "newref_v03_20260907",
+        "grain": "search_id",
+        "numerator": 1431,
+        "denominator": 7101,
+        "value": 0.20152091254752852,
+        "sql": "WITH p AS (SELECT DISTINCT search_id FROM Search WHERE total_result_count>0),d AS (SELECT DISTINCT e.search_id FROM SearchResult r JOIN ActionEvent e ON e.search_id=r.search_id AND e.hotel_id=r.hotel_id WHERE r.result_rank=1 AND e.event_type='hotel_detail_view') SELECT COUNT(DISTINCT d.search_id),COUNT(DISTINCT p.search_id) FROM p LEFT JOIN d USING(search_id)",
+        "sql_sha256": "78daa91075ba46a34e1ee8ffd1a1d55d4926054b6855270ebc0ba01390f60391"
+      },
+      {
+        "metric_id": "card_h_event_rows",
+        "definition_version": "newref_v03_20260907",
+        "grain": "event row",
+        "numerator": 5633,
+        "denominator": null,
+        "value": null,
+        "sql": "SELECT COUNT(*),NULL FROM Search s JOIN SearchResult r ON r.search_id=s.search_id AND r.result_rank=1 JOIN ActionEvent e ON e.search_id=s.search_id AND e.hotel_id=r.hotel_id AND e.event_type='hotel_detail_view' WHERE s.total_result_count>0",
+        "sql_sha256": "0d6fd5d8b90b164026ed3e6683e31b79740340bf89b856e464c1459347142f2c"
+      }
+    ],
+    "clones": {
+      "status": "PASS",
+      "approved_audit_sha256": "2dd3ec9b7b79f7948eb90b0790c7b3f02e5a73736c3446b8e2ef3761117a7026",
+      "clone_a_rows": 0,
+      "control_clone_b": 0,
+      "treatment_clone_b": 0,
+      "control_clone_c": 0,
+      "treatment_clone_c": 0,
+      "reference_exact_session_clone": 0,
+      "reference_exact_relative_path_clone": 0,
+      "reference_exact_delay_vector_clone": 5,
+      "diversity_path": {
+        "control": {
+          "clone_b_sessions": 0,
+          "clone_c_sessions": 0,
+          "diversity_path_repeated_sessions": 360,
+          "diversity_unique": 672,
+          "diversity_top_share": 0.204,
+          "diversity_hhi": 0.044171999999999996,
+          "diversity_shannon": 5.496474560965987
+        },
+        "treatment": {
+          "clone_b_sessions": 0,
+          "clone_c_sessions": 0,
+          "diversity_path_repeated_sessions": 512,
+          "diversity_unique": 568,
+          "diversity_top_share": 0.197,
+          "diversity_hhi": 0.042074,
+          "diversity_shannon": 5.3231268695803875
+        }
+      }
+    },
+    "relational": {
+      "integrity": "ok",
+      "foreign_keys": 0,
+      "time_inversion": 0,
+      "event_after_end": 0
+    },
+    "delay_vector_collision_policy": "diagnostic_only_without_business_path_identity"
+  }
+}

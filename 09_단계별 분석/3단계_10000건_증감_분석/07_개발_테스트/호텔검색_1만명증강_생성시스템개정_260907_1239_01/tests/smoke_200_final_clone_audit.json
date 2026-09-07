@@ -1,0 +1,29 @@
+{
+  "database": "C:\\Users\\이소이\\Desktop\\[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정\\미니 프로젝트\\깃허브 업로드용\\sesac-data-analysis-mini-project\\09_단계별 분석\\3단계_10000건_증감_분석\\호텔검색_1만명증강_생성시스템개정_260907_1239_01\\tests\\smoke_200_final.sqlite",
+  "sessions": 200,
+  "definitions": {
+    "CLONE_A": "duplicate stored rows including identifiers",
+    "CLONE_B": "all business values equal after excluding IDs, absolute timestamps, lineage; relative delays bucketed to 5s",
+    "CLONE_C": "CLONE-B with exact relative delays",
+    "DIVERSITY_PATH": "abstract outcome/action token repetition; allowed"
+  },
+  "clone_a_rows": 0,
+  "control": {
+    "clone_b_sessions": 0,
+    "clone_c_sessions": 0,
+    "diversity_path_repeated_sessions": 32,
+    "diversity_unique": 79,
+    "diversity_top_share": 0.06,
+    "diversity_hhi": 0.0176,
+    "diversity_shannon": 4.241064650693445
+  },
+  "treatment": {
+    "clone_b_sessions": 0,
+    "clone_c_sessions": 0,
+    "diversity_path_repeated_sessions": 50,
+    "diversity_unique": 65,
+    "diversity_top_share": 0.07,
+    "diversity_hhi": 0.024800000000000003,
+    "diversity_shannon": 3.959604593329099
+  }
+}

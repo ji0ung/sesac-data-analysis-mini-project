@@ -1,0 +1,37 @@
+﻿parameter_id,distribution,conditioning,outcome,n,numerator,denominator,prior_alpha,prior_beta,posterior_alpha,posterior_beta,posterior_total,posterior_mean,sparse_flag,source_metric_id,uncertainty_rule
+p_zero_result_rate,Beta,search_id,0건률,296,147,296,1,1,148,150,298,0.496644295,0,zero_result_rate,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_zero_followup_rate,Beta,zero_result_search_id,0건 후 후속검색률,147,140,147,1,1,141,8,149,0.946308725,0,zero_followup_rate,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_immediate_recovery_rate,Beta,zero_to_next_search_transition,즉시 회복률,140,24,140,1,1,25,117,142,0.176056338,0,immediate_recovery_rate,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_session_final_recovery_rate,Beta,session_id_experiencing_zero,세션 최종 회복률,28,21,28,1,1,22,8,30,0.733333333,1,session_final_recovery_rate,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_card_g_direct_success,Beta,session_id,카드 G direct_success,43,27,43,1,1,28,17,45,0.622222222,0,card_g_direct_success,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_card_g_exposed_unselected,Beta,session_id,카드 G exposed_unselected,43,10,43,1,1,11,34,45,0.244444444,0,card_g_exposed_unselected,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_card_g_persistent_failure,Beta,session_id,카드 G persistent_failure,43,2,43,1,1,3,42,45,0.066666667,1,card_g_persistent_failure,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_card_g_requery_recovery,Beta,session_id,카드 G requery_recovery,43,4,43,1,1,5,40,45,0.111111111,1,card_g_requery_recovery,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_card_h_rank1_detail_event,Beta,rank1_search_result_exposure_row,카드 H 1위 상세진입,149,110,149,1,1,111,40,151,0.735099338,0,card_h_rank1_detail_event,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_active_filters_ge3_zero_rate,Beta,search_id,활성 필터 3개 이상 결합 0건률,160,119,160,1,1,120,42,162,0.740740741,0,active_filters_ge3_zero_rate,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+dirichlet_filter_state_amenity_only,Dirichlet,search_id,amenity_only,31,31,296,1,,32,,304,0.105263158,0,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_filter_state_none,Dirichlet,search_id,none,84,84,296,1,,85,,304,0.279605263,0,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_filter_state_price_amenity,Dirichlet,search_id,price_amenity,20,20,296,1,,21,,304,0.069078947,1,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_filter_state_price_only,Dirichlet,search_id,price_only,9,9,296,1,,10,,304,0.032894737,1,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_filter_state_price_rating,Dirichlet,search_id,price_rating,13,13,296,1,,14,,304,0.046052632,1,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_filter_state_price_rating_amenity,Dirichlet,search_id,price_rating_amenity,104,104,296,1,,105,,304,0.345394737,0,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_filter_state_rating_amenity,Dirichlet,search_id,rating_amenity,32,32,296,1,,33,,304,0.108552632,0,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_filter_state_rating_only,Dirichlet,search_id,rating_only,3,3,296,1,,4,,304,0.013157895,1,filter_state_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+p_behavior_mixed_recovery,Beta,zero_to_next_search_transition,mixed 행동 회복률,2,0,2,1,1,1,3,4,0.25,1,behavior_mixed_recovery,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_mixed_detail,Beta,zero_to_next_search_transition,mixed 행동 후 상세진입률,2,0,2,1,1,1,3,4,0.25,1,behavior_mixed_detail,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_query_recovery,Beta,zero_to_next_search_transition,query 행동 회복률,10,3,10,1,1,4,8,12,0.333333333,1,behavior_query_recovery,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_query_detail,Beta,zero_to_next_search_transition,query 행동 후 상세진입률,10,3,10,1,1,4,8,12,0.333333333,1,behavior_query_detail,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_region_recovery,Beta,zero_to_next_search_transition,region 행동 회복률,24,10,24,1,1,11,15,26,0.423076923,1,behavior_region_recovery,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_region_detail,Beta,zero_to_next_search_transition,region 행동 후 상세진입률,24,3,24,1,1,4,22,26,0.153846154,1,behavior_region_detail,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_relax_recovery,Beta,zero_to_next_search_transition,relax 행동 회복률,41,11,41,1,1,12,31,43,0.279069767,0,behavior_relax_recovery,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_relax_detail,Beta,zero_to_next_search_transition,relax 행동 후 상세진입률,41,8,41,1,1,9,34,43,0.209302326,0,behavior_relax_detail,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_same_recovery,Beta,zero_to_next_search_transition,same 행동 회복률,53,0,53,1,1,1,54,55,0.018181818,1,behavior_same_recovery,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_same_detail,Beta,zero_to_next_search_transition,same 행동 후 상세진입률,53,0,53,1,1,1,54,55,0.018181818,1,behavior_same_detail,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_strengthen_recovery,Beta,zero_to_next_search_transition,strengthen 행동 회복률,10,0,10,1,1,1,11,12,0.083333333,1,behavior_strengthen_recovery,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+p_behavior_strengthen_detail,Beta,zero_to_next_search_transition,strengthen 행동 후 상세진입률,10,0,10,1,1,1,11,12,0.083333333,1,behavior_strengthen_detail,"Beta(1,1); sparse if n<30 or either outcome cell<5"
+dirichlet_behavior_mixed,Dirichlet,zero_to_next_search_transition,mixed,2,2,140,1,,3,,146,0.020547945,1,behavior_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_behavior_query,Dirichlet,zero_to_next_search_transition,query,10,10,140,1,,11,,146,0.075342466,1,behavior_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_behavior_region,Dirichlet,zero_to_next_search_transition,region,24,24,140,1,,25,,146,0.171232877,1,behavior_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_behavior_relax,Dirichlet,zero_to_next_search_transition,relax,41,41,140,1,,42,,146,0.287671233,0,behavior_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_behavior_same,Dirichlet,zero_to_next_search_transition,same,53,53,140,1,,54,,146,0.369863014,0,behavior_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30
+dirichlet_behavior_strengthen,Dirichlet,zero_to_next_search_transition,strengthen,10,10,140,1,,11,,146,0.075342466,1,behavior_distribution,symmetric Dirichlet alpha_i=1; sparse if category n<30

@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "metrics_source": "contract_executed",
+  "metrics": [
+    {
+      "metric_id": "search_zero_rate",
+      "definition_version": "newref_v03_20260907",
+      "grain": "search_id",
+      "numerator": 30614,
+      "denominator": 65355,
+      "value": 0.46842628720067325,
+      "sql": "SELECT COUNT(DISTINCT CASE WHEN total_result_count=0 THEN search_id END), COUNT(DISTINCT search_id) FROM Search",
+      "sql_sha256": "d36997d956487acac117b9c7e7f65c40c40f428ddee4b178e5c490edf864f754"
+    },
+    {
+      "metric_id": "zero_followup_rate",
+      "definition_version": "newref_v03_20260907",
+      "grain": "zero search transition",
+      "numerator": 29184,
+      "denominator": 30614,
+      "value": 0.9532893447442347,
+      "sql": "WITH o AS (SELECT search_id,session_id,total_result_count,LEAD(search_id) OVER(PARTITION BY session_id ORDER BY search_sequence,search_time,search_id) nxt FROM Search) SELECT SUM(total_result_count=0 AND nxt IS NOT NULL),SUM(total_result_count=0) FROM o",
+      "sql_sha256": "17831486b1556f085586d6782fcf1af173cbc5a57af168081082f4c8ba5976e5"
+    },
+    {
+      "metric_id": "immediate_recovery_transition_rate",
+      "definition_version": "newref_v03_20260907",
+      "grain": "adjacent transition whose source is a zero search",
+      "numerator": 5611,
+      "denominator": 29184,
+      "value": 0.19226288377192982,
+      "sql": "WITH o AS (SELECT search_id,session_id,total_result_count,LEAD(total_result_count) OVER(PARTITION BY session_id ORDER BY search_sequence,search_time,search_id) nxt FROM Search) SELECT SUM(total_result_count=0 AND nxt>0),SUM(total_result_count=0 AND nxt IS NOT NULL) FROM o",
+      "sql_sha256": "68c79609b0b5b6d82f2b3e7c34909068b05827c8d5b0c7d2b6d696a6d5650a0d"
+    },
+    {
+      "metric_id": "first_zero_immediate_recovery_rate",
+      "definition_version": "newref_v03_20260907",
+      "grain": "session first-zero transition",
+      "numerator": 838,
+      "denominator": 6140,
+      "value": 0.13648208469055376,
+      "sql": "WITH o AS (SELECT search_id,session_id,total_result_count,LEAD(total_result_count) OVER(PARTITION BY session_id ORDER BY search_sequence,search_time,search_id) nxt,search_sequence FROM Search),z AS (SELECT *,ROW_NUMBER() OVER(PARTITION BY session_id ORDER BY search_sequence,search_id) zr FROM o WHERE total_result_count=0) SELECT SUM(zr=1 AND nxt>0),SUM(zr=1 AND nxt IS NOT NULL) FROM z",
+      "sql_sha256": "3e67738e5ef3db225b02670b3d2f10e9ae190e4768eda05c0f617c8af36a7219"
+    },
+    {
+      "metric_id": "final_recovery_rate",
+      "definition_version": "newref_v03_20260907",
+      "grain": "session_id",
+      "numerator": 4936,
+      "denominator": 6366,
+      "value": 0.7753691486019478,
+      "sql": "WITH o AS (SELECT session_id,total_result_count,ROW_NUMBER() OVER(PARTITION BY session_id ORDER BY search_sequence DESC,search_time DESC,search_id DESC) rn,MAX(total_result_count=0) OVER(PARTITION BY session_id) z FROM Search) SELECT SUM(rn=1 AND z=1 AND total_result_count>0),SUM(rn=1 AND z=1) FROM o",
+      "sql_sha256": "b684ed4ea1c5a6b172ceea19f714550b40c44484b2b8d0021eb752e27df3848c"
+    },
+    {
+      "metric_id": "card_h_search_rate",
+      "definition_version": "newref_v03_20260907",
+      "grain": "search_id",
+      "numerator": 6834,
+      "denominator": 34741,
+      "value": 0.1967128177081834,
+      "sql": "WITH p AS (SELECT DISTINCT search_id FROM Search WHERE total_result_count>0),d AS (SELECT DISTINCT e.search_id FROM SearchResult r JOIN ActionEvent e ON e.search_id=r.search_id AND e.hotel_id=r.hotel_id WHERE r.result_rank=1 AND e.event_type='hotel_detail_view') SELECT COUNT(DISTINCT d.search_id),COUNT(DISTINCT p.search_id) FROM p LEFT JOIN d USING(search_id)",
+      "sql_sha256": "78daa91075ba46a34e1ee8ffd1a1d55d4926054b6855270ebc0ba01390f60391"
+    },
+    {
+      "metric_id": "card_h_event_rows",
+      "definition_version": "newref_v03_20260907",
+      "grain": "event row",
+      "numerator": 26687,
+      "denominator": null,
+      "value": null,
+      "sql": "SELECT COUNT(*),NULL FROM Search s JOIN SearchResult r ON r.search_id=s.search_id AND r.result_rank=1 JOIN ActionEvent e ON e.search_id=s.search_id AND e.hotel_id=r.hotel_id AND e.event_type='hotel_detail_view' WHERE s.total_result_count>0",
+      "sql_sha256": "0d6fd5d8b90b164026ed3e6683e31b79740340bf89b856e464c1459347142f2c"
+    }
+  ],
+  "clones": {
+    "status": "PASS",
+    "approved_audit_sha256": "2dd3ec9b7b79f7948eb90b0790c7b3f02e5a73736c3446b8e2ef3761117a7026",
+    "clone_a_rows": 0,
+    "control_clone_b": 0,
+    "treatment_clone_b": 0,
+    "control_clone_c": 0,
+    "treatment_clone_c": 0,
+    "reference_exact_session_clone": 0,
+    "reference_exact_relative_path_clone": 0,
+    "reference_exact_delay_vector_clone": 7,
+    "diversity_path": {
+      "control": {
+        "clone_b_sessions": 0,
+        "clone_c_sessions": 0,
+        "diversity_path_repeated_sessions": 2172,
+        "diversity_unique": 2997,
+        "diversity_top_share": 0.2074,
+        "diversity_hhi": 0.04538656,
+        "diversity_shannon": 6.412957906159307
+      },
+      "treatment": {
+        "clone_b_sessions": 0,
+        "clone_c_sessions": 0,
+        "diversity_path_repeated_sessions": 2975,
+        "diversity_unique": 2330,
+        "diversity_top_share": 0.2206,
+        "diversity_hhi": 0.05109872,
+        "diversity_shannon": 6.023489073109535
+      }
+    }
+  },
+  "relational": {
+    "integrity": "ok",
+    "foreign_keys": 0,
+    "time_inversion": 0,
+    "event_after_end": 0
+  },
+  "delay_vector_collision_policy": "diagnostic_only_without_business_path_identity"
+}

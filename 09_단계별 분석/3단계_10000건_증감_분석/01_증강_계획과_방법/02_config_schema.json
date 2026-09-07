@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paired hotel-search simulation configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["config_version", "seed", "full_design", "dry_run", "source", "scenario", "effects", "generation", "qa"],
+  "properties": {
+    "config_version": {"type": "string", "pattern": "^02\\.[0-9]+$"},
+    "seed": {"type": "integer", "minimum": 0, "maximum": 2147483647},
+    "full_design": {
+      "type": "object", "additionalProperties": false,
+      "required": ["pair_profiles", "control_users", "treatment_users"],
+      "properties": {
+        "pair_profiles": {"const": 5000},
+        "control_users": {"const": 5000},
+        "treatment_users": {"const": 5000}
+      }
+    },
+    "dry_run": {
+      "type": "object", "additionalProperties": false,
+      "required": ["max_total_users", "default_total_users"],
+      "properties": {
+        "max_total_users": {"type": "integer", "const": 200},
+        "default_total_users": {"type": "integer", "minimum": 2, "maximum": 200, "multipleOf": 2}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["observed_db", "observed_db_sha256", "reference_1000_db", "reference_1000_db_sha256", "probability_parameters"],
+      "properties": {
+        "observed_db": {"type": "string", "minLength": 1},
+        "observed_db_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "reference_1000_db": {"type": "string", "minLength": 1},
+        "reference_1000_db_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "probability_parameters": {"type": "string", "minLength": 1}
+      }
+    },
+    "scenario": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "effect_level", "run_id"],
+      "properties": {
+        "name": {"const": "paired_segment_treatment"},
+        "effect_level": {"enum": ["conservative", "base", "optimistic"]},
+        "run_id": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"}
+      }
+    },
+    "effects": {
+      "type": "object", "additionalProperties": false,
+      "required": ["conservative", "base", "optimistic"],
+      "properties": {
+        "conservative": {"$ref": "#/$defs/effect"},
+        "base": {"$ref": "#/$defs/effect"},
+        "optimistic": {"$ref": "#/$defs/effect"}
+      }
+    },
+    "generation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["max_template_share", "max_searches_per_session", "max_results_per_search", "interarrival", "continuous_jitter"],
+      "properties": {
+        "max_template_share": {"type": "number", "exclusiveMinimum": 0, "maximum": 0.1},
+        "max_searches_per_session": {"type": "integer", "minimum": 2, "maximum": 50},
+        "max_results_per_search": {"type": "integer", "minimum": 1, "maximum": 100},
+        "interarrival": {
+          "type": "object", "additionalProperties": false,
+          "required": ["distribution", "min_seconds", "max_seconds"],
+          "properties": {
+            "distribution": {"const": "positive_lognormal_fitted_from_observed_zero_transitions"},
+            "min_seconds": {"type": "integer", "minimum": 1},
+            "max_seconds": {"type": "integer", "minimum": 2}
+          }
+        },
+        "continuous_jitter": {
+          "type": "object", "additionalProperties": false,
+          "required": ["result_score_sd", "clip_min", "clip_max"],
+          "properties": {
+            "result_score_sd": {"type": "number", "minimum": 0, "maximum": 0.2},
+            "clip_min": {"type": "number"},
+            "clip_max": {"type": "number"}
+          }
+        }
+      }
+    },
+    "qa": {
+      "type": "object", "additionalProperties": false,
+      "required": ["template_cap_rounding", "require_zero_logic_violations", "require_source_immutable"],
+      "properties": {
+        "template_cap_rounding": {"const": "ceil"},
+        "require_zero_logic_violations": {"const": true},
+        "require_source_immutable": {"const": true}
+      }
+    }
+  },
+  "$defs": {
+    "effect": {
+      "type": "object", "additionalProperties": false,
+      "required": ["recovery_lift_pp", "detail_lift_pp", "repeat_reduction_pp"],
+      "properties": {
+        "recovery_lift_pp": {"type": "number", "minimum": 0, "maximum": 0.2},
+        "detail_lift_pp": {"type": "number", "minimum": 0, "maximum": 0.2},
+        "repeat_reduction_pp": {"type": "number", "minimum": 0, "maximum": 0.2}
+      }
+    }
+  }
+}

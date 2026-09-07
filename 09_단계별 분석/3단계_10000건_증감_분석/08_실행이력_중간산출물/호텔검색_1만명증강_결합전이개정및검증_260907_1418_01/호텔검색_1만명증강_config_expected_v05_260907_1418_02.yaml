@@ -1,0 +1,28 @@
+version: newref_v02
+mode: calibration
+seed: 1
+n_users: 2000
+scenario: expected
+reference: {path: "C:/Users/이소이/Desktop/[은평4기] AI로 끝내자! 바이브코딩으로 배우는 데이터분석 실전 과정/미니 프로젝트/깃허브 업로드용/sesac-data-analysis-mini-project/09_단계별 분석/2단계_1000건_증감_분석/01_초기생성_QA_전체분석/02_관측형합성1000명_실행묶음_260903_1606_01/호텔검색_관측형합성1000명_데이터_260903_1606_01_메타삭제_무인덱스_NULL5유지_텍스트최적화_16K.sqlite", sha256: 9120561ee85705141a92eae74c5015fb2c9a20f0c8d1f6df4d99893952fd1e9f}
+state_machine: {ever_zero_probability: 0.651, first_zero_given_ever_zero: 0.21351766513056836, zero_followup_probability: 0.9525334886429819, immediate_recovery_probability: 0.1705900336288597, terminal_recovery_probability: 0.7496159754224271, continued_search_probability: 0.88, max_searches: 31}
+sequential_transition:
+  first_zero_probability: 0.139
+  p_to_z_before_zero: 0.354
+  p_to_z_after_zero: 0.03
+  p_to_end: 0.241488748
+  z_to_z: 0.790040769
+  z_to_p: 0.162492720
+  z_to_end: 0.047466512
+  treatment_recovery_uplift: {conservative: 0.03, expected: 0.06, optimistic: 0.09}
+search_hazard: {base_zero: 0.55, order_decay: 0.025, previous_zero_increment: 0.12, cumulative_zero_increment: 0.02, price_constraint_increment: 0.04, option_2plus_increment: 0.05, region_change_decrement: 0.10, treatment_exposure_decrement: 0.06}
+card_h: {search_probability: 0.19619157530294287, repeat_mean: 3.7941176470588234, partial_pool_strength: 50}
+time_mixture: {same_timestamp_probability: 0.007796610169491526, tail_probability: 0.05, body_log_mu: 2.899725, body_log_sigma: 1.144826, body_cap_seconds: 109, tail_log_mu: 8.25, tail_log_sigma: 0.75, maximum_seconds: 51304}
+clone: {max_redraw_attempts: 30, delay_bucket_seconds: 1}
+treatment_posteriors:
+  region_change: {success: 10, n: 24, prior_alpha: 1, prior_beta: 1}
+  query_change: {success: 3, n: 10, prior_alpha: 1, prior_beta: 1}
+  constraint_relax: {success: 11, n: 41, prior_alpha: 1, prior_beta: 1}
+  same_condition: {success: 0, n: 53, prior_alpha: 1, prior_beta: 1}
+safety: {unit_test_max_users: 40, smoke_test_max_users: 200, calibration_authorized: false, production_authorized: false, production_seed: 2434815518}
+output: {allowed_test_root: tests}
+

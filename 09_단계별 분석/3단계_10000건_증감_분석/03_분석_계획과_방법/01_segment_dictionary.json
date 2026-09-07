@@ -1,0 +1,124 @@
+{
+  "version": "1.0",
+  "source_db_sha256": "2f5bd2f73b02b103bb6107ee79aa109cf77afc6f5aecdf82b10c87c95a0bef80",
+  "separation_rule": "filter_state_segment와 intent_segment는 실험 전 공변량/배정용, observed_behavior와 outcome_segment는 실험 후 관측 결과용이다.",
+  "pre_experiment": {
+    "filter_state_segment": {
+      "grain": "search_id",
+      "source": "search_filter",
+      "exclusive": true,
+      "definitions": [
+        {
+          "code": "none",
+          "rule": "price IS NULL AND user_rating_min IS NULL AND COALESCE(amenity_count,0)=0"
+        },
+        {
+          "code": "price_only",
+          "rule": "price only active"
+        },
+        {
+          "code": "rating_only",
+          "rule": "user_rating_min only active"
+        },
+        {
+          "code": "amenity_only",
+          "rule": "amenity_count>0 only active"
+        },
+        {
+          "code": "price_amenity",
+          "rule": "price and amenity active only"
+        },
+        {
+          "code": "price_rating",
+          "rule": "price and rating active only"
+        },
+        {
+          "code": "rating_amenity",
+          "rule": "rating and amenity active only"
+        },
+        {
+          "code": "price_rating_amenity",
+          "rule": "all three active"
+        }
+      ],
+      "note": "property_type/property_grade/region은 별도 필터 특성으로 보존; 3+ 결합률에는 포함"
+    },
+    "intent_segment": {
+      "grain": "search_id",
+      "status": "proxy_not_observed_intent",
+      "definitions": [
+        {
+          "code": "LOCATION_ONLY",
+          "rule": "core constraint count=0"
+        },
+        {
+          "code": "PRICE",
+          "rule": "price only"
+        },
+        {
+          "code": "QUALITY_FILTER",
+          "rule": "rating only"
+        },
+        {
+          "code": "AMENITY",
+          "rule": "amenity only"
+        },
+        {
+          "code": "MIXED",
+          "rule": "two or more core constraints or other combined state"
+        }
+      ],
+      "warning": "사용자 의도를 직접 관측한 값이 아니라 필터 상태 기반 사전 분류 프록시다."
+    }
+  },
+  "post_experiment": {
+    "observed_behavior": {
+      "grain": "zero_to_next_search_transition",
+      "exclusive": true,
+      "priority": [
+        "same",
+        "region",
+        "query",
+        "relax",
+        "strengthen",
+        "mixed",
+        "other"
+      ],
+      "note": "직전/다음 검색의 조건 변화를 관측한 사후 행동"
+    },
+    "outcome_segment": {
+      "grain": "session_id",
+      "exclusive": true,
+      "definitions": [
+        {
+          "code": "direct_success",
+          "rule": "first search nonzero AND any session hotel_click"
+        },
+        {
+          "code": "exposed_unselected",
+          "rule": "first search nonzero AND no session hotel_click"
+        },
+        {
+          "code": "requery_recovery",
+          "rule": "first search zero AND later nonzero result"
+        },
+        {
+          "code": "persistent_failure",
+          "rule": "first search zero AND no later nonzero result"
+        }
+      ],
+      "approved_card_G_counts": {
+        "direct_success": 27,
+        "exposed_unselected": 10,
+        "persistent_failure": 2,
+        "requery_recovery": 4
+      }
+    }
+  },
+  "prohibited_mixing": [
+    "pre-experiment segments must not use post-treatment behavior",
+    "outcome_segment must not be used for treatment assignment",
+    "H-1 unique click candidate must not replace approved card H",
+    "synthetic/scenario outcomes must not be labeled actual A/B results"
+  ]
+}
