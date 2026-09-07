@@ -106,7 +106,6 @@ const slides=[
 ['StayTrace · 데이터를 수집한 과정',4,['#template-site_entry']],
 ['사이트의 옵션 일치·불일치 실험',4,['#template-site_experiment']],
 ['왜 호텔 검색 회복을 분석했는가?',4,['#page-4 .intro-kpis','#page-4 .callout']],
-['발표에서 사용할 핵심 용어',4,['#term-definitions .scroll']],
 ['원시데이터에서 1,000명 확장본까지',4,['#page-4 .origin-flow','#page-4 .origin-details .scroll']],
 ['시행착오 · 작성 템플릿',4,['#template-lessons']],
 ['데이터 증강 방식 · 작성 템플릿',4,['#template-augmentation']],
@@ -129,9 +128,10 @@ const slides=[
 ['의도별 제안 여정 · 탐색 방식',0,['#intent-journeys-b']],
 ['기간별 검색 결과 없음 추세',0,['#timeline']],
 ['기존 A/B와 연결할 개선안',2,['#intent-content','#ab-protocol .scroll']],
-['핵심 발견과 다음 의사결정',3,['#findings']]
+['핵심 발견과 다음 의사결정',3,['#findings']],
+['부록 · 발표에서 사용할 핵심 용어',4,['#term-definitions .scroll']]
 ];let slideIndex=0;
-const agendaGroups=[['기획과 수집',0,5],['데이터와 한계',5,15],['지표와 검증',15,21],['세그먼트와 여정',21,27],['해석과 의사결정',27,30]];
+const agendaGroups=[['기획과 수집',0,5],['데이터와 한계',5,14],['지표와 검증',14,20],['세그먼트와 여정',20,26],['해석과 의사결정',26,29],['부록',29,30]];
 const agendaHTML=agendaGroups.map(([name,start,end])=>`<section><h3>${name} · ${start+1}~${end}장</h3><ol start="${start+1}">${slides.slice(start,end).map(([title],i)=>`<li><button type="button" data-slide-jump="${start+i}">${title}</button></li>`).join('')}</ol></section>`).join('');
 ['#dashboard-agenda','#presentation-agenda'].forEach(id=>$(id).innerHTML=agendaHTML);
 document.querySelectorAll('[data-slide-jump]').forEach(button=>button.onclick=()=>{document.body.classList.add('presenting');$('#presentation-mode').setAttribute('aria-pressed','true');$('#presentation-mode').textContent='대시보드로 돌아가기';document.querySelectorAll('details').forEach(d=>d.open=false);slideIndex=Number(button.dataset.slideJump);renderSlide();$('#slide-title').focus({preventScroll:true});});
