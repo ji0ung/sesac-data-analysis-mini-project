@@ -60,6 +60,27 @@ const outcomeDefinitions=[
 '첫 검색 결과가 0개이고, 이후에도 결과가 1개 이상 나온 검색이 없음. 후속 검색 기록 자체가 없는 세션도 포함'
 ];
 $('#outcome-cards').innerHTML=D.segments.map((r,i)=>`<article class="segment-card outcome" style="--segment-color:${colors[i]}"><span class="label">SG${i+1} · 검색 후 성과군</span><h3>${r.name}</h3><div class="value">${fmt(r.n)}<span>세션 · ${pct(r.n,r.d)}%</span></div><p class="criterion"><b>분류 기준 · 실제 집계</b>${outcomeDefinitions[i]}</p><p class="mapping">분모: 선택한 ${fmt(r.d)}세션<br>한 세션은 한 성과군에만 포함</p></article>`).join('');
+['#journey-scope-a','#journey-scope-b'].forEach(id=>$(id).textContent=$('#filter-summary').textContent);
+const journeySteps=steps=>'<ol class="journey-steps">'+steps.map(([title,body])=>`<li><strong>${title}</strong><span>${body}</span></li>`).join('')+'</ol>';
+const outcomePaths=[
+[['첫 검색 · 결과 있음','노출 결과 1개 이상'],['같은 세션의 탐색','추가 검색·0건 검색이 있어도 첫 결과 기준 유지'],['호텔 클릭 있음','첫 검색의 클릭일 필요 없음 · 예약 성공 아님']],
+[['첫 검색 · 결과 있음','노출 결과 1개 이상'],['같은 세션의 탐색','추가 검색이나 비교 과정의 상세 순서는 미집계'],['호텔 클릭 없음','관측된 클릭 없음 · 이탈로 단정하지 않음']],
+[['첫 검색 · 결과 없음','0건에서 출발'],['후속 검색 · 결과 회복','이후 한 번이라도 결과 1개 이상 · 즉시 회복과 구분'],['세션 내 클릭 여부','회복 여부와 별도로 클릭한 세션을 집계']],
+[['첫 검색 · 결과 없음','0건에서 출발'],['후속 검색 없음 또는 미회복','두 경로의 세션 수는 현재 집계에 분리돼 있지 않음'],['관측 기록 끝까지 회복 없음','예약 실패·이탈을 의미하지 않음']]
+];
+const journeyCard=(r,i)=>`<article class="journey-card ${r.n?'':'empty-journey'}"><div class="journey-heading"><span class="label">SG${i+1} · ${r.name}</span><strong>${fmt(r.n)}세션 <small>· ${pct(r.n,r.d)}%</small></strong></div>${journeySteps(outcomePaths[i])}<div class="journey-stat">세션 내 클릭 ${fmt(r.click)} / ${fmt(r.n)} · ${pct(r.click,r.n)}%<br>세션당 평균 검색 ${r.n?Number(r.search_mean).toFixed(2)+'회':'—'}</div><details class="metric-notes"><summary>분모·해석</summary><p>구성비 분모는 선택한 ${fmt(r.d)}세션, 클릭 비율 분모는 이 성과군의 ${fmt(r.n)}세션입니다. 클릭 100% 또는 0%가 분류 조건인 SG1·SG2는 개선 효과가 아닙니다. 화살표마다 새로운 전환율을 계산한 퍼널이 아닙니다.</p></details></article>`;
+$('#outcome-paths-a').innerHTML=D.segments.slice(0,2).map((r,i)=>journeyCard(r,i)).join('');
+$('#outcome-paths-b').innerHTML=D.segments.slice(2).map((r,i)=>journeyCard(r,i+2)).join('');
+const intentPaths=[
+[['예산을 조정할 의향','사용자 의도 배정값 연결 필요'],['0건이면 가격 대안 제안','최대가격 상향·가격 필터 해제 선택지'],['사용자 선택 후 확인','다시 검색 → 결과 회복·클릭 검증']],
+[['요구 옵션 수 조정 의향','사용자 의도 배정값 연결 필요'],['0건이면 옵션 수 완화 제안','필수 요구 개수를 줄일 선택지'],['사용자 선택 후 확인','다시 검색 → 결과 회복·클릭 검증']],
+[['위치를 바꿀 의향','사용자 의도 배정값 연결 필요'],['0건이면 인접 지역 제안','인접·대체 지역의 대안 제시'],['사용자 선택 후 확인','다시 검색 → 결과 회복·클릭 검증']],
+[['조건을 유지하려는 성향','사용자 의도 배정값 연결 필요'],['반복 상황에서 대안 비교','조건 유지와 완화의 차이를 안내'],['사용자 선택 후 확인','유지·변경 후 반복률·회복률 검증']],
+[['표현을 수정하려는 성향','사용자 의도 배정값 연결 필요'],['0건이면 연관 검색어 제안','검색어 수정·자동완성 선택지'],['사용자 선택 후 확인','다시 검색 → 회복·상세진입 검증']],
+[['여러 조건을 바꿔 해결','사용자 의도 배정값 연결 필요'],['0건이면 단계별 대안 제안','지역·가격·필터 대안을 순서대로 안내'],['사용자 선택 후 확인','단계별 선택 → 즉시·최종 회복 검증']]
+];
+const intentJourney=(i)=>`<article class="journey-card proposed-journey"><div class="journey-heading"><span class="label">제안 흐름 · ${intents[i][2]}</span><h3>${intents[i][0]}</h3></div>${journeySteps(intentPaths[i])}<p class="meta">미수용·미회복도 가능 · 실제 결과 미연결</p></article>`;
+$('#intent-paths-a').innerHTML=[0,1,2].map(intentJourney).join('');$('#intent-paths-b').innerHTML=[3,4,5].map(intentJourney).join('');
 document.querySelectorAll('[data-intent-card]').forEach(b=>b.onclick=()=>{page(2);$('#intent').value=b.dataset.intentCard;intent();$('#intent').scrollIntoView({block:'center'});$('#intent').focus({preventScroll:true})});
 
 const region=D.methods.find(r=>r.name==='지역 변경'),relax=D.methods.find(r=>r.name==='조건 완화'),repeat=D.methods.find(r=>r.name==='동일조건 반복');
@@ -107,6 +128,10 @@ const slides=[
 ['세그먼트를 나눈 기준',0,['#segment-rules']],
 ['검색의도에 따른 6개 세그먼트',0,['#intent-cards']],
 ['검색결과에 따른 4개 성과 세그먼트',0,['#outcome-cards','#segment-donut']],
+['성과군 여정 · 첫 검색 결과 있음',0,['#outcome-journeys-a']],
+['성과군 여정 · 첫 검색 결과 없음',0,['#outcome-journeys-b']],
+['의도별 제안 여정 · 조건 변경',0,['#intent-journeys-a']],
+['의도별 제안 여정 · 탐색 방식',0,['#intent-journeys-b']],
 ['기간별 검색 결과 없음 추세',0,['#timeline']],
 ['기존 A/B와 연결할 개선안',2,['#intent-content','#ab-protocol .scroll']],
 ['핵심 발견과 다음 의사결정',3,['#findings']]
