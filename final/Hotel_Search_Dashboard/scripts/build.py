@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Bundle editable sources into one offline HTML file. No third-party dependencies."""
 from pathlib import Path
+import base64
 import argparse
 import json
 import sys
@@ -16,12 +17,17 @@ def render():
     assert code.count("{{DATA_PACK}}") == 1
     code = code.replace("{{DATA_PACK}}", payload)
     values = {"DASHBOARD_CSS": css, "DASHBOARD_JS": code}
-    for name in ("simulation_scope", "simulation_calibration", "simulation_impacts", "research", "survey", "topic", "team", "intent", "hypotheses", "lessons", "augmentation", "limitations", "optimization"):
+    for name in ("site_entry", "site_console", "site_experiment", "simulation_scope", "simulation_calibration", "simulation_impacts", "research", "survey", "topic", "team", "intent", "hypotheses", "lessons", "augmentation", "limitations", "optimization"):
         values["SLIDE_" + name.upper()] = (ROOT / f"slides/{name}.html").read_text(encoding="utf-8")
     for key, value in values.items():
         token = "{{" + key + "}}"
         assert page.count(token) == 1, f"Expected exactly one {token}"
         page = page.replace(token, value)
+    for key, filename in {"STAYTRACE_ENTRY": "staytrace_entry.png", "STAYTRACE_CONSOLE": "staytrace_console_20260907_160424.png"}.items():
+        token = "{{ASSET_" + key + "}}"
+        assert page.count(token) == 1, f"Expected exactly one {token}"
+        encoded = base64.b64encode((ROOT / "assets" / filename).read_bytes()).decode("ascii")
+        page = page.replace(token, "data:image/png;base64," + encoded)
     return page
 
 if __name__ == "__main__":
