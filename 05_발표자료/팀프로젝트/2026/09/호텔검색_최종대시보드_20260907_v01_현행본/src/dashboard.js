@@ -117,16 +117,53 @@ const slides=[
 ['시행착오 및 한계',4,['#template-data-limits']],
 ['주 KPI와 보조 지표의 공식',4,['#primary-kpi','#supporting-kpis']],
 ['목표 회복률을 건수로 환산하기',4,['#kpi-goal']],
-['기간별 검색 결과 없음 추세',0,['#timeline']],
-['부록 · 발표에서 사용할 핵심 용어',4,['#term-definitions .scroll']],
 ['[부록] StayTrace · 데이터를 수집한 과정',4,['#template-site_entry']],
 ['부록 · 팀원 구성 및 논문·데이터셋',4,['#template-team','#template-research']]
 ];let slideIndex=0;
-const agendaGroups=[['기획과 배경',0,2],['전체 현황과 회복 퍼널',2,4],['가설과 검증',4,7],['세그먼트와 검색후 흐름',7,11],['개선안과 의사결정',11,13],['데이터와 한계',13,15],['지표와 추세',15,18],['부록',18,21]];
+const agendaGroups=[['기획과 배경',0,2],['전체 현황과 회복 퍼널',2,4],['가설과 검증',4,7],['세그먼트와 검색후 흐름',7,11],['개선안과 의사결정',11,13],['데이터와 한계',13,15],['지표',15,17],['부록',17,19]];
 const agendaHTML=agendaGroups.map(([name,start,end])=>`<section><h3>${name} · ${start+1}~${end}장</h3><ol start="${start+1}">${slides.slice(start,end).map(([title],i)=>`<li><button type="button" data-slide-jump="${start+i}">${title}</button></li>`).join('')}</ol></section>`).join('');
 ['#dashboard-agenda','#presentation-agenda'].forEach(id=>$(id).innerHTML=agendaHTML);
 document.querySelectorAll('[data-slide-jump]').forEach(button=>button.onclick=()=>{document.body.classList.add('presenting');$('#presentation-mode').setAttribute('aria-pressed','true');$('#presentation-mode').textContent='대시보드로 돌아가기';document.querySelectorAll('details').forEach(d=>d.open=false);slideIndex=Number(button.dataset.slideJump);renderSlide();$('#slide-title').focus({preventScroll:true});});
 function cloneForSlide(selector){const source=$(selector);if(!source||source.hidden)return document.createElement('div');const el=source.cloneNode(true);el.removeAttribute('id');el.querySelectorAll('[id]').forEach(x=>x.removeAttribute('id'));el.querySelectorAll('details').forEach(x=>x.open=false);el.querySelectorAll('.choice-control').forEach(x=>{const label=document.createElement('span');label.className='badge gray';label.textContent='비교 기준군: '+x.dataset.selectedLabel;x.replaceWith(label);});el.querySelectorAll('select').forEach(x=>{const label=document.createElement('span');label.className='badge gray';label.textContent=x.selectedOptions[0]?.textContent||'';x.replaceWith(label);});el.querySelectorAll('input').forEach(x=>{const text=document.createElement('span');text.className='badge gray';text.textContent=x.value?x.value+'%':'목표 미설정';x.replaceWith(text);});el.querySelectorAll('button').forEach(x=>x.remove());return el;}
-function renderSlide(){const [title,n,selectors]=slides[slideIndex];$('#slide-title').textContent=title;$('#slide-counter').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-position').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-stage').replaceChildren(...selectors.map(cloneForSlide));$('#slide-script').replaceChildren(cloneForSlide('#page-'+n+' > .speaker-notes'));if(selectors.includes('#primary-kpi')||selectors.includes('#kpi-goal')){const extra=document.createElement('p');extra.textContent='주 KPI는 0건 이후 후속 검색에서 결과를 찾은 비율입니다. 현재 확장본 기준 558/3,271 = 약 17.1%입니다. 모든 0건 검색을 분모로 하면 558/3,434 = 16.2%이므로 두 지표를 구분합니다. 목표 입력 계산은 후속 검색 수를 고정한 건수 환산이며 예측 효과나 실험 표본 수가 아닙니다. 목표값은 별도로 정해야 합니다.';$('#slide-script .speaker-notes').append(extra);}if(selectors[0].startsWith('#template-'))$('#slide-script').replaceChildren();if(selectors.includes('#template-segments'))$('#slide-script').replaceChildren(cloneForSlide('#segment-presentation-notes'));if(selectors.includes('#template-after-search'))$('#slide-script').replaceChildren(cloneForSlide('#after-search-notes'));if(selectors.includes('#template-data-summary'))$('#slide-script').replaceChildren(cloneForSlide('#data-summary-notes'));if(selectors.includes('#template-data-limits'))$('#slide-script').replaceChildren(cloneForSlide('#data-limits-notes'));$('#prev-slide').disabled=slideIndex===0;$('#next-slide').disabled=slideIndex===slides.length-1;window.scrollTo(0,0);}
+function renderSlide(){const [title,n,selectors]=slides[slideIndex];$('#slide-title').textContent=title;$('#slide-counter').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-position').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-stage').replaceChildren(...selectors.map(cloneForSlide));addFirstUseTermNotes();$('#slide-script').replaceChildren(cloneForSlide('#page-'+n+' > .speaker-notes'));if(selectors.includes('#primary-kpi')||selectors.includes('#kpi-goal')){const extra=document.createElement('p');extra.textContent='주 KPI는 0건 이후 후속 검색에서 결과를 찾은 비율입니다. 현재 확장본 기준 558/3,271 = 약 17.1%입니다. 모든 0건 검색을 분모로 하면 558/3,434 = 16.2%이므로 두 지표를 구분합니다. 목표 입력 계산은 후속 검색 수를 고정한 건수 환산이며 예측 효과나 실험 표본 수가 아닙니다. 목표값은 별도로 정해야 합니다.';$('#slide-script .speaker-notes').append(extra);}if(selectors[0].startsWith('#template-'))$('#slide-script').replaceChildren();if(selectors.includes('#template-segments'))$('#slide-script').replaceChildren(cloneForSlide('#segment-presentation-notes'));if(selectors.includes('#template-after-search'))$('#slide-script').replaceChildren(cloneForSlide('#after-search-notes'));if(selectors.includes('#template-data-summary'))$('#slide-script').replaceChildren(cloneForSlide('#data-summary-notes'));if(selectors.includes('#template-data-limits'))$('#slide-script').replaceChildren(cloneForSlide('#data-limits-notes'));$('#prev-slide').disabled=slideIndex===0;$('#next-slide').disabled=slideIndex===slides.length-1;window.scrollTo(0,0);}
 function moveSlide(step){slideIndex=Math.max(0,Math.min(slides.length-1,slideIndex+step));renderSlide();}
 $('#prev-slide').onclick=()=>moveSlide(-1);$('#next-slide').onclick=()=>moveSlide(1);$('#presentation-mode').textContent='슬라이드 모드';$('#presentation-mode').onclick=()=>{const on=document.body.classList.toggle('presenting');$('#presentation-mode').setAttribute('aria-pressed',on);$('#presentation-mode').textContent=on?'대시보드로 돌아가기':'슬라이드 모드';document.querySelectorAll('details').forEach(d=>d.open=false);if(on){slideIndex=0;renderSlide();}else window.scrollTo(0,0);};document.addEventListener('keydown',e=>{if(!document.body.classList.contains('presenting')||['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName))return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();moveSlide(e.key==='ArrowRight'?1:-1);}});
+// Show each definition only on the first slide whose visible content uses it.
+const slideTermDefinitions=[
+{terms:['세션'],label:'세션',text:'이어진 검색·행동의 묶음. 검색 1건은 요청 한 번.'},
+{terms:['결과 없음','결과가 없','0건'],label:'결과 없음',text:'검색 결과가 0개인 상태.'},
+{terms:['후속 검색','후속검색'],label:'후속 검색',text:'같은 세션에서 이어지는 검색. 즉시 회복에서는 바로 다음 검색을 뜻함.'},
+{terms:['즉시 회복'],label:'즉시 회복',text:'0건 직후 다음 검색에서 결과를 1개 이상 찾음.'},
+{terms:['의도군','검색의도','6가지 의도'],label:'검색의도',text:'제안 전에 바꿀 수 있는 조건과 해결 선호로 나눈 사용자 기준.'},
+{terms:['성과 세그먼트','4가지 성과'],label:'성과 세그먼트',text:'첫 검색 결과와 이후 회복·클릭으로 나눈 세션 기준.'},
+{terms:['전환율'],label:'전환율',text:'해당 단계에 도달한 건수 ÷ 그 단계의 대상 건수 × 100.'},
+{terms:['%p'],label:'%p',text:'두 비율의 차이. 20%에서 25%는 +5%p.'},
+{terms:['상대 변화','상대 개선','상대값'],label:'상대 변화',text:'비율 차이 ÷ 기준 비율 × 100. 20%에서 25%는 +25%.'},
+{terms:['유의성','신뢰구간'],label:'유의성·신뢰구간',text:'통계적 판단과 추정의 불확실성 범위. 현재 A/B 결과는 미산출.'},
+{terms:['A-1'],label:'A-1',text:'조건 완화 검증. 회복률의 분모는 0건 이후 후속 검색.'},
+{terms:['D-1'],label:'D-1',text:'지역 확대 검증. 회복률의 분모는 지역 변경 후속 검색.'},
+{terms:['지역 선택률','수용률'],label:'지역 선택률',text:'지역 확대 제안 선택 ÷ 제안 노출 × 100.'},
+{terms:['예산 유연형','budget_flexible'],label:'예산 유연형',text:'가격 범위를 넓힐 의향이 있는 사용자.'},
+{terms:['옵션 유연형','옵션 수 유연형','option_count_flexible'],label:'옵션 수 유연형',text:'필요한 옵션 개수를 줄일 의향이 있는 사용자.'},
+{terms:['위치 유연형','location_flexible'],label:'위치 유연형',text:'인접·대체 지역을 고려할 의향이 있는 사용자.'},
+{terms:['A/B','대조군','실험군','제안군'],label:'A/B',text:'기존 검색을 쓰는 대조군과 맞춤 제안을 받는 실험군을 비교.'},
+{terms:['arm'],label:'arm',text:'실험의 비교 집단. 문서의 5,000명/arm은 설계값이며 실측 표본이 아님.'},
+{terms:['합성','확장본'],label:'합성 확장본',text:'원본을 바탕으로 생성한 데이터. 추가 모집한 관측 표본이 아님.'},
+{terms:['KPI'],label:'KPI',text:'목표 달성 정도를 확인하는 핵심 지표.'},
+{terms:['HOLD'],label:'HOLD',text:'검증 조건 미충족으로 정식 판정을 보류한 상태.'},
+{terms:['퍼널'],label:'퍼널',text:'단계별로 다음 행동·결과에 이어지는 규모를 보여주는 그림.'}
+];
+function addFirstUseTermNotes(){
+ const seen=new Set();
+ let current=[];
+ for(let i=0;i<=slideIndex;i++){
+  const [title,,selectors]=slides[i];
+  const content=selectors.map(selector=>{const node=cloneForSlide(selector);node.querySelectorAll('details').forEach(el=>el.remove());return node.textContent;}).join(' ');
+  const visible=title+' '+content;
+  current=slideTermDefinitions.filter((entry,index)=>{if(seen.has(index)||!entry.terms.some(term=>visible.includes(term)))return false;seen.add(index);return true;});
+ }
+ if(!current.length)return;
+ const notes=document.createElement('aside');notes.className='slide-term-notes';notes.setAttribute('aria-label','처음 나오는 용어 풀이');
+ current.forEach(entry=>{const item=document.createElement('span');const label=document.createElement('b');label.textContent=entry.label+' ';item.append(label,document.createTextNode(entry.text));notes.append(item);});
+ $('#slide-stage').append(notes);
+}
