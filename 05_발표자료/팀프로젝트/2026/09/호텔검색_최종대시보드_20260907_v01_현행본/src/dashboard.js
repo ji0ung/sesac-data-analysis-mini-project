@@ -100,32 +100,30 @@ function renderGoal(){const input=$('#goal-rate'),raw=input.value.trim(),target=
 $('#goal-rate').oninput=renderGoal;$('#clear-goal').onclick=()=>{$('#goal-rate').value='';renderGoal();};renderGoal();
 
 const slides=[
-['프로젝트 주제 · 기획 의도와 분석 범위',4,['#template-topic']],
-['왜 호텔 검색 회복을 분석했는가?',4,['#page-4 .intro-kpis','#page-4 .callout']],
-['전체 데이터의 전체 현황',0,['#kpis','#search-branches']],
-['결과 없음 이후의 회복 퍼널',0,['#funnel-filter-note','#recovery-funnel','#funnel-comparison']],
+['결과가 없을 때, 다시 찾게 하려면?',4,['#template-story-topic']],
+['왜 검색 회복에 주목했는가?',4,['#template-story-problem']],
+['전체 데이터의 전체 현황',0,['#template-story-overview']],
+['결과 없음 이후의 회복 퍼널',0,['#template-story-funnel']],
+['검색어 입력 후 회복·클릭 흐름',0,['#template-after-search']],
 ['가설 1 · 조건 완화가 즉시 회복률을 높이는가?',1,['#template-hypothesis-1']],
 ['가설 2 · 조건 완화 효과는 검색의도별로 다른가?',1,['#template-hypothesis-2']],
 ['가설 3 · 지역 확대 제안이 결과 회복으로 이어지는가?',1,['#template-hypothesis-3']],
-['세그먼트 한눈에 · 의도 6가지, 성과 4가지',0,['#template-segments']],
-['검색후',0,['#template-after-search']],
-['의도별 제안 여정 · 조건 변경',0,['#intent-journeys-a']],
-['의도별 제안 여정 · 탐색 방식',0,['#intent-journeys-b']],
-['기존 A/B와 연결할 개선안',2,['#intent-content','#ab-protocol .scroll']],
-['핵심 발견과 다음 의사결정',3,['#findings']],
+['검색의도 · 무엇을 바꿀 수 있나?',0,['#template-story-intents']],
+['의도별 개선안 · 바꿀 수 있는 조건부터',2,['#template-story-proposals']],
+['다음 의사결정 · 실제 효과를 확인하기',3,['#template-story-decisions']],
 ['사용한 데이터',4,['#template-data-summary']],
 ['시행착오 및 한계',4,['#template-data-limits']],
-['주 KPI와 보조 지표의 공식',4,['#primary-kpi','#supporting-kpis']],
-['목표 회복률을 건수로 환산하기',4,['#kpi-goal']],
+['[부록] 주 KPI와 보조 지표의 공식',4,['#primary-kpi','#supporting-kpis']],
+['[부록] 목표 회복률을 건수로 환산하기',4,['#kpi-goal']],
 ['[부록] StayTrace · 데이터를 수집한 과정',4,['#template-site_entry']],
 ['부록 · 팀원 구성 및 논문·데이터셋',4,['#template-team','#template-research']]
 ];let slideIndex=0;
-const agendaGroups=[['기획과 배경',0,2],['전체 현황과 회복 퍼널',2,4],['가설과 검증',4,7],['세그먼트와 검색후 흐름',7,11],['개선안과 의사결정',11,13],['데이터와 한계',13,15],['지표',15,17],['부록',17,19]];
+const agendaGroups=[['기획과 배경',0,2],['전체 현황과 검색 흐름',2,5],['가설과 검증',5,8],['검색의도와 개선안',8,10],['결론',10,11],['데이터와 한계',11,13],['부록',13,17]];
 const agendaHTML=agendaGroups.map(([name,start,end])=>`<section><h3>${name} · ${start+1}~${end}장</h3><ol start="${start+1}">${slides.slice(start,end).map(([title],i)=>`<li><button type="button" data-slide-jump="${start+i}">${title}</button></li>`).join('')}</ol></section>`).join('');
 ['#dashboard-agenda','#presentation-agenda'].forEach(id=>$(id).innerHTML=agendaHTML);
 document.querySelectorAll('[data-slide-jump]').forEach(button=>button.onclick=()=>{document.body.classList.add('presenting');$('#presentation-mode').setAttribute('aria-pressed','true');$('#presentation-mode').textContent='대시보드로 돌아가기';document.querySelectorAll('details').forEach(d=>d.open=false);slideIndex=Number(button.dataset.slideJump);renderSlide();$('#slide-title').focus({preventScroll:true});});
 function cloneForSlide(selector){const source=$(selector);if(!source||source.hidden)return document.createElement('div');const el=source.cloneNode(true);el.removeAttribute('id');el.querySelectorAll('[id]').forEach(x=>x.removeAttribute('id'));el.querySelectorAll('details').forEach(x=>x.open=false);el.querySelectorAll('.choice-control').forEach(x=>{const label=document.createElement('span');label.className='badge gray';label.textContent='비교 기준군: '+x.dataset.selectedLabel;x.replaceWith(label);});el.querySelectorAll('select').forEach(x=>{const label=document.createElement('span');label.className='badge gray';label.textContent=x.selectedOptions[0]?.textContent||'';x.replaceWith(label);});el.querySelectorAll('input').forEach(x=>{const text=document.createElement('span');text.className='badge gray';text.textContent=x.value?x.value+'%':'목표 미설정';x.replaceWith(text);});el.querySelectorAll('button').forEach(x=>x.remove());return el;}
-function renderSlide(){const [title,n,selectors]=slides[slideIndex];$('#slide-title').textContent=title;$('#slide-counter').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-position').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-stage').replaceChildren(...selectors.map(cloneForSlide));addFirstUseTermNotes();$('#slide-script').replaceChildren(cloneForSlide('#page-'+n+' > .speaker-notes'));if(selectors.includes('#primary-kpi')||selectors.includes('#kpi-goal')){const extra=document.createElement('p');extra.textContent='주 KPI는 0건 이후 후속 검색에서 결과를 찾은 비율입니다. 현재 확장본 기준 558/3,271 = 약 17.1%입니다. 모든 0건 검색을 분모로 하면 558/3,434 = 16.2%이므로 두 지표를 구분합니다. 목표 입력 계산은 후속 검색 수를 고정한 건수 환산이며 예측 효과나 실험 표본 수가 아닙니다. 목표값은 별도로 정해야 합니다.';$('#slide-script .speaker-notes').append(extra);}if(selectors[0].startsWith('#template-'))$('#slide-script').replaceChildren();if(selectors.includes('#template-segments'))$('#slide-script').replaceChildren(cloneForSlide('#segment-presentation-notes'));if(selectors.includes('#template-after-search'))$('#slide-script').replaceChildren(cloneForSlide('#after-search-notes'));if(selectors.includes('#template-data-summary'))$('#slide-script').replaceChildren(cloneForSlide('#data-summary-notes'));if(selectors.includes('#template-data-limits'))$('#slide-script').replaceChildren(cloneForSlide('#data-limits-notes'));$('#prev-slide').disabled=slideIndex===0;$('#next-slide').disabled=slideIndex===slides.length-1;window.scrollTo(0,0);}
+function renderSlide(){const [title,n,selectors]=slides[slideIndex];$('#slide-title').textContent=title;$('#slide-counter').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-position').textContent=(slideIndex+1)+' / '+slides.length;$('#slide-stage').replaceChildren(...selectors.map(cloneForSlide));addFirstUseTermNotes();$('#slide-script').replaceChildren(cloneForSlide('#page-'+n+' > .speaker-notes'));if(selectors.includes('#primary-kpi')||selectors.includes('#kpi-goal')){const extra=document.createElement('p');extra.textContent='주 KPI는 0건 이후 후속 검색에서 결과를 찾은 비율입니다. 현재 확장본 기준 558/3,271 = 약 17.1%입니다. 모든 0건 검색을 분모로 하면 558/3,434 = 16.2%이므로 두 지표를 구분합니다. 목표 입력 계산은 후속 검색 수를 고정한 건수 환산이며 예측 효과나 실험 표본 수가 아닙니다. 목표값은 별도로 정해야 합니다.';$('#slide-script .speaker-notes').append(extra);}if(selectors[0].startsWith('#template-'))$('#slide-script').replaceChildren();if(selectors.includes('#template-segments'))$('#slide-script').replaceChildren(cloneForSlide('#segment-presentation-notes'));if(selectors.includes('#template-after-search'))$('#slide-script').replaceChildren(cloneForSlide('#after-search-notes'));if(selectors.includes('#template-data-summary'))$('#slide-script').replaceChildren(cloneForSlide('#data-summary-notes'));if(selectors.includes('#template-data-limits'))$('#slide-script').replaceChildren(cloneForSlide('#data-limits-notes'));for(const key of ['topic','problem','overview','funnel','intents','proposals','decisions']){if(selectors.includes('#template-story-'+key))$('#slide-script').replaceChildren(cloneForSlide('#story-'+key+'-notes'));}for(let h=1;h<=3;h++){if(selectors.includes('#template-hypothesis-'+h))$('#slide-script').replaceChildren(cloneForSlide('#hypothesis-'+h+'-notes'));}$('#prev-slide').disabled=slideIndex===0;$('#next-slide').disabled=slideIndex===slides.length-1;window.scrollTo(0,0);}
 function moveSlide(step){slideIndex=Math.max(0,Math.min(slides.length-1,slideIndex+step));renderSlide();}
 $('#prev-slide').onclick=()=>moveSlide(-1);$('#next-slide').onclick=()=>moveSlide(1);$('#presentation-mode').textContent='슬라이드 모드';$('#presentation-mode').onclick=()=>{const on=document.body.classList.toggle('presenting');$('#presentation-mode').setAttribute('aria-pressed',on);$('#presentation-mode').textContent=on?'대시보드로 돌아가기':'슬라이드 모드';document.querySelectorAll('details').forEach(d=>d.open=false);if(on){slideIndex=0;renderSlide();}else window.scrollTo(0,0);};document.addEventListener('keydown',e=>{if(!document.body.classList.contains('presenting')||['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName))return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();moveSlide(e.key==='ArrowRight'?1:-1);}});
 // Show each definition only on the first slide whose visible content uses it.
