@@ -45,19 +45,19 @@ document.querySelectorAll('[data-hyp]').forEach(e=>e.onclick=()=>{showHyp(e.data
 const intents=[['예산 유연형','A-1 가격 범위 확대','H1/H2'],['옵션 유연형','A-1 필요한 옵션 수 감소','H1/H2'],['위치 유연형','D-1 인접지역 제안','H5'],['조건 고수형','F-1 반복 안내','H4'],['표현 수정형','D-2 연관 검색어 제안','H6'],['빠른 해결형','C-1 단계별 안내','H3']];const savedIntent=$('#intent').value;$('#intent').innerHTML=intents.map((x,i)=>`<option value="${i}">${x[0]}</option>`).join('');function intent(){let x=intents[+$('#intent').value];$('#intent-content').innerHTML=`<div class="divider"></div><h3>${x[1]}</h3><p>연결 가설: ${x[2]}</p><p class="meta">문서의 개선안 매핑입니다. 이 경량 DB에는 의도군별 A/B 배정값이 포함되어 있지 않습니다.</p>`}$('#intent').value=savedIntent||'0';$('#intent').onchange=intent;intent();
 
 const intentDefinitions=[
-['budget_flexible','가격 상한을 높이는 등 예산 조건을 조정할 수 있는 사용자','예산 범위를 넓혀 대안 찾기'],
-['option_count_flexible','필수로 요구하는 옵션 수를 줄일 수 있는 사용자','필수 옵션을 줄여 대안 찾기'],
-['location_flexible','원래 지역 대신 인접·대체 지역도 고려할 수 있는 사용자','검색할 지역을 넓히기'],
-['condition_keeper','현재 검색 조건을 유지하려는 사용자','조건 유지와 완화의 선택지를 비교'],
-['query_reframer','검색어 또는 표현을 바꿔 다시 찾으려는 사용자','연관 검색어로 다시 검색'],
-['rapid_resolver','빠르게 결과를 찾는 것을 우선하는 사용자','회복 방법을 단계별로 안내']
+['budget_flexible','가격 상한을 높이는 등 예산 조건을 조정할 수 있는 사용자','행동 신호: 최대가격 상향 또는 가격 필터 해제. 가격을 바꿨다는 이유만으로 이 의도군에 자동 배정하지 않음.'],
+['option_count_flexible','필수로 요구하는 옵션 수를 줄일 수 있는 사용자','행동 신호: 요구 옵션 수 감소. 편의시설 종류별 해제가 아니라 옵션 개수 기준.'],
+['location_flexible','원래 지역 대신 인접·대체 지역도 고려할 수 있는 사용자','행동 신호: 인접·대체 지역 선택. 지역 변경의 실제 회복 여부는 의도 판정에 사용하지 않음.'],
+['condition_keeper','현재 검색 조건을 유지하려는 사용자','행동 신호: 동일 조건 반복 또는 조건 강화 경향. 반복 횟수 임계값은 현재 연결 자료에 없음.'],
+['query_reframer','검색어 또는 표현을 바꿔 다시 찾으려는 사용자','행동 신호: 검색어 수정 또는 연관어 선택. 지역·조건 동시 변경 시 단일 의도 우선순위는 확인되지 않음.'],
+['rapid_resolver','빠르게 결과를 찾는 것을 우선하는 사용자','행동 신호: 지역·가격·필터 복합 변경. 빠름을 판정하는 시간 임계값은 현재 연결 자료에 없음.']
 ];
-$('#intent-cards').innerHTML=intents.map((x,i)=>`<article class="segment-card"><span class="label">${intentDefinitions[i][0]}</span><h3>${x[0]}</h3><p class="criterion"><b>분류 기준 · 문서 정의</b>${intentDefinitions[i][1]}</p><p>${intentDefinitions[i][2]}</p><p class="mapping">연결 개선안: ${x[1]}<br>연결 가설: ${x[2]}</p><button data-intent-card="${i}">이 의도군의 A/B 연결 보기 →</button></article>`).join('');
+$('#intent-cards').innerHTML=intents.map((x,i)=>`<article class="segment-card"><span class="label">${intentDefinitions[i][0]}</span><h3>${x[0]}</h3><p class="criterion"><b>의도 정의 · 배정값 미연결</b>${intentDefinitions[i][1]}</p><p>${intentDefinitions[i][2]}</p><p class="mapping">연결 개선안: ${x[1]}<br>연결 가설: ${x[2]}</p><button data-intent-card="${i}">이 의도군의 A/B 연결 보기 →</button></article>`).join('');
 const outcomeDefinitions=[
-'첫 검색 결과가 1개 이상이고, 같은 세션에 호텔 클릭이 1회 이상 있음',
+'첫 검색 결과가 1개 이상이고, 같은 세션에 호텔 클릭이 1회 이상 있음. 첫 검색에서의 클릭이나 예약 성공을 뜻하지 않음',
 '첫 검색 결과가 1개 이상이지만, 같은 세션에 호텔 클릭이 없음',
-'첫 검색 결과가 0개이고, 이후 검색 중 결과가 1개 이상 나온 검색이 있음',
-'첫 검색 결과가 0개이고, 이후에도 결과가 1개 이상 나온 검색이 없음'
+'첫 검색 결과가 0개이고, 이후 검색 중 결과가 1개 이상 나온 검색이 있음. 바로 다음 검색일 필요는 없고 클릭도 필수 조건이 아님',
+'첫 검색 결과가 0개이고, 이후에도 결과가 1개 이상 나온 검색이 없음. 후속 검색 기록 자체가 없는 세션도 포함'
 ];
 $('#outcome-cards').innerHTML=D.segments.map((r,i)=>`<article class="segment-card outcome" style="--segment-color:${colors[i]}"><span class="label">SG${i+1} · 검색 후 성과군</span><h3>${r.name}</h3><div class="value">${fmt(r.n)}<span>세션 · ${pct(r.n,r.d)}%</span></div><p class="criterion"><b>분류 기준 · 실제 집계</b>${outcomeDefinitions[i]}</p><p class="mapping">분모: 선택한 ${fmt(r.d)}세션<br>한 세션은 한 성과군에만 포함</p></article>`).join('');
 document.querySelectorAll('[data-intent-card]').forEach(b=>b.onclick=()=>{page(2);$('#intent').value=b.dataset.intentCard;intent();$('#intent').scrollIntoView({block:'center'});$('#intent').focus({preventScroll:true})});
@@ -102,6 +102,7 @@ const slides=[
 ['선택한 데이터의 전체 현황',0,['#kpis','#search-branches']],
 ['결과 없음 이후의 회복 퍼널',0,['#funnel-filter-note','#recovery-funnel','#funnel-comparison']],
 ['어떤 변경 뒤에 결과를 찾았는가?',1,['#method-bars']],
+['세그먼트를 나눈 기준',0,['#segment-rules']],
 ['검색의도에 따른 6개 세그먼트',0,['#intent-cards']],
 ['검색결과에 따른 4개 성과 세그먼트',0,['#outcome-cards','#segment-donut']],
 ['기간별 검색 결과 없음 추세',0,['#timeline']],
