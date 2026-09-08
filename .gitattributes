@@ -1,3 +1,4 @@
 09_단계별[[:space:]]분석/2단계_1000건_증감_분석/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
 03_데이터모델링/합성데이터/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
 09_단계별[[:space:]]분석/3단계_10000건_증감_분석/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
+09_단계별[[:space:]]분석/3단계_10000건_증감_분석/**/*.zip filter=lfs diff=lfs merge=lfs -text
