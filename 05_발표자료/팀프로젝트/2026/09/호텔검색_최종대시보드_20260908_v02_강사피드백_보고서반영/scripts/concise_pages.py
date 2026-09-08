@@ -9,6 +9,16 @@ def ab_page(root):
  plot=bars([(r['metric'],[(r['control_n'],r['control_d']),(r['treatment_n'],r['treatment_d'])]) for r in wanted],['대조군 C','실험군 T'])
  content='<div class="label">03 · 합성 A/B 비교</div><h1>실패는 줄었고,<br>상세 진입도 좋아졌을까?</h1><p class="lead">C/T 각 5,000명 · 같은 사전 프로필 5,000쌍 · 2028-02-01~07 UTC. 합성 탐색 결과이며 실제 사용자 A/B는 아닙니다.</p>'
  content+=card('핵심 지표 4개 · 대조군과 실험군',plot,'분모: 0건률=전체 검색 / 즉시 회복=0건 후속 검색 / 최종 회복=0건 경험 세션 / 상세 진입=결과 있음 검색','report-summary')
+ content+=card('이 A/B는 어떤 가설을 확인하나?','<div class="scroll"><table><thead><tr><th>연결 가설</th><th>비교 대상</th><th>확인하려는 효과</th><th>현재 판단</th></tr></thead><tbody><tr><th>H1 · 전체 회복 개선</th><td>전체 C/T 각 5,000명</td><td>복합 개입이 0건 후 즉시 회복률을 높이는가?</td><td>16.90% → 22.02% · +5.12%p. 합성 개입의 개선 확인, 조건 완화 단독 효과는 미분리.</td></tr><tr><th>H2 · 조건별 효과 차이</th><td>첫 검색의 가격 설정 여부·옵션 0/1/2/3개</td><td>각 조건군 안의 회복률 차이 Δ=T−C와 군 사이 Δ의 차이 비교</td><td>아래 조건별 합성 비교 가능. 군 간 차이의 통계적 검증과 실제 의도군 효과는 별도.</td></tr><tr><th>H5 · 일본 지역 확대</th><td>일본 도시·세부지역별 제안 대상 C/T</td><td>지역 확대 제안의 선택·회복 효과</td><td>현재 합성 DB에 일본 도시·제안 로그가 없어 미검증. 일반 지역 코드 비교는 대체 증거가 아님.</td></tr></tbody></table></div><p class="meta">01의 행동 추정군은 재검색 후 배정된 설명용 군입니다. 이 A/B의 H2에는 첫 검색 가격·옵션 조건을 사용합니다. 가격 설정은 예산 유연성과 같지 않습니다.</p>','가설 → 세그먼트 → 지표 → 판정','ab-hypothesis-map')
+ for dim in ['가격 조건','옵션 수']:
+  subset=[r for r in o['ab_conditions'] if r['dimension']==dim];levels=list(dict.fromkeys(r['segment'] for r in subset));rows=[];deltas=[]
+  for level in levels:
+   c,t=[next(r for r in subset if r['segment']==level and r['arm']==arm) for arm in ['control','treatment']]
+   label=level+'개' if dim=='옵션 수' else level
+   rows.append((label,[(c['recovered'],c['followup']),(t['recovered'],t['followup'])]));deltas.append((label,(t['recovered']/t['followup']-c['recovered']/c['followup'])*100))
+  differences=' · '.join(f'{label} {value:+.2f}%p' for label,value in deltas)
+  spread=max(v for _,v in deltas)-min(v for _,v in deltas)
+  content+=card('H2 · '+dim+'에 따라 회복 개선 폭이 다른가?',bars(rows,['대조군 C','실험군 T'])+f'<p><b>군별 즉시 회복률 차이(T−C): {differences}.</b> 최대·최소 개선 폭의 차이는 {spread:.2f}%p입니다.</p><p class="meta">확인 목적: 어떤 초기 조건에서 회복 개선이 더 크게 나타나는지 탐색합니다. 군별 막대의 높이 자체보다 C/T 간격을 비교합니다. 위 차이는 기술통계이며 군×처치 상호작용의 신뢰구간·검정은 아직 산출하지 않아 차이의 유의성이나 우선순위를 확정하지 않습니다.</p>','첫 검색 조건으로 분류 · 합성 10,000명 · 2028-02-01~07 UTC · 즉시 회복 / 0건 후속 검색','ab-h2-'+('price' if dim=='가격 조건' else 'options'))
  s=''
  for v in [0,25,50,75,100]:
   y=300-v*2.4;s+=f'<line x1="60" x2="950" y1="{y}" y2="{y}" stroke="#e3e9ef"/><text x="48" y="{y+4}" text-anchor="end" font-size="13">{v}%</text>'
@@ -19,7 +29,13 @@ def ab_page(root):
    x=60+days.index(r['day'])*890/(len(days)-1);q=r['zero']/r['searches']*100;y=300-q*2.4;points.append(f'{x},{y}');s+=f'<circle cx="{x}" cy="{y}" r="5" fill="{color}"><title>{r["day"]} {arm}: {r["zero"]}/{r["searches"]} · {q:.2f}%</title></circle>'
   s+=f'<polyline points="{" ".join(points)}" fill="none" stroke="{color}" stroke-width="3"/>'
  for i,day in enumerate(days):s+=f'<text x="{60+i*890/(len(days)-1)}" y="330" text-anchor="middle" font-size="13">{day[5:]}</text>'
- content+=card('일별 검색 0건률 · C/T 추이','<div class="path-legend"><span><i style="background:#4569df"></i>대조군 C</span><span><i style="background:#219a87"></i>실험군 T</span></div>'+svg(s)+'<p class="meta">분모: 각 날짜·집단의 전체 검색. 점에 마우스를 올리면 분자·분모를 확인합니다. 마지막 날은 03:47 UTC까지이며 합성 시간축으로 실제 서비스 추이를 뜻하지 않습니다.</p>','2028-02-01~07 UTC · 동일 날짜의 C/T 비교','ab-daily')
+ daily_pairs=[]
+ for day in days:
+  c,t=[next(r for r in o['ab_daily'] if r['day']==day and r['arm']==arm) for arm in ['control','treatment']]
+  daily_pairs.append((day,(t['zero']/t['searches']-c['zero']/c['searches'])*100))
+ full=[v for day,v in daily_pairs if day!=days[-1]]
+ daily_read=f'<p><b>무엇을 확인하나?</b> 전체 0건률 차이가 특정 하루에만 집중되는지, 날짜별로도 같은 방향인지 점검하는 H1 보조 진단입니다.</p><p><b>관측 결과:</b> {len(days)}개 날짜 중 {sum(v<0 for day,v in daily_pairs)}개에서 T의 0건률이 C보다 낮습니다. 마지막 부분 날짜를 제외한 일별 T−C 차이는 {min(full):+.2f}~{max(full):+.2f}%p입니다. 마지막 날짜({days[-1]})는 {daily_pairs[-1][1]:+.2f}%p로 방향이 반대이며, 일부 시간만 포함한 구성 차이를 함께 확인해야 합니다.</p><p class="meta">이는 합성 실행 안에서 방향이 얼마나 일관적인지 보여줍니다. 학습 효과·요일 효과·실제 운영 안정성의 증거는 아닙니다. 일별 사용자 구성과 반복 검색량이 달라 날짜를 독립 실험처럼 세지 않습니다. H1의 주 판단은 전체 즉시 회복률과 조건부 구간으로 합니다.</p>'
+ content+=card('일별 검색 0건률 · C/T 추이','<div class="path-legend"><span><i style="background:#4569df"></i>대조군 C</span><span><i style="background:#219a87"></i>실험군 T</span></div>'+svg(s)+'<p class="meta">분모: 각 날짜·집단의 전체 검색. 점에 마우스를 올리면 분자·분모를 확인합니다. 마지막 날은 03:47 UTC까지이며 합성 시간축으로 실제 서비스 추이를 뜻하지 않습니다.</p>'+daily_read,'2028-02-01~07 UTC · 동일 날짜의 C/T 비교','ab-daily')
  summary='<div class="scroll"><table><thead><tr><th>지표</th><th>T − C</th><th>조건부 95% 구간</th><th>해석</th></tr></thead><tbody>'
  for i,r in enumerate(wanted):
   summary+=f'<tr><td>{r["metric"]}</td><td>{r["difference"]*100:+.2f}%p</td><td>[{r["ci_low"]*100:+.2f}, {r["ci_high"]*100:+.2f}]%p</td><td>{"개선 근거 부족 · 구간에 0 포함" if i==3 else "합성 시나리오에서 개선 방향"}</td></tr>'

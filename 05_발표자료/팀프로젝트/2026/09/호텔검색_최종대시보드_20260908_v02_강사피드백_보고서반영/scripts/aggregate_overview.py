@@ -167,6 +167,19 @@ assert sum(g['users'] for g in behavior_groups)==10000
 assert sum(g['searches'] for g in behavior_groups)==65355-10000
 assert len({a['user_id'] for a in assignments})==10000
 (dest/'data/behavior_assignments_10000.json').write_text(json.dumps({'version':'behavior_proxy_v1','assignment':'first_search_to_second_search','source_sha256':sha,'rows':assignments},ensure_ascii=False,separators=(',',':'))+'\n')
+# Pre-search condition strata for H2; never use post-treatment behavior proxies here.
+arm_by_user=dict(c.execute('SELECT user_id,sample_set_type FROM UserSynthetic'))
+ab_conditions=[]
+for dim,levels in [('가격 조건',['미설정','설정']),('옵션 수',['0','1','2','3'])]:
+ for level in levels:
+  for arm in ['control','treatment']:
+   selected=[by[sid] for sid,ss in sessions.items() if arm_by_user[ss['user_id']]==arm and (('미설정' if by[sid][0]['price'] is None else '설정') if dim=='가격 조건' else str(by[sid][0]['amenity_count']))==level]
+   rows=[r for seq in selected for r in seq];pairs=[(a,b) for seq in selected for a,b in zip(seq,seq[1:]) if a['total_result_count']==0]
+   ab_conditions.append(dict(dimension=dim,segment=level,arm=arm,users=len(selected),searches=len(rows),zero=sum(r['total_result_count']==0 for r in rows),followup=len(pairs),recovered=sum(b['total_result_count']>0 for a,b in pairs)))
+for dim in ['가격 조건','옵션 수']:
+ for arm in ['control','treatment']:
+  selected=[r for r in ab_conditions if r['dimension']==dim and r['arm']==arm]
+  assert sum(r['users'] for r in selected)==5000
 ab_daily=[dict(r) for r in c.execute("SELECT substr(s.search_time,1,10) day,u.sample_set_type arm,COUNT(*) searches,SUM(s.total_result_count=0) zero FROM Search s JOIN SessionSynthetic x USING(session_id) JOIN UserSynthetic u ON x.user_id=u.user_id GROUP BY 1,2 ORDER BY 1,2")]
-out={'behavior_groups':behavior_groups,'behavior_version':'behavior_proxy_v1','ab_daily':ab_daily,'option_summary' :option_summary,'option_boxes':option_boxes,'topic_conversion':topic_conversion,'option_conversion':option_conversion,'retention':retention,'condition_transitions':list(transitions.values()),'cities':cities,'city_transitions':city_transitions,'original_period':original_period,'source':source_path,'sha256':sha,'start':start,'end':end,'grain':grain,'counts':counts,'trend':sorted(trend.values(),key=lambda r:r['label']),'experience':exp,'profiles':profiles,'filters':list(filters.values()),'sequence':seq,'cohort_patterns':cohort_rows,'kpi_baseline':kpi_baseline,'keywords':keyword_rows,'funnel':funnel,'events':[dict(r) for r in c.execute('SELECT event_type,COUNT(*) n FROM ActionEvent GROUP BY event_type')]}
+out={'ab_conditions':ab_conditions,'behavior_groups':behavior_groups,'behavior_version':'behavior_proxy_v1','ab_daily':ab_daily,'option_summary' :option_summary,'option_boxes':option_boxes,'topic_conversion':topic_conversion,'option_conversion':option_conversion,'retention':retention,'condition_transitions':list(transitions.values()),'cities':cities,'city_transitions':city_transitions,'original_period':original_period,'source':source_path,'sha256':sha,'start':start,'end':end,'grain':grain,'counts':counts,'trend':sorted(trend.values(),key=lambda r:r['label']),'experience':exp,'profiles':profiles,'filters':list(filters.values()),'sequence':seq,'cohort_patterns':cohort_rows,'kpi_baseline':kpi_baseline,'keywords':keyword_rows,'funnel':funnel,'events':[dict(r) for r in c.execute('SELECT event_type,COUNT(*) n FROM ActionEvent GROUP BY event_type')]}
 (dest/'data/overview_10000.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'period':[start,end],'grain':grain,'counts':counts,'events':out['events']},ensure_ascii=False))

@@ -1,4 +1,126 @@
 {
+  "ab_conditions": [
+    {
+      "dimension": "가격 조건",
+      "segment": "미설정",
+      "arm": "control",
+      "users": 1202,
+      "searches": 8612,
+      "zero": 4406,
+      "followup": 4204,
+      "recovered": 671
+    },
+    {
+      "dimension": "가격 조건",
+      "segment": "미설정",
+      "arm": "treatment",
+      "users": 1202,
+      "searches": 7464,
+      "zero": 3152,
+      "followup": 3013,
+      "recovered": 685
+    },
+    {
+      "dimension": "가격 조건",
+      "segment": "설정",
+      "arm": "control",
+      "users": 3798,
+      "searches": 24960,
+      "zero": 12355,
+      "followup": 11731,
+      "recovered": 2022
+    },
+    {
+      "dimension": "가격 조건",
+      "segment": "설정",
+      "arm": "treatment",
+      "users": 3798,
+      "searches": 24319,
+      "zero": 10701,
+      "followup": 10236,
+      "recovered": 2233
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "0",
+      "arm": "control",
+      "users": 1237,
+      "searches": 8237,
+      "zero": 4100,
+      "followup": 3906,
+      "recovered": 675
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "0",
+      "arm": "treatment",
+      "users": 1237,
+      "searches": 8022,
+      "zero": 3512,
+      "followup": 3354,
+      "recovered": 737
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "1",
+      "arm": "control",
+      "users": 1240,
+      "searches": 8315,
+      "zero": 4205,
+      "followup": 3983,
+      "recovered": 664
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "1",
+      "arm": "treatment",
+      "users": 1240,
+      "searches": 7798,
+      "zero": 3420,
+      "followup": 3279,
+      "recovered": 724
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "2",
+      "arm": "control",
+      "users": 1288,
+      "searches": 8834,
+      "zero": 4450,
+      "followup": 4233,
+      "recovered": 693
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "2",
+      "arm": "treatment",
+      "users": 1288,
+      "searches": 8117,
+      "zero": 3625,
+      "followup": 3446,
+      "recovered": 708
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "3",
+      "arm": "control",
+      "users": 1235,
+      "searches": 8186,
+      "zero": 4006,
+      "followup": 3813,
+      "recovered": 661
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "3",
+      "arm": "treatment",
+      "users": 1235,
+      "searches": 7846,
+      "zero": 3296,
+      "followup": 3170,
+      "recovered": 749
+    }
+  ],
   "behavior_groups": [
     {
       "code": "budget_flexible",
