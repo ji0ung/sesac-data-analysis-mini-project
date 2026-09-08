@@ -100,12 +100,11 @@ function renderGoal(){const input=$('#goal-rate'),raw=input.value.trim(),target=
 $('#goal-rate').oninput=renderGoal;$('#clear-goal').onclick=()=>{$('#goal-rate').value='';renderGoal();};renderGoal();
 
 const slides=[
-['결과가 없을 때, 다시 찾게 하려면?',4,['#template-story-topic']],
+['재검색은 이어지지만, 즉시 회복 17.1%에서 가장 크게 빠집니다',4,['#template-story-topic']],
 ['왜 검색 회복에 주목했는가?',4,['#template-story-problem']],
 ['전체 데이터의 전체 현황',0,['#template-story-overview']],
 ['CARD H · 검색 단위로 다시 계산한 19.5%',0,['#template-card-h']],
 ['결과 없음 이후의 회복 퍼널',0,['#template-story-funnel']],
-['검색어 입력 후 회복·클릭 흐름',0,['#template-after-search']],
 ['가설 1 · 조건 완화가 즉시 회복률을 높이는가?',1,['#template-hypothesis-1']],
 ['가설 2 · 조건 완화 효과는 검색의도별로 다른가?',1,['#template-hypothesis-2']],
 ['가설 3 · 지역 확대 제안이 결과 회복으로 이어지는가?',1,['#template-hypothesis-3']],
@@ -119,7 +118,7 @@ const slides=[
 ['[부록] StayTrace · 데이터를 수집한 과정',4,['#template-site_entry']],
 ['부록 · 팀원 구성 및 논문·데이터셋',4,['#template-team','#template-research']]
 ];let slideIndex=0;
-const agendaGroups=[['기획과 배경',0,2],['전체 현황과 지표 검증',2,6],['가설과 검증',6,9],['검색의도와 개선안',9,11],['결론',11,12],['데이터와 한계',12,14],['부록',14,18]];
+const agendaGroups=[['기획과 배경',0,2],['전체 현황과 지표 검증',2,5],['가설과 검증',5,8],['검색의도와 개선안',8,10],['결론',10,11],['데이터와 한계',11,13],['부록',13,17]];
 const agendaHTML=agendaGroups.map(([name,start,end])=>`<section><h3>${name} · ${start+1}~${end}장</h3><ol start="${start+1}">${slides.slice(start,end).map(([title],i)=>`<li><button type="button" data-slide-jump="${start+i}">${title}</button></li>`).join('')}</ol></section>`).join('');
 ['#dashboard-agenda','#presentation-agenda'].forEach(id=>$(id).innerHTML=agendaHTML);
 document.querySelectorAll('[data-slide-jump]').forEach(button=>button.onclick=()=>{document.body.classList.add('presenting');$('#presentation-mode').setAttribute('aria-pressed','true');$('#presentation-mode').textContent='대시보드로 돌아가기';document.querySelectorAll('details').forEach(d=>d.open=false);slideIndex=Number(button.dataset.slideJump);renderSlide();$('#slide-title').focus({preventScroll:true});});

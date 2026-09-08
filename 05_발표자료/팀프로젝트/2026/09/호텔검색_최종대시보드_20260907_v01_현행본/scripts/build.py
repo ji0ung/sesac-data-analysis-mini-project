@@ -32,14 +32,14 @@ def render():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--check", action="store_true", help="Fail if 2팀발표자료_0908_02.html differs from sources")
+    parser.add_argument("--check", action="store_true", help="Fail if 2팀발표자료_0908_03.html differs from sources")
     args = parser.parse_args()
-    output = ROOT / "2팀발표자료_0908_02.html"
+    output = ROOT / "2팀발표자료_0908_03.html"
     content = render()
     if args.check:
         if not output.exists() or output.read_text(encoding="utf-8") != content:
-            sys.exit("2팀발표자료_0908_02.html is stale. Run scripts/build.py and commit the rebuilt file.")
-        print("PASS: 2팀발표자료_0908_02.html matches source files")
+            sys.exit("2팀발표자료_0908_03.html is stale. Run scripts/build.py and commit the rebuilt file.")
+        print("PASS: 2팀발표자료_0908_03.html matches source files")
     else:
         output.write_text(content, encoding="utf-8")
         print(f"Built {output}")
