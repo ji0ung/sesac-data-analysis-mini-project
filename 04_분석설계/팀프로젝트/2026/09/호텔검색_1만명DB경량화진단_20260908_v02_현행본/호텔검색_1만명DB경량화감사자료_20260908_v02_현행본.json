@@ -1,0 +1,3693 @@
+﻿{
+  "generated_at": "2026-09-07T21:35:38+0900",
+  "source": {
+    "path": "[LOCAL_DOWNLOADS]\\호텔검색_1만명증강_탐색용AB10000_260907_1544_01.sqlite",
+    "bytes": 790736896,
+    "page_size": 4096,
+    "page_count": 193051,
+    "freelist_count": 0,
+    "integrity_check": "ok",
+    "foreign_key_issues": [],
+    "objects": [
+      [
+        "index",
+        "idx_event_search_type",
+        "ActionEvent",
+        "CREATE INDEX idx_event_search_type ON ActionEvent(search_id,event_type)"
+      ],
+      [
+        "index",
+        "idx_event_session_time",
+        "ActionEvent",
+        "CREATE INDEX idx_event_session_time ON ActionEvent(session_id,event_at)"
+      ],
+      [
+        "index",
+        "idx_result_search_rank",
+        "SearchResult",
+        "CREATE INDEX idx_result_search_rank ON SearchResult(search_id,result_rank)"
+      ],
+      [
+        "index",
+        "idx_search_session_time",
+        "Search",
+        "CREATE INDEX idx_search_session_time ON Search(session_id,search_time)"
+      ],
+      [
+        "index",
+        "sqlite_autoindex_ActionEvent_1",
+        "ActionEvent",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_Booking_1",
+        "Booking",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_Hotel_1",
+        "Hotel",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_Room_1",
+        "Room",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchFilter_1",
+        "SearchFilter",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchFilter_2",
+        "SearchFilter",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchResult_1",
+        "SearchResult",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchResult_2",
+        "SearchResult",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchResult_3",
+        "SearchResult",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchTransition_1",
+        "SearchTransition",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_Search_1",
+        "Search",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_Search_2",
+        "Search",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SessionSynthetic_1",
+        "SessionSynthetic",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SessionSynthetic_2",
+        "SessionSynthetic",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SimulationRun_1",
+        "SimulationRun",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_UserSynthetic_1",
+        "UserSynthetic",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_UserSynthetic_2",
+        "UserSynthetic",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex__generation_metadata_1",
+        "_generation_metadata",
+        null
+      ],
+      [
+        "table",
+        "ActionEvent",
+        "ActionEvent",
+        "CREATE TABLE ActionEvent(event_id TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES UserSynthetic(user_id),session_id TEXT NOT NULL REFERENCES SessionSynthetic(session_id),search_id TEXT REFERENCES Search(search_id),hotel_id TEXT REFERENCES Hotel(hotel_id),event_type TEXT NOT NULL,event_at TEXT NOT NULL,review_completed_at TEXT CHECK(review_completed_at IS NULL),review_text TEXT CHECK(review_text IS NULL))"
+      ],
+      [
+        "table",
+        "Booking",
+        "Booking",
+        "CREATE TABLE Booking(booking_id TEXT PRIMARY KEY,user_id TEXT REFERENCES UserSynthetic(user_id),hotel_id TEXT REFERENCES Hotel(hotel_id),room_id TEXT REFERENCES Room(room_id))"
+      ],
+      [
+        "table",
+        "Hotel",
+        "Hotel",
+        "CREATE TABLE Hotel(hotel_id TEXT PRIMARY KEY,hotel_name TEXT NOT NULL)"
+      ],
+      [
+        "table",
+        "Room",
+        "Room",
+        "CREATE TABLE Room(room_id TEXT PRIMARY KEY,hotel_id TEXT NOT NULL REFERENCES Hotel(hotel_id))"
+      ],
+      [
+        "table",
+        "Search",
+        "Search",
+        "CREATE TABLE Search(search_id TEXT PRIMARY KEY,session_id TEXT NOT NULL REFERENCES SessionSynthetic(session_id),search_sequence INTEGER NOT NULL,search_time TEXT NOT NULL,total_result_count INTEGER NOT NULL CHECK(total_result_count>=0),query_text TEXT NOT NULL,destination TEXT NOT NULL,action_type TEXT NOT NULL,UNIQUE(session_id,search_sequence))"
+      ],
+      [
+        "table",
+        "SearchFilter",
+        "SearchFilter",
+        "CREATE TABLE SearchFilter(search_filter_id TEXT PRIMARY KEY,search_id TEXT NOT NULL UNIQUE REFERENCES Search(search_id),price INTEGER,amenity_count INTEGER NOT NULL,region TEXT NOT NULL,property_type TEXT CHECK(property_type IS NULL),property_grade INTEGER CHECK(property_grade IS NULL))"
+      ],
+      [
+        "table",
+        "SearchResult",
+        "SearchResult",
+        "CREATE TABLE SearchResult(search_result_id TEXT PRIMARY KEY,search_id TEXT NOT NULL REFERENCES Search(search_id),hotel_id TEXT NOT NULL REFERENCES Hotel(hotel_id),room_id TEXT NOT NULL REFERENCES Room(room_id),result_rank INTEGER NOT NULL CHECK(result_rank>0),UNIQUE(search_id,hotel_id),UNIQUE(search_id,result_rank))"
+      ],
+      [
+        "table",
+        "SearchTransition",
+        "SearchTransition",
+        "CREATE TABLE SearchTransition(transition_id TEXT PRIMARY KEY,session_id TEXT NOT NULL REFERENCES SessionSynthetic(session_id),from_search_id TEXT NOT NULL REFERENCES Search(search_id),to_search_id TEXT NOT NULL REFERENCES Search(search_id),action_type TEXT NOT NULL,recovered INTEGER NOT NULL CHECK(recovered IN(0,1)))"
+      ],
+      [
+        "table",
+        "SessionSynthetic",
+        "SessionSynthetic",
+        "CREATE TABLE SessionSynthetic(session_id TEXT PRIMARY KEY,user_id TEXT NOT NULL UNIQUE REFERENCES UserSynthetic(user_id),pair_id TEXT NOT NULL,started_at TEXT NOT NULL,ended_at TEXT NOT NULL,outcome_segment TEXT NOT NULL CHECK(outcome_segment IN('SG1','SG2','SG3','SG4')),treatment_exposed INTEGER NOT NULL CHECK(treatment_exposed IN(0,1)))"
+      ],
+      [
+        "table",
+        "SimulationRun",
+        "SimulationRun",
+        "CREATE TABLE SimulationRun(run_id TEXT PRIMARY KEY,random_seed INTEGER NOT NULL,mode TEXT NOT NULL CHECK(mode IN('unit_test','smoke_test','calibration','production')),scenario TEXT NOT NULL,created_at TEXT NOT NULL,disclaimer TEXT NOT NULL)"
+      ],
+      [
+        "table",
+        "UserSynthetic",
+        "UserSynthetic",
+        "CREATE TABLE UserSynthetic(user_id TEXT PRIMARY KEY,pair_id TEXT NOT NULL,sample_set_type TEXT NOT NULL CHECK(sample_set_type IN('control','treatment')),sample_stratum TEXT NOT NULL,simulation_run_id TEXT NOT NULL REFERENCES SimulationRun(run_id),random_seed INTEGER NOT NULL,source_session_id TEXT NOT NULL,treatment_scenario TEXT NOT NULL,generation_model_version TEXT NOT NULL,age_group TEXT CHECK(age_group IS NULL),UNIQUE(pair_id,sample_set_type),CHECK((sample_set_type='control' AND treatment_scenario='none') OR (sample_set_type='treatment' AND treatment_scenario IN('conservative','expected','optimistic'))))"
+      ],
+      [
+        "table",
+        "_generation_metadata",
+        "_generation_metadata",
+        "CREATE TABLE _generation_metadata(key TEXT PRIMARY KEY,value TEXT NOT NULL)"
+      ]
+    ],
+    "tables": [
+      {
+        "name": "ActionEvent",
+        "rows": 2152148,
+        "columns": [
+          {
+            "name": "event_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 2152148,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 15.293974206234887,
+            "max_text_length": 17,
+            "storage_types": {
+              "text": 2152148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "user_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 10000,
+            "distinct_ratio": 0.004646520592449962,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 7.0,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 2152148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "session_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 10000,
+            "distinct_ratio": 0.004646520592449962,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 7.0,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 2152148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 65355,
+            "distinct_ratio": 0.030367335331956725,
+            "nulls": 10000,
+            "null_ratio": 0.004646520592449962,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 2142148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 1000,
+            "distinct_ratio": 0.00046465205924499614,
+            "nulls": 75355,
+            "null_ratio": 0.03501385592440669,
+            "avg_text_length": 5.0,
+            "max_text_length": 5,
+            "storage_types": {
+              "text": 2076793,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "event_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 5,
+            "distinct_ratio": 2.3232602962249807e-06,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 15.836064713021596,
+            "max_text_length": 17,
+            "storage_types": {
+              "text": 2152148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "event_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 496717,
+            "distinct_ratio": 0.23080057691199676,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 2152148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "review_completed_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 2152148,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "review_text",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 2152148,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Search",
+            "search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "SessionSynthetic",
+            "session_id",
+            "session_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            3,
+            0,
+            "UserSynthetic",
+            "user_id",
+            "user_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE ActionEvent(event_id TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES UserSynthetic(user_id),session_id TEXT NOT NULL REFERENCES SessionSynthetic(session_id),search_id TEXT REFERENCES Search(search_id),hotel_id TEXT REFERENCES Hotel(hotel_id),event_type TEXT NOT NULL,event_at TEXT NOT NULL,review_completed_at TEXT CHECK(review_completed_at IS NULL),review_text TEXT CHECK(review_text IS NULL))"
+      },
+      {
+        "name": "Booking",
+        "rows": 0,
+        "columns": [
+          {
+            "name": "booking_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "user_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "room_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Room",
+            "room_id",
+            "room_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "UserSynthetic",
+            "user_id",
+            "user_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE Booking(booking_id TEXT PRIMARY KEY,user_id TEXT REFERENCES UserSynthetic(user_id),hotel_id TEXT REFERENCES Hotel(hotel_id),room_id TEXT REFERENCES Room(room_id))"
+      },
+      {
+        "name": "Hotel",
+        "rows": 1000,
+        "columns": [
+          {
+            "name": "hotel_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.0,
+            "max_text_length": 5,
+            "storage_types": {
+              "text": 1000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_name",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 10.0,
+            "max_text_length": 10,
+            "storage_types": {
+              "text": 1000,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [],
+        "create_sql": "CREATE TABLE Hotel(hotel_id TEXT PRIMARY KEY,hotel_name TEXT NOT NULL)"
+      },
+      {
+        "name": "Room",
+        "rows": 1000,
+        "columns": [
+          {
+            "name": "room_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.0,
+            "max_text_length": 5,
+            "storage_types": {
+              "text": 1000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.0,
+            "max_text_length": 5,
+            "storage_types": {
+              "text": 1000,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE Room(room_id TEXT PRIMARY KEY,hotel_id TEXT NOT NULL REFERENCES Hotel(hotel_id))"
+      },
+      {
+        "name": "Search",
+        "rows": 65355,
+        "columns": [
+          {
+            "name": "search_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 65355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "session_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 10000,
+            "distinct_ratio": 0.15301048121796343,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 7.0,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_sequence",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 31,
+            "distinct_ratio": 0.00047433249177568663,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_time",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 61246,
+            "distinct_ratio": 0.9371279932675388,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "total_result_count",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 30,
+            "distinct_ratio": 0.0004590314436538903,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "query_text",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 18141,
+            "distinct_ratio": 0.2775763139775075,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 21.7189197460026,
+            "max_text_length": 29,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "destination",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 4,
+            "distinct_ratio": 6.120419248718538e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.997352918674929,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "action_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 5,
+            "distinct_ratio": 7.650524060898171e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 12.565006502945451,
+            "max_text_length": 16,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "SessionSynthetic",
+            "session_id",
+            "session_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE Search(search_id TEXT PRIMARY KEY,session_id TEXT NOT NULL REFERENCES SessionSynthetic(session_id),search_sequence INTEGER NOT NULL,search_time TEXT NOT NULL,total_result_count INTEGER NOT NULL CHECK(total_result_count>=0),query_text TEXT NOT NULL,destination TEXT NOT NULL,action_type TEXT NOT NULL,UNIQUE(session_id,search_sequence))"
+      },
+      {
+        "name": "SearchFilter",
+        "rows": 65355,
+        "columns": [
+          {
+            "name": "search_filter_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 65355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 11.0,
+            "max_text_length": 11,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 65355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "price",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 3,
+            "distinct_ratio": 4.590314436538903e-05,
+            "nulls": 23910,
+            "null_ratio": 0.3658480605921506,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 41445,
+              "real": 0
+            }
+          },
+          {
+            "name": "amenity_count",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 4,
+            "distinct_ratio": 6.120419248718538e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "region",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 4,
+            "distinct_ratio": 6.120419248718538e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.997352918674929,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "property_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 65355,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "property_grade",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 65355,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Search",
+            "search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SearchFilter(search_filter_id TEXT PRIMARY KEY,search_id TEXT NOT NULL UNIQUE REFERENCES Search(search_id),price INTEGER,amenity_count INTEGER NOT NULL,region TEXT NOT NULL,property_type TEXT CHECK(property_type IS NULL),property_grade INTEGER CHECK(property_grade IS NULL))"
+      },
+      {
+        "name": "SearchResult",
+        "rows": 2023419,
+        "columns": [
+          {
+            "name": "search_result_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 2023419,
+            "distinct": 2023419,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 14.411551932644697,
+            "max_text_length": 16,
+            "storage_types": {
+              "text": 2023419,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 34741,
+            "distinct_ratio": 0.017169454275164957,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 2023419,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 1000,
+            "distinct_ratio": 0.0004942130127274677,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.0,
+            "max_text_length": 5,
+            "storage_types": {
+              "text": 2023419,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "room_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 1000,
+            "distinct_ratio": 0.0004942130127274677,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.0,
+            "max_text_length": 5,
+            "storage_types": {
+              "text": 2023419,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "result_rank",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 1000,
+            "distinct_ratio": 0.0004942130127274677,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2023419,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Room",
+            "room_id",
+            "room_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "Search",
+            "search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SearchResult(search_result_id TEXT PRIMARY KEY,search_id TEXT NOT NULL REFERENCES Search(search_id),hotel_id TEXT NOT NULL REFERENCES Hotel(hotel_id),room_id TEXT NOT NULL REFERENCES Room(room_id),result_rank INTEGER NOT NULL CHECK(result_rank>0),UNIQUE(search_id,hotel_id),UNIQUE(search_id,result_rank))"
+      },
+      {
+        "name": "SearchTransition",
+        "rows": 55355,
+        "columns": [
+          {
+            "name": "transition_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 55355,
+            "distinct": 55355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 11.0,
+            "max_text_length": 11,
+            "storage_types": {
+              "text": 55355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "session_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 7814,
+            "distinct_ratio": 0.14116159335200074,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 7.0,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 55355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "from_search_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 55355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 55355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "to_search_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 55355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 55355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "action_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 4,
+            "distinct_ratio": 7.22608617107759e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 13.570336916267726,
+            "max_text_length": 16,
+            "storage_types": {
+              "text": 55355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "recovered",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 2,
+            "distinct_ratio": 3.613043085538795e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 55355,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Search",
+            "to_search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Search",
+            "from_search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "SessionSynthetic",
+            "session_id",
+            "session_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SearchTransition(transition_id TEXT PRIMARY KEY,session_id TEXT NOT NULL REFERENCES SessionSynthetic(session_id),from_search_id TEXT NOT NULL REFERENCES Search(search_id),to_search_id TEXT NOT NULL REFERENCES Search(search_id),action_type TEXT NOT NULL,recovered INTEGER NOT NULL CHECK(recovered IN(0,1)))"
+      },
+      {
+        "name": "SessionSynthetic",
+        "rows": 10000,
+        "columns": [
+          {
+            "name": "session_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 7.0,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "user_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 7.0,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "pair_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 5000,
+            "distinct_ratio": 0.5,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 6.0,
+            "max_text_length": 6,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "started_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "ended_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 9908,
+            "distinct_ratio": 0.9908,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "outcome_segment",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 3,
+            "distinct_ratio": 0.0003,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 3.0,
+            "max_text_length": 3,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "treatment_exposed",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 2,
+            "distinct_ratio": 0.0002,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "UserSynthetic",
+            "user_id",
+            "user_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SessionSynthetic(session_id TEXT PRIMARY KEY,user_id TEXT NOT NULL UNIQUE REFERENCES UserSynthetic(user_id),pair_id TEXT NOT NULL,started_at TEXT NOT NULL,ended_at TEXT NOT NULL,outcome_segment TEXT NOT NULL CHECK(outcome_segment IN('SG1','SG2','SG3','SG4')),treatment_exposed INTEGER NOT NULL CHECK(treatment_exposed IN(0,1)))"
+      },
+      {
+        "name": "SimulationRun",
+        "rows": 1,
+        "columns": [
+          {
+            "name": "run_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 20.0,
+            "max_text_length": 20,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "random_seed",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 1,
+              "real": 0
+            }
+          },
+          {
+            "name": "mode",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 10.0,
+            "max_text_length": 10,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "scenario",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 8.0,
+            "max_text_length": 8,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "created_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 32.0,
+            "max_text_length": 32,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "disclaimer",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 50.0,
+            "max_text_length": 50,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [],
+        "create_sql": "CREATE TABLE SimulationRun(run_id TEXT PRIMARY KEY,random_seed INTEGER NOT NULL,mode TEXT NOT NULL CHECK(mode IN('unit_test','smoke_test','calibration','production')),scenario TEXT NOT NULL,created_at TEXT NOT NULL,disclaimer TEXT NOT NULL)"
+      },
+      {
+        "name": "UserSynthetic",
+        "rows": 10000,
+        "columns": [
+          {
+            "name": "user_id",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 7.0,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "pair_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 5000,
+            "distinct_ratio": 0.5,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 6.0,
+            "max_text_length": 6,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "sample_set_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 2,
+            "distinct_ratio": 0.0002,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 8.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "sample_stratum",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 72,
+            "distinct_ratio": 0.0072,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 37.8374,
+            "max_text_length": 41,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "simulation_run_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 1,
+            "distinct_ratio": 0.0001,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 20.0,
+            "max_text_length": 20,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "random_seed",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 1,
+            "distinct_ratio": 0.0001,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "source_session_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 992,
+            "distinct_ratio": 0.0992,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "treatment_scenario",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 2,
+            "distinct_ratio": 0.0002,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 6.0,
+            "max_text_length": 8,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "generation_model_version",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 1,
+            "distinct_ratio": 0.0001,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 10.0,
+            "max_text_length": 10,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "age_group",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 10000,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 10000,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "SimulationRun",
+            "simulation_run_id",
+            "run_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE UserSynthetic(user_id TEXT PRIMARY KEY,pair_id TEXT NOT NULL,sample_set_type TEXT NOT NULL CHECK(sample_set_type IN('control','treatment')),sample_stratum TEXT NOT NULL,simulation_run_id TEXT NOT NULL REFERENCES SimulationRun(run_id),random_seed INTEGER NOT NULL,source_session_id TEXT NOT NULL,treatment_scenario TEXT NOT NULL,generation_model_version TEXT NOT NULL,age_group TEXT CHECK(age_group IS NULL),UNIQUE(pair_id,sample_set_type),CHECK((sample_set_type='control' AND treatment_scenario='none') OR (sample_set_type='treatment' AND treatment_scenario IN('conservative','expected','optimistic'))))"
+      },
+      {
+        "name": "_generation_metadata",
+        "rows": 11,
+        "columns": [
+          {
+            "name": "key",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 11,
+            "distinct": 11,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 17.727272727272727,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 11,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "value",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 11,
+            "distinct": 11,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 30.181818181818183,
+            "max_text_length": 64,
+            "storage_types": {
+              "text": 11,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [],
+        "create_sql": "CREATE TABLE _generation_metadata(key TEXT PRIMARY KEY,value TEXT NOT NULL)"
+      }
+    ]
+  },
+  "compact": {
+    "path": "[LOCAL_DOWNLOADS]\\호텔검색_1만명증강_탐색용AB10000_260907_1544_01_ERD보존_정수키_16K.sqlite",
+    "bytes": 393789440,
+    "page_size": 16384,
+    "page_count": 24035,
+    "freelist_count": 0,
+    "integrity_check": "ok",
+    "foreign_key_issues": [],
+    "objects": [
+      [
+        "index",
+        "idx_event_search_type",
+        "ActionEvent",
+        "CREATE INDEX idx_event_search_type ON ActionEvent(search_id,event_type)"
+      ],
+      [
+        "index",
+        "idx_event_session_time",
+        "ActionEvent",
+        "CREATE INDEX idx_event_session_time ON ActionEvent(session_id,event_at)"
+      ],
+      [
+        "index",
+        "idx_search_session_time",
+        "Search",
+        "CREATE INDEX idx_search_session_time ON Search(session_id,search_time)"
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchFilter_1",
+        "SearchFilter",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchResult_1",
+        "SearchResult",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SearchResult_2",
+        "SearchResult",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_Search_1",
+        "Search",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_SessionSynthetic_1",
+        "SessionSynthetic",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_UserSynthetic_1",
+        "UserSynthetic",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex__generation_metadata_1",
+        "_generation_metadata",
+        null
+      ],
+      [
+        "table",
+        "ActionEvent",
+        "ActionEvent",
+        "CREATE TABLE ActionEvent(\n  event_id INTEGER PRIMARY KEY,\n  user_id INTEGER NOT NULL REFERENCES UserSynthetic(user_id),\n  session_id INTEGER NOT NULL REFERENCES SessionSynthetic(session_id),\n  search_id INTEGER REFERENCES Search(search_id),\n  hotel_id INTEGER REFERENCES Hotel(hotel_id),\n  event_type TEXT NOT NULL,\n  event_at TEXT NOT NULL,\n  review_completed_at TEXT CHECK(review_completed_at IS NULL),\n  review_text TEXT CHECK(review_text IS NULL)\n)"
+      ],
+      [
+        "table",
+        "Booking",
+        "Booking",
+        "CREATE TABLE Booking(\n  booking_id INTEGER PRIMARY KEY,\n  user_id INTEGER REFERENCES UserSynthetic(user_id),\n  hotel_id INTEGER REFERENCES Hotel(hotel_id),\n  room_id INTEGER REFERENCES Room(room_id)\n)"
+      ],
+      [
+        "table",
+        "Hotel",
+        "Hotel",
+        "CREATE TABLE Hotel(\n  hotel_id INTEGER PRIMARY KEY,\n  hotel_name TEXT NOT NULL\n)"
+      ],
+      [
+        "table",
+        "Room",
+        "Room",
+        "CREATE TABLE Room(\n  room_id INTEGER PRIMARY KEY,\n  hotel_id INTEGER NOT NULL REFERENCES Hotel(hotel_id)\n)"
+      ],
+      [
+        "table",
+        "Search",
+        "Search",
+        "CREATE TABLE Search(\n  search_id INTEGER PRIMARY KEY,\n  session_id INTEGER NOT NULL REFERENCES SessionSynthetic(session_id),\n  search_sequence INTEGER NOT NULL,\n  search_time TEXT NOT NULL,\n  total_result_count INTEGER NOT NULL CHECK(total_result_count>=0),\n  query_text TEXT NOT NULL,\n  destination TEXT NOT NULL,\n  action_type TEXT NOT NULL,\n  UNIQUE(session_id,search_sequence)\n)"
+      ],
+      [
+        "table",
+        "SearchFilter",
+        "SearchFilter",
+        "CREATE TABLE SearchFilter(\n  search_filter_id INTEGER PRIMARY KEY,\n  search_id INTEGER NOT NULL UNIQUE REFERENCES Search(search_id),\n  price INTEGER,\n  amenity_count INTEGER NOT NULL,\n  region TEXT NOT NULL,\n  property_type TEXT CHECK(property_type IS NULL),\n  property_grade INTEGER CHECK(property_grade IS NULL)\n)"
+      ],
+      [
+        "table",
+        "SearchResult",
+        "SearchResult",
+        "CREATE TABLE SearchResult(\n  search_result_id INTEGER PRIMARY KEY,\n  search_id INTEGER NOT NULL REFERENCES Search(search_id),\n  hotel_id INTEGER NOT NULL REFERENCES Hotel(hotel_id),\n  room_id INTEGER NOT NULL REFERENCES Room(room_id),\n  result_rank INTEGER NOT NULL CHECK(result_rank>0),\n  UNIQUE(search_id,hotel_id),\n  UNIQUE(search_id,result_rank)\n)"
+      ],
+      [
+        "table",
+        "SearchTransition",
+        "SearchTransition",
+        "CREATE TABLE SearchTransition(\n  transition_id INTEGER PRIMARY KEY,\n  session_id INTEGER NOT NULL REFERENCES SessionSynthetic(session_id),\n  from_search_id INTEGER NOT NULL REFERENCES Search(search_id),\n  to_search_id INTEGER NOT NULL REFERENCES Search(search_id),\n  action_type TEXT NOT NULL,\n  recovered INTEGER NOT NULL CHECK(recovered IN(0,1))\n)"
+      ],
+      [
+        "table",
+        "SessionSynthetic",
+        "SessionSynthetic",
+        "CREATE TABLE SessionSynthetic(\n  session_id INTEGER PRIMARY KEY,\n  user_id INTEGER NOT NULL UNIQUE REFERENCES UserSynthetic(user_id),\n  pair_id INTEGER NOT NULL,\n  started_at TEXT NOT NULL,\n  ended_at TEXT NOT NULL,\n  outcome_segment TEXT NOT NULL CHECK(outcome_segment IN('SG1','SG2','SG3','SG4')),\n  treatment_exposed INTEGER NOT NULL CHECK(treatment_exposed IN(0,1))\n)"
+      ],
+      [
+        "table",
+        "SimulationRun",
+        "SimulationRun",
+        "CREATE TABLE SimulationRun(\n  run_id INTEGER PRIMARY KEY,\n  random_seed INTEGER NOT NULL,\n  mode TEXT NOT NULL CHECK(mode IN('unit_test','smoke_test','calibration','production')),\n  scenario TEXT NOT NULL,\n  created_at TEXT NOT NULL,\n  disclaimer TEXT NOT NULL\n)"
+      ],
+      [
+        "table",
+        "UserSynthetic",
+        "UserSynthetic",
+        "CREATE TABLE UserSynthetic(\n  user_id INTEGER PRIMARY KEY,\n  pair_id INTEGER NOT NULL,\n  sample_set_type TEXT NOT NULL CHECK(sample_set_type IN('control','treatment')),\n  sample_stratum TEXT NOT NULL,\n  simulation_run_id INTEGER NOT NULL REFERENCES SimulationRun(run_id),\n  random_seed INTEGER NOT NULL,\n  source_session_id TEXT NOT NULL,\n  treatment_scenario TEXT NOT NULL,\n  generation_model_version TEXT NOT NULL,\n  age_group TEXT CHECK(age_group IS NULL),\n  UNIQUE(pair_id,sample_set_type),\n  CHECK((sample_set_type='control' AND treatment_scenario='none') OR\n        (sample_set_type='treatment' AND treatment_scenario IN('conservative','expected','optimistic')))\n)"
+      ],
+      [
+        "table",
+        "_generation_metadata",
+        "_generation_metadata",
+        "CREATE TABLE _generation_metadata(\n  key TEXT PRIMARY KEY,\n  value TEXT NOT NULL\n)"
+      ]
+    ],
+    "tables": [
+      {
+        "name": "ActionEvent",
+        "rows": 2152148,
+        "columns": [
+          {
+            "name": "event_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 2152148,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2152148,
+              "real": 0
+            }
+          },
+          {
+            "name": "user_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 10000,
+            "distinct_ratio": 0.004646520592449962,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2152148,
+              "real": 0
+            }
+          },
+          {
+            "name": "session_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 10000,
+            "distinct_ratio": 0.004646520592449962,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2152148,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 65355,
+            "distinct_ratio": 0.030367335331956725,
+            "nulls": 10000,
+            "null_ratio": 0.004646520592449962,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2142148,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 1000,
+            "distinct_ratio": 0.00046465205924499614,
+            "nulls": 75355,
+            "null_ratio": 0.03501385592440669,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2076793,
+              "real": 0
+            }
+          },
+          {
+            "name": "event_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 5,
+            "distinct_ratio": 2.3232602962249807e-06,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 15.836064713021596,
+            "max_text_length": 17,
+            "storage_types": {
+              "text": 2152148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "event_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2152148,
+            "distinct": 496717,
+            "distinct_ratio": 0.23080057691199676,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 2152148,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "review_completed_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 2152148,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "review_text",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 2152148,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 2152148,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Search",
+            "search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "SessionSynthetic",
+            "session_id",
+            "session_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            3,
+            0,
+            "UserSynthetic",
+            "user_id",
+            "user_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE ActionEvent(\n  event_id INTEGER PRIMARY KEY,\n  user_id INTEGER NOT NULL REFERENCES UserSynthetic(user_id),\n  session_id INTEGER NOT NULL REFERENCES SessionSynthetic(session_id),\n  search_id INTEGER REFERENCES Search(search_id),\n  hotel_id INTEGER REFERENCES Hotel(hotel_id),\n  event_type TEXT NOT NULL,\n  event_at TEXT NOT NULL,\n  review_completed_at TEXT CHECK(review_completed_at IS NULL),\n  review_text TEXT CHECK(review_text IS NULL)\n)"
+      },
+      {
+        "name": "Booking",
+        "rows": 0,
+        "columns": [
+          {
+            "name": "booking_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "user_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "room_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 0,
+            "distinct": 0,
+            "distinct_ratio": null,
+            "nulls": 0,
+            "null_ratio": null,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Room",
+            "room_id",
+            "room_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "UserSynthetic",
+            "user_id",
+            "user_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE Booking(\n  booking_id INTEGER PRIMARY KEY,\n  user_id INTEGER REFERENCES UserSynthetic(user_id),\n  hotel_id INTEGER REFERENCES Hotel(hotel_id),\n  room_id INTEGER REFERENCES Room(room_id)\n)"
+      },
+      {
+        "name": "Hotel",
+        "rows": 1000,
+        "columns": [
+          {
+            "name": "hotel_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 1000,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_name",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 10.0,
+            "max_text_length": 10,
+            "storage_types": {
+              "text": 1000,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [],
+        "create_sql": "CREATE TABLE Hotel(\n  hotel_id INTEGER PRIMARY KEY,\n  hotel_name TEXT NOT NULL\n)"
+      },
+      {
+        "name": "Room",
+        "rows": 1000,
+        "columns": [
+          {
+            "name": "room_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 1000,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1000,
+            "distinct": 1000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 1000,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE Room(\n  room_id INTEGER PRIMARY KEY,\n  hotel_id INTEGER NOT NULL REFERENCES Hotel(hotel_id)\n)"
+      },
+      {
+        "name": "Search",
+        "rows": 65355,
+        "columns": [
+          {
+            "name": "search_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 65355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "session_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 10000,
+            "distinct_ratio": 0.15301048121796343,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_sequence",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 31,
+            "distinct_ratio": 0.00047433249177568663,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_time",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 61246,
+            "distinct_ratio": 0.9371279932675388,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "total_result_count",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 30,
+            "distinct_ratio": 0.0004590314436538903,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "query_text",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 18141,
+            "distinct_ratio": 0.2775763139775075,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 21.7189197460026,
+            "max_text_length": 29,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "destination",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 4,
+            "distinct_ratio": 6.120419248718538e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.997352918674929,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "action_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 5,
+            "distinct_ratio": 7.650524060898171e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 12.565006502945451,
+            "max_text_length": 16,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "SessionSynthetic",
+            "session_id",
+            "session_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE Search(\n  search_id INTEGER PRIMARY KEY,\n  session_id INTEGER NOT NULL REFERENCES SessionSynthetic(session_id),\n  search_sequence INTEGER NOT NULL,\n  search_time TEXT NOT NULL,\n  total_result_count INTEGER NOT NULL CHECK(total_result_count>=0),\n  query_text TEXT NOT NULL,\n  destination TEXT NOT NULL,\n  action_type TEXT NOT NULL,\n  UNIQUE(session_id,search_sequence)\n)"
+      },
+      {
+        "name": "SearchFilter",
+        "rows": 65355,
+        "columns": [
+          {
+            "name": "search_filter_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 65355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 65355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "price",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 3,
+            "distinct_ratio": 4.590314436538903e-05,
+            "nulls": 23910,
+            "null_ratio": 0.3658480605921506,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 41445,
+              "real": 0
+            }
+          },
+          {
+            "name": "amenity_count",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 4,
+            "distinct_ratio": 6.120419248718538e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 65355,
+              "real": 0
+            }
+          },
+          {
+            "name": "region",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 65355,
+            "distinct": 4,
+            "distinct_ratio": 6.120419248718538e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 5.997352918674929,
+            "max_text_length": 7,
+            "storage_types": {
+              "text": 65355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "property_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 65355,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "property_grade",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": false,
+            "rows": 65355,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 65355,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Search",
+            "search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SearchFilter(\n  search_filter_id INTEGER PRIMARY KEY,\n  search_id INTEGER NOT NULL UNIQUE REFERENCES Search(search_id),\n  price INTEGER,\n  amenity_count INTEGER NOT NULL,\n  region TEXT NOT NULL,\n  property_type TEXT CHECK(property_type IS NULL),\n  property_grade INTEGER CHECK(property_grade IS NULL)\n)"
+      },
+      {
+        "name": "SearchResult",
+        "rows": 2023419,
+        "columns": [
+          {
+            "name": "search_result_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 2023419,
+            "distinct": 2023419,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2023419,
+              "real": 0
+            }
+          },
+          {
+            "name": "search_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 34741,
+            "distinct_ratio": 0.017169454275164957,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2023419,
+              "real": 0
+            }
+          },
+          {
+            "name": "hotel_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 1000,
+            "distinct_ratio": 0.0004942130127274677,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2023419,
+              "real": 0
+            }
+          },
+          {
+            "name": "room_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 1000,
+            "distinct_ratio": 0.0004942130127274677,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2023419,
+              "real": 0
+            }
+          },
+          {
+            "name": "result_rank",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 2023419,
+            "distinct": 1000,
+            "distinct_ratio": 0.0004942130127274677,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 2023419,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Room",
+            "room_id",
+            "room_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Hotel",
+            "hotel_id",
+            "hotel_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "Search",
+            "search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SearchResult(\n  search_result_id INTEGER PRIMARY KEY,\n  search_id INTEGER NOT NULL REFERENCES Search(search_id),\n  hotel_id INTEGER NOT NULL REFERENCES Hotel(hotel_id),\n  room_id INTEGER NOT NULL REFERENCES Room(room_id),\n  result_rank INTEGER NOT NULL CHECK(result_rank>0),\n  UNIQUE(search_id,hotel_id),\n  UNIQUE(search_id,result_rank)\n)"
+      },
+      {
+        "name": "SearchTransition",
+        "rows": 55355,
+        "columns": [
+          {
+            "name": "transition_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 55355,
+            "distinct": 55355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 55355,
+              "real": 0
+            }
+          },
+          {
+            "name": "session_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 7814,
+            "distinct_ratio": 0.14116159335200074,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 55355,
+              "real": 0
+            }
+          },
+          {
+            "name": "from_search_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 55355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 55355,
+              "real": 0
+            }
+          },
+          {
+            "name": "to_search_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 55355,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 55355,
+              "real": 0
+            }
+          },
+          {
+            "name": "action_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 4,
+            "distinct_ratio": 7.22608617107759e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 13.570336916267726,
+            "max_text_length": 16,
+            "storage_types": {
+              "text": 55355,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "recovered",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 55355,
+            "distinct": 2,
+            "distinct_ratio": 3.613043085538795e-05,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 55355,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "Search",
+            "to_search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "Search",
+            "from_search_id",
+            "search_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            2,
+            0,
+            "SessionSynthetic",
+            "session_id",
+            "session_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SearchTransition(\n  transition_id INTEGER PRIMARY KEY,\n  session_id INTEGER NOT NULL REFERENCES SessionSynthetic(session_id),\n  from_search_id INTEGER NOT NULL REFERENCES Search(search_id),\n  to_search_id INTEGER NOT NULL REFERENCES Search(search_id),\n  action_type TEXT NOT NULL,\n  recovered INTEGER NOT NULL CHECK(recovered IN(0,1))\n)"
+      },
+      {
+        "name": "SessionSynthetic",
+        "rows": 10000,
+        "columns": [
+          {
+            "name": "session_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "user_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "pair_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 5000,
+            "distinct_ratio": 0.5,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "started_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "ended_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 9908,
+            "distinct_ratio": 0.9908,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 25.0,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "outcome_segment",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 3,
+            "distinct_ratio": 0.0003,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 3.0,
+            "max_text_length": 3,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "treatment_exposed",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 2,
+            "distinct_ratio": 0.0002,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "UserSynthetic",
+            "user_id",
+            "user_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE SessionSynthetic(\n  session_id INTEGER PRIMARY KEY,\n  user_id INTEGER NOT NULL UNIQUE REFERENCES UserSynthetic(user_id),\n  pair_id INTEGER NOT NULL,\n  started_at TEXT NOT NULL,\n  ended_at TEXT NOT NULL,\n  outcome_segment TEXT NOT NULL CHECK(outcome_segment IN('SG1','SG2','SG3','SG4')),\n  treatment_exposed INTEGER NOT NULL CHECK(treatment_exposed IN(0,1))\n)"
+      },
+      {
+        "name": "SimulationRun",
+        "rows": 1,
+        "columns": [
+          {
+            "name": "run_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 1,
+              "real": 0
+            }
+          },
+          {
+            "name": "random_seed",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 1,
+              "real": 0
+            }
+          },
+          {
+            "name": "mode",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 10.0,
+            "max_text_length": 10,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "scenario",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 8.0,
+            "max_text_length": 8,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "created_at",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 32.0,
+            "max_text_length": 32,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "disclaimer",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 1,
+            "distinct": 1,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 50.0,
+            "max_text_length": 50,
+            "storage_types": {
+              "text": 1,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [],
+        "create_sql": "CREATE TABLE SimulationRun(\n  run_id INTEGER PRIMARY KEY,\n  random_seed INTEGER NOT NULL,\n  mode TEXT NOT NULL CHECK(mode IN('unit_test','smoke_test','calibration','production')),\n  scenario TEXT NOT NULL,\n  created_at TEXT NOT NULL,\n  disclaimer TEXT NOT NULL\n)"
+      },
+      {
+        "name": "UserSynthetic",
+        "rows": 10000,
+        "columns": [
+          {
+            "name": "user_id",
+            "declared_type": "INTEGER",
+            "pk": 1,
+            "notnull": false,
+            "rows": 10000,
+            "distinct": 10000,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "pair_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 5000,
+            "distinct_ratio": 0.5,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "sample_set_type",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 2,
+            "distinct_ratio": 0.0002,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 8.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "sample_stratum",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 72,
+            "distinct_ratio": 0.0072,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 37.8374,
+            "max_text_length": 41,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "simulation_run_id",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 1,
+            "distinct_ratio": 0.0001,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "random_seed",
+            "declared_type": "INTEGER",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 1,
+            "distinct_ratio": 0.0001,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 10000,
+              "real": 0
+            }
+          },
+          {
+            "name": "source_session_id",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 992,
+            "distinct_ratio": 0.0992,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 9.0,
+            "max_text_length": 9,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "treatment_scenario",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 2,
+            "distinct_ratio": 0.0002,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 6.0,
+            "max_text_length": 8,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "generation_model_version",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 10000,
+            "distinct": 1,
+            "distinct_ratio": 0.0001,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 10.0,
+            "max_text_length": 10,
+            "storage_types": {
+              "text": 10000,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "age_group",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": false,
+            "rows": 10000,
+            "distinct": 0,
+            "distinct_ratio": 0.0,
+            "nulls": 10000,
+            "null_ratio": 1.0,
+            "avg_text_length": null,
+            "max_text_length": null,
+            "storage_types": {
+              "text": 0,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "SimulationRun",
+            "simulation_run_id",
+            "run_id",
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ]
+        ],
+        "create_sql": "CREATE TABLE UserSynthetic(\n  user_id INTEGER PRIMARY KEY,\n  pair_id INTEGER NOT NULL,\n  sample_set_type TEXT NOT NULL CHECK(sample_set_type IN('control','treatment')),\n  sample_stratum TEXT NOT NULL,\n  simulation_run_id INTEGER NOT NULL REFERENCES SimulationRun(run_id),\n  random_seed INTEGER NOT NULL,\n  source_session_id TEXT NOT NULL,\n  treatment_scenario TEXT NOT NULL,\n  generation_model_version TEXT NOT NULL,\n  age_group TEXT CHECK(age_group IS NULL),\n  UNIQUE(pair_id,sample_set_type),\n  CHECK((sample_set_type='control' AND treatment_scenario='none') OR\n        (sample_set_type='treatment' AND treatment_scenario IN('conservative','expected','optimistic')))\n)"
+      },
+      {
+        "name": "_generation_metadata",
+        "rows": 11,
+        "columns": [
+          {
+            "name": "key",
+            "declared_type": "TEXT",
+            "pk": 1,
+            "notnull": false,
+            "rows": 11,
+            "distinct": 11,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 17.727272727272727,
+            "max_text_length": 25,
+            "storage_types": {
+              "text": 11,
+              "integer": 0,
+              "real": 0
+            }
+          },
+          {
+            "name": "value",
+            "declared_type": "TEXT",
+            "pk": 0,
+            "notnull": true,
+            "rows": 11,
+            "distinct": 11,
+            "distinct_ratio": 1.0,
+            "nulls": 0,
+            "null_ratio": 0.0,
+            "avg_text_length": 30.181818181818183,
+            "max_text_length": 64,
+            "storage_types": {
+              "text": 11,
+              "integer": 0,
+              "real": 0
+            }
+          }
+        ],
+        "foreign_keys": [],
+        "create_sql": "CREATE TABLE _generation_metadata(\n  key TEXT PRIMARY KEY,\n  value TEXT NOT NULL\n)"
+      }
+    ]
+  },
+  "benchmarks": {
+    "source": {
+      "event_type_counts": {
+        "median_seconds": 1.4800815999988117,
+        "median_rss_delta_bytes": 4395008,
+        "trials": [
+          {
+            "seconds": 1.4800815999988117,
+            "rss_delta_bytes": 4608000,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.4693432999993092,
+            "rss_delta_bytes": 4395008,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.78432160000375,
+            "rss_delta_bytes": 4509696,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.4337348000044585,
+            "rss_delta_bytes": 4071424,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.5433124000046519,
+            "rss_delta_bytes": 4304896,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          }
+        ]
+      },
+      "search_result_rank": {
+        "median_seconds": 3.2142238000014913,
+        "median_rss_delta_bytes": 4354048,
+        "trials": [
+          {
+            "seconds": 3.227863099993556,
+            "rss_delta_bytes": 4263936,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 3.162420299995574,
+            "rss_delta_bytes": 4354048,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 3.5210198999993736,
+            "rss_delta_bytes": 4378624,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 3.1901110999970115,
+            "rss_delta_bytes": 4050944,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 3.2142238000014913,
+            "rss_delta_bytes": 4599808,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          }
+        ]
+      },
+      "zero_rate_by_arm": {
+        "median_seconds": 0.09610880000400357,
+        "median_rss_delta_bytes": 4710400,
+        "trials": [
+          {
+            "seconds": 0.11484360000031302,
+            "rss_delta_bytes": 4612096,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.10686970000097062,
+            "rss_delta_bytes": 4878336,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.09380119999696035,
+            "rss_delta_bytes": 4587520,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.09610880000400357,
+            "rss_delta_bytes": 5038080,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.09318920000077924,
+            "rss_delta_bytes": 4710400,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          }
+        ]
+      },
+      "hotel_join": {
+        "median_seconds": 2.8878110999939963,
+        "median_rss_delta_bytes": 4464640,
+        "trials": [
+          {
+            "seconds": 2.8564773999969475,
+            "rss_delta_bytes": 4608000,
+            "rows": 1000,
+            "digest": "e31bb3061fd07b2534a3abb3d56c00699e832e57756b189a31bf653312ee6bf0"
+          },
+          {
+            "seconds": 2.882841099999496,
+            "rss_delta_bytes": 4366336,
+            "rows": 1000,
+            "digest": "e31bb3061fd07b2534a3abb3d56c00699e832e57756b189a31bf653312ee6bf0"
+          },
+          {
+            "seconds": 2.9282955000016955,
+            "rss_delta_bytes": 4780032,
+            "rows": 1000,
+            "digest": "e31bb3061fd07b2534a3abb3d56c00699e832e57756b189a31bf653312ee6bf0"
+          },
+          {
+            "seconds": 2.8970903000008548,
+            "rss_delta_bytes": 4464640,
+            "rows": 1000,
+            "digest": "e31bb3061fd07b2534a3abb3d56c00699e832e57756b189a31bf653312ee6bf0"
+          },
+          {
+            "seconds": 2.8878110999939963,
+            "rss_delta_bytes": 4431872,
+            "rows": 1000,
+            "digest": "e31bb3061fd07b2534a3abb3d56c00699e832e57756b189a31bf653312ee6bf0"
+          }
+        ]
+      }
+    },
+    "compact": {
+      "event_type_counts": {
+        "median_seconds": 1.2178925000043819,
+        "median_rss_delta_bytes": 6234112,
+        "trials": [
+          {
+            "seconds": 1.2178925000043819,
+            "rss_delta_bytes": 6250496,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.2013589999987744,
+            "rss_delta_bytes": 6176768,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.4027793999994174,
+            "rss_delta_bytes": 6234112,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.25073120000161,
+            "rss_delta_bytes": 6332416,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          },
+          {
+            "seconds": 1.2087964000020293,
+            "rss_delta_bytes": 5931008,
+            "rows": 5,
+            "digest": "319cf6aabc173ec5050db0702c8aff109d923286eaee909d4ba01bc124b11461"
+          }
+        ]
+      },
+      "zero_rate_by_arm": {
+        "median_seconds": 0.04096249999565771,
+        "median_rss_delta_bytes": 4165632,
+        "trials": [
+          {
+            "seconds": 0.048330300000088755,
+            "rss_delta_bytes": 4534272,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.04096249999565771,
+            "rss_delta_bytes": 4165632,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.042610500000591855,
+            "rss_delta_bytes": 4108288,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.03954670000530314,
+            "rss_delta_bytes": 4919296,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          },
+          {
+            "seconds": 0.037314200002583675,
+            "rss_delta_bytes": 4161536,
+            "rows": 2,
+            "digest": "fcdaeb6fa3d1e171123513c2b23894259f45be594a0adb8c0420390bc9015ca3"
+          }
+        ]
+      },
+      "search_result_rank": {
+        "median_seconds": 1.3055238999950234,
+        "median_rss_delta_bytes": 6156288,
+        "trials": [
+          {
+            "seconds": 1.315656200000376,
+            "rss_delta_bytes": 6287360,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 1.3055238999950234,
+            "rss_delta_bytes": 6144000,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 1.1541127000018605,
+            "rss_delta_bytes": 6156288,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 1.5544098999962443,
+            "rss_delta_bytes": 5763072,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          },
+          {
+            "seconds": 1.2550686999966274,
+            "rss_delta_bytes": 6201344,
+            "rows": 2,
+            "digest": "7f33f12682ad4cbfbd56dbe46331050171651eeb9527883f5e2a2ec02ec9bdc7"
+          }
+        ]
+      },
+      "hotel_join": {
+        "median_seconds": 1.9612660000057076,
+        "median_rss_delta_bytes": 6291456,
+        "trials": [
+          {
+            "seconds": 2.2108388999986346,
+            "rss_delta_bytes": 6438912,
+            "rows": 1000,
+            "digest": "a2d19224ada5db9f69e0df931e09b49d41b8b249018fa32035f062affdbdeb04"
+          },
+          {
+            "seconds": 1.9612660000057076,
+            "rss_delta_bytes": 6225920,
+            "rows": 1000,
+            "digest": "a2d19224ada5db9f69e0df931e09b49d41b8b249018fa32035f062affdbdeb04"
+          },
+          {
+            "seconds": 1.977548900002148,
+            "rss_delta_bytes": 6291456,
+            "rows": 1000,
+            "digest": "a2d19224ada5db9f69e0df931e09b49d41b8b249018fa32035f062affdbdeb04"
+          },
+          {
+            "seconds": 1.954601500001445,
+            "rss_delta_bytes": 6037504,
+            "rows": 1000,
+            "digest": "a2d19224ada5db9f69e0df931e09b49d41b8b249018fa32035f062affdbdeb04"
+          },
+          {
+            "seconds": 1.90186939999694,
+            "rss_delta_bytes": 6529024,
+            "rows": 1000,
+            "digest": "a2d19224ada5db9f69e0df931e09b49d41b8b249018fa32035f062affdbdeb04"
+          }
+        ]
+      }
+    }
+  },
+  "full_text_scan": {
+    "source": {
+      "seconds": 23.134918700001435,
+      "rss_delta_bytes": 2072576,
+      "text_values": 24082354,
+      "characters": 259748271,
+      "digest": "7a58bed544051e51ba2bc0484f29789e783341cdb51d9282391fbdc952b65957"
+    },
+    "compact": {
+      "seconds": 5.541703000002599,
+      "rss_delta_bytes": 1847296,
+      "text_values": 4767452,
+      "characters": 94543857,
+      "digest": "33e50052952b53910917c3469651b841c5a6ae6d77ef533a339794cd13f54e85"
+    }
+  }
+}
