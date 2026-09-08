@@ -1,0 +1,15 @@
+<section id="template-data-summary">
+<p class="data-headline">원본을 바탕으로 확장한 <b>1,000명 데이터로 분석했습니다.</b></p>
+<div class="data-flow"><article><span class="label">수집·정제한 원본</span><strong>41<small>명</small></strong><p>43세션 · 296검색</p><span class="badge gray">검색 이벤트 연결 사용자</span></article><div class="data-arrow">→<small>세션 재표집·복제<br>식별자·시간축 재구성</small></div><article class="data-main"><span class="label">현재 대시보드에 사용</span><strong>1,000<small>명</small></strong><p>1,000세션 · 6,900검색</p><span class="badge">합성 확장본</span></article></div>
+<div class="data-separate"><b>보고서 반영 · 10,000명 합성 A/B</b><span>각 5,000명 · 65,355검색 · 탐색용</span><span class="badge pending">HOLD · 검증 보류</span></div>
+
+
+</section>
+<section id="template-data-limits">
+<p class="data-headline">확장 과정에서 확인한 문제와 <b>아직 남은 한계</b></p>
+<div class="data-issues"><article><span class="label">01 · 원본 규모</span><h3>관측 표본이 작음</h3><div class="issue-number">41<small>명</small></div><p>세션 재표집으로 1,000명 확장</p><div class="issue-limit">규모 확대 ≠ 새 관측 증거</div></article><article><span class="label">02 · 확장 검증</span><h3>기준선 재현 미충족</h3><div class="issue-number">16 / 20<small>실행 충족</small></div><p>별도 2,000명/run · expected 20 seeds</p><div class="issue-limit">HOLD 유지 · 탐색용 제한 사용</div></article><article><span class="label">03 · 효과 검증</span><h3>실제 효과 미검증</h3><div class="issue-word">판정 보류</div><p>배정 → 노출 → 수용 → 회복 연결 필요</p><div class="issue-limit">관측된 차이 ≠ 제안의 효과</div></article></div>
+
+
+</section>
+<section id="data-summary-notes" class="speaker-notes"><h3>발표 대본 · 사용한 데이터</h3><p>분석은 StayTrace 가상 호텔 검색 실험에서 수집한 로그를 정제한 자료에서 시작했습니다. USER 테이블 전체는 89명이지만, 검색 이벤트와 연결된 분석 대상은 41명이며 43세션, 296검색입니다. 사용자 전체와 실제 분석 대상의 분모를 구분했습니다.</p><p>이 원본 세션을 재표집하고 복제한 뒤 식별자와 시간축을 재구성해 1,000명, 1,000세션, 6,900검색의 합성 확장본을 만들었습니다. 현재 발표의 주요 그래프는 이 확장본 집계를 사용합니다. 새로 1,000명을 모집하거나 독립적인 행동을 1,000명에게서 관측한 것은 아닙니다.</p><p>검색에서 결과가 없었던 지점, 후속 검색 여부, 결과 회복과 호텔 클릭을 연결해 분석했습니다. 사용자 수, 세션 수, 검색 수는 서로 다른 단위이므로 지표마다 분모를 구분합니다. 바로 다음 검색의 즉시 회복과 세션 안에서 이후 한 번이라도 회복한 경우도 다릅니다.</p><p>별도로 10,000명 A/B 시뮬레이션 검토가 있습니다. 대조군 5,000명과 실험군 5,000명 구성에 관한 자료지만 현재 대시보드 데이터를 교체한 결과는 아닙니다. 품질 게이트는 HOLD이며 학습, 발표, 세그먼트 탐색과 가정별 시나리오 비교에 제한합니다. 실제 서비스 개선율이나 인과효과의 증거로 사용하지 않습니다.</p></section>
+<section id="data-limits-notes" class="speaker-notes"><h3>발표 대본 · 시행착오 및 한계</h3><p>첫 번째는 원본 규모입니다. 검색 이벤트가 연결된 사용자가 41명으로 작아 세션 재표집과 복제를 통해 분석용 데이터를 확장했습니다. 다만 합성 표본 수가 늘었다고 새로운 관측 증거가 늘어난 것은 아니며, 원본의 불확실성이 줄었다고 해석하지 않습니다.</p><p>두 번째는 확장 검증입니다. 기존 제공자료에서 10,000명 시뮬레이션의 검색 0건률 기준선은 49.7681%, 여러 실행을 합친 값은 50.2233%로 차이가 남았습니다. 보고서의 반올림 전 비율 차이는 +0.4551%p입니다. 20개 seed 중 16개가 기준을 충족했고 4개는 상한을 넘었습니다. 이는 데이터 행의 20%가 오류라는 뜻이 아닙니다. 이전 전이 오류가 개선됐다는 제공 설명이 있지만, 남은 재현 조건 때문에 HOLD를 유지합니다.</p><p>대응은 기준선과 집단별 분자·분모를 함께 확인하고, 한 번의 실행뿐 아니라 여러 seed와 시나리오를 검토하는 것입니다. 최종 보고서에서 실제 10,000명 DB의 관계·clone 전수 QA PASS를 확인했습니다. 기준선 재현 HOLD와는 별도 상태입니다. 이번 슬라이드 수정에서 DB를 새로 생성하거나 검증한 것은 아닙니다.</p><p>세 번째는 A/B 결과 연결입니다. 현재 관측 로그에서 조건 변경과 회복을 볼 수 있지만, 사전 의도, 집단 배정, 제안 노출, 수용, 조건 변경과 성과가 연결되지 않아 제안의 인과효과는 보류했습니다. 실제 관측을 보강하고 이러한 이벤트를 연결하는 것이 다음 과제입니다.</p><p>기존 시행착오와 용량 줄이기 페이지는 실제 작업 내역과 전후 측정값이 비어 있는 템플릿이었습니다. 따라서 확인되지 않은 실패 사례나 용량 감소율을 성과로 만들지 않았습니다. 실제 작업 기록이 연결되면 그 근거로 보완할 수 있습니다.</p></section>

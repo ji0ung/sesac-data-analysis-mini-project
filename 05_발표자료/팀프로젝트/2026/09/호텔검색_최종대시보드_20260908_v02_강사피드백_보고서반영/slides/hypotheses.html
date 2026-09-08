@@ -1,0 +1,18 @@
+﻿<section id="template-hypothesis-1">
+<p class="hyp-claim">조건 완화를 제안하면 <b>즉시 회복률이 높아질 것이다.</b></p>
+<div class="hyp-layout"><div class="hyp-formula"><h3>즉시 회복률</h3><div class="fraction"><span class="numerator">회복한 후속 검색</span><span class="denominator">0건 이후 후속 검색</span></div> × 100<div class="hyp-number">17.1%</div><p class="meta">원본 전체 관측 · 24 / 140건</p></div>
+<figure class="hyp-chart"><figcaption>원본의 회복 현황 <small>관측값 · 제안 효과 아님</small></figcaption><div class="hyp-stacked" role="img" aria-label="회복 24건 17.1%, 미회복 116건 82.9%"><div style="width:17.142857%">24</div><div style="width:82.857143%">116</div></div><div class="hyp-legend"><span>회복 17.1%</span><span>미회복 82.9%</span></div><p class="hyp-pending">대조군 ↔ 조건 완화 제안군<br><small>합성 복합 개입: 16.90% → 22.02% (+5.12%p)</small></p></figure></div>
+<p class="hyp-limit"><b>한계</b> 전체 관측값으로 조건 완화 효과를 판단할 수 없다. 1만 명 합성 A/B는 지역 변경과 회복 확률의 복합 개입으로, 조건 완화 단독 효과를 검증하지 못함.</p>
+</section>
+<section id="template-hypothesis-2">
+<p class="hyp-claim">조건 완화 효과는 <b>예산·옵션 수 의도군별로 다를 것이다.</b></p>
+<div class="hyp-layout"><div class="hyp-formula"><h3>의도군별 효과 (%p)</h3><p class="hyp-equation">제안군 회복률<br>− 대조군 회복률</p><p class="meta">회복률 = 회복 후속 검색 /<br>0건 이후 후속 검색 × 100</p><p>예산군 효과 − 옵션 수군 효과</p></div>
+<figure class="hyp-chart"><figcaption>의도군별 A/B 비교 <small>검색의도 배정값 없음</small></figcaption><div class="hyp-compare"><b>예산 유연형</b><div>대조군<br>—</div><span>↔</span><div>제안군<br>—</div></div><div class="hyp-compare"><b>옵션 수 유연형</b><div>대조군<br>—</div><span>↔</span><div>제안군<br>—</div></div><p class="hyp-pending">두 의도군의 회복률 개선 폭 비교<br><small>intent_segment 없음 · 03에서 사전 조건별 비교 확인</small></p></figure></div>
+<p class="hyp-limit"><b>한계</b> 최종 1만 명 DB에도 intent_segment가 없어 사전 의도별 효과를 산출할 수 없다. 현재 어느 의도군의 효과가 더 큰지 판단할 수 없다.</p>
+</section>
+<section id="template-hypothesis-3">
+<p class="hyp-claim">위치 유연형에게 지역 확대를 제안하면 <b>결과 회복으로 이어질 것이다.</b></p>
+<div class="hyp-layout"><div class="hyp-formula"><h3>지역 변경 후 회복률</h3><div class="fraction"><span class="numerator">회복한 지역 변경 후속 검색</span><span class="denominator">지역 변경 후속 검색</span></div> × 100<div class="hyp-number">41.7%</div><p class="meta">원본 자발적 지역 변경 · 10 / 24건</p></div>
+<figure class="hyp-chart"><figcaption>지역 변경 후 회복 현황 <small>관측값 · 제안 효과 아님</small></figcaption><div class="hyp-stacked" role="img" aria-label="회복 10건 41.7%, 미회복 14건 58.3%"><div style="width:41.666667%">10</div><div style="width:58.333333%">14</div></div><div class="hyp-legend"><span>회복 41.7%</span><span>미회복 58.3%</span></div><p class="hyp-pending">제안 노출 → 수용 → 지역 변경 → 회복<br><small>단계별 건수 및 합성 복합 개입: 16.90% → 22.02% (+5.12%p)</small></p></figure></div>
+<p class="hyp-limit"><b>한계</b> 자발적 지역 변경 24건의 관측값이다. 변경한 사람만 비교하면 선택 편향이 생기며, 제안의 인과효과는 미검증이다.</p>
+</section>
