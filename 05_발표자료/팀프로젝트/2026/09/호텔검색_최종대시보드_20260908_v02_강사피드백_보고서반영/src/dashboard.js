@@ -50,7 +50,7 @@ const intentDefinitions=[
 ['query_reframer','검색어 또는 표현을 바꿔 다시 찾으려는 사용자','행동 신호: 검색어 수정 또는 연관어 선택. 지역·조건 동시 변경 시 단일 의도 우선순위는 확인되지 않음.'],
 ['rapid_resolver','빠르게 결과를 찾는 것을 우선하는 사용자','행동 신호: 지역·가격·필터 복합 변경. 빠름을 판정하는 시간 임계값은 현재 연결 자료에 없음.']
 ];
-$('#intent-cards').innerHTML=intents.map((x,i)=>`<article class="segment-card"><span class="label">${intentDefinitions[i][0]}</span><h3>${x[0]}</h3><p class="criterion"><b>의도 정의 · 배정값 미연결</b>${intentDefinitions[i][1]}</p><p>${intentDefinitions[i][2]}</p><p class="mapping">연결 개선안: ${x[1]}<br>연결 가설: ${x[2]}</p></article>`).join('');
+$('#intent-cards').innerHTML=intents.map((x,i)=>`<article class="segment-card"><span class="label">${intentDefinitions[i][0]}</span><h3>${x[0]}</h3><p class="criterion"><b>의도 정의 · 행동 추정 v1 연결</b>${intentDefinitions[i][1]}</p><p>${intentDefinitions[i][2]}</p><p class="mapping">연결 개선안: ${x[1]}<br>연결 가설: ${x[2]}</p></article>`).join('');
 const outcomeDefinitions=[
 '첫 검색 결과가 1개 이상이고, 같은 세션에 호텔 클릭이 1회 이상 있음. 첫 검색에서의 클릭이나 예약 성공을 뜻하지 않음',
 '첫 검색 결과가 1개 이상이지만, 같은 세션에 호텔 클릭이 없음',

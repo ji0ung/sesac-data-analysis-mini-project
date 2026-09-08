@@ -1,4 +1,77 @@
 {
+  "behavior_groups": [
+    {
+      "code": "budget_flexible",
+      "label": "예산 유연형 추정",
+      "rule": "가격값 상향 또는 가격 조건 해제",
+      "users": 335,
+      "searches": 2418,
+      "zero": 1319,
+      "positive": 1099,
+      "detail": 233
+    },
+    {
+      "code": "option_count_flexible",
+      "label": "옵션 유연형 추정",
+      "rule": "요구 옵션 수 감소",
+      "users": 349,
+      "searches": 2550,
+      "zero": 1314,
+      "positive": 1236,
+      "detail": 231
+    },
+    {
+      "code": "location_flexible",
+      "label": "위치 유연형 추정",
+      "rule": "목적지 코드 변경 · 일본 도시 배정 아님",
+      "users": 2460,
+      "searches": 17408,
+      "zero": 9100,
+      "positive": 8308,
+      "detail": 1625
+    },
+    {
+      "code": "condition_keeper",
+      "label": "조건 고수형 추정",
+      "rule": "조건 유지 또는 가격값 하향·조건 추가·옵션 수 증가",
+      "users": 3672,
+      "searches": 26117,
+      "zero": 13868,
+      "positive": 12249,
+      "detail": 2350
+    },
+    {
+      "code": "query_reframer",
+      "label": "표현 수정형 추정",
+      "rule": "생성 접미사를 제거한 검색어 변경",
+      "users": 0,
+      "searches": 0,
+      "zero": 0,
+      "positive": 0,
+      "detail": 0
+    },
+    {
+      "code": "rapid_resolver",
+      "label": "복합 변경형 추정",
+      "rule": "가격·옵션 수·지역·검색어 중 2개 이상 동시 변경 · 빠름은 미측정",
+      "users": 998,
+      "searches": 6862,
+      "zero": 3655,
+      "positive": 3207,
+      "detail": 620
+    },
+    {
+      "code": "unclassified",
+      "label": "미분류",
+      "rule": "두 번째 검색 없음 또는 규칙 밖 행동",
+      "users": 2186,
+      "searches": 0,
+      "zero": 0,
+      "positive": 0,
+      "detail": 0
+    }
+  ],
+  "behavior_version": "behavior_proxy_v1",
   "ab_daily": [
     {
       "day": "2028-02-01",

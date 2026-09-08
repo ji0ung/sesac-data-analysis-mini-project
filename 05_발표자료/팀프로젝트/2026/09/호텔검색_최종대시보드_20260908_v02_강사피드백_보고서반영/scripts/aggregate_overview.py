@@ -132,6 +132,41 @@ for code,label in city_names.items():
   pairs.extend((a,b) for a,b in zip(rows,rows[1:]) if a['city']==code and int(a['total_result_count'])==0 and a['destination']!=b['destination'])
  city_transitions.append(dict(label=label,n=len(pairs),recovered=sum(int(b['total_result_count'])>0 for a,b in pairs)))
 original_period=[min(r['search_time'] for r in original),max(r['search_time'] for r in original)]
+# behavior_proxy_v1: first observed retry only; no result/click information in assignment.
+# Query suffixes are generator artifacts, not human semantic edits.
+import re
+behavior_definitions=[
+ ('budget_flexible','예산 유연형 추정','가격값 상향 또는 가격 조건 해제'),
+ ('option_count_flexible','옵션 유연형 추정','요구 옵션 수 감소'),
+ ('location_flexible','위치 유연형 추정','목적지 코드 변경 · 일본 도시 배정 아님'),
+ ('condition_keeper','조건 고수형 추정','조건 유지 또는 가격값 하향·조건 추가·옵션 수 증가'),
+ ('query_reframer','표현 수정형 추정','생성 접미사를 제거한 검색어 변경'),
+ ('rapid_resolver','복합 변경형 추정','가격·옵션 수·지역·검색어 중 2개 이상 동시 변경 · 빠름은 미측정'),
+ ('unclassified','미분류','두 번째 검색 없음 또는 규칙 밖 행동')]
+normalize_query=lambda q:re.sub(r'-(?:[a-z_]+)-\d+$','',q or '').strip().lower()
+def assign_behavior(rows):
+ if len(rows)<2:return 'unclassified'
+ a,b=rows[:2]
+ changes=[a['price']!=b['price'],a['amenity_count']!=b['amenity_count'],a['destination']!=b['destination'],normalize_query(a['query_text'])!=normalize_query(b['query_text'])]
+ if sum(changes)>=2:return 'rapid_resolver'
+ if changes[0]:return 'budget_flexible' if a['price'] is not None and (b['price'] is None or b['price']>a['price']) else 'condition_keeper'
+ if changes[1]:return 'option_count_flexible' if b['amenity_count']<a['amenity_count'] else 'condition_keeper'
+ if changes[2]:return 'location_flexible'
+ if changes[3]:return 'query_reframer'
+ return 'condition_keeper'
+assignments=[]
+for sid,ss in sessions.items():
+ ss['behavior_proxy']=assign_behavior(by[sid])
+ assignments.append(dict(user_id=ss['user_id'],session_id=sid,behavior_proxy=ss['behavior_proxy'],basis_search_ids=[r['search_id'] for r in by[sid][:2]]))
+behavior_groups=[]
+for code,label,rule in behavior_definitions:
+ selected=[ss for ss in sessions.values() if ss['behavior_proxy']==code]
+ rows=[r for ss in selected for r in by[ss['session_id']][1:]]
+ behavior_groups.append(dict(code=code,label=label,rule=rule,users=len(selected),searches=len(rows),zero=sum(r['total_result_count']==0 for r in rows),positive=sum(r['total_result_count']>0 for r in rows),detail=sum(r['search_id'] in clicked_searches and r['total_result_count']>0 for r in rows)))
+assert sum(g['users'] for g in behavior_groups)==10000
+assert sum(g['searches'] for g in behavior_groups)==65355-10000
+assert len({a['user_id'] for a in assignments})==10000
+(dest/'data/behavior_assignments_10000.json').write_text(json.dumps({'version':'behavior_proxy_v1','assignment':'first_search_to_second_search','source_sha256':sha,'rows':assignments},ensure_ascii=False,separators=(',',':'))+'\n')
 ab_daily=[dict(r) for r in c.execute("SELECT substr(s.search_time,1,10) day,u.sample_set_type arm,COUNT(*) searches,SUM(s.total_result_count=0) zero FROM Search s JOIN SessionSynthetic x USING(session_id) JOIN UserSynthetic u ON x.user_id=u.user_id GROUP BY 1,2 ORDER BY 1,2")]
-out={'ab_daily':ab_daily,'option_summary' :option_summary,'option_boxes':option_boxes,'topic_conversion':topic_conversion,'option_conversion':option_conversion,'retention':retention,'condition_transitions':list(transitions.values()),'cities':cities,'city_transitions':city_transitions,'original_period':original_period,'source':source_path,'sha256':sha,'start':start,'end':end,'grain':grain,'counts':counts,'trend':sorted(trend.values(),key=lambda r:r['label']),'experience':exp,'profiles':profiles,'filters':list(filters.values()),'sequence':seq,'cohort_patterns':cohort_rows,'kpi_baseline':kpi_baseline,'keywords':keyword_rows,'funnel':funnel,'events':[dict(r) for r in c.execute('SELECT event_type,COUNT(*) n FROM ActionEvent GROUP BY event_type')]}
+out={'behavior_groups':behavior_groups,'behavior_version':'behavior_proxy_v1','ab_daily':ab_daily,'option_summary' :option_summary,'option_boxes':option_boxes,'topic_conversion':topic_conversion,'option_conversion':option_conversion,'retention':retention,'condition_transitions':list(transitions.values()),'cities':cities,'city_transitions':city_transitions,'original_period':original_period,'source':source_path,'sha256':sha,'start':start,'end':end,'grain':grain,'counts':counts,'trend':sorted(trend.values(),key=lambda r:r['label']),'experience':exp,'profiles':profiles,'filters':list(filters.values()),'sequence':seq,'cohort_patterns':cohort_rows,'kpi_baseline':kpi_baseline,'keywords':keyword_rows,'funnel':funnel,'events':[dict(r) for r in c.execute('SELECT event_type,COUNT(*) n FROM ActionEvent GROUP BY event_type')]}
 (dest/'data/overview_10000.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'period':[start,end],'grain':grain,'counts':counts,'events':out['events']},ensure_ascii=False))

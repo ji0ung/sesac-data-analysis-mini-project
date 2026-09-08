@@ -37,4 +37,11 @@ def kpi_page(root):
  body+=card('현재와 3개 개선 시나리오',bars(rows,['검색 0건률','검색 → 상세 진입률']).split('<div class="scroll">')[0]+'<p class="meta">5% 감소는 5%p 감소가 아닙니다. 현재 0건률에 0.95를 곱하는 상대 감소입니다. 그래프는 가정에 따른 산술 시뮬레이션으로 실제 A/B 결과나 승인된 목표가 아닙니다.</p>','기준: 합성 10,000명 · 2028-02-01~07 UTC · 검색량·조건부 상세 진입률 고정','fixed-scenarios')
  body+=card('상세 진입 증가 규모',table+'</tbody></table></div><p>목표 0건률 = 현재 0건률 × (1 − 감소율)<br>예상 상세 검색 = 65,355 × (1 − 목표 0건률) × 현재 결과 있음 대비 상세 진입률</p><p class="meta">소수 건수는 기대값입니다. 결과가 늘어도 상세 진입 품질이 유지된다는 가정이 깨지면 이 기대값에 도달하지 못합니다.</p>','현재 상세 진입 6,834검색 · 모든 시나리오의 검색량 동일','scenario-counts')
  body+=card('목표와 함께 지킬 기준','<ul><li>결과 있음 → 상세 진입률: 현재 '+f'{d*100:.2f}'+'% 이상 유지</li><li>검색 → 상세 진입률: 현재 '+f'{base/S*100:.2f}'+'%보다 증가</li><li>세션당 검색 횟수: 현재 '+f'{S/b["sessions"]:.2f}'+'회보다 늘어나지 않는지 확인</li></ul><p>반복 검색 횟수는 이 산술 모형으로 예측하지 않습니다. 실제 실험에서 별도로 관측해야 합니다.</p>','보호 기준 · 품질 유지와 검색 부담을 함께 확인','scenario-guards')
+ groups=o['behavior_groups'];group_table='<div class="scroll"><table><thead><tr><th>행동 추정군</th><th>현재 후속 검색 → 상세</th><th>0건률 상대 10% 감소 시</th><th>예상 추가 상세 검색</th></tr></thead><tbody>'
+ for g in groups:
+  if not g['positive']:
+   group_table+=f'<tr><th>{g["label"]}</th><td colspan="3">계산 불가 · 후속 검색 분모 없음</td></tr>';continue
+  expected=(g['positive']+g['zero']*.1)*g['detail']/g['positive']
+  group_table+=f'<tr><th>{g["label"]}</th><td>{g["detail"]:,}/{g["searches"]:,} · {g["detail"]/g["searches"]*100:.2f}%</td><td>{expected/g["searches"]*100:.2f}% · {expected:,.1f}건</td><td>{expected-g["detail"]:+,.1f}건</td></tr>'
+ body+=card('행동 추정군별 · 같은 10% 감소 가정 비교',group_table+'</tbody></table></div><p class="meta">01의 첫 재검색 행동 규칙과 같은 배정입니다. 사용자 의도를 직접 측정한 값이 아닙니다. 각 군의 후속 검색량과 결과 있음 대비 상세 진입률을 고정합니다. 예상 상세 = (현재 결과 있음 + 현재 0건 × 0.1) × 현재 조건부 상세 진입률. 첫 검색이 제외된 55,355검색 기준이므로 위 전체65,355검색 시나리오와 합산하지 않습니다.</p>','행동 규칙 v1 · 두 번째 검색부터 집계 · 의도군별 효과 검증 아님','behavior-scenarios')
  return body+'<details class="speaker-notes"><summary>발표 설명</summary><p>전체 검색량을 고정하고 실패율이 상대적으로 5, 10, 15퍼센트 감소할 때 상세 진입의 기대값을 비교합니다. 조건부 상세 진입률 유지가 전제이며 실제 검증 결과와 구분합니다.</p></details></section>'
