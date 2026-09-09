@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / '04_분석설계/팀프로젝트/2026/09'
 SOURCE = BASE / 'BI시각화_32-34일차_TO-BE_클린제출본_20260905'
-OUT = BASE / 'BI시각화_32-34일차_TO-BE_화면피드백반영_20260907'
+OUT = ROOT / '04_분석설계' / '이전버전' / '화면피드백반영' / 'BI시각화_32-34일차_TO-BE_화면피드백반영_20260907'
 W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'
 NS = {'w': W}
 def q(t): return '{'+W+'}'+t
