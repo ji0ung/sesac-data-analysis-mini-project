@@ -1,0 +1,7 @@
+﻿transition,control,treatment
+P→END,4174,4396
+P→P,9797,10691
+P→Z,2840,2843
+Z→END,826,604
+Z→P,2693,2918
+Z→Z,13242,10331

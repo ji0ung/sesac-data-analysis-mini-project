@@ -1,0 +1,3502 @@
+{
+  "ab_conditions": [
+    {
+      "dimension": "가격 조건",
+      "segment": "미설정",
+      "arm": "control",
+      "users": 1202,
+      "searches": 8612,
+      "zero": 4406,
+      "followup": 4204,
+      "recovered": 671
+    },
+    {
+      "dimension": "가격 조건",
+      "segment": "미설정",
+      "arm": "treatment",
+      "users": 1202,
+      "searches": 7464,
+      "zero": 3152,
+      "followup": 3013,
+      "recovered": 685
+    },
+    {
+      "dimension": "가격 조건",
+      "segment": "설정",
+      "arm": "control",
+      "users": 3798,
+      "searches": 24960,
+      "zero": 12355,
+      "followup": 11731,
+      "recovered": 2022
+    },
+    {
+      "dimension": "가격 조건",
+      "segment": "설정",
+      "arm": "treatment",
+      "users": 3798,
+      "searches": 24319,
+      "zero": 10701,
+      "followup": 10236,
+      "recovered": 2233
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "0",
+      "arm": "control",
+      "users": 1237,
+      "searches": 8237,
+      "zero": 4100,
+      "followup": 3906,
+      "recovered": 675
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "0",
+      "arm": "treatment",
+      "users": 1237,
+      "searches": 8022,
+      "zero": 3512,
+      "followup": 3354,
+      "recovered": 737
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "1",
+      "arm": "control",
+      "users": 1240,
+      "searches": 8315,
+      "zero": 4205,
+      "followup": 3983,
+      "recovered": 664
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "1",
+      "arm": "treatment",
+      "users": 1240,
+      "searches": 7798,
+      "zero": 3420,
+      "followup": 3279,
+      "recovered": 724
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "2",
+      "arm": "control",
+      "users": 1288,
+      "searches": 8834,
+      "zero": 4450,
+      "followup": 4233,
+      "recovered": 693
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "2",
+      "arm": "treatment",
+      "users": 1288,
+      "searches": 8117,
+      "zero": 3625,
+      "followup": 3446,
+      "recovered": 708
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "3",
+      "arm": "control",
+      "users": 1235,
+      "searches": 8186,
+      "zero": 4006,
+      "followup": 3813,
+      "recovered": 661
+    },
+    {
+      "dimension": "옵션 수",
+      "segment": "3",
+      "arm": "treatment",
+      "users": 1235,
+      "searches": 7846,
+      "zero": 3296,
+      "followup": 3170,
+      "recovered": 749
+    }
+  ],
+  "behavior_groups": [
+    {
+      "code": "budget_flexible",
+      "label": "예산 유연형 추정",
+      "rule": "가격값 상향 또는 가격 조건 해제",
+      "users": 335,
+      "searches": 2418,
+      "zero": 1319,
+      "positive": 1099,
+      "detail": 233
+    },
+    {
+      "code": "option_count_flexible",
+      "label": "옵션 유연형 추정",
+      "rule": "요구 옵션 수 감소",
+      "users": 349,
+      "searches": 2550,
+      "zero": 1314,
+      "positive": 1236,
+      "detail": 231
+    },
+    {
+      "code": "location_flexible",
+      "label": "위치 유연형 추정",
+      "rule": "목적지 코드 변경 · 일본 도시 배정 아님",
+      "users": 2460,
+      "searches": 17408,
+      "zero": 9100,
+      "positive": 8308,
+      "detail": 1625
+    },
+    {
+      "code": "condition_keeper",
+      "label": "조건 고수형 추정",
+      "rule": "조건 유지 또는 가격값 하향·조건 추가·옵션 수 증가",
+      "users": 3672,
+      "searches": 26117,
+      "zero": 13868,
+      "positive": 12249,
+      "detail": 2350
+    },
+    {
+      "code": "query_reframer",
+      "label": "표현 수정형 추정",
+      "rule": "생성 접미사를 제거한 검색어 변경",
+      "users": 0,
+      "searches": 0,
+      "zero": 0,
+      "positive": 0,
+      "detail": 0
+    },
+    {
+      "code": "rapid_resolver",
+      "label": "복합 변경형 추정",
+      "rule": "가격·옵션 수·지역·검색어 중 2개 이상 동시 변경 · 빠름은 미측정",
+      "users": 998,
+      "searches": 6862,
+      "zero": 3655,
+      "positive": 3207,
+      "detail": 620
+    },
+    {
+      "code": "unclassified",
+      "label": "미분류",
+      "rule": "두 번째 검색 없음 또는 규칙 밖 행동",
+      "users": 2186,
+      "searches": 0,
+      "zero": 0,
+      "positive": 0,
+      "detail": 0
+    }
+  ],
+  "behavior_version": "behavior_proxy_v1",
+  "ab_daily": [
+    {
+      "day": "2028-02-01",
+      "arm": "control",
+      "searches": 5595,
+      "zero": 2766
+    },
+    {
+      "day": "2028-02-01",
+      "arm": "treatment",
+      "searches": 5374,
+      "zero": 2378
+    },
+    {
+      "day": "2028-02-02",
+      "arm": "control",
+      "searches": 6098,
+      "zero": 3090
+    },
+    {
+      "day": "2028-02-02",
+      "arm": "treatment",
+      "searches": 5318,
+      "zero": 2246
+    },
+    {
+      "day": "2028-02-03",
+      "arm": "control",
+      "searches": 5737,
+      "zero": 2934
+    },
+    {
+      "day": "2028-02-03",
+      "arm": "treatment",
+      "searches": 5619,
+      "zero": 2512
+    },
+    {
+      "day": "2028-02-04",
+      "arm": "control",
+      "searches": 5914,
+      "zero": 2898
+    },
+    {
+      "day": "2028-02-04",
+      "arm": "treatment",
+      "searches": 5170,
+      "zero": 2257
+    },
+    {
+      "day": "2028-02-05",
+      "arm": "control",
+      "searches": 5603,
+      "zero": 2753
+    },
+    {
+      "day": "2028-02-05",
+      "arm": "treatment",
+      "searches": 5517,
+      "zero": 2340
+    },
+    {
+      "day": "2028-02-06",
+      "arm": "control",
+      "searches": 4614,
+      "zero": 2316
+    },
+    {
+      "day": "2028-02-06",
+      "arm": "treatment",
+      "searches": 4778,
+      "zero": 2115
+    },
+    {
+      "day": "2028-02-07",
+      "arm": "control",
+      "searches": 11,
+      "zero": 4
+    },
+    {
+      "day": "2028-02-07",
+      "arm": "treatment",
+      "searches": 7,
+      "zero": 5
+    }
+  ],
+  "option_summary": {
+    "min": 0,
+    "q1": 1.0,
+    "median": 2.0,
+    "q3": 2.0,
+    "max": 3,
+    "mean": 1.5042
+  },
+  "option_boxes": [
+    {
+      "label": "0",
+      "users": 2474,
+      "min": 1,
+      "q1": 2.0,
+      "median": 5.0,
+      "q3": 9.0,
+      "max": 31,
+      "mean": 6.5719482619240095
+    },
+    {
+      "label": "1",
+      "users": 2480,
+      "min": 1,
+      "q1": 2.0,
+      "median": 5.0,
+      "q3": 9.0,
+      "max": 31,
+      "mean": 6.497177419354839
+    },
+    {
+      "label": "2",
+      "users": 2576,
+      "min": 1,
+      "q1": 2.0,
+      "median": 5.0,
+      "q3": 10.0,
+      "max": 31,
+      "mean": 6.580357142857143
+    },
+    {
+      "label": "3",
+      "users": 2470,
+      "min": 1,
+      "q1": 2.0,
+      "median": 5.0,
+      "q3": 9.0,
+      "max": 31,
+      "mean": 6.490688259109311
+    }
+  ],
+  "topic_conversion": [
+    {
+      "label": "일반 숙소 탐색",
+      "users": 4042,
+      "share": 40.42,
+      "searches": 26517,
+      "avg": 6.560366155368629,
+      "zero": 12445,
+      "zero_rate": 46.932156729645136,
+      "zero_users": 2586,
+      "recovered_users": 2008,
+      "clicked": 1785,
+      "positive": 14072,
+      "detail": 2778
+    },
+    {
+      "label": "가족 표현",
+      "users": 2020,
+      "share": 20.200000000000003,
+      "searches": 13354,
+      "avg": 6.610891089108911,
+      "zero": 6379,
+      "zero_rate": 47.768458888722485,
+      "zero_users": 1292,
+      "recovered_users": 1003,
+      "clicked": 898,
+      "positive": 6975,
+      "detail": 1376
+    },
+    {
+      "label": "주말 표현",
+      "users": 1892,
+      "share": 18.92,
+      "searches": 12062,
+      "avg": 6.3752642706131075,
+      "zero": 5587,
+      "zero_rate": 46.31901840490797,
+      "zero_users": 1190,
+      "recovered_users": 911,
+      "clicked": 872,
+      "positive": 6475,
+      "detail": 1308
+    },
+    {
+      "label": "업무·출장 표현",
+      "users": 2046,
+      "share": 20.46,
+      "searches": 13422,
+      "avg": 6.560117302052786,
+      "zero": 6203,
+      "zero_rate": 46.21516912531665,
+      "zero_users": 1298,
+      "recovered_users": 1014,
+      "clicked": 923,
+      "positive": 7219,
+      "detail": 1372
+    }
+  ],
+  "option_conversion": [
+    {
+      "label": "0",
+      "users": 2474,
+      "share": 24.740000000000002,
+      "searches": 16259,
+      "avg": 6.5719482619240095,
+      "zero": 7612,
+      "zero_rate": 46.81714742604096,
+      "zero_users": 1589,
+      "recovered_users": 1237,
+      "clicked": 1145,
+      "positive": 8647,
+      "detail": 1716
+    },
+    {
+      "label": "1",
+      "users": 2480,
+      "share": 24.8,
+      "searches": 16113,
+      "avg": 6.497177419354839,
+      "zero": 7625,
+      "zero_rate": 47.32203810587724,
+      "zero_users": 1583,
+      "recovered_users": 1220,
+      "clicked": 1103,
+      "positive": 8488,
+      "detail": 1661
+    },
+    {
+      "label": "2",
+      "users": 2576,
+      "share": 25.759999999999998,
+      "searches": 16951,
+      "avg": 6.580357142857143,
+      "zero": 8075,
+      "zero_rate": 47.637307533478854,
+      "zero_users": 1629,
+      "recovered_users": 1233,
+      "clicked": 1119,
+      "positive": 8876,
+      "detail": 1702
+    },
+    {
+      "label": "3",
+      "users": 2470,
+      "share": 24.7,
+      "searches": 16032,
+      "avg": 6.490688259109311,
+      "zero": 7302,
+      "zero_rate": 45.54640718562874,
+      "zero_users": 1565,
+      "recovered_users": 1246,
+      "clicked": 1111,
+      "positive": 8730,
+      "detail": 1755
+    }
+  ],
+  "retention": [
+    {
+      "day": "2028-02-01",
+      "users": 1712,
+      "steps": [
+        1712,
+        1337,
+        1147,
+        1034,
+        918,
+        802,
+        705,
+        609,
+        515,
+        425
+      ]
+    },
+    {
+      "day": "2028-02-02",
+      "users": 1710,
+      "steps": [
+        1710,
+        1314,
+        1134,
+        1016,
+        912,
+        804,
+        689,
+        601,
+        523,
+        437
+      ]
+    },
+    {
+      "day": "2028-02-03",
+      "users": 1712,
+      "steps": [
+        1712,
+        1359,
+        1187,
+        1053,
+        930,
+        815,
+        695,
+        601,
+        505,
+        412
+      ]
+    },
+    {
+      "day": "2028-02-04",
+      "users": 1710,
+      "steps": [
+        1710,
+        1337,
+        1142,
+        1002,
+        890,
+        785,
+        689,
+        591,
+        501,
+        424
+      ]
+    },
+    {
+      "day": "2028-02-05",
+      "users": 1711,
+      "steps": [
+        1711,
+        1340,
+        1140,
+        1007,
+        877,
+        775,
+        684,
+        591,
+        498,
+        412
+      ]
+    },
+    {
+      "day": "2028-02-06",
+      "users": 1445,
+      "steps": [
+        1445,
+        1127,
+        985,
+        869,
+        770,
+        676,
+        587,
+        495,
+        409,
+        334
+      ]
+    }
+  ],
+  "condition_transitions": [
+    {
+      "label": "가격·옵션 변경",
+      "n": 6176,
+      "recovered": 1066,
+      "detail": 205
+    },
+    {
+      "label": "가격·옵션 유지",
+      "n": 23008,
+      "recovered": 4545,
+      "detail": 825
+    }
+  ],
+  "cities": [
+    {
+      "code": "Tokyo",
+      "label": "도쿄",
+      "n": 118,
+      "zero": 59
+    },
+    {
+      "code": "Osaka",
+      "label": "오사카",
+      "n": 80,
+      "zero": 49
+    },
+    {
+      "code": "Kyoto",
+      "label": "교토",
+      "n": 17,
+      "zero": 6
+    },
+    {
+      "code": "Fukuoka",
+      "label": "후쿠오카",
+      "n": 15,
+      "zero": 3
+    },
+    {
+      "code": "Sapporo",
+      "label": "삿포로",
+      "n": 21,
+      "zero": 3
+    },
+    {
+      "code": "",
+      "label": "지역 미설정",
+      "n": 45,
+      "zero": 27
+    }
+  ],
+  "city_transitions": [
+    {
+      "label": "도쿄",
+      "n": 6,
+      "recovered": 4
+    },
+    {
+      "label": "오사카",
+      "n": 13,
+      "recovered": 4
+    },
+    {
+      "label": "교토",
+      "n": 1,
+      "recovered": 0
+    },
+    {
+      "label": "후쿠오카",
+      "n": 0,
+      "recovered": 0
+    },
+    {
+      "label": "삿포로",
+      "n": 2,
+      "recovered": 2
+    },
+    {
+      "label": "지역 미설정",
+      "n": 2,
+      "recovered": 0
+    }
+  ],
+  "original_period": [
+    "2026-08-28 18:18:23 KST",
+    "2026-08-31 19:43:27 KST"
+  ],
+  "source": "09_단계별 분석/3단계_10000건_증감_분석/02_증강_데이터/호텔검색_1만명증강_탐색용생성_260907_1544_01/output/호텔검색_1만명증강_탐색용AB10000_260907_1544_01.sqlite",
+  "sha256": "f6de5834ea326bb165efdd16e73ba4b1ff3939d1c8ecce27b3517d55b2a5819a",
+  "start": "2028-02-01T00:00:00+00:00",
+  "end": "2028-02-07T03:47:37+00:00",
+  "grain": "일",
+  "counts": {
+    "users": 10000,
+    "sessions": 10000,
+    "searches": 65355,
+    "zero": 30614,
+    "clicked_users": 4478,
+    "zero_users": 6366,
+    "final_recovered": 4936,
+    "first_zero": 1358
+  },
+  "trend": [
+    {
+      "label": "2028-02-01",
+      "searches": 10969,
+      "zero": 5144,
+      "users": 1712,
+      "entries": 1712
+    },
+    {
+      "label": "2028-02-02",
+      "searches": 11416,
+      "zero": 5336,
+      "users": 1737,
+      "entries": 1710
+    },
+    {
+      "label": "2028-02-03",
+      "searches": 11356,
+      "zero": 5446,
+      "users": 1748,
+      "entries": 1712
+    },
+    {
+      "label": "2028-02-04",
+      "searches": 11084,
+      "zero": 5155,
+      "users": 1745,
+      "entries": 1710
+    },
+    {
+      "label": "2028-02-05",
+      "searches": 11120,
+      "zero": 5093,
+      "users": 1744,
+      "entries": 1711
+    },
+    {
+      "label": "2028-02-06",
+      "searches": 9392,
+      "zero": 4431,
+      "users": 1473,
+      "entries": 1445
+    },
+    {
+      "label": "2028-02-07",
+      "searches": 18,
+      "zero": 9,
+      "users": 4,
+      "entries": 0
+    }
+  ],
+  "experience": [
+    {
+      "label": "첫 결과 있음·미클릭",
+      "users": 4686,
+      "share": 46.86,
+      "searches": 20422,
+      "avg": 4.358087921468203,
+      "zero": 9873,
+      "zero_rate": 48.34492214278719,
+      "zero_users": 2119,
+      "recovered_users": 1356,
+      "clicked": 0
+    },
+    {
+      "label": "처음 0건·이후 회복",
+      "users": 1095,
+      "share": 10.95,
+      "searches": 9459,
+      "avg": 8.638356164383561,
+      "zero": 5282,
+      "zero_rate": 55.84099799133101,
+      "zero_users": 1095,
+      "recovered_users": 1069,
+      "clicked": 522
+    },
+    {
+      "label": "첫 결과 있음·클릭",
+      "users": 3956,
+      "share": 39.56,
+      "searches": 34366,
+      "avg": 8.68705763397371,
+      "zero": 14351,
+      "zero_rate": 41.75929697957284,
+      "zero_users": 2889,
+      "recovered_users": 2511,
+      "clicked": 3956
+    },
+    {
+      "label": "처음 0건·끝까지 미회복",
+      "users": 263,
+      "share": 2.63,
+      "searches": 1108,
+      "avg": 4.212927756653992,
+      "zero": 1108,
+      "zero_rate": 100.0,
+      "zero_users": 263,
+      "recovered_users": 0,
+      "clicked": 0
+    }
+  ],
+  "profiles": {
+    "price": [
+      {
+        "label": "1",
+        "users": 7596,
+        "share": 75.96000000000001,
+        "searches": 49279,
+        "avg": 6.487493417588205,
+        "zero": 23056,
+        "zero_rate": 46.7866636904158,
+        "zero_users": 4833,
+        "recovered_users": 3744,
+        "clicked": 3384
+      },
+      {
+        "label": "0",
+        "users": 2404,
+        "share": 24.04,
+        "searches": 16076,
+        "avg": 6.687188019966722,
+        "zero": 7558,
+        "zero_rate": 47.01418263249565,
+        "zero_users": 1533,
+        "recovered_users": 1192,
+        "clicked": 1094
+      }
+    ],
+    "opt": [
+      {
+        "label": "0",
+        "users": 2474,
+        "share": 24.740000000000002,
+        "searches": 16259,
+        "avg": 6.5719482619240095,
+        "zero": 7612,
+        "zero_rate": 46.81714742604096,
+        "zero_users": 1589,
+        "recovered_users": 1237,
+        "clicked": 1145
+      },
+      {
+        "label": "1",
+        "users": 2480,
+        "share": 24.8,
+        "searches": 16113,
+        "avg": 6.497177419354839,
+        "zero": 7625,
+        "zero_rate": 47.32203810587724,
+        "zero_users": 1583,
+        "recovered_users": 1220,
+        "clicked": 1103
+      },
+      {
+        "label": "2",
+        "users": 2576,
+        "share": 25.759999999999998,
+        "searches": 16951,
+        "avg": 6.580357142857143,
+        "zero": 8075,
+        "zero_rate": 47.637307533478854,
+        "zero_users": 1629,
+        "recovered_users": 1233,
+        "clicked": 1119
+      },
+      {
+        "label": "3",
+        "users": 2470,
+        "share": 24.7,
+        "searches": 16032,
+        "avg": 6.490688259109311,
+        "zero": 7302,
+        "zero_rate": 45.54640718562874,
+        "zero_users": 1565,
+        "recovered_users": 1246,
+        "clicked": 1111
+      }
+    ],
+    "region": [
+      {
+        "label": "metro",
+        "users": 2504,
+        "share": 25.040000000000003,
+        "searches": 16608,
+        "avg": 6.63258785942492,
+        "zero": 7797,
+        "zero_rate": 46.94725433526011,
+        "zero_users": 1578,
+        "recovered_users": 1256,
+        "clicked": 1133
+      },
+      {
+        "label": "inland",
+        "users": 2478,
+        "share": 24.779999999999998,
+        "searches": 15777,
+        "avg": 6.36682808716707,
+        "zero": 7238,
+        "zero_rate": 45.87690942511251,
+        "zero_users": 1560,
+        "recovered_users": 1192,
+        "clicked": 1127
+      },
+      {
+        "label": "island",
+        "users": 2504,
+        "share": 25.040000000000003,
+        "searches": 16531,
+        "avg": 6.601837060702875,
+        "zero": 7791,
+        "zero_rate": 47.12963523077854,
+        "zero_users": 1640,
+        "recovered_users": 1252,
+        "clicked": 1089
+      },
+      {
+        "label": "coastal",
+        "users": 2514,
+        "share": 25.14,
+        "searches": 16439,
+        "avg": 6.538981702466189,
+        "zero": 7788,
+        "zero_rate": 47.375144473508115,
+        "zero_users": 1588,
+        "recovered_users": 1236,
+        "clicked": 1129
+      }
+    ]
+  },
+  "filters": [
+    {
+      "label": "가격+옵션",
+      "searches": 31102,
+      "zero": 14706,
+      "zero_rate": 47.28313291749727
+    },
+    {
+      "label": "둘 다 미설정",
+      "searches": 8566,
+      "zero": 3984,
+      "zero_rate": 46.5094559887929
+    },
+    {
+      "label": "옵션만",
+      "searches": 15344,
+      "zero": 7087,
+      "zero_rate": 46.18743482794578
+    },
+    {
+      "label": "가격만",
+      "searches": 10343,
+      "zero": 4837,
+      "zero_rate": 46.765928647394375
+    }
+  ],
+  "sequence": [
+    {
+      "label": "1",
+      "users": 10000,
+      "zero": 1358
+    },
+    {
+      "label": "2",
+      "users": 7814,
+      "zero": 4026
+    },
+    {
+      "label": "3",
+      "users": 6735,
+      "zero": 4519
+    },
+    {
+      "label": "4",
+      "users": 5981,
+      "zero": 4037
+    },
+    {
+      "label": "5",
+      "users": 5297,
+      "zero": 3330
+    },
+    {
+      "label": "6",
+      "users": 4657,
+      "zero": 2679
+    },
+    {
+      "label": "7",
+      "users": 4049,
+      "zero": 2139
+    },
+    {
+      "label": "8",
+      "users": 3488,
+      "zero": 1680
+    },
+    {
+      "label": "9",
+      "users": 2951,
+      "zero": 1307
+    },
+    {
+      "label": "10",
+      "users": 2444,
+      "zero": 1020
+    },
+    {
+      "label": "11",
+      "users": 2033,
+      "zero": 809
+    },
+    {
+      "label": "12",
+      "users": 1690,
+      "zero": 653
+    },
+    {
+      "label": "13",
+      "users": 1403,
+      "zero": 530
+    },
+    {
+      "label": "14",
+      "users": 1158,
+      "zero": 448
+    },
+    {
+      "label": "15",
+      "users": 966,
+      "zero": 372
+    },
+    {
+      "label": "16",
+      "users": 799,
+      "zero": 278
+    },
+    {
+      "label": "17",
+      "users": 664,
+      "zero": 242
+    },
+    {
+      "label": "18",
+      "users": 563,
+      "zero": 203
+    },
+    {
+      "label": "19",
+      "users": 493,
+      "zero": 171
+    },
+    {
+      "label": "20",
+      "users": 408,
+      "zero": 151
+    },
+    {
+      "label": "21",
+      "users": 335,
+      "zero": 121
+    },
+    {
+      "label": "22",
+      "users": 283,
+      "zero": 106
+    },
+    {
+      "label": "23",
+      "users": 237,
+      "zero": 89
+    },
+    {
+      "label": "24",
+      "users": 205,
+      "zero": 71
+    },
+    {
+      "label": "25",
+      "users": 164,
+      "zero": 53
+    },
+    {
+      "label": "26",
+      "users": 142,
+      "zero": 45
+    },
+    {
+      "label": "27",
+      "users": 109,
+      "zero": 41
+    },
+    {
+      "label": "28",
+      "users": 84,
+      "zero": 38
+    },
+    {
+      "label": "29",
+      "users": 76,
+      "zero": 32
+    },
+    {
+      "label": "30",
+      "users": 68,
+      "zero": 35
+    },
+    {
+      "label": "31",
+      "users": 59,
+      "zero": 31
+    }
+  ],
+  "cohort_patterns": [
+    {
+      "label": "첫 검색 결과 있음",
+      "users": 8642,
+      "steps": [
+        {
+          "step": 1,
+          "reach": {
+            "n": 8642,
+            "d": 8642
+          },
+          "end": {
+            "n": 2140,
+            "d": 8642
+          },
+          "retry": {
+            "n": 6502,
+            "d": 8642
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 2,
+          "reach": {
+            "n": 6502,
+            "d": 8642
+          },
+          "end": {
+            "n": 974,
+            "d": 6502
+          },
+          "retry": {
+            "n": 5528,
+            "d": 6502
+          },
+          "recovery": {
+            "n": 361,
+            "d": 2818
+          }
+        },
+        {
+          "step": 3,
+          "reach": {
+            "n": 5528,
+            "d": 8642
+          },
+          "end": {
+            "n": 625,
+            "d": 5528
+          },
+          "retry": {
+            "n": 4903,
+            "d": 5528
+          },
+          "recovery": {
+            "n": 666,
+            "d": 3527
+          }
+        },
+        {
+          "step": 4,
+          "reach": {
+            "n": 4903,
+            "d": 8642
+          },
+          "end": {
+            "n": 531,
+            "d": 4903
+          },
+          "retry": {
+            "n": 4372,
+            "d": 4903
+          },
+          "recovery": {
+            "n": 634,
+            "d": 3220
+          }
+        },
+        {
+          "step": 5,
+          "reach": {
+            "n": 4372,
+            "d": 8642
+          },
+          "end": {
+            "n": 517,
+            "d": 4372
+          },
+          "retry": {
+            "n": 3855,
+            "d": 4372
+          },
+          "recovery": {
+            "n": 515,
+            "d": 2676
+          }
+        },
+        {
+          "step": 6,
+          "reach": {
+            "n": 3855,
+            "d": 8642
+          },
+          "end": {
+            "n": 496,
+            "d": 3855
+          },
+          "retry": {
+            "n": 3359,
+            "d": 3855
+          },
+          "recovery": {
+            "n": 429,
+            "d": 2159
+          }
+        },
+        {
+          "step": 7,
+          "reach": {
+            "n": 3359,
+            "d": 8642
+          },
+          "end": {
+            "n": 452,
+            "d": 3359
+          },
+          "retry": {
+            "n": 2907,
+            "d": 3359
+          },
+          "recovery": {
+            "n": 374,
+            "d": 1741
+          }
+        },
+        {
+          "step": 8,
+          "reach": {
+            "n": 2907,
+            "d": 8642
+          },
+          "end": {
+            "n": 434,
+            "d": 2907
+          },
+          "retry": {
+            "n": 2473,
+            "d": 2907
+          },
+          "recovery": {
+            "n": 297,
+            "d": 1372
+          }
+        },
+        {
+          "step": 9,
+          "reach": {
+            "n": 2473,
+            "d": 8642
+          },
+          "end": {
+            "n": 420,
+            "d": 2473
+          },
+          "retry": {
+            "n": 2053,
+            "d": 2473
+          },
+          "recovery": {
+            "n": 222,
+            "d": 1051
+          }
+        },
+        {
+          "step": 10,
+          "reach": {
+            "n": 2053,
+            "d": 8642
+          },
+          "end": {
+            "n": 329,
+            "d": 2053
+          },
+          "retry": {
+            "n": 1724,
+            "d": 2053
+          },
+          "recovery": {
+            "n": 181,
+            "d": 833
+          }
+        },
+        {
+          "step": 11,
+          "reach": {
+            "n": 1724,
+            "d": 8642
+          },
+          "end": {
+            "n": 278,
+            "d": 1724
+          },
+          "retry": {
+            "n": 1446,
+            "d": 1724
+          },
+          "recovery": {
+            "n": 129,
+            "d": 654
+          }
+        },
+        {
+          "step": 12,
+          "reach": {
+            "n": 1446,
+            "d": 8642
+          },
+          "end": {
+            "n": 244,
+            "d": 1446
+          },
+          "retry": {
+            "n": 1202,
+            "d": 1446
+          },
+          "recovery": {
+            "n": 107,
+            "d": 531
+          }
+        },
+        {
+          "step": 13,
+          "reach": {
+            "n": 1202,
+            "d": 8642
+          },
+          "end": {
+            "n": 207,
+            "d": 1202
+          },
+          "retry": {
+            "n": 995,
+            "d": 1202
+          },
+          "recovery": {
+            "n": 81,
+            "d": 443
+          }
+        },
+        {
+          "step": 14,
+          "reach": {
+            "n": 995,
+            "d": 8642
+          },
+          "end": {
+            "n": 171,
+            "d": 995
+          },
+          "retry": {
+            "n": 824,
+            "d": 995
+          },
+          "recovery": {
+            "n": 73,
+            "d": 372
+          }
+        },
+        {
+          "step": 15,
+          "reach": {
+            "n": 824,
+            "d": 8642
+          },
+          "end": {
+            "n": 140,
+            "d": 824
+          },
+          "retry": {
+            "n": 684,
+            "d": 824
+          },
+          "recovery": {
+            "n": 79,
+            "d": 303
+          }
+        },
+        {
+          "step": 16,
+          "reach": {
+            "n": 684,
+            "d": 8642
+          },
+          "end": {
+            "n": 117,
+            "d": 684
+          },
+          "retry": {
+            "n": 567,
+            "d": 684
+          },
+          "recovery": {
+            "n": 39,
+            "d": 224
+          }
+        },
+        {
+          "step": 17,
+          "reach": {
+            "n": 567,
+            "d": 8642
+          },
+          "end": {
+            "n": 85,
+            "d": 567
+          },
+          "retry": {
+            "n": 482,
+            "d": 567
+          },
+          "recovery": {
+            "n": 37,
+            "d": 197
+          }
+        },
+        {
+          "step": 18,
+          "reach": {
+            "n": 482,
+            "d": 8642
+          },
+          "end": {
+            "n": 58,
+            "d": 482
+          },
+          "retry": {
+            "n": 424,
+            "d": 482
+          },
+          "recovery": {
+            "n": 35,
+            "d": 170
+          }
+        },
+        {
+          "step": 19,
+          "reach": {
+            "n": 424,
+            "d": 8642
+          },
+          "end": {
+            "n": 74,
+            "d": 424
+          },
+          "retry": {
+            "n": 350,
+            "d": 424
+          },
+          "recovery": {
+            "n": 22,
+            "d": 140
+          }
+        },
+        {
+          "step": 20,
+          "reach": {
+            "n": 350,
+            "d": 8642
+          },
+          "end": {
+            "n": 62,
+            "d": 350
+          },
+          "retry": {
+            "n": 288,
+            "d": 350
+          },
+          "recovery": {
+            "n": 29,
+            "d": 126
+          }
+        },
+        {
+          "step": 21,
+          "reach": {
+            "n": 288,
+            "d": 8642
+          },
+          "end": {
+            "n": 45,
+            "d": 288
+          },
+          "retry": {
+            "n": 243,
+            "d": 288
+          },
+          "recovery": {
+            "n": 18,
+            "d": 103
+          }
+        },
+        {
+          "step": 22,
+          "reach": {
+            "n": 243,
+            "d": 8642
+          },
+          "end": {
+            "n": 42,
+            "d": 243
+          },
+          "retry": {
+            "n": 201,
+            "d": 243
+          },
+          "recovery": {
+            "n": 13,
+            "d": 85
+          }
+        },
+        {
+          "step": 23,
+          "reach": {
+            "n": 201,
+            "d": 8642
+          },
+          "end": {
+            "n": 28,
+            "d": 201
+          },
+          "retry": {
+            "n": 173,
+            "d": 201
+          },
+          "recovery": {
+            "n": 16,
+            "d": 73
+          }
+        },
+        {
+          "step": 24,
+          "reach": {
+            "n": 173,
+            "d": 8642
+          },
+          "end": {
+            "n": 38,
+            "d": 173
+          },
+          "retry": {
+            "n": 135,
+            "d": 173
+          },
+          "recovery": {
+            "n": 12,
+            "d": 58
+          }
+        },
+        {
+          "step": 25,
+          "reach": {
+            "n": 135,
+            "d": 8642
+          },
+          "end": {
+            "n": 17,
+            "d": 135
+          },
+          "retry": {
+            "n": 118,
+            "d": 135
+          },
+          "recovery": {
+            "n": 5,
+            "d": 44
+          }
+        },
+        {
+          "step": 26,
+          "reach": {
+            "n": 118,
+            "d": 8642
+          },
+          "end": {
+            "n": 25,
+            "d": 118
+          },
+          "retry": {
+            "n": 93,
+            "d": 118
+          },
+          "recovery": {
+            "n": 4,
+            "d": 38
+          }
+        },
+        {
+          "step": 27,
+          "reach": {
+            "n": 93,
+            "d": 8642
+          },
+          "end": {
+            "n": 23,
+            "d": 93
+          },
+          "retry": {
+            "n": 70,
+            "d": 93
+          },
+          "recovery": {
+            "n": 4,
+            "d": 34
+          }
+        },
+        {
+          "step": 28,
+          "reach": {
+            "n": 70,
+            "d": 8642
+          },
+          "end": {
+            "n": 6,
+            "d": 70
+          },
+          "retry": {
+            "n": 64,
+            "d": 70
+          },
+          "recovery": {
+            "n": 7,
+            "d": 33
+          }
+        },
+        {
+          "step": 29,
+          "reach": {
+            "n": 64,
+            "d": 8642
+          },
+          "end": {
+            "n": 6,
+            "d": 64
+          },
+          "retry": {
+            "n": 58,
+            "d": 64
+          },
+          "recovery": {
+            "n": 1,
+            "d": 28
+          }
+        },
+        {
+          "step": 30,
+          "reach": {
+            "n": 58,
+            "d": 8642
+          },
+          "end": {
+            "n": 5,
+            "d": 58
+          },
+          "retry": {
+            "n": 53,
+            "d": 58
+          },
+          "recovery": {
+            "n": 5,
+            "d": 30
+          }
+        },
+        {
+          "step": 31,
+          "reach": {
+            "n": 53,
+            "d": 8642
+          },
+          "end": {
+            "n": 53,
+            "d": 53
+          },
+          "retry": {
+            "n": 0,
+            "d": 53
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "첫 0건·재시도 후 회복",
+      "users": 1095,
+      "steps": [
+        {
+          "step": 1,
+          "reach": {
+            "n": 1095,
+            "d": 1095
+          },
+          "end": {
+            "n": 0,
+            "d": 1095
+          },
+          "retry": {
+            "n": 1095,
+            "d": 1095
+          },
+          "recovery": {
+            "n": 199,
+            "d": 1095
+          }
+        },
+        {
+          "step": 2,
+          "reach": {
+            "n": 1095,
+            "d": 1095
+          },
+          "end": {
+            "n": 48,
+            "d": 1095
+          },
+          "retry": {
+            "n": 1047,
+            "d": 1095
+          },
+          "recovery": {
+            "n": 239,
+            "d": 896
+          }
+        },
+        {
+          "step": 3,
+          "reach": {
+            "n": 1047,
+            "d": 1095
+          },
+          "end": {
+            "n": 89,
+            "d": 1047
+          },
+          "retry": {
+            "n": 958,
+            "d": 1047
+          },
+          "recovery": {
+            "n": 147,
+            "d": 663
+          }
+        },
+        {
+          "step": 4,
+          "reach": {
+            "n": 958,
+            "d": 1095
+          },
+          "end": {
+            "n": 128,
+            "d": 958
+          },
+          "retry": {
+            "n": 830,
+            "d": 958
+          },
+          "recovery": {
+            "n": 123,
+            "d": 532
+          }
+        },
+        {
+          "step": 5,
+          "reach": {
+            "n": 830,
+            "d": 1095
+          },
+          "end": {
+            "n": 98,
+            "d": 830
+          },
+          "retry": {
+            "n": 732,
+            "d": 830
+          },
+          "recovery": {
+            "n": 106,
+            "d": 422
+          }
+        },
+        {
+          "step": 6,
+          "reach": {
+            "n": 732,
+            "d": 1095
+          },
+          "end": {
+            "n": 94,
+            "d": 732
+          },
+          "retry": {
+            "n": 638,
+            "d": 732
+          },
+          "recovery": {
+            "n": 83,
+            "d": 333
+          }
+        },
+        {
+          "step": 7,
+          "reach": {
+            "n": 638,
+            "d": 1095
+          },
+          "end": {
+            "n": 94,
+            "d": 638
+          },
+          "retry": {
+            "n": 544,
+            "d": 638
+          },
+          "recovery": {
+            "n": 75,
+            "d": 262
+          }
+        },
+        {
+          "step": 8,
+          "reach": {
+            "n": 544,
+            "d": 1095
+          },
+          "end": {
+            "n": 92,
+            "d": 544
+          },
+          "retry": {
+            "n": 452,
+            "d": 544
+          },
+          "recovery": {
+            "n": 47,
+            "d": 200
+          }
+        },
+        {
+          "step": 9,
+          "reach": {
+            "n": 452,
+            "d": 1095
+          },
+          "end": {
+            "n": 81,
+            "d": 452
+          },
+          "retry": {
+            "n": 371,
+            "d": 452
+          },
+          "recovery": {
+            "n": 36,
+            "d": 160
+          }
+        },
+        {
+          "step": 10,
+          "reach": {
+            "n": 371,
+            "d": 1095
+          },
+          "end": {
+            "n": 77,
+            "d": 371
+          },
+          "retry": {
+            "n": 294,
+            "d": 371
+          },
+          "recovery": {
+            "n": 30,
+            "d": 129
+          }
+        },
+        {
+          "step": 11,
+          "reach": {
+            "n": 294,
+            "d": 1095
+          },
+          "end": {
+            "n": 58,
+            "d": 294
+          },
+          "retry": {
+            "n": 236,
+            "d": 294
+          },
+          "recovery": {
+            "n": 24,
+            "d": 105
+          }
+        },
+        {
+          "step": 12,
+          "reach": {
+            "n": 236,
+            "d": 1095
+          },
+          "end": {
+            "n": 39,
+            "d": 236
+          },
+          "retry": {
+            "n": 197,
+            "d": 236
+          },
+          "recovery": {
+            "n": 22,
+            "d": 82
+          }
+        },
+        {
+          "step": 13,
+          "reach": {
+            "n": 197,
+            "d": 1095
+          },
+          "end": {
+            "n": 37,
+            "d": 197
+          },
+          "retry": {
+            "n": 160,
+            "d": 197
+          },
+          "recovery": {
+            "n": 16,
+            "d": 65
+          }
+        },
+        {
+          "step": 14,
+          "reach": {
+            "n": 160,
+            "d": 1095
+          },
+          "end": {
+            "n": 20,
+            "d": 160
+          },
+          "retry": {
+            "n": 140,
+            "d": 160
+          },
+          "recovery": {
+            "n": 9,
+            "d": 55
+          }
+        },
+        {
+          "step": 15,
+          "reach": {
+            "n": 140,
+            "d": 1095
+          },
+          "end": {
+            "n": 26,
+            "d": 140
+          },
+          "retry": {
+            "n": 114,
+            "d": 140
+          },
+          "recovery": {
+            "n": 8,
+            "d": 49
+          }
+        },
+        {
+          "step": 16,
+          "reach": {
+            "n": 114,
+            "d": 1095
+          },
+          "end": {
+            "n": 18,
+            "d": 114
+          },
+          "retry": {
+            "n": 96,
+            "d": 114
+          },
+          "recovery": {
+            "n": 13,
+            "d": 39
+          }
+        },
+        {
+          "step": 17,
+          "reach": {
+            "n": 96,
+            "d": 1095
+          },
+          "end": {
+            "n": 16,
+            "d": 96
+          },
+          "retry": {
+            "n": 80,
+            "d": 96
+          },
+          "recovery": {
+            "n": 9,
+            "d": 31
+          }
+        },
+        {
+          "step": 18,
+          "reach": {
+            "n": 80,
+            "d": 1095
+          },
+          "end": {
+            "n": 12,
+            "d": 80
+          },
+          "retry": {
+            "n": 68,
+            "d": 80
+          },
+          "recovery": {
+            "n": 3,
+            "d": 24
+          }
+        },
+        {
+          "step": 19,
+          "reach": {
+            "n": 68,
+            "d": 1095
+          },
+          "end": {
+            "n": 11,
+            "d": 68
+          },
+          "retry": {
+            "n": 57,
+            "d": 68
+          },
+          "recovery": {
+            "n": 6,
+            "d": 24
+          }
+        },
+        {
+          "step": 20,
+          "reach": {
+            "n": 57,
+            "d": 1095
+          },
+          "end": {
+            "n": 11,
+            "d": 57
+          },
+          "retry": {
+            "n": 46,
+            "d": 57
+          },
+          "recovery": {
+            "n": 3,
+            "d": 18
+          }
+        },
+        {
+          "step": 21,
+          "reach": {
+            "n": 46,
+            "d": 1095
+          },
+          "end": {
+            "n": 7,
+            "d": 46
+          },
+          "retry": {
+            "n": 39,
+            "d": 46
+          },
+          "recovery": {
+            "n": 2,
+            "d": 15
+          }
+        },
+        {
+          "step": 22,
+          "reach": {
+            "n": 39,
+            "d": 1095
+          },
+          "end": {
+            "n": 4,
+            "d": 39
+          },
+          "retry": {
+            "n": 35,
+            "d": 39
+          },
+          "recovery": {
+            "n": 3,
+            "d": 14
+          }
+        },
+        {
+          "step": 23,
+          "reach": {
+            "n": 35,
+            "d": 1095
+          },
+          "end": {
+            "n": 4,
+            "d": 35
+          },
+          "retry": {
+            "n": 31,
+            "d": 35
+          },
+          "recovery": {
+            "n": 4,
+            "d": 11
+          }
+        },
+        {
+          "step": 24,
+          "reach": {
+            "n": 31,
+            "d": 1095
+          },
+          "end": {
+            "n": 3,
+            "d": 31
+          },
+          "retry": {
+            "n": 28,
+            "d": 31
+          },
+          "recovery": {
+            "n": 5,
+            "d": 9
+          }
+        },
+        {
+          "step": 25,
+          "reach": {
+            "n": 28,
+            "d": 1095
+          },
+          "end": {
+            "n": 5,
+            "d": 28
+          },
+          "retry": {
+            "n": 23,
+            "d": 28
+          },
+          "recovery": {
+            "n": 2,
+            "d": 4
+          }
+        },
+        {
+          "step": 26,
+          "reach": {
+            "n": 23,
+            "d": 1095
+          },
+          "end": {
+            "n": 8,
+            "d": 23
+          },
+          "retry": {
+            "n": 15,
+            "d": 23
+          },
+          "recovery": {
+            "n": 0,
+            "d": 5
+          }
+        },
+        {
+          "step": 27,
+          "reach": {
+            "n": 15,
+            "d": 1095
+          },
+          "end": {
+            "n": 2,
+            "d": 15
+          },
+          "retry": {
+            "n": 13,
+            "d": 15
+          },
+          "recovery": {
+            "n": 1,
+            "d": 4
+          }
+        },
+        {
+          "step": 28,
+          "reach": {
+            "n": 13,
+            "d": 1095
+          },
+          "end": {
+            "n": 2,
+            "d": 13
+          },
+          "retry": {
+            "n": 11,
+            "d": 13
+          },
+          "recovery": {
+            "n": 1,
+            "d": 4
+          }
+        },
+        {
+          "step": 29,
+          "reach": {
+            "n": 11,
+            "d": 1095
+          },
+          "end": {
+            "n": 2,
+            "d": 11
+          },
+          "retry": {
+            "n": 9,
+            "d": 11
+          },
+          "recovery": {
+            "n": 0,
+            "d": 3
+          }
+        },
+        {
+          "step": 30,
+          "reach": {
+            "n": 9,
+            "d": 1095
+          },
+          "end": {
+            "n": 4,
+            "d": 9
+          },
+          "retry": {
+            "n": 5,
+            "d": 9
+          },
+          "recovery": {
+            "n": 0,
+            "d": 3
+          }
+        },
+        {
+          "step": 31,
+          "reach": {
+            "n": 5,
+            "d": 1095
+          },
+          "end": {
+            "n": 5,
+            "d": 5
+          },
+          "retry": {
+            "n": 0,
+            "d": 5
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "첫 0건·재시도 후 미회복",
+      "users": 217,
+      "steps": [
+        {
+          "step": 1,
+          "reach": {
+            "n": 217,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 217
+          },
+          "retry": {
+            "n": 217,
+            "d": 217
+          },
+          "recovery": {
+            "n": 0,
+            "d": 217
+          }
+        },
+        {
+          "step": 2,
+          "reach": {
+            "n": 217,
+            "d": 217
+          },
+          "end": {
+            "n": 57,
+            "d": 217
+          },
+          "retry": {
+            "n": 160,
+            "d": 217
+          },
+          "recovery": {
+            "n": 0,
+            "d": 160
+          }
+        },
+        {
+          "step": 3,
+          "reach": {
+            "n": 160,
+            "d": 217
+          },
+          "end": {
+            "n": 40,
+            "d": 160
+          },
+          "retry": {
+            "n": 120,
+            "d": 160
+          },
+          "recovery": {
+            "n": 0,
+            "d": 120
+          }
+        },
+        {
+          "step": 4,
+          "reach": {
+            "n": 120,
+            "d": 217
+          },
+          "end": {
+            "n": 25,
+            "d": 120
+          },
+          "retry": {
+            "n": 95,
+            "d": 120
+          },
+          "recovery": {
+            "n": 0,
+            "d": 95
+          }
+        },
+        {
+          "step": 5,
+          "reach": {
+            "n": 95,
+            "d": 217
+          },
+          "end": {
+            "n": 25,
+            "d": 95
+          },
+          "retry": {
+            "n": 70,
+            "d": 95
+          },
+          "recovery": {
+            "n": 0,
+            "d": 70
+          }
+        },
+        {
+          "step": 6,
+          "reach": {
+            "n": 70,
+            "d": 217
+          },
+          "end": {
+            "n": 18,
+            "d": 70
+          },
+          "retry": {
+            "n": 52,
+            "d": 70
+          },
+          "recovery": {
+            "n": 0,
+            "d": 52
+          }
+        },
+        {
+          "step": 7,
+          "reach": {
+            "n": 52,
+            "d": 217
+          },
+          "end": {
+            "n": 15,
+            "d": 52
+          },
+          "retry": {
+            "n": 37,
+            "d": 52
+          },
+          "recovery": {
+            "n": 0,
+            "d": 37
+          }
+        },
+        {
+          "step": 8,
+          "reach": {
+            "n": 37,
+            "d": 217
+          },
+          "end": {
+            "n": 11,
+            "d": 37
+          },
+          "retry": {
+            "n": 26,
+            "d": 37
+          },
+          "recovery": {
+            "n": 0,
+            "d": 26
+          }
+        },
+        {
+          "step": 9,
+          "reach": {
+            "n": 26,
+            "d": 217
+          },
+          "end": {
+            "n": 6,
+            "d": 26
+          },
+          "retry": {
+            "n": 20,
+            "d": 26
+          },
+          "recovery": {
+            "n": 0,
+            "d": 20
+          }
+        },
+        {
+          "step": 10,
+          "reach": {
+            "n": 20,
+            "d": 217
+          },
+          "end": {
+            "n": 5,
+            "d": 20
+          },
+          "retry": {
+            "n": 15,
+            "d": 20
+          },
+          "recovery": {
+            "n": 0,
+            "d": 15
+          }
+        },
+        {
+          "step": 11,
+          "reach": {
+            "n": 15,
+            "d": 217
+          },
+          "end": {
+            "n": 7,
+            "d": 15
+          },
+          "retry": {
+            "n": 8,
+            "d": 15
+          },
+          "recovery": {
+            "n": 0,
+            "d": 8
+          }
+        },
+        {
+          "step": 12,
+          "reach": {
+            "n": 8,
+            "d": 217
+          },
+          "end": {
+            "n": 4,
+            "d": 8
+          },
+          "retry": {
+            "n": 4,
+            "d": 8
+          },
+          "recovery": {
+            "n": 0,
+            "d": 4
+          }
+        },
+        {
+          "step": 13,
+          "reach": {
+            "n": 4,
+            "d": 217
+          },
+          "end": {
+            "n": 1,
+            "d": 4
+          },
+          "retry": {
+            "n": 3,
+            "d": 4
+          },
+          "recovery": {
+            "n": 0,
+            "d": 3
+          }
+        },
+        {
+          "step": 14,
+          "reach": {
+            "n": 3,
+            "d": 217
+          },
+          "end": {
+            "n": 1,
+            "d": 3
+          },
+          "retry": {
+            "n": 2,
+            "d": 3
+          },
+          "recovery": {
+            "n": 0,
+            "d": 2
+          }
+        },
+        {
+          "step": 15,
+          "reach": {
+            "n": 2,
+            "d": 217
+          },
+          "end": {
+            "n": 1,
+            "d": 2
+          },
+          "retry": {
+            "n": 1,
+            "d": 2
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 16,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 17,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 18,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 19,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 20,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 21,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 22,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 23,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 24,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 25,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 26,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 27,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 28,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 29,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 30,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 0,
+            "d": 1
+          },
+          "retry": {
+            "n": 1,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "step": 31,
+          "reach": {
+            "n": 1,
+            "d": 217
+          },
+          "end": {
+            "n": 1,
+            "d": 1
+          },
+          "retry": {
+            "n": 0,
+            "d": 1
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "첫 0건·재시도 없이 종료",
+      "users": 46,
+      "steps": [
+        {
+          "step": 1,
+          "reach": {
+            "n": 46,
+            "d": 46
+          },
+          "end": {
+            "n": 46,
+            "d": 46
+          },
+          "retry": {
+            "n": 0,
+            "d": 46
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 2,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 3,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 4,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 5,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 6,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 7,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 8,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 9,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 10,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 11,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 12,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 13,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 14,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 15,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 16,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 17,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 18,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 19,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 20,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 21,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 22,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 23,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 24,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 25,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 26,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 27,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 28,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 29,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 30,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        },
+        {
+          "step": 31,
+          "reach": {
+            "n": 0,
+            "d": 46
+          },
+          "end": {
+            "n": 0,
+            "d": 0
+          },
+          "retry": {
+            "n": 0,
+            "d": 0
+          },
+          "recovery": {
+            "n": 0,
+            "d": 0
+          }
+        }
+      ]
+    }
+  ],
+  "kpi_baseline": {
+    "searches": 65355,
+    "positive_searches": 34741,
+    "zero_searches": 30614,
+    "detail_searches": 6834,
+    "sessions": 10000,
+    "booking_rows": 0
+  },
+  "keywords": [
+    {
+      "label": "business",
+      "n": 2046
+    },
+    {
+      "label": "hotel",
+      "n": 2038
+    },
+    {
+      "label": "family",
+      "n": 2020
+    },
+    {
+      "label": "stay",
+      "n": 2004
+    },
+    {
+      "label": "weekend",
+      "n": 1892
+    }
+  ],
+  "funnel": {
+    "zero": 30614,
+    "followup": 29184,
+    "recovered": 5611,
+    "recovered_click": 1030
+  },
+  "events": [
+    {
+      "event_type": "hotel_click",
+      "n": 26687
+    },
+    {
+      "event_type": "hotel_detail_view",
+      "n": 26687
+    },
+    {
+      "event_type": "hotel_impression",
+      "n": 2023419
+    },
+    {
+      "event_type": "search_submit",
+      "n": 65355
+    },
+    {
+      "event_type": "session_end",
+      "n": 10000
+    }
+  ]
+}

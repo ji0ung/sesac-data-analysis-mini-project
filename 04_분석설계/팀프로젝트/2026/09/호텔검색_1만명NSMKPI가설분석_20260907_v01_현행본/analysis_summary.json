@@ -1,0 +1,183 @@
+{
+  "db": "C:\\Users\\ENCO\\Downloads\\호텔검색_1만명증강_탐색용AB10000_260907_1544_01_ERD보존_정수키_16K.sqlite",
+  "quality": {
+    "integrity_check": "ok",
+    "foreign_key_issues": 0,
+    "table_counts": {
+      "ActionEvent": 2152148.0,
+      "Booking": 0.0,
+      "Hotel": 1000.0,
+      "Room": 1000.0,
+      "Search": 65355.0,
+      "SearchFilter": 65355.0,
+      "SearchResult": 2023419.0,
+      "SearchTransition": 55355.0,
+      "SessionSynthetic": 10000.0,
+      "SimulationRun": 1.0,
+      "UserSynthetic": 10000.0,
+      "_generation_metadata": 11.0
+    },
+    "pair_balance_issues": 0,
+    "duplicate_search_id": 0,
+    "duplicate_event_id": 0,
+    "duplicate_result_id": 0
+  },
+  "metrics": [
+    {
+      "arm": "control",
+      "metric": "검색 0건률",
+      "numerator": 16761,
+      "denominator": 33572,
+      "rate": 0.49925533182413917
+    },
+    {
+      "arm": "control",
+      "metric": "0건 후속검색률",
+      "numerator": 15935,
+      "denominator": 16761,
+      "rate": 0.9507189308513811
+    },
+    {
+      "arm": "control",
+      "metric": "즉시 회복률(NSM 후보)",
+      "numerator": 2693,
+      "denominator": 15935,
+      "rate": 0.16899905867587073
+    },
+    {
+      "arm": "control",
+      "metric": "첫 Z 즉시 회복률",
+      "numerator": 351,
+      "denominator": 3073,
+      "rate": 0.11422063130491376
+    },
+    {
+      "arm": "control",
+      "metric": "최종 회복률",
+      "numerator": 2376,
+      "denominator": 3202,
+      "rate": 0.7420362273579013
+    },
+    {
+      "arm": "control",
+      "metric": "Card H-SEARCH",
+      "numerator": 3330,
+      "denominator": 16811,
+      "rate": 0.19808458747248825
+    },
+    {
+      "arm": "treatment",
+      "metric": "검색 0건률",
+      "numerator": 13853,
+      "denominator": 31783,
+      "rate": 0.4358619387722997
+    },
+    {
+      "arm": "treatment",
+      "metric": "0건 후속검색률",
+      "numerator": 13249,
+      "denominator": 13853,
+      "rate": 0.956399335883924
+    },
+    {
+      "arm": "treatment",
+      "metric": "즉시 회복률(NSM 후보)",
+      "numerator": 2918,
+      "denominator": 13249,
+      "rate": 0.22024303721035549
+    },
+    {
+      "arm": "treatment",
+      "metric": "첫 Z 즉시 회복률",
+      "numerator": 487,
+      "denominator": 3067,
+      "rate": 0.1587870883599609
+    },
+    {
+      "arm": "treatment",
+      "metric": "최종 회복률",
+      "numerator": 2560,
+      "denominator": 3164,
+      "rate": 0.809102402022756
+    },
+    {
+      "arm": "treatment",
+      "metric": "Card H-SEARCH",
+      "numerator": 3504,
+      "denominator": 17930,
+      "rate": 0.19542665923034022
+    }
+  ],
+  "ci": [
+    {
+      "metric": "검색 0건률",
+      "difference_pp": -6.33933930518395,
+      "ci_low": -7.640139369357336,
+      "ci_high": -5.133890270040945,
+      "prob_positive": 0.0,
+      "prob_favorable": 1.0
+    },
+    {
+      "metric": "0건 후속검색률",
+      "difference_pp": 0.5680405032542857,
+      "ci_low": 0.13307958435082423,
+      "ci_high": 1.0086104994463698,
+      "prob_positive": 0.994,
+      "prob_favorable": 0.994
+    },
+    {
+      "metric": "즉시 회복률(NSM 후보)",
+      "difference_pp": 5.1243978534484755,
+      "ci_low": 4.266231184114422,
+      "ci_high": 5.9890411417577285,
+      "prob_positive": 1.0,
+      "prob_favorable": 1.0
+    },
+    {
+      "metric": "첫 Z 즉시 회복률",
+      "difference_pp": 4.456645705504712,
+      "ci_low": 2.721262908127781,
+      "ci_high": 6.106785944870246,
+      "prob_positive": 1.0,
+      "prob_favorable": 1.0
+    },
+    {
+      "metric": "최종 회복률",
+      "difference_pp": 6.706617466485465,
+      "ci_low": 4.6510178481952495,
+      "ci_high": 8.773041066333196,
+      "prob_positive": 1.0,
+      "prob_favorable": 1.0
+    },
+    {
+      "metric": "Card H-SEARCH",
+      "difference_pp": -0.26579282421480277,
+      "ci_low": -1.0606370196998438,
+      "ci_high": 0.5707804951348795,
+      "prob_positive": 0.2765,
+      "prob_favorable": 0.2765
+    }
+  ],
+  "h3_recovery_detail": [
+    {
+      "sample_set_type": "control",
+      "numerator": 503,
+      "denominator": 2693,
+      "rate": 0.18678054214630524
+    },
+    {
+      "sample_set_type": "treatment",
+      "numerator": 527,
+      "denominator": 2918,
+      "rate": 0.18060315284441397
+    }
+  ],
+  "hypothesis_status": {
+    "H1": "합성 모형 안에서 지지; 실제 인과효과 아님",
+    "H2": "검정 불가: intent_segment 없음",
+    "H3": "탐색 가능; 회복자 사후집단이며 실제 인과효과 아님",
+    "H4": "검정 불가: condition_keeper와 반복방지 전용 처치 없음",
+    "H5": "검정 불가: location_flexible 없음, region_change와 +0.06 결합",
+    "H6": "검정 불가: query_reframer와 검색어 제안 노출 로그 없음"
+  }
+}
